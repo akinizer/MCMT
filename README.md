@@ -12,21 +12,21 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
 
 ### New Content:
 
-*   **Legendary Heroes:**
+*   **Legendary Heroes Arrived and Returned to join Ranks:**
     *   Landlord: A versatile hero with building capabilities and unique passive buffs.
     *   Conan: A powerful warrior with access to multiple god powers.
     *   Matsuri Yurio & Matsuri Azula: Psionic heroes with unique transformation and combat abilities.
-    *   MCMT_KastorLegend, MCMT_ChampionOfFreyr, AchillesDismounted, and more.
+    *   KastorLegend, ChampionOfFreyr, AchillesDismounted, and more.
 *   **Elite Heroes & Warriors:**
     *   Farseer, Chieftain, Hitman, ValkyrieWarrior, WindRider, Partisan, Spartan, ImperialGuard, Peacemaker, AttackWolf.
 *   **Gods and Mythical Beasts:**
     *   Playable versions of Thor, Chiron, Heracles, Hades.
     *   Awakened versions of Volstagg, Surtr, Fenrisulfr.
     *   New beasts like GorgonAvenger, Fafnirstrasz, Grootia, Earthshaker.
-*   **Chinese Legends:**
-    *   MCMT_HuangZhaowu, MCMT_HuangZhaowuWife, MCMT_NvChou.
+*   **Chinese Legends Returned as Special Units:**
+    *   HuangZhaowu, HuangZhaowuWife, NvChou.
 *   **Super Weapons & Unique Units:**
-    *   MCMT_GiantSiegeCrossbow, MCMT_Devastator, MCMT_ColossusOfRhodes.
+    *   GiantSiegeCrossbow, Devastator, ColossusOfRhodes.
     *   Onigami (Demolition Ship), SolarBarge (Flying Siege Unit).
     *   OxCartModelX (Advanced Caravan).
 *   **CyberTech Units:**
@@ -37,15 +37,15 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
     *   Bastion (Advanced Defensive/Training Structure).
     *   TempleOfPrimordials (Trains Gods and Legendary Myth Units).
     *   TechBuilding (Centralized Research Hub for MCMT Techs).
-    *   MCMT_DwarvenForge, MageTower, StrategicVesselAssembly, AirCommand, TheAttractor.
+    *   DwarvenForge, MageTower, StrategicVesselAssembly, AirCommand, TheAttractor.
 *   **Naval Special Units:**
     *   Desolator, Flagship, Navigator, ScorpionBoat, FlyingDutchman, PirateCaptain, Blazemaster, Worldbreaker, MrWukong.
 *   **New Technologies:**
-    *   A wide range of new military, economic, and myth unit upgrades (e.g., MCMT_DivineArmaments, MCMT_NanofiberPlatings, MCMT_MonstrousRage, MCMT_VibrantLand).
+    *   A wide range of new military, economic, and myth unit upgrades (e.g., DivineArmaments, NanofiberPlatings, MonstrousRage, VibrantLand).
 *   **New Powers & Abilities:**
-    *   Custom versions of existing god powers (e.g., MCMT_Meteor, MCMT_Frost, MCMT_Restoration).
+    *   Custom versions of existing god powers (e.g., Meteor, Frost, Restoration).
     *   New unit-specific abilities and transformations.
-    *   Unique powers like MCMT_OrbitalStrike.
+    *   Unique powers like OrbitalStrike.
 
 ### Enhancements to Existing Content:
 
