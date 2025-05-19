@@ -1,0 +1,214 @@
+<abilities>	
+	<!-- /////// MyCustomModTechs ///////// -->
+	<Landlord>
+		<ability>PassiveLifesteal<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>	
+		<ability>PassiveNaturesEyes<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveHamask<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveValhallasChosen<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveBattleFrenzy<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSerratedBlades<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>AbilityMinotaur<chargetimeasrof>1</chargetimeasrof></ability>
+	</Landlord>
+	<Farseer>	
+		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
+		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveNaturesEyes<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveHamask<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Farseer>
+	<Conan>
+		<ability>Bronze<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>FlamingWeapons<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>ForestFire<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>Chaos<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>MCMT_OrbitalStrike<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>		
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveNaturesEyes<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveLifesteal<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>	
+		<ability>PassiveHamask<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveBattleFrenzy<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSerratedBlades<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Conan>
+	
+	<Hitman>
+		<ability>Heal<actioncommand>true</actioncommand></ability>
+		<ability>AbilityDraugr<chargetimeasrof>1</chargetimeasrof></ability>
+	</Hitman>
+	<MatsuriYurio>
+		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
+		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>MCMT_AbstractUnitTransform<rof>10</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</MatsuriYurio>
+	<MatsuriYurioFlight>
+		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
+		<ability>AbilityPsionicDecimatorSuperweapon<rof>1</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
+		<ability>MCMT_AbstractUnitTransform<rof>10</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</MatsuriYurioFlight>
+	<MatsuriAzula>
+		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
+		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>AbilityPsionicLevitation<rof>40</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</MatsuriAzula>
+
+	<Worldbreaker>
+		<ability>AbilityTsunamiGenerator<rof>60</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>AbilityKastorCharisma<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Worldbreaker>
+	
+	<Earthshaker>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Earthshaker>
+	
+	<TravelerOxCart>
+		<ability>Heal<actioncommand>true</actioncommand></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</TravelerOxCart>
+	<WindRider>
+		<ability>AbilityWhiteHorseCavalry<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveLastStand<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	 </WindRider>
+	
+	<ThorDescended>
+		<ability>AbilityTitan<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveTitanicStature<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</ThorDescended>
+	
+	<VolstaggAwakened>
+		<ability>AbilityKingFolstagFrigidBreath<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>AbilityKingFolstagFreezeTitan<auxchargetimeasrof>1</auxchargetimeasrof></ability>
+		<ability>AbilityTitan<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveTitanicStature<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</VolstaggAwakened>
+	
+	<SurtrAwakened>
+		<ability>AbilityFireKing<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>AbilityTitan<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveTitanicStature<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</SurtrAwakened>
+	
+	<FenrisulfrAwakened>
+		<ability>AbilityTitan<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveTitanicStature<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</FenrisulfrAwakened>
+	
+	<Grootia>
+		<ability>AbilityTitan<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveTitanicStature<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Grootia>
+	
+	<MCMT_HuangZhaowuWife>
+		<ability>Heal<actioncommand>true</actioncommand></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</MCMT_HuangZhaowuWife>
+	
+	<!-- /////// Existing Unit Override ///////// -->
+	
+		<!--Chinese-Hero-->	
+	<Nezha>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Nezha>
+	<LiJing>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</LiJing>
+		<!--Chinese-MythUnit-->	
+	<QiongQiAir><ability>AbilityAutoScout<noautocast>true</noautocast></ability></QiongQiAir>
+	
+		<!--Greek-Hero-Zeus-->	
+	<Jason>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Jason>
+	<Heracles>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveLifesteal<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Heracles>
+	<Odysseus>
+		<ability>AbilityOdysseusSPC<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSolarFlare<tech>SunRay</tech><alwaysdisabledingrid>1</alwaysdisabledingrid></ability>	
+	</Odysseus>
+	<Bellerophon>
+		<ability>AbilityBellerophon<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Bellerophon>
+		<!--Greek-Hero-Hades-->	
+	<Theseus>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Theseus>
+	<Atalanta>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Atalanta>	
+	
+	<Hippolyta>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveVenomous<tech>ShaftsOfPlague</tech><alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSolarFlare<tech>SunRay</tech><alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Hippolyta>	
+	
+	<Polyphemus>
+		<ability>AbilityPolyphemus<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Polyphemus>-->
+		<!--Greek-Hero-Poseidon-->
+	<Ajax>
+		<ability>AbilityAjaxSPC<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Ajax>
+	<Achilles>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveLifesteal<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Achilles>
+	<Chiron>
+		<ability>AbilityChironSPC<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSolarFlare<tech>SunRay</tech><alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Chiron>
+	<Perseus>
+		<ability>AbilityPerseus<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Perseus>
+	<TheArgo>
+		<ability>PassiveSolarFlare<tech>SunRay</tech><alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</TheArgo>
+		<!--Greek-MythUnit-->
+	<Pegasus>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</Pegasus>
+	<PegasusGroundedMessenger>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</PegasusGroundedMessenger>
+	
+		<!--MCMT Buildings-->
+	<Bastion>
+		<ability>MCMT_Meteor<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>MCMT_LightningStorm<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>MCMT_Earthquake<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+	</Bastion>
+</abilities>

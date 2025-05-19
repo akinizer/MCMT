@@ -1,0 +1,71 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_RANGED">Cannonball</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\crush</impacteffect>
+  </action>
+  <action>
+    <name>LaserBlaster</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\crush</impacteffect>    
+  </action>
+  <action>
+    <name>AAGun</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\crush</impacteffect>
+  </action>
+  <action>
+    <name>CharismaSpeed</name>
+    <type>AutoRangedModify</type>
+    <modifyabstracttype>Unit</modifyabstracttype>
+    <forbidabstracttype>MythUnit</forbidabstracttype>
+    <forbidabstracttype>Ship</forbidabstracttype>
+    <maxrange>10</maxrange>
+    <persistent>1</persistent>
+    <modifytype>Speed</modifytype>
+    <modifymultiplier>1.10</modifymultiplier>
+  </action>
+  <action>
+    <name>CharismaAttack</name>
+    <type>AutoRangedModify</type>
+    <modifyabstracttype>Unit</modifyabstracttype>
+    <forbidabstracttype>MythUnit</forbidabstracttype>
+    <forbidabstracttype>Ship</forbidabstracttype>
+    <maxrange>10</maxrange>
+    <persistent>1</persistent>
+    <modifytype>Damage</modifytype>
+    <modifymultiplier>1.10</modifymultiplier>
+  </action>
+  <tactic>Default
+    <action priority="100">Cannonball</action>
+    <action priority="90">LaserBlaster</action>
+    <action priority="80">AAGun</action>
+    <action>CharismaSpeed</action><action>CharismaAttack</action>
+    <attacktype>LogicalTypeRangedUnitsAttack</attacktype>
+    <autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype>
+    <attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype>
+  </tactic>
+ 
+	  
+</tactics>

@@ -1,0 +1,32 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_FISHING">Gather</name>
+    <type>Gather</type>
+    <maxrange>1.0</maxrange>
+    <rate type="FishResource">1.0</rate>
+    <rate type="AbstractDock">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_BUILD">Build</name>
+    <type>Build</type>
+    <anim>Idle</anim>
+    <maxrange>2.0</maxrange>
+    <rate type="Building">1.0</rate>
+  </action>
+  <action>
+    <name>SmartDropsite</name>
+    <type>SmartDropsite</type>
+    <maxrange>2</maxrange>
+    <rate type="AbstractDock">1.0</rate>
+  </action>
+  <action>
+    <name>SelfDestructAttack</name>
+    <type>Attack</type>
+    <anim>HandAttack</anim>
+    <rate type="All">1.0</rate>
+    <attackaction>1</attackaction>
+    <areasortmode>Radial</areasortmode>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <tactic>Default<action priority="100">Gather</action><action priority="90">Build</action><action>SmartDropsite</action><attackresponsetype>LogicalTypeVillagersAttackResponse</attackresponsetype></tactic>
+</tactics>

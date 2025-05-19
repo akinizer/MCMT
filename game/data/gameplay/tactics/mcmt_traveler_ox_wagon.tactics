@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+	<action>
+		<name>Gather</name>
+		<type>Gather</type>
+		<typedanim type="Resource">Idle</typedanim>
+		<maxrange>2</maxrange>
+		<donotdepositresources>1</donotdepositresources>
+		<rate type="Resource">1.0</rate>
+	</action>
+	
+  
+	<action>
+		<name stringid="STR_ACTION_BUILD">Build</name>
+		<type>Build</type>
+		<anim>Build</anim>
+		<maxrange>0.5</maxrange>
+	</action>
+	
+	<action>
+		<name>AreaHeal</name>
+		<type>AutoRangedModify</type>
+		<!-- <modifyabstracttype>LogicalTypeAffectedByRestoration</modifyabstracttype> -->
+		<modifyabstracttype>All</modifyabstracttype>
+		<persistent>1</persistent>
+		<modifytype>HealRate</modifytype>
+		<modifyflyingunits>1</modifyflyingunits>
+		<includeally>1</includeally>
+		<modelattachment>greek\godpowers\restoration\healing_vfx.xml</modelattachment>
+		<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+	</action>
+	<action>
+		<name stringid="STR_ACTION_RANGED">RangedAttack</name>
+		<type>Attack</type>
+		<attackaction>1</attackaction>
+		<rangedlogic>1</rangedlogic>
+		<anim>RangedAttack</anim>
+		<accuracy>0.8</accuracy>
+		<maxspread>5.0</maxspread>
+		<spreadfactor>0.25</spreadfactor>
+		<trackrating>1.0</trackrating>
+		<impacteffect>effects\impacts\pierce</impacteffect>
+		<rate type="Unit">1.0</rate>
+		<volleymode>1</volleymode>
+	</action>
+	
+	<tactic>Default<action>Gather</action><action>AreaHeal</action><action>Build</action><action>RangedAttack</action></tactic>
+</tactics>

@@ -1,0 +1,11 @@
+<tactics>
+	<action>
+		<name stringid="STR_ACTION_HAND">HandAttack</name>
+		<type>Attack</type>
+		<rate type="All">1.0</rate>
+		<attackaction>1</attackaction>
+		<handlogic>1</handlogic>
+		<anim>HandAttack</anim>
+	</action>
+	<tactic>Default<action priority="100">HandAttack</action><attacktype>LogicalTypeHandUnitsAttack</attacktype></tactic>
+</tactics>

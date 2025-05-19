@@ -1,0 +1,91 @@
+<tactics>
+   <action>
+    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_EMPOWER">Empower</name>
+    <type>Empower</type>
+    <anim>Empower</anim>
+    <empowerdata>
+      <logicaltypebuildingempoweredforlos>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+        <empowerrate modifytype="LOSFactor">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </logicaltypebuildingempoweredforlos>
+      <logicaltypeaffectedbyvalleyofthekings>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </logicaltypeaffectedbyvalleyofthekings>
+      <logicaltypebuildingthatcanbeempowered>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </logicaltypebuildingthatcanbeempowered>
+    </empowerdata>
+    <natureempowerdata>
+      <abstractsettlement>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </abstractsettlement>
+    </natureempowerdata>
+    <maxrange>3</maxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HEAL">Heal</name>
+    <type>Heal</type>
+    <maxrange>10</maxrange>
+    <rate type="LogicalTypeHealed">10.0</rate>
+    <rate type="GuardianSleeping">15.0</rate>
+    <rate type="GuardianSleepingTNA">15.0</rate>
+    <anim>Heal</anim>
+    <modelattachment>greek\godpowers\restoration\healing_vfx.xml</modelattachment>
+    <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+  </action>
+  <action>
+    <name>DelayedTransform</name>
+    <type>DelayedTransform</type>
+    <anim>Transform</anim>
+  </action>
+  
+   <tactic>Default
+	<action priority="100">RangedAttack</action>
+	<attacktype>LogicalTypeRangedUnitsAttack</attacktype>
+	<autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype>
+	<attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype>
+	<attackmovetype>AbstractWall</attackmovetype>
+	<action>Empower</action>
+	<action>Heal</action>
+	<action>DelayedTransform</action>
+   </tactic>  
+</tactics>

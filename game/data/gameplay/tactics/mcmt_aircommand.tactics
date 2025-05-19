@@ -1,0 +1,28 @@
+<tactics>
+	<action>
+		<name>AutoLOS</name>
+		<type>IdleStatBonus</type>
+		<anim>MaxLOS</anim>
+		<persistent>1</persistent>
+	</action>
+	<action>
+		<name stringid="STR_ACTION_REVEAL_UI">OracleRevealEnemyUI</name>
+		<type>AutoRangedModify</type>
+		<maxrange>5</maxrange>
+		<persistent>1</persistent>
+		<targetnonally>1</targetnonally>
+		<modifyabstracttype>All</modifyabstracttype>
+		<modifyrangeuselos>1</modifyrangeuselos>
+		<modifytype>RevealUI</modifytype>
+	</action>
+	<tactic>Default<action>AutoLOS</action><action>OracleRevealEnemyUI</action></tactic>
+	<action>
+		<name>BillowingSmog</name>
+		<type>AutoRangedModify</type>
+		<modifyabstracttype>Unit</modifyabstracttype>
+		<persistent>1</persistent>
+		<modifytype>HealRate</modifytype>
+		<targetenemy>1</targetenemy>
+	 </action>
+  <tactic>Default<action>AutoLOS</action><action>OracleRevealEnemyUI</action><action>BillowingSmog</action></tactic>
+</tactics>

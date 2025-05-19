@@ -1,0 +1,1188 @@
+<powersmod>	
+	<!--///MY_CUSTOM_MOD_TECH///-->
+	<power name="MCMT_RocLand" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_ROC</displaynameid>
+		<rolloverid>STR_ABILITY_ROC_LR</rolloverid>
+		<icon>egyptian\static_color\abilities\roc_ability_icon.png</icon>
+		<activetime>4</activetime>
+		<radius>5.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_Roc</abstractplacementtargettype>
+		<unitaction>DelayedTransform</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_RocTakeoff" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_ROC_LANDED</displaynameid>
+		<rolloverid>STR_ABILITY_ROC_LANDED_LR</rolloverid>
+		<icon>egyptian\static_color\abilities\roc_ability_icon.png</icon>
+		<activetime>4</activetime>
+		<radius>5.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_RocLanded</abstractplacementtargettype>
+		<unitaction>DelayedTransform</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_SpeedIncrease" type="GeneralEffect" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SPEED_INCREASE_NAME</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SPEED_INCREASE_LR</rolloverid>
+		<icon>in_game\stat_speed.png</icon>
+		<placement>Skip</placement>
+		<powerplayerrelation>Player</powerplayerrelation>
+		<effect type="MaximumVelocity" amount="3.00" relativity="Absolute">
+			<target type="ProtoUnit">Unit</target>
+		</effect>
+	</power>
+	<power name="MCMT_SpeedDecrease" type="GeneralEffect" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SPEED_DECREASE_NAME</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SPEED_DECREASE_LR</rolloverid>
+		<icon>in_game\connect_slow.png</icon>
+		<placement>Skip</placement>
+		<powerplayerrelation>Player</powerplayerrelation>
+		<effect type="MaximumVelocity" amount="-3.00" relativity="Absolute">
+			<target type="ProtoUnit">Unit</target>
+		</effect>
+	</power>
+	<power name="MCMT_RechargeFast" type="GeneralEffect" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_RECHARGE_FAST_NAME</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_RECHARGE_FAST_LR</rolloverid>
+		<icon>front_end\Dropdown_Arrow\Dropdown_Arrow_Up_Double.png</icon>
+		<placement>Skip</placement>
+		<powerplayerrelation>Player</powerplayerrelation>
+		<effect type="RechargeTime" amount="-3.00" relativity="Absolute">
+			<target type="ProtoUnit">Unit</target>
+		</effect>
+	</power>
+	<power name="MCMT_RechargeSlow" type="GeneralEffect" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_RECHARGE_SLOW_NAME</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_RECHARGE_SLOW_LR</rolloverid>
+		<icon>front_end\Dropdown_Arrow\Dropdown_Arrow_Down_Double.png</icon>
+		<placement>Skip</placement>
+		<powerplayerrelation>Player</powerplayerrelation>
+		<effect type="RechargeTime" amount="3.00" relativity="Absolute">
+			<target type="ProtoUnit">Unit</target>
+		</effect>
+	</power>
+	<power name="MCMT_AbilityAutomaton" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_AUTOMATON</displaynameid>
+		<rolloverid>STR_ABILITY_AUTOMATON_LR</rolloverid>
+		<icon>atlantean\static_color\abilities\automaton_ability_icon.png</icon>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>Automaton</abstractplacementtargettype>
+		<abstractplacementtargettype>MCMT_Automaton</abstractplacementtargettype>
+		<unitaction>Heal</unitaction>
+		<cursortype>Repair</cursortype>
+	</power>
+	<power name="MCMT_SpiderLair" type="Spiders" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_SPIDER_LAIR</displaynameid>
+		<rolloverid>STR_POWER_SPIDER_LAIR_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\spider_lair_icon.png</icon>
+		<placement disallowwatercast="">Full</placement>
+		<vectorplacement></vectorplacement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAlly">SpiderLairBirth</soundset>
+		<soundset type="EndSound" listenertype="Ally">GodPowerEnd</soundset>
+		<activetime>-1</activetime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>HumanSoldier</abstractattacktargettype>
+		<rangeindicator range="20.0" width="5.0">Arrow</rangeindicator>
+		<rangeindicatorcustomdecal>effects\rangedecals\rangedecals_arrow_1stepline</rangeindicatorcustomdecal>
+		<numbertocreate>8</numbertocreate>
+		<separationdistance>2.5</separationdistance>
+		<warntime>0.1</warntime>
+		<initialdelay>0.1</initialdelay>
+		<hatchtime>1.0</hatchtime>
+		<hatchintervalmin>0.2</hatchintervalmin>
+		<hatchintervalmax>0.7</hatchintervalmax>
+		<spiderproto>Spider</spiderproto>
+		<spiderattackrange>2.0</spiderattackrange>
+		<spiderspawnoffset>1.0</spiderspawnoffset>
+		<spidereggproto>SpiderEgg</spidereggproto>
+		<spiderdoorproto>SpiderDoor</spiderdoorproto>
+		<spiderwarnproto>SpiderWarn</spiderwarnproto>
+		<humandeathsoundset>SpiderLairDeath</humandeathsoundset>
+	</power>
+	<power name="MCMT_MeteorSPC" type="Meteor" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_MCMT_METEOR</displaynameid>
+		<rolloverid>STR_POWER_MCMT_METEOR_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\meteor_icon.png</icon>
+		<placement>Full</placement>
+		<rangeindicator range="40.0" speed="0.2">Circle</rangeindicator>
+		<camerashake duration="0.50" strength="0.25"></camerashake>
+		<builduptime>3.0</builduptime>
+		<activetime>10.0</activetime>
+		<accuracy>1</accuracy>
+		<radius>40.0</radius>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeValidMeteorTarget</abstractattacktargettype>
+		<fasteststriketime>0</fasteststriketime>
+		<sloweststriketime>0</sloweststriketime>
+		<meteorprotounit>MeteorSPC</meteorprotounit>
+		<numberofstrikes>20</numberofstrikes>
+		<numberofprioritystrikes>3</numberofprioritystrikes>
+		<minimumgroupsize>5</minimumgroupsize>
+		<groupsearchradius>6.0</groupsearchradius>
+		<secondaryaccuracy>1.0</secondaryaccuracy>
+		<watersplashprotounit>VFXMeteorImpactWater</watersplashprotounit>
+		<landimpactprotounit>VFXMeteorImpactGround</landimpactprotounit>
+		<firststrikesoundset>MeteorBigHit</firststrikesoundset>
+		<strikesoundset>MeteorSmallHit</strikesoundset>
+		<firstapproachsound>MeteorApproach</firstapproachsound>
+		<approachsound>MeteorWhoosh</approachsound>
+		<minthrowdistance>6.0</minthrowdistance>
+		<maxthrowdistance>10.0</maxthrowdistance>
+		<minthrowheight>1.0</minthrowheight>
+		<maxthrowheight>2.0</maxthrowheight>
+		<minthrowvelocity>10.0</minthrowvelocity>
+		<maxthrowvelocity>20.0</maxthrowvelocity>
+	</power>
+	<power name="MCMT_SmallMeteorSPC" type="Meteor" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_MCMT_SMALL_METEOR</displaynameid>
+		<rolloverid>STR_POWER_MCMT_SMALL_METEOR_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\meteor_icon.png</icon>
+		<placement>Full</placement>
+		<rangeindicator range="3.0" speed="0.2">Circle</rangeindicator>
+		<camerashake duration="0.50" strength="0.25"></camerashake>
+		<builduptime>3.0</builduptime>
+		<activetime>1.0</activetime>
+		<accuracy>1</accuracy>
+		<radius>3.0</radius>
+		<powerplayerrelation>All</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeValidMeteorTarget</abstractattacktargettype>
+		<fasteststriketime>0</fasteststriketime>
+		<sloweststriketime>0</sloweststriketime>
+		<meteorprotounit>MeteorSPC</meteorprotounit>
+		<numberofstrikes>1</numberofstrikes>
+		<numberofprioritystrikes>1</numberofprioritystrikes>
+		<minimumgroupsize>1</minimumgroupsize>
+		<groupsearchradius>3.0</groupsearchradius>
+		<secondaryaccuracy>1.0</secondaryaccuracy>
+		<watersplashprotounit>VFXMeteorImpactWater</watersplashprotounit>
+		<landimpactprotounit>VFXMeteorImpactGround</landimpactprotounit>
+		<firststrikesoundset>MeteorBigHit</firststrikesoundset>
+		<strikesoundset>MeteorSmallHit</strikesoundset>
+		<firstapproachsound>MeteorApproach</firstapproachsound>
+		<approachsound>MeteorWhoosh</approachsound>
+		<minthrowdistance>6.0</minthrowdistance>
+		<maxthrowdistance>10.0</maxthrowdistance>
+		<minthrowheight>1.0</minthrowheight>
+		<maxthrowheight>2.0</maxthrowheight>
+		<minthrowvelocity>10.0</minthrowvelocity>
+		<maxthrowvelocity>20.0</maxthrowvelocity>
+	</power>
+	<power name="MCMT_Vision" type="TempUnit" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_MCMT_VISION</displaynameid>
+		<rolloverid>STR_POWER_MCMT_VISION_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\vision_icon.png</icon>
+		<placement>Skip</placement>
+		<rangeindicator range="60.0" speed="0.2">Circle</rangeindicator>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="Caster">VisionBirth</soundset>
+		<activetime>20.0</activetime>
+		<createunit quantity="1" radius="0" delay="0">MCMT_VisionRevealer</createunit>
+		<createunit quantity="1" radius="0" delay="0">VFXVision</createunit>
+	</power>
+	<power name="MCMT_TraitorAbstract" type="Traitor" mergeMode="add">
+		<displaynameid>STR_POWER_TRAITOR</displaynameid>
+		<rolloverid>STR_POWER_MCMT_TRAITOR_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\traitor_icon.png</icon>
+		<placement enemy="">Unit</placement>
+		<abstractplacementtargettype>Unit</abstractplacementtargettype>
+		<soundset type="StartSound" listenertype="Caster">TraitorBirth</soundset>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<activetime>3.0</activetime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<vfxproto>VFXTraitor</vfxproto>
+		<percentdamageonconvert>0.0</percentdamageonconvert>
+	</power>
+	<power name="MCMT_TraitorNormal" type="Traitor" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_TRAITOR</displaynameid>
+		<rolloverid>STR_POWER_TRAITOR_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\traitor_icon.png</icon>
+		<placement enemy="">Unit</placement>
+		<abstractplacementtargettype>LogicalTypeValidTraitorTarget</abstractplacementtargettype>
+		<soundset type="StartSound" listenertype="Caster">TraitorBirth</soundset>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<activetime>3.0</activetime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeValidTraitorTarget</abstractattacktargettype>
+		<vfxproto>VFXTraitor</vfxproto>
+		<percentdamageonconvert>0.0</percentdamageonconvert>
+	</power>
+	<power name="MCMT_Earthquake" type="Earthquake" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_EARTHQUAKE</displaynameid>
+		<rolloverid>STR_POWER_EARTHQUAKE_LR</rolloverid>
+		<icon>greek\static_color\god_powers\earthquake_icon.png</icon>
+		<placement>Full</placement>
+		<reveallos radius="35.0">Revealer</reveallos>
+		<rangeindicator range="35.0" speed="0.2">Circle</rangeindicator>
+		<camerashake duration="0.50" strength="0.25"></camerashake>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" loop="">EarthquakeExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<playsbattlemusic></playsbattlemusic>
+		<radius>35.0</radius>
+		<activetime>15.0</activetime>
+		<powerblocker>35.0</powerblocker>
+		<powerplayerrelation>All</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeEarthquakeAttack</abstractattacktargettype>
+		<terrainrumbling height="0.25" width="2.0" speed="15.0" fadetime="2.0"></terrainrumbling>
+		<attackproto>Earthquake</attackproto>
+		<attackinterval>0.25</attackinterval>
+		<attacktreeaccuracy>0.025</attacktreeaccuracy>
+		<allydamageratio>0.05</allydamageratio>
+		<epicenterzoneradius>7.5</epicenterzoneradius>
+		<middlezoneradius>17.5</middlezoneradius>
+		<outerzoneradius>35.0</outerzoneradius>
+		<epicenterzonedamageratio>1.0</epicenterzonedamageratio>
+		<middlezonedamageratio>0.5</middlezonedamageratio>
+		<outerzonedamageratio>0.2</outerzonedamageratio>
+		<dustsmallvfxproto>VFXDustSmall</dustsmallvfxproto>
+		<dustmediumvfxproto>VFXDustMedium</dustmediumvfxproto>
+		<dustlargevfxproto>VFXDustLarge</dustlargevfxproto>
+	</power>
+	<power name="MCMT_GaiaForest" type="GaiaForest" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_GAIA_FOREST</displaynameid>
+		<rolloverid>STR_POWER_GAIA_FOREST_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\gaia_forest_icon.png</icon>
+		<placement disallowwatercast="">Full</placement>
+		<rangeindicator range="10.0" speed="0.2">Circle</rangeindicator>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="Caster">GaiaForestBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>-1</activetime>
+		<radius>30.0</radius>
+		<treeproto>TreeGaia</treeproto>
+		<treeeffectproto>VFXTreeGaia</treeeffectproto>
+		<totalnumberoftrees>20</totalnumberoftrees>
+		<treespawnintervalmin>3.0</treespawnintervalmin>
+		<treespawnintervalmax>5.0</treespawnintervalmax>
+		<growthradiusstart>2.0</growthradiusstart>
+		<growthradiusincreaserate>0.02</growthradiusincreaserate>
+		<placementrestriction radius="5.0">GoldResource</placementrestriction>
+		<placementrestriction radius="5.0">AbstractSettlement</placementrestriction>
+	</power>
+	<power name="MCMT_TartarianGate" type="TartarianGate" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_TARTARIAN_GATE</displaynameid>
+		<rolloverid>STR_POWER_TARTARIAN_GATE_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\tartarian_gate_icon.png</icon>
+		<placement disallowwatercast="" overlaptype="LogicalTypeTartarianGateValidOverlapPlacement" losprotounit="TartarianGatePlacement">Overlap</placement>
+		<camerashake duration="1.0" strength="0.20" range="40.0"></camerashake>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>-1</activetime>
+		<radius>4.0</radius>
+		<powerplayerrelation>All</powerplayerrelation>
+		<terrainrumbling height="0.03" width="1.0" speed="25.0" fadetime="0.5"></terrainrumbling>
+		<revealerproto>RevealerToAll</revealerproto>
+		<spawnproto>TartarianSpawn</spawnproto>
+		<tartariangateproto>TartarianGate</tartariangateproto>
+		<gatebirthproto>TartarianGateBirth</gatebirthproto>
+		<gateflameproto>TartarianGateFlame</gateflameproto>
+		<sinkholetime>4.0</sinkholetime>
+		<sinkholeshakestrength>0.08</sinkholeshakestrength>
+		<rumbletime>4.0</rumbletime>
+		<spawntimedelay>1.0</spawntimedelay>
+		<spawnintervalmin>1.0</spawnintervalmin>
+		<spawnintervalmax>3.0</spawnintervalmax>
+		<maxnumspawns>7</maxnumspawns>
+		<minthrowdistance>7.0</minthrowdistance>
+		<maxthrowdistance>9.0</maxthrowdistance>
+		<minthrowheight>1.0</minthrowheight>
+		<maxthrowheight>2.0</maxthrowheight>
+		<minthrowvelocity>12.0</minthrowvelocity>
+		<maxthrowvelocity>13.0</maxthrowvelocity>
+	</power>
+	<power name="MCMT_Restoration" type="Restoration" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_RESTORATION</displaynameid>
+		<rolloverid>STR_POWER_RESTORATION_LR</rolloverid>
+		<icon>greek\static_color\god_powers\restoration_icon.png</icon>
+		<placement>Full</placement>
+		<rangeindicator range="25.0" speed="0.2">Circle</rangeindicator>
+		<reveallos radius="25.0">Revealer</reveallos>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">RestorationBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>10</activetime>
+		<radius>25.0</radius>
+		<powerplayerrelation>Ally</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeAffectedByRestoration</abstractattacktargettype>
+		<healvfx>VFXHealing</healvfx>
+		<areavfx>VFXHealingArea</areavfx>
+		<healspeed>50.0</healspeed>
+		<slowhealmultiplier>0.50</slowhealmultiplier>
+		<scaninterval>0.25</scaninterval>
+	</power>
+	<power name="MCMT_Bolt" type="Bolt" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_BOLT</displaynameid>
+		<rolloverid>STR_POWER_BOLT_LR</rolloverid>
+		<icon>greek\static_color\god_powers\bolt_icon.png</icon>
+		<placement enemy="" allownature="">Unit</placement>
+		<abstractplacementtargettype>LogicalTypeValidBoltTarget</abstractplacementtargettype>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">LightningStrike</soundset>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<activetime>3.0</activetime>
+		<abstractattacktargettype>LogicalTypeValidBoltTarget</abstractattacktargettype>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<strikeproto>BoltStrike</strikeproto>
+		<sparksvfxproto>VFXLightningSparks</sparksvfxproto>
+		<scorchvfxproto>VFXBoltScorch</scorchvfxproto>
+		<strikeheight>25.0</strikeheight>
+		<strikeminoffset>0.0</strikeminoffset>
+		<strikemaxoffset>0.1</strikemaxoffset>
+		<scorchfactor>1.75</scorchfactor>
+	</power>
+	<power name="MCMT_Tornado" type="Tornado" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_TORNADO</displaynameid>
+		<rolloverid>STR_POWER_TORNADO_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\tornado_icon.png</icon>
+		<placement>Full</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<playsbattlemusic></playsbattlemusic>
+		<activetime>20.0</activetime>
+		<powerblocker>20.0</powerblocker>
+		<powerplayerrelation>All</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeValidTornadoAttack</abstractattacktargettype>
+		<rangeindicator range="20.0" speed="5.0">Circle</rangeindicator>
+		<damageinterval>0.5</damageinterval>
+		<tornadoprotounit>Tornado</tornadoprotounit>
+		<minthrowdistance>9.0</minthrowdistance>
+		<maxthrowdistance>15.0</maxthrowdistance>
+		<minthrowheight>14.0</minthrowheight>
+		<maxthrowheight>15.0</maxthrowheight>
+		<minthrowvelocity>10.0</minthrowvelocity>
+		<maxthrowvelocity>20.0</maxthrowvelocity>
+		<excludefromthrow>Building</excludefromthrow>
+		<excludefromthrow>Wood</excludefromthrow>
+		<excludefromthrow>Gold</excludefromthrow>
+		<excludefromthrow>Fish</excludefromthrow>
+		<excludefrompullingintofunnel>AbstractSettlement</excludefrompullingintofunnel>
+		<excludefrompullingintofunnel>Farm</excludefrompullingintofunnel>
+		<excludefrompullingintofunnel>Building</excludefrompullingintofunnel>
+		<excludefrompullingintofunnel>Gold</excludefrompullingintofunnel>
+		<excludefrompullingintofunnel>Wave</excludefrompullingintofunnel>
+		<debrisxzvelocity>6.5</debrisxzvelocity>
+		<debrisyvelocity>3.0</debrisyvelocity>
+		<debrisangularvelocity>3.14</debrisangularvelocity>
+		<funnelradius>4.5</funnelradius>
+		<funnelheight>16.0</funnelheight>
+		<numberofwaypoints>200</numberofwaypoints>
+		<spiralsize>1.0</spiralsize>
+		<greaterdamageradius>15</greaterdamageradius>
+	</power>
+	<power name="MCMT_LightningStorm" type="LightningStorm" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_LIGHTNING_STORM</displaynameid>
+		<rolloverid>STR_POWER_LIGHTNING_STORM_LR</rolloverid>
+		<icon>greek\static_color\god_powers\lightning_storm_icon.png</icon>
+		<placement>Full</placement>
+		<reveallos radius="40.0">Revealer</reveallos>
+		<rangeindicator range="40.0" speed="0.2">Circle</rangeindicator>
+		<camerashake duration="0.1" strength="0.1"></camerashake>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">LightThunder</soundset>
+		<soundset type="BuildUp" listenertype="IfOnScreen">LightningBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<builduptime>1.3</builduptime>
+		<playsbattlemusic></playsbattlemusic>
+		<activetime>15.0</activetime>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<abstractattacktargettype>Building</abstractattacktargettype>
+		<explicitlyrestrictedattacktargettype>Farm</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>Settlement</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>Gargarensis</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>SonOfOsiris</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>Nidhogg</explicitlyrestrictedattacktargettype>
+		<powerblocker>40.0</powerblocker>
+		<accuracy>1</accuracy>
+		<radius>40.0</radius>
+		<powerplayerrelation>EnemyNotMotherNature</powerplayerrelation>
+		<fasteststriketime>-0.5</fasteststriketime>
+		<sloweststriketime>0.0</sloweststriketime>
+		<strikeproto>LightningStrike</strikeproto>
+		<rainvfxproto>VFXLightningRain</rainvfxproto>
+		<cloudvfxproto>VFXLightningCloud</cloudvfxproto>
+		<sparksvfxproto>VFXLightningSparks</sparksvfxproto>
+		<scorchvfxproto>VFXLightningScorch</scorchvfxproto>
+		<groundsparksvfxproto>VFXLightningSparksGround</groundsparksvfxproto>
+		<strikesoundset>LightningStrike</strikesoundset>
+		<strikeheight>25.0</strikeheight>
+		<strikeminoffset>0.0</strikeminoffset>
+		<strikemaxoffset>0.1</strikemaxoffset>
+		<cloudbuildupstarttime>0.0</cloudbuildupstarttime>
+		<cloudbuildupendtime>1.0</cloudbuildupendtime>
+		<cloudfadeoutstarttime>40.0</cloudfadeoutstarttime>
+		<cloudfadeoutendtime>43.0</cloudfadeoutendtime>
+		<rainbuildupstarttime>2.0</rainbuildupstarttime>
+		<rainbuildupendtime>7.0</rainbuildupendtime>
+		<rainfadeoutstarttime>37.0</rainfadeoutstarttime>
+		<rainfadeoutendtime>38.0</rainfadeoutendtime>
+	</power>
+	<power name="MCMT_Meteor" type="Meteor" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_METEOR</displaynameid>
+		<rolloverid>STR_POWER_METEOR_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\meteor_icon.png</icon>
+		<placement>Full</placement>
+		<rangeindicator range="25.0" speed="0.2">Circle</rangeindicator>
+		<camerashake duration="0.50" strength="0.25"></camerashake>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<playsbattlemusic></playsbattlemusic>
+		<builduptime>3.0</builduptime>
+		<activetime>15.0</activetime>
+		<radius>25.0</radius>
+		<powerblocker>25.0</powerblocker>
+		<accuracy>1</accuracy>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeValidMeteorTarget</abstractattacktargettype>
+		<fasteststriketime>-0.5</fasteststriketime>
+		<sloweststriketime>0.5</sloweststriketime>
+		<meteorprotounit>Meteor</meteorprotounit>
+		<numberofstrikes>12</numberofstrikes>
+		<numberofprioritystrikes>3</numberofprioritystrikes>
+		<minimumgroupsize>5</minimumgroupsize>
+		<groupsearchradius>6.0</groupsearchradius>
+		<secondaryaccuracy>0.5</secondaryaccuracy>
+		<watersplashprotounit>VFXMeteorImpactWater</watersplashprotounit>
+		<landimpactprotounit>VFXMeteorImpactGround</landimpactprotounit>
+		<firststrikesoundset>MeteorBigHit</firststrikesoundset>
+		<strikesoundset>MeteorSmallHit</strikesoundset>
+		<firstapproachsound>MeteorApproach</firstapproachsound>
+		<approachsound>MeteorWhoosh</approachsound>
+		<minthrowdistance>6.0</minthrowdistance>
+		<maxthrowdistance>10.0</maxthrowdistance>
+		<minthrowheight>1.0</minthrowheight>
+		<maxthrowheight>2.0</maxthrowheight>
+		<minthrowvelocity>10.0</minthrowvelocity>
+		<maxthrowvelocity>20.0</maxthrowvelocity>
+	</power>
+	<power name="MCMT_Undermine" type="Undermine" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_UNDERMINE</displaynameid>
+		<rolloverid>STR_POWER_MCMT_UNDERMINE_LR</rolloverid>
+		<icon>norse\static_color\god_powers\undermine_icon.png</icon>
+		<placement>Full</placement>
+		<vectorplacement></vectorplacement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">UndermineBirth</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" loop="">UndermineExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<playsbattlemusic></playsbattlemusic>
+		<activetime>15.0</activetime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<fasteststriketime>1.0</fasteststriketime>
+		<camerashake duration="0.50" strength="0.25"></camerashake>
+		<rangeindicator range="34.0" width="15.0">Arrow</rangeindicator>
+		<attackproto>UndermineDamage</attackproto>
+		<damageradius>5.0</damageradius>
+		<deformdepth>0.10</deformdepth>
+		<attackintervalseconds>0.1</attackintervalseconds>
+		<attacktarget instantkill="1">WallGate</attacktarget>
+		<attacktarget instantkill="1">WallLong</attacktarget>
+		<attacktarget instantkill="1">WallMedium</attacktarget>
+		<attacktarget instantkill="1">WallShort</attacktarget>
+		<attacktarget instantkill="1">WallConnector</attacktarget>
+		<attacktarget instantkill="1">SentryTower</attacktarget>
+		<attacktarget instantkill="1">MirrorTower</attacktarget>
+		<attacktarget instantkill="1">Building</attacktarget>
+	</power>
+	<power name="MCMT_AbilityKingFolstagFrigidBreath" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_FROST_GIANT</displaynameid>
+		<rolloverid>STR_ABILITY_FROST_GIANT_LR</rolloverid>
+		<icon>spc\static_color\abilities\king_folstag_ability_frigid_breath_icon.png</icon>
+		<placement enemy="">Unit</placement>
+		<abstractplacementtargettype>HumanSoldier</abstractplacementtargettype>
+		<abstractplacementtargettype>LogicalTypeMythUnitNotTitan</abstractplacementtargettype>
+		<abstractplacementtargettype>LogicalTypeVillagerNotHero</abstractplacementtargettype>
+		<abstractplacementtargettype>Hero</abstractplacementtargettype>
+		<abstractplacementtargettype>Huntable</abstractplacementtargettype>
+		<unitaction>FreezeAttack</unitaction>
+	</power>
+	<power name="MCMT_ForestFire" type="ForestFire" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_FOREST_FIRE</displaynameid>
+		<rolloverid>STR_POWER_FOREST_FIRE_LR</rolloverid>
+		<icon>norse\static_color\god_powers\forest_fire_icon.png</icon>
+		<placement natureonly="">Unit</placement>
+		<abstractplacementtargettype>Tree</abstractplacementtargettype>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">ForestFireBirth</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" loop="1" positional="1">ForestFireExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>30.0</activetime>
+		<fasteststriketime>0.5</fasteststriketime>
+		<sloweststriketime>0.5</sloweststriketime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<abstractattacktargettype>Building</abstractattacktargettype>
+		<attackproto>ForestFire</attackproto>
+		<vfxproto>VFXForestFire</vfxproto>
+		<embersproto>ForestFireEmbers</embersproto>
+		<burnlength>30.0</burnlength>
+		<burnfadelength>20.0</burnfadelength>
+		<treedestructionseconds>3.0</treedestructionseconds>
+		<emberlifespan>16.0</emberlifespan>
+		<treesearchradius>6.0</treesearchradius>
+		<damagesearchradius>6.0</damagesearchradius>
+	</power>
+	<power name="MCMT_Frost" type="Frost" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_FROST</displaynameid>
+		<rolloverid>STR_POWER_MCMT_FROST_LR</rolloverid>
+		<icon>norse\static_color\god_powers\frost_icon.png</icon>
+		<placement>Full</placement>
+		<rangeindicator range="23.5" speed="1.5">Circle</rangeindicator>
+		<reveallos radius="23.0">Revealer</reveallos>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">IceStereo</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" loop="">FrostExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>50.0</activetime>
+		<radius>23.0</radius>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<fasteststriketime>0.5</fasteststriketime>
+		<sloweststriketime>1.0</sloweststriketime>
+		<stormprotounit>VFXIceSheet</stormprotounit>
+		<snowdriftprotounit>VFXSnowDrift</snowdriftprotounit>
+		<fastestdrifttime>4.0</fastestdrifttime>
+		<slowestdrifttime>8.0</slowestdrifttime>
+		<freezeexpansiontime>3.0</freezeexpansiontime>
+		<freezetransitiontime>1.5</freezetransitiontime>
+		<freezeholdtime>45.0</freezeholdtime>
+		<armoramount>0.00</armoramount>
+	</power>
+	<power name="MCMT_Spy" type="Spy" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_SPY</displaynameid>
+		<rolloverid>STR_POWER_SPY_LR</rolloverid>
+		<icon>norse\static_color\god_powers\spy_icon.png</icon>
+		<placement enemy="" allownature="">Unit</placement>
+		<abstractplacementtargettype>Unit</abstractplacementtargettype>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<soundset type="StartSound" listenertype="Ally">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAlly">SpyBirth</soundset>
+		<soundset type="EndSound" listenertype="Ally">GodPowerEnd</soundset>
+		<activetime>-1</activetime>
+		<spyprotounit>SpyEye</spyprotounit>
+	</power>
+	<power name="MCMT_ServantOfKronosLand" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_AIR</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_AIR_LR</rolloverid>
+		<icon>egyptian\static_color\abilities\roc_ability_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_ServantOfKronosFlying</abstractplacementtargettype>
+		<unitaction>DelayedTransform1</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+		<power name="MCMT_ServantOfKronosTakeoff" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_LANDED</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_LANDED_LR</rolloverid>
+		<icon>egyptian\static_color\abilities\roc_ability_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_ServantOfKronos</abstractplacementtargettype>
+		<unitaction>DelayedTransform1</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_ServantOfKronosTurnCentimanus" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TRANSFORM</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TURN_CENTIMANUS_LR</rolloverid>
+		<icon>atlantean\player_color\units\centimanus_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_ServantOfKronos</abstractplacementtargettype>
+		<unitaction>DelayedTransform2</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_ServantOfKronosTurnCaladria" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TRANSFORM</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TURN_CALADRIA_LR</rolloverid>
+		<icon>atlantean\player_color\units\caladria_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_ServantOfKronosFlying</abstractplacementtargettype>
+		<unitaction>DelayedTransform2</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_ServantOfKronosTurnStymphalianBird" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TRANSFORM</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TURN_STYMPHALIAN_BIRD_LR</rolloverid>
+		<icon>atlantean\player_color\units\stymphalian_bird_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_ServantOfKronosFlying</abstractplacementtargettype>
+		<unitaction>DelayedTransform3</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_ServantOfKronosTurnKrios" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TRANSFORM</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TURN_KRIOS_LR</rolloverid>
+		<icon>spc\player_color\units\krios_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_ServantOfKronos</abstractplacementtargettype>
+		<unitaction>DelayedTransform3</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_ServantOfKronosRevertLand" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_REVERT</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_REVERT_LR</rolloverid>
+		<icon>spc\player_color\units\servant_of_kronos_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_CentimanusShapeshifted</abstractplacementtargettype>
+		<abstractplacementtargettype>MCMT_Krios</abstractplacementtargettype>
+		<unitaction>DelayedTransform</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+		<power name="MCMT_ServantOfKronosRevertTakeoff" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_REVERT</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_REVERT_LR</rolloverid>
+		<icon>spc\player_color\units\servant_of_kronos_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_CaladriaShapeshifted</abstractplacementtargettype>
+		<abstractplacementtargettype>MCMT_StymphalianBirdShapeshifted</abstractplacementtargettype>
+		<unitaction>DelayedTransform</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_SkultLand" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TRANSFORM</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SKULT_AIR_LR</rolloverid>
+		<icon>spc\player_color\units\skult_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_RavenSkult</abstractplacementtargettype>
+		<unitaction>DelayedTransform1</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_SkultTakeoff" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_MCMT_SERVANT_OF_KRONOS_TRANSFORM</displaynameid>
+		<rolloverid>STR_ABILITY_MCMT_SKULT_LANDED_LR</rolloverid>
+		<icon>norse\player_color\units\raven_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_Skult</abstractplacementtargettype>
+		<unitaction>DelayedTransform1</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_Deconstruction" type="Deconstruction" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_DECONSTRUCTION</displaynameid>
+		<rolloverid>STR_POWER_DECONSTRUCTION_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\deconstruction_icon.png</icon>
+		<placement enemy="" fullybuiltonly="">Unit</placement>
+		<abstractplacementtargettype>LogicalTypeTartarianGateValidOverlapPlacement</abstractplacementtargettype>
+		<explicitlyrestrictedplacementtargettype>VillageCenter</explicitlyrestrictedplacementtargettype>
+		<explicitlyrestrictedplacementtargettype>Tent</explicitlyrestrictedplacementtargettype>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="Caster">DeconstructionBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>-1</activetime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<cracksoundset>DeconstructionDestruction</cracksoundset>
+		<crackintervalmin>2.0</crackintervalmin>
+		<crackintervalmax>4.0</crackintervalmax>
+		<timefactor>0.4</timefactor>
+	</power>
+	<power name="MCMT_TeleportShiftingSands" type="ShiftingSands" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_MCMT_TELEPORT_SHIFTING_SANDS</displaynameid>
+		<rolloverid>STR_POWER_MCMT_TELEPORT_SHIFTING_SANDS_LR</rolloverid>
+		<icon>atlantean\static_color\abilities\time_shift_ability_icon.png</icon>
+		<!-- <placement disallowwatercast="">Full</placement> -->
+		<placement>Skip</placement>
+		<rangeindicator range="3.0" speed="0.2">Circle</rangeindicator>
+		<dualpowermindistance>1.0</dualpowermindistance>
+		<soundset type="StartSound" listenertype="All">GodPowerStart</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>1.0</activetime>
+		<radius>3.0</radius>
+		<powerplayerrelation>All</powerplayerrelation>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<abstractattacktargettype>Building</abstractattacktargettype>
+		<scaninterval>0.250</scaninterval>
+		<unitfadetime>1.0</unitfadetime>
+		<placementradius>1</placementradius>
+		<rangeindicator range="3" speed="0.2">Circle</rangeindicator>
+		<inportalprotounit>VFXShiftingSandsIn</inportalprotounit>
+		<outportalprotounit>VFXShiftingSandsOut</outportalprotounit>
+		<outportalspawntime>0.0</outportalspawntime>
+	</power>
+	<power name="MCMT_Ancestors" type="TempUnit" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_MCMT_ANCESTORS</displaynameid>
+		<rolloverid>STR_POWER_ANCESTORS_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\ancestors_icon.png</icon>
+		<placement>Full</placement>
+		<rangeindicator range="16" speed="0.2">Circle</rangeindicator>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">AncestorsBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>60.0</activetime>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="0.0" waterprotoid="MCMT_CharonFerry">MCMT_Mummy</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="0.5" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="2.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="3.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="4.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="5.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="6.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="7.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="8.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="9.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="10.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="11.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+		<createunit quantity="1" minradius="0" maxradius="16" delay="13.0" waterprotoid="MCMT_LostShip">MCMT_Minion</createunit>
+	</power>
+	<power name="MCMT_DwarvenMine" type="DwarvenMine" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_DWARVEN_MINE</displaynameid>
+		<rolloverid>STR_POWER_DWARVEN_MINE_LR</rolloverid>
+		<icon>norse\static_color\god_powers\dwarven_mine_icon.png</icon>
+		<placement disallowwatercast="" losprotounit="MineDwarvenLarge" allowsnap="">Full</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="Caster">DwarvenMineBirth</soundset>
+		<activetime>3.0</activetime>
+		<createunit quantity="1" radius="0.0" delay="0.0" norandomrotate="" permanent="">MineDwarvenLarge</createunit>
+		<ageadjustment goldamount="500.01" gatherratemultiplier="1.0">ArchaicAge</ageadjustment>
+		<ageadjustment goldamount="1000.01" gatherratemultiplier="1.1">ClassicalAge</ageadjustment>
+		<ageadjustment goldamount="3000.01" gatherratemultiplier="1.25">HeroicAge</ageadjustment>
+		<ageadjustment goldamount="6000.01" gatherratemultiplier="1.5">MythicAge</ageadjustment>
+		<ageadjustment goldamount="7500.01" gatherratemultiplier="1.75">WonderAge</ageadjustment>
+	</power>
+	<power name="MCMT_Prosperity" type="Prosperity" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_PROSPERITY</displaynameid>
+		<rolloverid>STR_POWER_PROSPERITY_LR</rolloverid>
+		<icon>egyptian\static_color\god_powers\prosperity_icon.png</icon>
+		<placement>Skip</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">ProsperityBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>50.0</activetime>
+		<radius>12.0</radius>
+		<powerplayerrelation>Player</powerplayerrelation>
+		<largesfxprotoid>VFXProsperityLarge</largesfxprotoid>
+		<smallsfxprotoid>VFXProsperitySmall</smallsfxprotoid>
+		<abstracttype>GoldDropsite</abstracttype>
+		<abstracttype>Market</abstracttype>
+		<effect type="WorkRate" action="Gather" unittype="GoldResource" relativity="BasePercent" amount="2.00">
+			<target type="ProtoUnit">AbstractVillager</target>
+		</effect>
+		<effect type="WorkRate" action="Trade" unittype="AbstractTownCenter" relativity="BasePercent" amount="1.50">
+			<target type="ProtoUnit">TradeUnit</target>
+		</effect>
+	</power>
+	<power name="MCMT_Tempest" type="Tempest" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_TEMPEST</displaynameid>
+		<rolloverid>STR_POWER_TEMPEST_LR</rolloverid>
+		<icon>norse_freyr\static_color\god_powers\tempest_icon.png</icon>
+		<placement>Full</placement>
+		<reveallos radius="20.0">Revealer</reveallos>
+		<rangeindicator range="23.0" speed="0.2">Circle</rangeindicator>
+		<camerashake duration="0.05" strength="0.05"></camerashake>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">LightThunder</soundset>
+		<soundset type="BuildUp" listenertype="IfOnScreenAll">TempestBirth</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" positional="" loop="" fadein="2.0">TempestWind</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<builduptime>1.3</builduptime>
+		<playsbattlemusic></playsbattlemusic>
+		<activetime>25.0</activetime>
+		<abstractattacktargettype>MilitaryUnit</abstractattacktargettype>
+		<abstractattacktargettype>EconomicUnit</abstractattacktargettype>
+		<abstractattacktargettype>Building</abstractattacktargettype>
+		<explicitlyrestrictedattacktargettype>Settlement</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>SonOfOsiris</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>AbstractTitan</explicitlyrestrictedattacktargettype>
+		<explicitlyrestrictedattacktargettype>AbstractFlyingUnit</explicitlyrestrictedattacktargettype>
+		<accuracy>0.75</accuracy>
+		<radius>17.0</radius>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<fasteststriketime>0.02</fasteststriketime>
+		<sloweststriketime>0.20</sloweststriketime>
+		<lightset>gp_tempest</lightset>
+		<strikeproto>TempestStrike</strikeproto>
+		<icesheetvfxproto>VFXTempestFloor</icesheetvfxproto>
+		<groundimpactvfxproto>VFXTempestHailImpact</groundimpactvfxproto>
+		<strikesoundset>TempestStrike</strikesoundset>
+		<strikeheight>25.0</strikeheight>
+		<strikeminoffset>0.0</strikeminoffset>
+		<strikemaxoffset>0.1</strikemaxoffset>
+		<cloudbuildupstarttime>0.0</cloudbuildupstarttime>
+		<cloudbuildupendtime>3.0</cloudbuildupendtime>
+		<cloudfadeoutstarttime>37.0</cloudfadeoutstarttime>
+		<cloudfadeoutendtime>40.0</cloudfadeoutendtime>
+		<fastestdrifttime>4.0</fastestdrifttime>
+		<slowestdrifttime>8.0</slowestdrifttime>
+		<treebendstrengthmin>-0.1</treebendstrengthmin>
+		<treebendstrengthmax>0.1</treebendstrengthmax>
+		<treebendperiodmin>2.5</treebendperiodmin>
+		<treebendperiodmax>4.0</treebendperiodmax>
+	</power>
+	<power name="MCMT_Inferno" type="Stampede" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_INFERNO</displaynameid>
+		<rolloverid>STR_POWER_INFERNO_LR</rolloverid>
+		<icon>norse_freyr\static_color\god_powers\inferno_icon.png</icon>
+		<placement nolosextraloc="">Full</placement>
+		<dualpowermindistance>3.0</dualpowermindistance>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">InfernoBirth</soundset>
+		<soundset type="StartSound" listenertype="All">InfernoBuildUp</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<builduptime>1.0</builduptime>
+		<activetime>-1</activetime>
+		<shutdowntime>7.0</shutdowntime>
+		<shutdownfadetime>1.5</shutdownfadetime>
+		<playsbattlemusic></playsbattlemusic>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<fasteststriketime>1.0</fasteststriketime>
+		<camerashake duration="2.00" strength="0.25"></camerashake>
+		<lightset>gp_inferno</lightset>
+		<rangeindicator range="35.0" width="14.0">Arrow</rangeindicator>
+		<fulllength></fulllength>
+		<stampede scale="1" attackaction="HandAttack" attackinterval="200" animrate="1.5">Fenrir</stampede>
+	</power>
+	<power name="MCMT_UnderworldPassage" type="Teleport" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_UNDERWORLD_PASSAGE</displaynameid>
+		<rolloverid>STR_POWER_UNDERWORLD_PASSAGE_LR</rolloverid>
+		<icon>greek\static_color\god_powers\underworld_passage_icon.png</icon>
+		<placement disallowwatercast="" losprotounit="UnderworldPassage" allowsnap="">Full</placement>
+		<dualpowermindistance>30.0</dualpowermindistance>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">UnderworldPassageSelect</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll" usesecondlocation="1">UnderworldPassageSelect</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" playdelay="20.0" positional="">UnderworldPassageExists</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" playdelay="20.0" positional="" usesecondlocation="1">UnderworldPassageExists</soundset>
+		<activetime>-1</activetime>
+		<inportal>UnderworldPassage</inportal>
+		<outportal>UnderworldPassage</outportal>
+	</power>
+	<power name="MCMT_CeaseFire" type="CeaseFire" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_CEASE_FIRE</displaynameid>
+		<rolloverid>STR_POWER_CEASE_FIRE_LR</rolloverid>
+		<icon>greek\static_color\god_powers\ceasefire_icon.png</icon>
+		<placement>Skip</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="All">CeaseFireBirth</soundset>
+		<soundset type="ExistSound" listenertype="All" playdelay="12.0">CeaseFireExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>30.0</activetime>
+		<exclusive></exclusive>
+		<vfxproto>VFXDoves</vfxproto>
+		<attachvfxto>AbstractSettlement</attachvfxto>
+		<effect type="BuildPoints" relativity="BasePercent" amount="2.00">
+			<target type="ProtoUnit">LogicalTypeAffectedByCeaseFireBuildingSlow</target>
+		</effect>
+	</power>
+	<power name="MCMT_Lure" type="Lure" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_LURE</displaynameid>
+		<rolloverid>STR_POWER_LURE_LR</rolloverid>
+		<icon>greek\static_color\god_powers\lure_icon.png</icon>
+		<placement disallowwatercast="" losprotounit="Lure" allowsnap="">Full</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAlly">LureSelect</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" playdelay="20.0" positional="">LureExists</soundset>
+		<activetime>-1</activetime>
+		<lureproto>Lure</lureproto>
+		<minrange>50.0</minrange>
+		<maxrange>200.0</maxrange>
+		<attractrate>30.0</attractrate>
+		<variance>0.0</variance>
+		<spawnproto>Chicken</spawnproto>
+		<spawnvfx>VFXLure</spawnvfx>
+		<ageinfo maxfood="1200" numspawns="3">1</ageinfo>
+		<ageinfo maxfood="1300" numspawns="4">2</ageinfo>
+		<ageinfo maxfood="1500" numspawns="6">3</ageinfo>
+		<ageinfo maxfood="1900" numspawns="10">4</ageinfo>
+		<ageinfo maxfood="3000" numspawns="15">5</ageinfo>
+		<attracttype>Herdable</attracttype>
+		<attracttype>Huntable</attracttype>
+		<attractiondistancetocountagainstcap>40.0</attractiondistancetocountagainstcap>
+	</power>
+	<power name="MCMT_HealingSpring" type="TempUnit" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_HEALING_SPRING</displaynameid>
+		<rolloverid>STR_POWER_MCMT_HEALING_SPRING_LR</rolloverid>
+		<icon>norse\static_color\god_powers\healing_spring_icon.png</icon>
+		<placement disallowwatercast="" losprotounit="MCMT_HealingSpring" allowsnap="">Full</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="Caster">HealingSpringBirth</soundset>
+		<activetime>3.0</activetime>
+		<createunit quantity="1" radius="0.00" norandomrotate="" permanent="" delay="0.0">MCMT_HealingSpring</createunit>
+		<createunit quantity="1" radius="0.00" norandomrotate="" permanent="" delay="0.0">PathBlock1</createunit>
+	</power>
+	<power name="MCMT_FlamingWeapons" type="FlamingWeapons" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_FLAMING_WEAPONS</displaynameid>
+		<rolloverid>STR_POWER_FLAMING_WEAPONS_LR</rolloverid>
+		<icon>norse\static_color\god_powers\flaming_weapons_icon.png</icon>
+		<placement>Skip</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">FlamingWeaponsBirth</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<playsbattlemusic></playsbattlemusic>
+		<activetime>50</activetime>
+		<powerplayerrelation>Player</powerplayerrelation>
+		<effect type="Damage" relativity="Percent" amount="1.75">
+			<target type="ProtoUnit">HumanSoldier</target>
+		</effect>
+		<effect type="Damage" relativity="Percent" amount="1.75">
+			<target type="ProtoUnit">Hero</target>
+		</effect>
+		<effect type="Damage" relativity="Percent" amount="1.75">
+			<target type="ProtoUnit">Ship</target>
+		</effect>
+		<effect type="TechActivate">
+			<target type="Tech">FlamingWeaponsActive</target>
+		</effect>
+		<effect type="UpdateVisuals" unittype="Hero">
+			<target type="Player"></target>
+		</effect>
+	</power>
+	<power name="MCMT_AsgardianBastion" type="TempUnit" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_ASGARDIAN_BASTION</displaynameid>
+		<rolloverid>STR_POWER_ASGARDIAN_BASTION_LR</rolloverid>
+		<icon>norse_freyr\static_color\god_powers\asgardian_bastion_icon.png</icon>
+		<placement losprotounit="AsgardianHillFort" allowsnap="">Full</placement>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="Caster">AsgardianBastionBirth</soundset>
+		<activetime>3.0</activetime>
+		<createunit quantity="1" radius="0.00" foundation="" norandomrotate="" permanent="" delay="0.0">AsgardianHillFort</createunit>
+	</power>
+	<power name="MCMT_GreatHunt" type="GreatHunt" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_GREAT_HUNT</displaynameid>
+		<rolloverid>STR_POWER_GREAT_HUNT_LR</rolloverid>
+		<icon>norse\static_color\god_powers\great_hunt_icon.png</icon>
+		<placement disallowwatercastradius="">Full</placement>
+		<rangeindicator range="10" speed="0.2">Circle</rangeindicator>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">GreatHuntBirth</soundset>
+		<activetime>3.0</activetime>
+		<radius>10.0</radius>
+		<abstractattacktargettype>Huntable</abstractattacktargettype>
+		<maxfood age="1">600.0</maxfood>
+		<maxfood age="2">1000.0</maxfood>
+		<maxfood age="3">1200.0</maxfood>
+		<maxfood age="4">2100.0</maxfood>
+		<maxfood age="5">3500.0</maxfood>
+		<vfxproto>VFXGreatHunt</vfxproto>
+		<spawnproto>Elk</spawnproto>
+		<spawnfoodratio>0.5</spawnfoodratio>
+	</power>
+	<power name="MCMT_OrbitalStrike" type="ForestFire" godpower="" mergeMode="add">
+		<displaynameid>STR_POWER_FOREST_FIRE</displaynameid>
+		<rolloverid>STR_POWER_FOREST_FIRE_LR</rolloverid>
+		<icon>norse\static_color\god_powers\forest_fire_icon.png</icon>
+		<placement natureonly="">Unit</placement>
+		<abstractplacementtargettype>MilitaryUnit</abstractplacementtargettype>
+		<abstractplacementtargettype>Building</abstractplacementtargettype>
+		<abstractplacementtargettype>Tree</abstractplacementtargettype>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">ForestFireBirth</soundset>
+		<soundset type="ExistSound" listenertype="IfOnScreenAll" loop="1" positional="1">ForestFireExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>30.0</activetime>
+		<fasteststriketime>0.5</fasteststriketime>
+		<sloweststriketime>0.5</sloweststriketime>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<abstractattacktargettype>Building</abstractattacktargettype>
+		<attackproto>ForestFire</attackproto>
+		<vfxproto>VFXForestFire</vfxproto>
+		<embersproto>ForestFireEmbers</embersproto>
+		<burnlength>30.0</burnlength>
+		<burnfadelength>20.0</burnfadelength>
+		<treedestructionseconds>1.0</treedestructionseconds>
+		<emberlifespan>16.0</emberlifespan>
+		<treesearchradius>6.0</treesearchradius>
+		<damagesearchradius>6.0</damagesearchradius>
+	</power>
+	<power name="MCMT_VillagerTurnBerserk" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_MCMT_TRANSFORM_TO_BERSERK</displaynameid>
+		<rolloverid>STR_MCMT_TRANSFORM_TO_BERSERK_LR</rolloverid>
+		<icon>norse\player_color\units\berserk_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_VillagerNorse</abstractplacementtargettype>
+		<abstractplacementtargettype>MCMT_VillagerDwarf</abstractplacementtargettype>
+		<unitaction>DelayedTransform</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_BerserkTurnVillagerNorse" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_MCMT_TRANSFORM_TO_GATHERER</displaynameid>
+		<rolloverid>STR_MCMT_TRANSFORM_TO_GATHERER_LR</rolloverid>
+		<icon>norse\player_color\units\villager_norse_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_Berserk</abstractplacementtargettype>
+		<abstractplacementtargettype>MCMT_VillagerDwarf</abstractplacementtargettype>
+		<unitaction>DelayedTransform1</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_BerserkTurnVillagerDwarf" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_MCMT_TRANSFORM_TO_DWARF</displaynameid>
+		<rolloverid>STR_MCMT_TRANSFORM_TO_DWARF_LR</rolloverid>
+		<icon>norse\player_color\units\villager_dwarf_icon.png</icon>
+		<activetime>1</activetime>
+		<radius>3.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>MCMT_VillagerNorse</abstractplacementtargettype>
+		<abstractplacementtargettype>MCMT_Berserk</abstractplacementtargettype>
+		<unitaction>DelayedTransform2</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="MCMT_AbstractUnitTransform" type="UnitAction" mergeMode="add">
+		<displaynameid>STR_ABILITY_ROC</displaynameid>
+		<rolloverid>STR_ABILITY_ROC_LR</rolloverid>
+		<icon>egyptian\static_color\abilities\roc_ability_icon.png</icon>
+		<activetime>4</activetime>
+		<radius>5.0</radius>
+		<placement ally="">Unit</placement>
+		<abstractplacementtargettype>Unit</abstractplacementtargettype>
+		<unitaction>DelayedTransform</unitaction>
+		<allowduringnorush>1</allowduringnorush>
+	</power>
+	<power name="AbilityPsionicDecimatorSuperweapon" type="Implode" godpower="">
+		<displaynameid>STR_POWER_PSIONIC_DECIMATOR</displaynameid>
+		<rolloverid>STR_POWER_PSIONIC_DECIMATOR_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\implode_icon.png</icon>
+		<placement>Full</placement>
+		<reveallos radius="30.0">Revealer</reveallos>
+		<minimapeventtime sendalertto="All">10.0</minimapeventtime>
+		<rangeindicator range="25.0" speed="0.2">Circle</rangeindicator>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<soundset type="Manual" listenertype="IfOnScreenAll" loop="">ImplodeExists1</soundset>
+		<soundset type="Manual" listenertype="IfOnScreenAll" loop="">ImplodeExists2</soundset>
+		<playsbattlemusic>
+		</playsbattlemusic>
+		<activetime>-1</activetime>
+		<powerblocker>30</powerblocker>
+		<abstractattacktargettype>LogicalTypeValidShockwaveTarget</abstractattacktargettype>
+		<explicitlyrestrictedattacktargettype>Ally</explicitlyrestrictedattacktargettype>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<cost>350.0</cost>
+		<repeatcost>5.0</repeatcost>
+		<sphereproto>ImplodeSphere</sphereproto>
+		<shockwaveproto>ImplodeShockwave</shockwaveproto>
+		<vfxpulleffectproto>VFXImplodePullEffect</vfxpulleffectproto>
+		<implodestartsoundset>ImplodeBirth</implodestartsoundset>
+		<implodeexplodesoundset>ImplodeDeath</implodeexplodesoundset>
+		<implodehitsoundset>ImplodeHit</implodehitsoundset>
+		<implodeexplosionwindupsoundset>ImplodeWindup</implodeexplosionwindupsoundset>
+		<explosionwinduplength>1.396</explosionwinduplength>
+		<pullradius>25.0</pullradius>
+		<exploderadius>35.0</exploderadius>
+		<unitescaperadius>35.0</unitescaperadius>
+		<damageintervalseconds>1.0</damageintervalseconds>
+		<pullstrengthincrement>0.1</pullstrengthincrement>
+		<maximumpullstrength>1.0</maximumpullstrength>
+		<pullstrengthoverkillincrement>0.1</pullstrengthoverkillincrement>
+		<pullstrengthadjustfactor>0.06</pullstrengthadjustfactor>
+		<unitacceleration>4.0</unitacceleration>
+		<poweraccumulationincrement>0.1</poweraccumulationincrement>
+		<maximumaccumulatedpower>1.0</maximumaccumulatedpower>
+		<spherescalemultiplier>1.2</spherescalemultiplier>
+		<shearmultiplier>0.2</shearmultiplier>
+		<baseshearincrement>0.1</baseshearincrement>
+		<baseshearmax>1.0</baseshearmax>
+		<unitimplodetimedelaymin>0.15</unitimplodetimedelaymin>
+		<unitimplodetimedelaymax>0.25</unitimplodetimedelaymax>
+		<unitimplodeendtimedelaymin>0.01</unitimplodeendtimedelaymin>
+		<unitimplodeendtimedelaymax>0.1</unitimplodeendtimedelaymax>
+		<spheretargetheight>3.0</spheretargetheight>
+		<sphereheightadjustfactor>2.0</sphereheightadjustfactor>
+		<unitfloatadjustfactor>0.3</unitfloatadjustfactor>
+		<spheremovementdelay>2.0</spheremovementdelay>
+		<mintimeinstagestarting>3.0</mintimeinstagestarting>
+		<mintimeinstagepullingunits>4.0</mintimeinstagepullingunits>
+		<mintimeinstageexploding>3.0</mintimeinstageexploding>
+		<explosiondelay>1.6</explosiondelay>
+		<shockwavevelocity>67.2</shockwavevelocity>
+		<outerorbitradiussquared>225.0</outerorbitradiussquared>
+		<middleorbitradiussquared>100.0</middleorbitradiussquared>
+		<innerorbitradiussquared>25.0</innerorbitradiussquared>
+		<outerorbitangularacceleration>0.5</outerorbitangularacceleration>
+		<middleorbitangularacceleration>2.5</middleorbitangularacceleration>
+		<innerorbitangularacceleration>14.0</innerorbitangularacceleration>
+		<initialrumblecamerashakeduration>3.0</initialrumblecamerashakeduration>
+		<initialrumblecamerashakestrength>0.05</initialrumblecamerashakestrength>
+		<unitdeathcamerashakeduration>0.1</unitdeathcamerashakeduration>
+		<unitdeathcamerashakestrength>0.1</unitdeathcamerashakestrength>
+		<explosioncamerashakeduration>0.8</explosioncamerashakeduration>
+		<explosioncamerashakestrength>0.3</explosioncamerashakestrength>
+		<minthrowdistance>15.0</minthrowdistance>
+		<maxthrowdistance>25.0</maxthrowdistance>
+		<minthrowheight>1.0</minthrowheight>
+		<maxthrowheight>2.0</maxthrowheight>
+		<minthrowvelocity>15.0</minthrowvelocity>
+		<maxthrowvelocity>22.0</maxthrowvelocity>
+	</power>
+		<power name="AbilityPsionicLevitation" type="Shockwave" godpower="">
+		<displaynameid>STR_POWER_PSIONIC_LEVITATION</displaynameid>
+		<rolloverid>STR_POWER_PSIONIC_LEVITATION_LR</rolloverid>
+		<icon>atlantean\static_color\god_powers\shockwave_icon.png</icon>
+		<placement>Full</placement>
+		<minimapeventtime sendalertto="All">10.0</minimapeventtime>
+		<rangeindicator range="5.0" speed="0.3">Circle</rangeindicator>
+		<reveallos radius="5.0">Revealer</reveallos>
+		<camerashake duration="0.10" strength="0.20" range="40.0">
+		</camerashake>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">ShockwaveBirth</soundset>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<activetime>3.0</activetime>
+		<radius>5.0</radius>
+		<powerplayerrelation>Enemy</powerplayerrelation>
+		<abstractattacktargettype>LogicalTypeValidShockwaveTarget</abstractattacktargettype>
+		<terrainrumbling height="1.20" width="1.0" speed="25.0" fadetime="0.2">
+		</terrainrumbling>
+		<cost>15.0</cost>
+		<repeatcost>15.0</repeatcost>
+		<stunlength>1.0</stunlength>
+		<shockwavevfx>VFXShockwave</shockwavevfx>
+		<minthrowdistance>7.0</minthrowdistance>
+		<maxthrowdistance>9.0</maxthrowdistance>
+		<minthrowheight>1.0</minthrowheight>
+		<maxthrowheight>2.0</maxthrowheight>
+		<minthrowvelocity>12.0</minthrowvelocity>
+		<maxthrowvelocity>13.0</maxthrowvelocity>
+	</power>
+	<power name="AbilityTsunamiGenerator" type="GreatFlood" godpower="">
+		<displaynameid>STR_POWER_GREAT_FLOOD</displaynameid>
+		<rolloverid>STR_POWER_GREAT_FLOOD_LR</rolloverid>
+		<icon>chinese\static_color\god_powers\great_flood_icon.png</icon>
+		<placement>Full</placement>
+		<vectorplacement>
+		</vectorplacement>
+		<rangeindicator range="60.0" width="75.0">Arrow</rangeindicator>
+		<camerashake duration="0.50" strength="0.25" range="40.0">
+		</camerashake>
+		<minimapeventtime sendalertto="All">10.0</minimapeventtime>
+		<soundset type="StartSound" listenertype="AllExceptCaster">GodPowerStart</soundset>
+		<soundset type="StartSound" listenertype="IfOnScreenAll">GreatFloodBirth</soundset>
+		<soundset type="ExistSound" listenertype="All" loop="" positional="">GreatFloodExists</soundset>
+		<soundset type="EndSound" listenertype="All">GodPowerEnd</soundset>
+		<activetime>10.0</activetime>
+		<cost>350</cost>
+		<repeatcost>5</repeatcost>
+		<shutdowntime>3.0</shutdowntime>
+		<powerplayerrelation>All</powerplayerrelation>
+		<abstractattacktargettype>Unit</abstractattacktargettype>
+		<abstractattacktargettype>Tree</abstractattacktargettype>
+		<abstractattacktargettype>Building</abstractattacktargettype>
+		<explicitlyrestrictedattacktargettype>AbstractFarm</explicitlyrestrictedattacktargettype>
+		<waveprotounit>GreatFlood</waveprotounit>
+		<wavecount>5</wavecount>
+		<spacingdistance>10.0</spacingdistance>
+		<waveradius>5.0</waveradius>
+		<initialattackname>InitialAttack</initialattackname>
+		<initialvelocity>0.0</initialvelocity>
+		<finalvelocity>7.0</finalvelocity>
+		<ramptime>5.0</ramptime>
+		<attackinterval>0.25</attackinterval>
+    </power>
+</powersmod>

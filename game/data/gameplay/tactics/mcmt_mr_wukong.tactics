@@ -1,0 +1,21 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_BUILD">Build</name>
+    <type>Build</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+    <rate type="Building">1.0</rate>
+    <typedmaxrange type="Dock">2.0</typedmaxrange>
+    <typedanim type="AbstractFarm">Sow</typedanim>
+    <typedanim type="Excavation">Dig</typedanim>
+    <typedanim type="DigPile">Dig</typedanim>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_REPAIR">Repair</name>
+    <type>Repair</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+    <typedmaxrange type="Dock">2.0</typedmaxrange>
+  </action>
+  <tactic>Default<action>Build</action><action>Repair</action></tactic>
+</tactics>

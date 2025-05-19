@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_RANGED_DIVINE">DivineRangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>	
+  </action>
+   <action>
+    <name>ChargedRangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>99.0</trackrating>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="LogicalTypeRangedUnitsAttack">1.0</rate>
+  </action>
+  <action>
+    <name>ReleaseSkyLantern</name>
+    <type>ReleaseSkyLantern</type>
+    <chargeaction>1</chargeaction>
+    <autocastbyself>1</autocastbyself>
+  </action>
+  <tactic>Default<action priority="100">ChargedRangedAttack</action><action priority="90">DivineRangedAttack</action><action priority="80">RangedAttack</action><action>ReleaseSkyLantern</action><attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype></tactic>
+</tactics>	

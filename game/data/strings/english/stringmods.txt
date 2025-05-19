@@ -1,0 +1,118 @@
+ID = "STR_UNIT_TRAVELER_OX_CART_NAME"   ;   Str = "Traveler's Ox Wagon"
+ID = "STR_UNIT_TRAVELER_OX_CART_LR"   ;   Str = "Desgined to help Merchants to travel in long distances with their precious supplies"
+ID = "STR_UNIT_TRAVELER_OX_CART_SR"   ;   Str = "T.O.W"
+ID = "STR_UNIT_LANDLORD_NAME"   ;   Str = "Landlord"
+ID = "STR_UNIT_LANDLORD_LR"   ;   Str = "Elite Infantry. All-around. Head of Household and stronger than the basic variant."
+ID = "STR_UNIT_CHIEFTAIN_NAME"   ;   Str = "Chieftain"
+ID = "STR_UNIT_CHIEFTAIN_LR"   ;   Str = "Veteran Tribal Villager. Faster, Stronger, Tougher."
+ID = "STR_UNIT_CONAN_NAME"   ;   Str = "Conan"
+ID = "STR_UNIT_MATSURIYURIO_NAME"   ;   Str = "Matsuri Yurio"
+ID = "STR_UNIT_MATSURIYURIO_SR"   ;   Str = "Psionic Commando"
+ID = "STR_UNIT_MATSURIYURIO_LR"   ;   Str = "Highschool girl broken free from psionics research facility in the Rising Sun Empire in an alternative timeline"
+ID = "STR_UNIT_MATSURIAZULA_NAME"   ;   Str = "Matsuri Azula"
+ID = "STR_UNIT_MATSURIAZULA_SR"   ;   Str = "Secret Weapon of Rising Sun CyberTech Labs"
+ID = "STR_UNIT_MATSURIAZULA_LR"   ;   Str = "Elder sister and a clone matured and militarized in psionics research facility after disappearance of Yuri"
+
+ID = "STR_UNIT_PARTISAN_NAME"   ;   Str = "Partisan"
+ID = "STR_UNIT_PARTISAN_NAME"   ;   Str = "Partisan"
+ID = "STR_UNIT_VALKYRIE_WARRIOR_NAME"   ;   Str = "Valkyrie Warrior"
+ID = "STR_UNIT_VALKYRIE_WARRIOR_LR"   ;   Str = "Valkyrie Dismounted. Ranged Hero Infantry. Unyielding protector of Valhalla."
+ID = "STR_UNIT_VALKYRIE_WARRIOR_HORSE_NAME"   ;   Str = "Valkyrie Horse."
+ID = "STR_UNIT_VALKYRIE_WARRIOR_HORSE_LR"   ;   Str = "Valkyrie Dismounted. Ranged Hero Infantry. Unyielding protector of Valhalla."
+
+ID = "STR_UNIT_FARSEER_NAME"   ;   Str = "Farseer"
+ID = "STR_UNIT_FARSEER_LR"   ;   Str = "Ascendend Oracle"
+
+ID = "STR_UNIT_THORDESCENDED_NAME"   ;   Str = "Thor (God)"
+ID = "STR_UNIT_THORDESCENDED_LR"   ;   Str = "Lord of Thunder"
+
+ID = "STR_UNIT_VOLSTAGGAWAKENED_NAME"   ;   Str = "Volstagg (Jötnar)"
+ID = "STR_UNIT_VOLSTAGGAWAKENED_LR"   ;   Str = "King of Jötunnheim"
+
+ID = "STR_UNIT_SURTRAWAKENED_NAME"   ;   Str = "Surtr (Jötnar)"
+ID = "STR_UNIT_SURTRAWAKENED_LR"   ;   Str = "King of Muspelheim"
+
+ID = "STR_UNIT_FENRISULFRAWAKENED_NAME"   ;   Str = "Fenrisulfr (Son of Loki)"
+ID = "STR_UNIT_FENRISULFRAWAKENED_LR"   ;   Str = "Mythical Beast of Ragnarok"
+
+ID = "STR_UNIT_GROOTIA_NAME"   ;   Str = "Grootia"
+ID = "STR_UNIT_GROOTIA_LR"   ;   Str = "Mother of Dryads"
+
+ID = "STR_UNIT_MCMT_HUANGZHAOWU_NAME"   ;   Str = "Huang Zhaowu"
+ID = "STR_UNIT_MCMT_HUANGZHAOWU_LR"   ;   Str = "Emperor of China"
+
+ID = "STR_UNIT_MCMT_HUANGZHAOWUWIFE_NAME"   ;   Str = "Xiaoli"
+ID = "STR_UNIT_MCMT_HUANGZHAOWUWIFE_LR"   ;   Str = "Resurrected Wife of Huang Zhaowu"
+
+ID = "STR_UNIT_MCMT_NVCHOU_NAME"   ;   Str = "Shiji Nüchou"
+ID = "STR_UNIT_MCMT_NVCHOU_LR"   ;   Str = "Old Witch Friend of Houyi"
+
+ID = "STR_UNIT_MOTHERSHIP_NAME"   ;   Str = "Mothership"
+ID = "STR_UNIT_MOTHERSHIP_SR"   ;   Str = "Mothership"
+ID = "STR_UNIT_MOTHERSHIP_LR"   ;   Str = "End of the All Things"
+
+ID = "STR_UNIT_PRISMTANK_NAME"   ;   Str = "Prism Tank"
+ID = "STR_UNIT_PRISMTANK_SR"   ;   Str = "Prism Tank"
+ID = "STR_UNIT_PRISMTANK_LR"   ;   Str = "FutureTech with a Powerful Laser Cannon"
+
+ID = "STR_UNIT_MIRAGETANK_NAME"   ;   Str = "Mirage Tank"
+ID = "STR_UNIT_MIRAGETANK_SR"   ;   Str = "Mirage Tank"
+ID = "STR_UNIT_MIRAGETANK_LR"   ;   Str = "FutureTech with a Shockwave Cannon"
+
+ID = "STR_UNIT_MIRRORTANK_NAME"   ;   Str = "Mirror Tank"
+ID = "STR_UNIT_MIRRORTANK_SR"   ;   Str = "Mirror Tank"
+ID = "STR_UNIT_MIRRORTANK_LR"   ;   Str = "FutureTech with a Solus Cannon"
+
+ID = "STR_UNIT_IGNITER_NAME"   ;   Str = "Igniter Tank"
+ID = "STR_UNIT_IGNITER_SR"   ;   Str = "Igniter Tank"
+ID = "STR_UNIT_IGNITER_LR"   ;   Str = "Invented by a Pyrotechnician"
+
+ID = "STR_UNIT_SCOUTPROBE_NAME"   ;   Str = "Scout Probe"
+ID = "STR_UNIT_SCOUTPROBE_SR"   ;   Str = "Scout Probe"
+ID = "STR_UNIT_SCOUTPROBE_LR"   ;   Str = "Fast Drone with Lightweight Plating"
+
+ID = "STR_UNIT_MCMT_GIANTSIEGECROSSBOW_NAME"   ;   Str = "Giant Siege Crossbow"
+ID = "STR_UNIT_MCMT_GIANTSIEGECROSSBOW_LR"   ;   Str = "Anti-Pillar SuperWeapon"
+
+ID = "STR_UNIT_MCMT_DEVASTATOR_NAME"   ;   Str = "Devastator"
+ID = "STR_UNIT_MCMT_DEVASTATOR_LR"   ;   Str = "Anti-TartarusGate SuperWeapon"
+
+ID = "STR_UNIT_MCMT_COLOSSUSOFRHODES_NAME"   ;   Str = "Colossus of Rhodes"
+ID = "STR_UNIT_MCMT_COLOSSUSOFRHODES_SR"   ;   Str = "Colossus of Rhodes"
+ID = "STR_UNIT_MCMT_COLOSSUSOFRHODES_LR"   ;   Str = "Mobile Wonder of Rhodes Island"
+
+ID = "STR_UNIT_ONIGAMI_NAME"   ;   Str = "Onigami"
+ID = "STR_UNIT_ONIGAMI_SR"   ;   Str = "Onigami"
+ID = "STR_UNIT_ONIGAMI_LR"   ;   Str = "Nuke Carrier Hovercraft"
+
+ID = "STR_UNIT_WINDRIDER_NAME"   ;   Str = "Wind Rider"
+ID = "STR_UNIT_WINDRIDER_SR"   ;   Str = "Wind Rider"
+ID = "STR_UNIT_WINDRIDER_LR"   ;   Str = "Mounted Monk of Shangri La that excels in elemental archery"
+
+ID = "STR_UNIT_EARTHSHAKER_NAME"   ;   Str = "Earthshaker"
+ID = "STR_UNIT_EARTHSHAKER_SR"   ;   Str = "Earthshaker"
+ID = "STR_UNIT_EARTHSHAKER_LR"   ;   Str = "The Worst Nightmare of Gaia"
+
+ID = "STR_BLD_BASTION_NAME"   ;   Str = "Bastion"
+ID = "STR_BLD_BASTION_LR"   ;   Str = "Special Units Building"
+
+ID = "STR_BLD_TEMPLE_OF_PRIMORDIALS_NAME"   ;   Str = "Temple of the Primordial Creators"
+ID = "STR_BLD_TEMPLE_OF_PRIMORDIALS_LR"   ;   Str = "Worldly Gateway to Divine Entities"
+
+ID = "STR_BLD_TECH_BUILDING_NAME"   ;   Str = "Tech Building"
+ID = "STR_BLD_TECH_BUILDING_LR"   ;   Str = "Cybertech Researches"
+
+ID = "STR_BLD_SVA_NAME"   ;   Str = "Strategic Vessel Assembly"
+ID = "STR_BLD_SVA_LR"   ;   Str = "Mechanized Naval Warfare Deployment Center"
+
+ID = "STR_BLD_MAGETOWER_NAME"   ;   Str = "Mage Tower"
+ID = "STR_BLD_MAGETOWER_SR"   ;   Str = "Akashic Archive and Residence of the Archmage"
+ID = "STR_BLD_MAGETOWER_LR"   ;   Str = "Akashic Archive and Residence of the Archmage"
+
+ID = "STR_TECH_MCMT_PAGE_1"   ;   Str = "Page1"
+ID = "STR_TECH_MCMT_PAGE_2"   ;   Str = "Page2"
+
+ID = "STR_POWER_PSIONIC_DECIMATOR"   ;   Str = "Psionic Decimator"
+ID = "STR_POWER_PSIONIC_DECIMATOR_LR"   ;   Str = "Psionic Superweapon Unleashed by Matsuri Yurio"
+ID = "STR_POWER_PSIONIC_LEVITATION"   ;   Str = "Psionic Levitation"
+ID = "STR_POWER_PSIONIC_LEVITATION_LR"   ;   Str = "Psionic Energy Unleashed to Blast Targets"
