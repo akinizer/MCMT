@@ -4,8 +4,6 @@
 
 **Author:** Akinizer
 
-**Last Updated:** [Date of Last Update]
-
 ## Description
 
 The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, introducing a vast array of new units, buildings, technologies, and powers, while also enhancing existing game content across all civilizations. Experience new legendary heroes, powerful mythical beasts, advanced siege weaponry, unique economic units, and much more. This mod aims to expand strategic options and provide a fresh gameplay experience.
