@@ -90,9 +90,17 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
 *   All units got additional Line Upgrades and Unit Types for logical tech benefits
 
   **General Improvements:**
-*   All units got defensive, offensive, ability reworks (e.g Sentinels now fire petrification bolts)
+*   All units got defensive, offensive, ability reworks (e.g Sentinel now fires petrification bolts, Rock Giant is now slower but durable, Argo is now also a warship)
 *   Various structures got reworks (Sentry Tower now benefits from Wall Techs, House can garrison, Mirror Tower and Lighthouse count as Tower)
 *   Garrison units now also serve as transportation type
+*   Various units now have amphibious ability due to physiology or hovering (e.g Frost Giant, Hun Dun and Shade)
+*   Many units gained impact pushback due to attacks or special attacks (e.g Nemean Lean, Avenger)
+*   Various units got special reworks (e.g Lampades transforms enemies to exploding chickens, )
+*   Various units gained veterancy (e.g WarTurtle spawns as hatchling and grows in size as it battles)
+*   Some units obtained regenerative or solid shield due to divinity or technology (e.g Greek Heroes, Chinese Heroes Divine Beasts such as Ying Long, Shade)
+*   Heroes are now stronger in warfare and benefit from LineUpgades. Myth units are reworked and some access LineUpgrades (e.g Centaur). Buildings are reworked and Sentry Towers have deadly boiling oils and cannonballs
+*   Some military units are now heroes (e.g Myrmidon, Mummy, Einheri) or Siege Units (e.g Mountain Giant, Hekantoires) and some heroes also benefit from Myth techs (e.g Perseus, Polyphemus and Chiron)
+*   Titans gained different behaviors (e.g Cerberus attacks faster, Ymir hits harder, Xingtian is more durable)
 
 ## Installation
 
