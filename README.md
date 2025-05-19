@@ -58,9 +58,9 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
     *   AirCommand: Special tower that operates as beacon with sattelite support, defensive structure with damage zone and base of operators with Mr Wukong
 *   **Naval Special Units:**
     *   Desolator: Naval unit equipped with radiactive area and bolts
-    *   Flagship: Strong naval unit that strengthens with passangers
-    *   Navigator: Medium naval unit that can provide a large sight
-    *   Scorpion Boat: Fast light naval unit equipped with AA Laser Blasters and effective to cheese enemies
+    *   Flagship: Strong naval unit that strengthens with passangers and breaks havocs on coasts with carpet bombs
+    *   Navigator: Medium naval unit that can provide a large sight and that can assisst with light cannons
+    *   Scorpion Boat: Fast light naval unit equipped with AA Laser Blasters and effective to cheese enemies with its minigun on the coasts
     *   Flying Dutchman: Legendary flying undead ship that can summon ghost crews and ghost captain, turn victims into mummies for a short time
     *   PirateCaptain: Captain of Flying Dutchman
     *   Blazemaster: Heavy naval unit that can shoot fireballs and send units flying
