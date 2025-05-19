@@ -39,7 +39,7 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
     *   Devastator: The worst nightmare of structures on wheels
     *   ColossusOfRhodes: The wonder of Rhodes animated to join ranks
     *   Onigami: Amphibious demolition vehicle that annihilates units when implodes or gets destroyed, that can also help in fishing
-    *   SolarBarge: Flying Legenday Siege Unit of Ra that rains death from above
+    *   Solar Barge: Flying Legendary Boat of Ra that rains sunfire missiles from above
     *   OxCartModelX: Exclusive ox cart that transport units
     *   Traveler's Ox Cart: Exclusive Ox Cart that serves many benefits to merchants i.e area heal, amphibious transportation, construct The Attractor, fortification with passengers
 *   **CyberTech Units:**
@@ -61,7 +61,7 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
     *   Flagship: Strong naval unit that strengthens with passangers and breaks havocs on coasts with carpet bombs
     *   Navigator: Medium naval unit that can provide a large sight and that can assisst with light cannons
     *   Scorpion Boat: Fast light naval unit equipped with AA Laser Blasters and effective to cheese enemies with its minigun on the coasts
-    *   Flying Dutchman: Legendary flying undead ship that can summon ghost crews and ghost captain, turn victims into mummies for a short time
+    *   Flying Dutchman: Legendary flying undead ship that can summon ghost crews and ghost captain, turn victims into mummies for a short time and launch frozen bolts at anything in the way
     *   PirateCaptain: Captain of Flying Dutchman
     *   Blazemaster: Heavy naval unit that can shoot fireballs and send units flying
     *   Worldbreaker: Super Naval Unit and Mobile Dock with massive passanger availabilty for fortification, serving three cannons specialized for anit-air, anti-building and anti-ship, that also reinforces Onigami
