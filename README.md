@@ -88,7 +88,10 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
 *   **UI Enhancements:**
     *   Custom command panel pages for units like Conan and Landlord for easier access to their numerous abilities and build options.
 *   All units got additional Line Upgrades and Unit Types for logical tech benefits
-*   All units got defensive, offensive, ability reworks
+
+  **General Improvements:**
+*   All units got defensive, offensive, ability reworks (e.g Sentinels now fire petrification bolts)
+*   Various structures got reworks (Sentry Tower now benefits from Wall Techs, House can garrison, Mirror Tower and Lighthouse count as Tower)
 *   Garrison units now also serve as transportation type
 
 ## Installation
