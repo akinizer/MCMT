@@ -12,7 +12,7 @@ The MCMT Mod is a comprehensive modification for Age of Mythology: Retold, intro
 
 ### New Content:
 
-*   **Legendary Heroes Arrived and Returned to join Ranks:**
+*   **Legendary Heroes Arrived and Returned:**
     *   Landlord: A versatile hero with building capabilities and unique passive buffs.
     *   Conan: A powerful warrior with access to multiple god powers.
     *   Matsuri Yurio & Matsuri Azula: Psionic heroes with unique transformation and combat abilities.
