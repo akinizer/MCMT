@@ -1,0 +1,42 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HEAL">Heal</name>
+    <type>Heal</type>
+    <anim>Heal</anim>
+    <modelattachment>greek\godpowers\restoration\healing_vfx.xml</modelattachment>
+    <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="All">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_BUILD">Build</name>
+    <type>Build</type>
+    <anim>Heal</anim>
+    <maxrange>0.2</maxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_REPAIR">Repair</name>
+    <type>Repair</type>
+    <anim>Heal</anim>
+    <maxrange>0.2</maxrange>
+  </action>
+  <tactic>Default
+    <action priority="100">HandAttack</action>
+    <action priority="90">Heal</action>
+    <action>Build</action>
+    <action>Repair</action>
+    <attacktype>LogicalTypeHandUnitsAttack</attacktype>
+    <autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype>
+    <attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype>
+    <attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>

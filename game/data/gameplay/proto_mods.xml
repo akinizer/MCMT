@@ -733,9 +733,9 @@
 	  </unit>
 	 -->
 	<unit name="OxCartModelX">
-		<displaynameid>STR_UNIT_MECHANICAL_OX_CARAVAN_SPC_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_MECHANICAL_OX_CARAVAN_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_MECHANICAL_OX_CARAVAN_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_OXCARTMODELX_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_OXCARTMODELX_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_OXCARTMODELX_SR</shortrollovertextid>
 		<icon>resources\chinese\player_color\units\caravan_chinese_icon.png</icon>
 		<animfile>chinese\units\economic\caravan_chinese\caravan_chinese_spc.xml</animfile>
 		<soundsetfile>chinese\vo\caravan_chinese\caravan_chinese.xml</soundsetfile>
@@ -2657,7 +2657,7 @@
 		<tech row="2" column="3">MCMT_VibrantLand</tech>
 		<tech row="2" column="4">MCMT_MonstrousRage</tech>
 		
-		<tech row="3" column="0">MCMT_TowerWall</tech>
+		<tech row="3" column="0">MCMT_TowerOfBabel</tech>
 		<tech row="3" column="0">MCMT_MithrilArmaments</tech>
 		<tech row="3" column="0">MCMT_TurretInstallation</tech>
 		
@@ -3062,7 +3062,7 @@
 		<animfile culture="norse">norse\buildings\tower\tower.xml</animfile>
 		<animfile culture="atlantean">atlantean\buildings\tower\tower.xml</animfile>
 		<animfile culture="chinese">chinese\buildings\tower\tower.xml</animfile>
-		<soundsetfile>shared\sfx\buildings\sentry_tower.xml</soundsetfile>
+		<soundsetfile>atlantean\sfx\buildings\mirror_tower.xml</soundsetfile>
 		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
 		
 		<obstructionradiusx>1.0000</obstructionradiusx>
@@ -3136,32 +3136,41 @@
 		<notcontain>AbstractTitan</notcontain>
 		<notcontain>Ship</notcontain>
 		<notcontain>Resource</notcontain>
-		<tactics>sentry_tower.tactics</tactics>
+		<tactics>mcmt_magetower.tactics</tactics>
+		
 		<protoaction>
-		  <name>RangedAttack</name>
-		  <rof>0.100000</rof>
+		  <name>MagicMissile</name>
+		  <rof>0.80000</rof>
 		  <damage type="Divine">10.000000</damage>
-		  <damagebonus type="AbstractTitan">300.000000</damagebonus>
 		  <damagebonus type="MythUnit">30.000000</damagebonus>
 		  <minrange>4.000000</minrange>
-		  <maxrange>60.000000</maxrange>
+		  <maxrange>50.000000</maxrange>
 		  <projectile>ProjectileShiJiAttack</projectile>
 		  <displayednumberprojectiles>1</displayednumberprojectiles>
 		  <autoretarget>1</autoretarget>
 		  <canattackground>1</canattackground>
+
+		  <rate type="All">1.0</rate> 		 
+		  <rate type="AbstractFlyingUnit">0.0</rate> 		 
+		  <rate type="Building">0.0</rate>
+		  <rate type="AbstractTitan">0.0</rate>
 		</protoaction>
 		<protoaction>
-		  <name>FlyingUnitAttack</name>
-		  <rof>0.100000</rof>
-		  <damage type="Divine">10.000000</damage>
-		  <damagebonus type="AbstractFlyingUnit">30.000000</damagebonus>
-		  <damagebonus type="AbstractTitan">300.000000</damagebonus>
-		  
-		  <maxrange>50.000000</maxrange>
-		  <projectile>ProjectileShiJiAttack</projectile>
-		  <displayednumberprojectiles>3</displayednumberprojectiles>
+		  <name>Dematerializer</name>
+		  <rof>10.000000</rof>
+		  <damage type="Divine">100.000000</damage>  
+		  <damagebonus type="AbstractTitan">100.000000</damagebonus>
+		  <damagebonus type="AbstractFlyingUnit">50.000000</damagebonus>
+		  <damagebonus type="Building">50.000000</damagebonus>
+		  <maxrange>60.000000</maxrange>
+		  <projectile>ProjectileLiJingAttack</projectile>
+		  <displayednumberprojectiles>1</displayednumberprojectiles>
 		  <autoretarget>1</autoretarget>
-		  <canattackground>1</canattackground>
+		  <canattackground>1</canattackground>				  
+		  
+		  <rate type="AbstractFlyingUnit">1.0</rate> 		 
+		  <rate type="Building">1.0</rate>
+		  <rate type="AbstractTitan">1.0</rate>
 		</protoaction>
 		<protoaction>
 		  <name>HandAttack</name>
@@ -3173,12 +3182,12 @@
 	</unit>
 	
 	<unit name="AirCommand" mergeMode="add">
-		<displaynameid>STR_BLD_LIGHTHOUSE_NAME</displaynameid>
-		<rollovertextid>STR_BLD_LIGHTHOUSE_LR</rollovertextid>
-		<shortrollovertextid>STR_BLD_LIGHTHOUSE_SR</shortrollovertextid>
+		<displaynameid>STR_BLD_AIRCOMMAND_NAME</displaynameid>
+		<rollovertextid>STR_BLD_AIRCOMMAND_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_AIRCOMMAND_SR</shortrollovertextid>
 		<icon>resources\egyptian\static_color\buildings\lighthouse_icon.png</icon>
 		<animfile>egyptian\buildings\lighthouse\lighthouse.xml</animfile>
-		<soundsetfile>atlantean\sfx\buildings\lighthouse.xml</soundsetfile>
+		<soundsetfile>egyptian\sfx\buildings\lighthouse.xml</soundsetfile>
 		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
 		
 		<obstructionradiusx>3.0000</obstructionradiusx>
@@ -3237,6 +3246,7 @@
 		<flag>DisplayRange</flag>
 		<flag>ForceEmpowerable</flag>
 		<flag>DisplayRangeOverride</flag>
+		<flag>HasGatherPoint</flag>
 		<contain>Unit</contain>
 		<notcontain>MythUnit</notcontain>
 		<notcontain>AbstractSiegeWeapon</notcontain>
@@ -3244,7 +3254,8 @@
 		<notcontain>Resource</notcontain>
 		
 		<train row="0" column="5">MrWukong</train>
-		
+		<command row="3" column="5">SetGatherPoint</command>
+
 		<tactics>mcmt_aircommand.tactics</tactics>
 		<protoaction>
 		  <name>BillowingSmog</name>
@@ -5963,9 +5974,9 @@
     </protoaction>
   </unit>
   <unit name="MrWukong">
-    <displaynameid>STR_EMB_MONKEY_RAFT_NAME</displaynameid>
-    <rollovertextid>STR_EMB_MONKEY_RAFT_LR</rollovertextid>
-	<shortrollovertextid>STR_EMB_MONKEY_RAFT_LR</shortrollovertextid>
+    <displaynameid>STR_UNIT_MR_WUKONG_NAME</displaynameid>
+	<shortrollovertextid>STR_UNIT_MR_WUKONG_SR</shortrollovertextid>
+    <rollovertextid>STR_UNIT_MR_WUKONG_LR</rollovertextid>
     <icon>resources\nature\animals\naval\monkey_raft_icon.png</icon>
     <animfile>nature\animals\naval\monkey_raft\monkey_raft.xml</animfile>
 	<soundsetfile>nature\animals\relic_monkey\relic_monkey.xml</soundsetfile>
@@ -6505,9 +6516,109 @@
 		</protoaction>		
 	</unit>
 	<unit name="Automaton">
+		<displaynameid>STR_UNIT_AUTOMATON_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_AUTOMATON_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_AUTOMATON_SR</shortrollovertextid>
+		<icon>resources\atlantean\player_color\units\automaton_icon.png</icon>
+		<animfile>atlantean\units\myth\automaton\automaton.xml</animfile>
+		<soundsetfile>atlantean\vo\automaton\automaton.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Metal</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>230.0000</initialhitpoints>
+		<maxhitpoints>230.0000</maxhitpoints>
+		<trainpoints>10.0000</trainpoints>
+		<weightclass>6</weightclass>
+		<populationcount>2</populationcount>
+		<maxvelocity>4.2000</maxvelocity>
+		<los>16.0000</los>
+
+		<cost resourcetype="Gold">90.0000</cost><cost resourcetype="Favor">6.0000</cost>
+		<armor type="Hack" value="0.3000"></armor><armor type="Pierce" value="0.5500"></armor><armor type="Crush" value="0.8000"></armor>
+
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeClassicalMythUnit</unittype>
+
 		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>MythUnit</unittype>
+		<unittype>MythUnitMelee</unittype>
+
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
+		
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeMythUnitNotTitan</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFreezableMythUnit</unittype>
+		<unittype>LogicalTypeMythUnitNotFlying</unittype>
+
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>RecoverableDeathHeal</flag>
+		<flag>CanAutoHeal</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>PreventRespawn</flag>
+		<flag>AbilitiesOnBothPages</flag>
+		<flag>ForceBuildingData</flag>
+
+		<tactics>mcmt_automaton.tactics</tactics>
+		<protoaction>
+		<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Hack">11.000000</damage>
+			<damagebonus type="MythUnit">3.000000</damagebonus>
+			<damagebonus type="Hero">0.500000</damagebonus>
+			<maxrange>0.500000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name>Heal</name>
+			<type>Heal</type>
+			<maxrange>0.500000</maxrange>
+			<rate type="Automaton">15.00000</rate>
+			<rate type="PrismTank">5.00000</rate>
+			<rate type="MirageTank">5.00000</rate>
+			<rate type="MirrorTank">5.00000</rate>
+			<rate type="Igniter">5.00000</rate>
+			<rate type="ScoutProbe">5.00000</rate>	
+			<rate type="Ship">5.00000</rate>	
+			<rate type="TheArgo">5.00000</rate>	
+			<rate type="Building">0.85000</rate>	
+			<slowhealmultiplier>0.50</slowhealmultiplier>
+			<donotignoredead>1</donotignoredead>
+		</protoaction>
+		<protoaction>
+			<name>Build</name>
+			<rate type="Building">0.85</rate>
+		</protoaction>		
 	</unit>
 	<unit name="Behemoth">
 		<unittype>AbstractSiegeWeapon</unittype>
@@ -8099,6 +8210,8 @@
 			<numberprojectiles>50</numberprojectiles>
 			<volleymode></volleymode>
 		</protoaction>
+
+		<flag>RecoverableDeathHeal</flag>
 	</unit>	
 	
 	<!--Greek///Heroes///Poseidon-->
@@ -9089,6 +9202,7 @@
 		<flag>AllowAutoGarrison</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NoIdleActions</flag>
+		<flag>RecoverableDeathHeal</flag>
 		
 		<tactics>chainattack_beam.tactics</tactics>
 		<protoaction>
@@ -9175,7 +9289,8 @@
 		<flag>AllowAutoGarrison</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NoIdleActions</flag>
-		
+		<flag>RecoverableDeathHeal</flag>
+
 		<tactics>chainattack_beam.tactics</tactics>
 		<protoaction>
 			<name>BeamAttack</name>
@@ -9261,7 +9376,8 @@
 		<flag>AllowAutoGarrison</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NoIdleActions</flag>
-		
+		<flag>RecoverableDeathHeal</flag>
+
 		<tactics>chainattack_beam.tactics</tactics>
 		<protoaction>
 			<name>BeamAttack</name>
@@ -9348,7 +9464,8 @@
 		<flag>AllowAutoGarrison</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NoIdleActions</flag>
-		
+		<flag>RecoverableDeathHeal</flag>
+
 		<tactics>chainattack_beam.tactics</tactics>
 		
 		<protoaction>
@@ -9456,7 +9573,8 @@
 		<flag>AllowAutoGarrison</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NoIdleActions</flag>
-		
+		<flag>RecoverableDeathHeal</flag>
+
 		<tactics>chainattack_beam.tactics</tactics>
 		<protoaction>	
 			<name>BeamAttack</name>

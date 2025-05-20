@@ -93,6 +93,10 @@ ID = "STR_UNIT_EARTHSHAKER_NAME"   ;   Str = "Earthshaker"
 ID = "STR_UNIT_EARTHSHAKER_SR"   ;   Str = "Earthshaker"
 ID = "STR_UNIT_EARTHSHAKER_LR"   ;   Str = "The Worst Nightmare of Gaia"
 
+ID = "STR_UNIT_MR_WUKONG_NAME"   ;   Str = "Mr. Wukong"
+ID = "STR_UNIT_MR_WUKONG_SR"   ;   Str = "Mr. Wukong"
+ID = "STR_UNIT_MR_WUKONG_LR"   ;   Str = "The Monkey King from the Rising Sun Empire in service to establish civilizations"
+
 ID = "STR_BLD_BASTION_NAME"   ;   Str = "Bastion"
 ID = "STR_BLD_BASTION_LR"   ;   Str = "Special Units Building"
 
@@ -105,12 +109,77 @@ ID = "STR_BLD_TECH_BUILDING_LR"   ;   Str = "Cybertech Researches"
 ID = "STR_BLD_SVA_NAME"   ;   Str = "Strategic Vessel Assembly"
 ID = "STR_BLD_SVA_LR"   ;   Str = "Mechanized Naval Warfare Deployment Center"
 
+ID = "STR_BLD_AIRCOMMAND_NAME"   ;   Str = "Air Command HQ"
+ID = "STR_BLD_AIRCOMMAND_SR"   ;   Str = "Air Command Headquarters"
+ID = "STR_BLD_AIRCOMMAND_LR"   ;   Str = "Defensive Base of Operations for Aircraft "
+
 ID = "STR_BLD_MAGETOWER_NAME"   ;   Str = "Mage Tower"
-ID = "STR_BLD_MAGETOWER_SR"   ;   Str = "Akashic Archive and Residence of the Archmage"
+ID = "STR_BLD_MAGETOWER_SR"   ;   Str = "Mage Tower"
 ID = "STR_BLD_MAGETOWER_LR"   ;   Str = "Akashic Archive and Residence of the Archmage"
 
 ID = "STR_TECH_MCMT_PAGE_1"   ;   Str = "Page1"
 ID = "STR_TECH_MCMT_PAGE_2"   ;   Str = "Page2"
+
+ID = "STR_TECH_DIVINEARMAMENTS_NAME"   ;   Str = "Divine Armaments"
+ID = "STR_TECH_DIVINEARMAMENTS_LR"   ;   Str = "Improves Offensive Capabilities of Military Units, Heroes and Hunters with Divine Weaponry"
+
+ID = "STR_TECH_NANOFIBERPLATINGS_NAME"   ;   Str = "Nanofiber Platings"
+ID = "STR_TECH_NANOFIBERPLATINGS_LR"   ;   Str = "Enhances Defensive Capabilities of Military Units and Heroes with Nanofiber Technology"
+
+ID = "STR_TECH_BOWOFORION_NAME"   ;   Str = "Bow of Orion"
+ID = "STR_TECH_BOWOFORION_LR"   ;   Str = "Envelops Projeectiles of Ranged Units in Pure Energy"
+
+ID = "STR_TECH_ANTHRAX_NAME"   ;   Str = "Anthrax"
+ID = "STR_TECH_ANTHRAX_LR"   ;   Str = "Enhances Effectiveness of Ranged Soldiers with Desolation Technology"
+
+ID = "STR_TECH_PHOBOSSPEAROFPANIC_MK2_NAME"   ;   Str = "Phobos Spear of Panic Mk.2"
+ID = "STR_TECH_PHOBOSSPEAROFPANIC_MK2_LR"   ;   Str = "Upgrades Spear Weaponry with Nano-Technology"
+
+ID = "STR_TECH_DEIMOSSWORDOFDREAD_MK2_NAME"   ;   Str = "Deimos Sword of Dread Mk.2"
+ID = "STR_TECH_DEIMOSSWORDOFDREAD_MK2_LR"   ;   Str = "Upgrades Sword Weaponry with Nano-Technology"
+
+ID = "STR_TECH_ENYOSBOWOFHORRO_MK2_NAME"   ;   Str = "Enyo's Bow of Horror Mk.2"
+ID = "STR_TECH_ENYOSBOWOFHORRO_MK2_LR"   ;   Str = "Upgrades Bow Weaponry with Nano-Technology"
+
+ID = "STR_TECH_MJOLNIR_NAME"   ;   Str = "Mjölnir"
+ID = "STR_TECH_MJOLNIR_LR"   ;   Str = "Thor Empowers Oracles and Wielders of Hammer, Mace and Axe with Worthiness of the Gods"
+
+ID = "STR_TECH_AEGISSHIELD_MK2_NAME"   ;   Str = "Aegis Shield Mk.2"
+ID = "STR_TECH_AEGISSHIELD_MK2_LR"   ;   Str = "Unleashes the True Potential of Whom Sworn to Protect and Unyield"
+
+ID = "STR_TECH_UNIT_STIMULANTS_NAME"   ;   Str = "Stimulants"
+ID = "STR_TECH_UNIT_STIMULANTS_LR"   ;   Str = "Increases the Regeneration Rate of Units"
+
+ID = "STR_TECH_DIVINEPROTECTION_NAME"   ;   Str = "Divine Protection"
+ID = "STR_TECH_DIVINEPROTECTION_LR"   ;   Str = "Fortfies the Special Structures and Landlord with Divine Blessing by God of Technology"
+
+ID = "STR_TECH_BUILDING_ABSORBANTS_NAME"   ;   Str = "Absorbants"
+ID = "STR_TECH_BUILDING_ABSORBANTS_LR"   ;   Str = "Increases the Regeneration Rate of Buildings"
+
+ID = "STR_TECH_COMPENSATIONS_NAME"   ;   Str = "Compensations"
+ID = "STR_TECH_COMPENSATIONS_LR"   ;   Str = "CyberTech Authorties Compensates Famlies of the Fallen Units with Resources"
+
+ID = "STR_TECH_MUSCLETRAINING_NAME"   ;   Str = "Muscle Training"
+ID = "STR_TECH_MUSCLETRAINING_LR"   ;   Str = "Overdoses Capabilities of Builder Units"
+
+ID = "STR_TECH_VIBRANTLAND_MK2_NAME"   ;   Str = "Vibrant Land Mk.2"
+ID = "STR_TECH_VIBRANTLAND_MK2_LR"   ;   Str = "Enforces Strategical Structures with Production Facilities"
+
+ID = "STR_TECH_MONSTROUSRAGE_MK2_NAME"   ;   Str = "Monstrous Rage Mk.2"
+ID = "STR_TECH_MONSTROUSRAGE_MK2_LR"   ;   Str = "Breakthrough Technology of Myth Genetics that Puts the Units in the Blazing Rage and Siege Units in the Petrification Curtain "
+
+ID = "STR_TECH_TOWEROFBABEL_NAME"   ;   Str = "Tower of Babel"
+ID = "STR_TECH_TOWEROFBABEL_LR"   ;   Str = "Improves Capabilities of Special Towers with Master Architects of Babylon"
+
+ID = "STR_TECH_MITHRILARMAMENTS_NAME"   ;   Str = "Mithril Armaments"
+ID = "STR_TECH_MITHRILARMAMENTS_LR"   ;   Str = "Introduces the Power of Mithril Platings to Tower Structures"
+
+ID = "STR_TECH_TURRETINSTALLATION_NAME"   ;   Str = "Turret Installation"
+ID = "STR_TECH_TURRETINSTALLATION_LR"   ;   Str = "Introduces the Automatization Machinery to Tower Structures"
+
+ID = "STR_UNIT_OXCARTMODELX_NAME"   ;   Str = "Ox Cart Model - X"
+ID = "STR_UNIT_OXCARTMODELX_LR"   ;   Str = "Ox Cart Model - X"
+ID = "STR_UNIT_OXCARTMODELX_SR"   ;   Str = "Ox Cart Model - X"
 
 ID = "STR_POWER_PSIONIC_DECIMATOR"   ;   Str = "Psionic Decimator"
 ID = "STR_POWER_PSIONIC_DECIMATOR_LR"   ;   Str = "Psionic Superweapon Unleashed by Matsuri Yurio"

@@ -554,6 +554,9 @@
 			<effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="VillagerChinese" relativity="Absolute">
 				<target type="ProtoUnit">VillagerChineseClay</target>
 			</effect>
+
+			<!-- Atlantean Improvements-->
+			 	<!-- Atlantean MythUnit-->
 		</effects>
 	</tech>	
 	<tech name="MCMT_Researches" mergeMode="add">
@@ -576,7 +579,7 @@
 			<effect type="TechStatus" status="obtainable">MCMT_VibrantLand</effect>
 			<effect type="TechStatus" status="obtainable">MCMT_MonstrousRage</effect>
 			
-			<effect type="TechStatus" status="obtainable">MCMT_TowerWall</effect>			
+			<effect type="TechStatus" status="obtainable">MCMT_TowerOfBabel</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_MithrilArmaments</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_TurretInstallation</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_DivineProtection</effect>	
@@ -651,6 +654,9 @@
 			<!-- TravelerOxWagon Single Page -->
 			<!--Assign-->
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="TheAttractor" row="3" column="0" relativity="Assign"><target type="ProtoUnit">TravelerOxWagon</target></effect>
+		
+			<!-- Automaton Single Page-->
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Armory" row="1" column="4" relativity="Assign"><target type="ProtoUnit">Automaton</target></effect>
 		</effects>
 	</tech>
 	<tech name="MCMT_Page2" mergeMode="add">
@@ -699,8 +705,8 @@
 	<!-- /// Researches /// -->
 	<tech name="MCMT_DivineArmaments" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_GIANT_SLAYING_BLADES_NAME</displaynameid>
-		<rollovertextid>STR_TECH_GIANT_SLAYING_BLADES_LR</rollovertextid>
+		<displaynameid>STR_TECH_DIVINEARMAMENTS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_DIVINEARMAMENTS_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\spc\static_color\technologies\giant_slaying_blades_icon.png</icon>
@@ -736,8 +742,8 @@
 	</tech>
 	<tech name="MCMT_NanofiberPlatings" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_OSMIUM_ARMOR_NAME</displaynameid>
-		<rollovertextid>STR_TECH_OSMIUM_ARMOR_LR</rollovertextid>
+		<displaynameid>STR_TECH_NANOFIBERPLATINGS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_NANOFIBERPLATINGS_LR</rollovertextid>
 		<researchpoints>15.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\spc\static_color\technologies\osmium_armor_icon.png</icon>
@@ -764,8 +770,8 @@
 	</tech>
 	<tech name="MCMT_BowOfOrion" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_SUN_RAY_NAME</displaynameid>
-		<rollovertextid>STR_TECH_SUN_RAY_LR</rollovertextid>
+		<displaynameid>STR_TECH_BOWOFORION_NAME</displaynameid>
+		<rollovertextid>STR_TECH_BOWOFORION_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\greek\static_color\technologies\sun_ray_icon.png</icon>
@@ -792,8 +798,8 @@
 	</tech>
 	<tech name="MCMT_Anthrax" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_SHAFTS_OF_PLAGUE_NAME</displaynameid>
-		<rollovertextid>STR_TECH_SHAFTS_OF_PLAGUE_LR</rollovertextid>
+		<displaynameid>STR_TECH_ANTHRAX_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ANTHRAX_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\greek\static_color\technologies\shafts_of_plague_icon.png</icon>
@@ -823,8 +829,8 @@
 		</effects>
 	</tech>
 	<tech name="MCMT_PhobosSpearOfPanic" mergeMode="add">
-		<displaynameid>STR_TECH_PHOBOS_SPEAR_OF_PANIC_NAME</displaynameid>
-		<rollovertextid>STR_TECH_PHOBOS_SPEAR_OF_PANIC_LR</rollovertextid>
+		<displaynameid>STR_TECH_PHOBOSSPEAROFPANIC_MK2_NAME</displaynameid>
+		<rollovertextid>STR_TECH_PHOBOSSPEAROFPANIC_MK2_LR</rollovertextid>
 		<researchpoints>40.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\greek\static_color\technologies\phobos_spear_of_panic_icon.png</icon>
@@ -888,8 +894,8 @@
 		</effects>
 	</tech>
 	<tech name="MCMT_DeimosSwordOfDread">
-    <displaynameid>STR_TECH_DEIMOS_SWORD_OF_DREAD_NAME</displaynameid>
-    <rollovertextid>STR_TECH_DEIMOS_SWORD_OF_DREAD_LR</rollovertextid>
+    <displaynameid>STR_TECH_DEIMOSSWORDOFDREAD_MK2_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DEIMOSSWORDOFDREAD_MK2_LR</rollovertextid>
     <cost resourcetype="Gold">150.0000</cost>
     <cost resourcetype="Favor">10.0000</cost>
     <researchpoints>20.0000</researchpoints>
@@ -960,8 +966,8 @@
     </effects>
   </tech>
   <tech name="MCMT_EnyosBowOfHorror">
-    <displaynameid>STR_TECH_ENYOS_BOW_OF_HORROR_NAME</displaynameid>
-    <rollovertextid>STR_TECH_ENYOS_BOW_OF_HORROR_LR</rollovertextid>
+    <displaynameid>STR_TECH_ENYOSBOWOFHORRO_MK2_NAME</displaynameid>
+    <rollovertextid>STR_TECH_ENYOSBOWOFHORRO_MK2_LR</rollovertextid>
     <cost resourcetype="Wood">125.0000</cost>
     <cost resourcetype="Favor">12.0000</cost>
     <researchpoints>40.0000</researchpoints>
@@ -1031,8 +1037,8 @@
     </effects>
   </tech>
   <tech name="MCMT_AegisShield">
-    <displaynameid>STR_TECH_AEGIS_SHIELD_NAME</displaynameid>
-    <rollovertextid>STR_TECH_AEGIS_SHIELD_LR</rollovertextid>
+    <displaynameid>STR_TECH_AEGISSHIELD_MK2_NAME</displaynameid>
+    <rollovertextid>STR_TECH_AEGISSHIELD_MK2_LR</rollovertextid>
     <cost resourcetype="Wood">150.0000</cost>
     <cost resourcetype="Favor">15.0000</cost>
     <researchpoints>40.0000</researchpoints>
@@ -1069,8 +1075,8 @@
     </effects>
   </tech>
   <tech name="MCMT_Mjolnir">
-    <displaynameid>STR_TECH_HAMMER_OF_THUNDER_NAME</displaynameid>
-    <rollovertextid>STR_TECH_HAMMER_OF_THUNDER_LR</rollovertextid>
+    <displaynameid>STR_TECH_MJOLNIR_NAME</displaynameid>
+    <rollovertextid>STR_TECH_MJOLNIR_LR</rollovertextid>
     <cost resourcetype="Gold">125.0000</cost>
     <cost resourcetype="Favor">10.0000</cost>
     <researchpoints>40.0000</researchpoints>
@@ -1201,8 +1207,8 @@
   </tech>
 	<tech name="MCMT_Compensations" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_FUNERAL_RITES_NAME</displaynameid>
-		<rollovertextid>STR_TECH_FUNERAL_RITES_LR</rollovertextid>
+		<displaynameid>STR_TECH_COMPENSATIONS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_COMPENSATIONS_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\egyptian\static_color\technologies\funeral_rites_icon.png</icon>
@@ -1217,12 +1223,12 @@
 	</tech>
 	<tech name="MCMT_Stimulants" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_UNIT_REJUVENATION_NAME</displaynameid>
-		<rollovertextid>STR_TECH_UNIT_REJUVENATION_LR</rollovertextid>
+		<displaynameid>STR_TECH_UNIT_STIMULANTS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_UNIT_STIMULANTS_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\atlantean\static_color\technologies\mythic_rejuvenation_icon.png</icon>
-		<flag>CountsTowardMilitaryScore</flag>
+		<flag>CountsTowardMilitaryScore</flag>in
 		<flag>MythTech</flag>
 		<cost resourcetype="Favor">120</cost>
 		<effects>
@@ -1239,8 +1245,8 @@
 	</tech>
 	<tech name="MCMT_Absorbants" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_BUILDING_REJUVENATION_NAME</displaynameid>
-		<rollovertextid>STR_TECH_BUILDING_REJUVENATION_LR</rollovertextid>
+		<displaynameid>STR_TECH_BUILDING_ABSORBANTS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_BUILDING_ABSORBANTS_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\atlantean\static_color\technologies\heroic_renewal_icon.png</icon>
@@ -1255,8 +1261,8 @@
 	</tech>
 	<tech name="MCMT_MuscleTraining" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
-		<displaynameid>STR_TECH_CURSED_BLOOD_NAME</displaynameid>
-		<rollovertextid>STR_TECH_CURSED_BLOOD_LR</rollovertextid>
+		<displaynameid>STR_TECH_MUSCLETRAINING_NAME</displaynameid>
+		<rollovertextid>STR_TECH_MUSCLETRAINING_LR</rollovertextid>
 		<researchpoints>1.0000</researchpoints>
 		<status>UNOBTAINABLE</status>
 		<icon>resources\greek\static_color\technologies\divine_blood_icon.png</icon>
@@ -1270,8 +1276,8 @@
 		</effects>
 	</tech>
   <tech name="MCMT_MonstrousRage">
-    <displaynameid>STR_TECH_MONSTROUS_RAGE_NAME</displaynameid>
-    <rollovertextid>STR_TECH_MONSTROUS_RAGE_LR</rollovertextid>
+    <displaynameid>STR_TECH_MONSTROUSRAGE_MK2_NAME</displaynameid>
+    <rollovertextid>STR_TECH_MONSTROUSRAGE_MK2_LR</rollovertextid>
     <cost resourcetype="Favor">465</cost>
     <researchpoints>30.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -1366,8 +1372,8 @@
     </effects>
   </tech>
   <tech name="MCMT_VibrantLand">
-	<displaynameid>STR_TECH_VIBRANT_LAND_NAME</displaynameid>
-    <rollovertextid>STR_TECH_VIBRANT_LAND_LR</rollovertextid>
+	<displaynameid>STR_TECH_VIBRANTLAND_MK2_NAME</displaynameid>
+    <rollovertextid>STR_TECH_VIBRANTLAND_MK2_LR</rollovertextid>
     <cost resourcetype="Favor">520</cost>
     <researchpoints>30.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -1446,9 +1452,9 @@
     </effects>  
   </tech>
   
-  <tech name="MCMT_TowerWall">
-	<displaynameid>STR_TECH_ADVANCED_DEFENSES_NAME</displaynameid>
-    <rollovertextid>STR_TECH_ADVANCED_DEFENSES_LR</rollovertextid>
+  <tech name="MCMT_TowerOfBabel">
+	<displaynameid>STR_TECH_TOWEROFBABEL_NAME</displaynameid>
+    <rollovertextid>STR_TECH_TOWEROFBABEL_LR</rollovertextid>
     <cost resourcetype="Favor">240</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -1458,14 +1464,26 @@
     <techtype>MythTechDefensive</techtype>
     <effects>
       <effect type="Data" allactions="1" amount="1.15" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">SentryTower</target>
+        <target type="ProtoUnit">MirrorTower</target>
       </effect>
       <effect type="Data" action="RangedAttack" amount="5" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">SentryTower</target>
+        <target type="ProtoUnit">MirrorTower</target>
       </effect>
       <effect type="Data" amount="10" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">SentryTower</target>
+        <target type="ProtoUnit">MirrorTower</target>
       </effect>
+	  
+	   <effect type="Data" allactions="1" amount="1.15" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">MageTower</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="5" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">MageTower</target>
+      </effect>
+      <effect type="Data" amount="10" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">MageTower</target>
+      </effect>
+
+
       <effect type="Data" allactions="1" amount="1.25" subtype="Damage" relativity="BasePercent">
         <target type="ProtoUnit">Baolei</target>
       </effect>
@@ -1478,8 +1496,8 @@
     </effects>
   </tech>
   <tech name="MCMT_TurretInstallation">
-    <displaynameid>STR_TECH_CROSSBOW_TOWER_NAME</displaynameid>
-    <rollovertextid>STR_TECH_CROSSBOW_TOWER_LR</rollovertextid>
+    <displaynameid>STR_TECH_TURRETINSTALLATION_NAME</displaynameid>
+    <rollovertextid>STR_TECH_TURRETINSTALLATION_LR</rollovertextid>
     <cost resourcetype="Favor">300</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -1507,8 +1525,8 @@
     </effects>
   </tech>
   <tech name="MCMT_MithrilArmaments">
-    <displaynameid>STR_TECH_BALLISTA_TOWER_NAME</displaynameid>
-    <rollovertextid>STR_TECH_BALLISTA_TOWER_LR</rollovertextid>
+    <displaynameid>STR_TECH_MITHRILARMAMENTS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_MITHRILARMAMENTS_LR</rollovertextid>
     <cost resourcetype="Favor">280</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -1527,8 +1545,8 @@
     </effects>
   </tech>
   <tech name="MCMT_DivineProtection">
-	 <displaynameid>STR_TECH_GILDED_SHIELDS_NAME</displaynameid>
-    <rollovertextid>STR_TECH_GILDED_SHIELDS_LR</rollovertextid>
+	 <displaynameid>STR_TECH_DIVINEPROTECTION_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DIVINEPROTECTION_LR</rollovertextid>
     <cost resourcetype="Favor">400.0000</cost>
     <researchpoints>50.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -1548,6 +1566,10 @@
 		<effect type="Data" amount="100.00" subtype="ShieldPoints" relativity="Assign">
 			<target type="ProtoUnit">Landlord</target>
 		</effect>
+
+		<timeshifting maxconcurrenttimeshifts="1">
+			<protounit costratio="0.0" timeratio="0.50">LogicalTypeBuildingsNotWalls</protounit>
+		</timeshifting>
 	</effects>	
   </tech>  
   
@@ -1840,6 +1862,41 @@
         <target type="ProtoUnit">SentryTower</target>
       </effect>
   </tech>
+  <tech name="VolcanicForge">
+    <displaynameid>STR_TECH_VOLCANIC_FORGE_NAME</displaynameid>
+    <rollovertextid>STR_TECH_VOLCANIC_FORGE_LR</rollovertextid>
+    <cost resourcetype="Food">100.0000</cost>
+    <cost resourcetype="Gold">50.0000</cost>
+    <cost resourcetype="Favor">15.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\volcanic_forge_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Automaton</target>
+      </effect>
+	  <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Colossus</target>
+      </effect>
+      <effect type="Data" amount="-0.2" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">HumanSoldier</target>
+      </effect>
+      <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+      <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">AbstractWarship</target>
+      </effect>
+	  <effect type="Data" amount="-0.5" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Armory</target>
+      </effect>
+	  <effect type="Data" amount="-0.9" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">DwarvenArmory</target>
+      </effect>
+    </effects>
+  </tech>
   <!--CyberTech-->
   <tech name="Nanomachines">
 	<displaynameid>STR_TECH_DAKTYLOI_NAME</displaynameid>
@@ -1957,7 +2014,6 @@
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\shared\static_color\technologies\champion_infantry_icon.png</icon>
-    <icon>resources\norse\static_color\technologies\champion_infantry_norse_icon.png</icon>
     <flag>CountsTowardMilitaryScore</flag>
     <effects>
       <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">

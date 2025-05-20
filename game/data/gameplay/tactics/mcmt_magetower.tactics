@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+  <action>
+    <name>MagicMissile</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <scalebycontainedunittype>
+      <rate type="Unit">0.05</rate>
+    </scalebycontainedunittype>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <action>
+    <name>Dematerializer</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <scalebycontainedunittype>
+      <rate type="Unit">0.05</rate>
+    </scalebycontainedunittype>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <action>
+    <name>HandAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <anim>HandAttack</anim>
+    <impacteffect>effects\impacts\hack</impacteffect>
+    <scalebycontainedunittype>
+      <rate type="Unit">0.05</rate>
+    </scalebycontainedunittype>
+    <rate type="All">1.0</rate>
+  </action>
+  <tactic>Default
+    <action priority="100">Dematerializer</action>
+    <action priority="90">MagicMissile</action>
+    <action priority="80">HandAttack</action>
+    <attacktype>LogicalTypeRangedUnitsAttack</attacktype>
+    <autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype>
+    <attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype>
+  </tactic>
+</tactics>
