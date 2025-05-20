@@ -1,7 +1,5 @@
 # MCMT Mod for Age of Mythology: Retold
 
-**Version:** 1.0.0
-
 **Author:** Akinizer
 
 ## Description
@@ -134,12 +132,5 @@ Most new units and technologies are integrated into the game via the "MCMT_Techs
 
 *   **Author:** Akinizer
 *   **Tools Used:** Resource Manager, VSC
-
-## Changelog
-
-**v1.0.0 - 20.05.2025**
-*   Initial Release / Major Update.
-
----
 
 *Thank you for trying out the MCMT Mod! Feedback is welcome.*
