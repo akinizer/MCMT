@@ -819,9 +819,9 @@
 	  <unit name="TheAttractor">
 		<buildpoints>20.0000</buildpoints>
 	  
-		<displaynameid>STR_BLD_LURE_NAME</displaynameid>
-		<rollovertextid>STR_BLD_LURE_LR</rollovertextid>
-		<shortrollovertextid>STR_BLD_LURE_SR</shortrollovertextid>
+		<displaynameid>STR_BLD_ATTRACTOR_NAME</displaynameid>
+		<rollovertextid>STR_BLD_ATTRACTOR_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_ATTRACTOR_SR</shortrollovertextid>
 		<icon>resources\greek\static_color\buildings\lure_icon.png</icon>
 		<animfile>greek\buildings\lure\lure.xml</animfile>
 		<soundsetfile>greek\sfx\buildings\lure.xml</soundsetfile>
@@ -2769,8 +2769,8 @@
 		<tech row="3" column="0">ChampionRangers</tech>		
 		<tech row="3" column="0">ChampionEngines</tech>		
 		<tech row="3" column="1">MCMT_SVA_ComfortableFireports</tech>		
-		<tech row="3" column="1">MCMT_SVA_LuxuriousFireports</tech>		
 		<tech row="3" column="1">MCMT_SVA_EliteFireports</tech>		
+		<tech row="3" column="1">MCMT_SVA_LuxuriousFireports</tech>		
 		
 		<flag>ShowGarrisonButton</flag>
 		<flag>DisplayRange</flag>
@@ -5018,8 +5018,13 @@
 		<rollovertextid>STR_UNIT_ONIGAMI_LR</rollovertextid>
 		<icon>resources\chinese\player_color\units\fishing_ship_chinese_icon.png</icon>
 		<animfile>chinese\units\naval\fishing_ship_chinese\fishing_ship_chinese.xml</animfile>
-		<soundsetfile>chinese\vo\fishing_ship_chinese\fishing_ship_chinese.xml</soundsetfile>
-		
+
+		<soundsetfile culture="greek">greek\vo\fishing_ship_greek\fishing_ship_greek.xml</soundsetfile>
+		<soundsetfile culture="chinese">chinese\vo\fishing_ship_chinese\fishing_ship_chinese.xml</soundsetfile>
+		<soundsetfile culture="egyptian">egyptian\vo\fishing_ship_egyptian\fishing_ship_egyptian.xml</soundsetfile>
+		<soundsetfile culture="norse">norse\vo\fishing_ship_norse\fishing_ship_norse.xml</soundsetfile>
+		<soundsetfile culture="atlantean">atlantean\vo\fishing_ship_atlantean\fishing_ship_atlantean.xml</soundsetfile>
+
 		<obstructionradiusx>0.9900</obstructionradiusx>
 		<obstructionradiusz>0.9900</obstructionradiusz>
 		<selectionradiusx>1.2500</selectionradiusx>
@@ -5460,9 +5465,9 @@
 	
 	<!--Naval///Special///Units-->
 	<unit name="Desolator">
-    <displaynameid>STR_UNIT_TRIREME_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_TRIREME_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_TRIREME_SR</shortrollovertextid>
+    <displaynameid>STR_UNIT_MCMT_DESOLATOR_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_MCMT_DESOLATOR_LR</rollovertextid>
+    <shortrollovertextid>STR_UNIT_MCMT_DESOLATOR_SR</shortrollovertextid>
     <editornameid>STR_UNIT_TRIREME_WRECKED_NAME</editornameid>
     <icon>resources\greek\player_color\units\trireme_icon.png</icon>
     <animfile>greek\units\naval\trireme\trireme_wrecked.xml</animfile>
@@ -5562,9 +5567,9 @@
     </protoaction>
   </unit>
   <unit name="FlyingDutchman">
-    <displaynameid>STR_UNIT_LOST_SHIP_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_LOST_SHIP_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_LOST_SHIP_SR</shortrollovertextid>
+    <displaynameid>STR_UNIT_MCMT_FLYINGDUTCHMAN_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_MCMT_FLYINGDUTCHMAN_LR</rollovertextid>
+    <shortrollovertextid>STR_UNIT_MCMT_FLYINGDUTCHMAN_SR</shortrollovertextid>
     <icon>resources\egyptian\player_color\units\lost_ship_icon.png</icon>
     <animfile>egyptian\units\naval\lost_ship\lost_ship.xml</animfile>
     <soundsetfile>egyptian\vo\lost_ship\lost_ship.xml</soundsetfile>
@@ -5676,9 +5681,9 @@
     </protoaction>
   </unit>
   <unit name="Flagship">
-    <displaynameid>STR_UNIT_PIRATE_SHIP_NORSE_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_PIRATE_SHIP_NORSE_LR</rollovertextid>
-    <editornameid>STR_UNIT_PIRATE_SHIP_NORSE_EDT_NAME</editornameid>
+    <displaynameid>STR_UNIT_MCMT_FLAGSHIP_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_MCMT_FLAGSHIP_LR</rollovertextid>
+	<shortrollovertextid>STR_UNIT_MCMT_FLAGSHIP_SR</shortrollovertextid>
     <icon>resources\spc\player_color\units\pirate_ship_norse_icon.png</icon>
     <animfile>spc\units\pirate_ship_norse\pirate_ship_norse.xml</animfile>
     <soundsetfile>norse\vo\longboat\longboat.xml</soundsetfile>
@@ -5784,9 +5789,9 @@
     </protoaction>
   </unit>
   <unit name="Navigator">
-    <displaynameid>STR_UNIT_PIRATE_SHIP_EGYPTIAN_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_PIRATE_SHIP_EGYPTIAN_LR</rollovertextid>
-    <editornameid>STR_UNIT_PIRATE_SHIP_EGYPTIAN_EDT_NAME</editornameid>
+    <displaynameid>STR_UNIT_NAVIGATOR_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_NAVIGATOR_LR</rollovertextid>
+	<shortrollovertextid>STR_UNIT_NAVIGATOR_SR</shortrollovertextid>
     <icon>resources\spc\player_color\units\pirate_ship_egyptian_icon.png</icon>
     <animfile>spc\units\pirate_ship_egyptian\pirate_ship_egyptian.xml</animfile>
     <soundsetfile>egyptian\vo\kebenit\kebenit.xml</soundsetfile>
@@ -5878,9 +5883,9 @@
   </unit>
   
   <unit name="ScorpionBoat">
-    <displaynameid>STR_UNIT_PIRATE_SHIP_NORSE_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_PIRATE_SHIP_NORSE_LR</rollovertextid>
-    <editornameid>STR_UNIT_PIRATE_SHIP_NORSE_EDT_NAME</editornameid>
+    <displaynameid>STR_UNIT_MCMT_SCORPIONBOAT_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_MCMT_SCORPIONBOAT_LR</rollovertextid>
+	<shortrollovertextid>STR_UNIT_MCMT_SCORPIONBOAT_SR</shortrollovertextid>
     <icon>resources\spc\player_color\units\pirate_ship_norse_icon.png</icon>
     <animfile>spc\units\pirate_ship_norse\pirate_ship_norse.xml</animfile>
     <soundsetfile>norse\vo\longboat\longboat.xml</soundsetfile>
@@ -6174,9 +6179,9 @@
 	
   </unit>
   <unit name="Blazemaster">
-    <displaynameid>STR_UNIT_FIRE_SHIP_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_FIRE_SHIP_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_FIRE_SHIP_SR</shortrollovertextid>
+    <displaynameid>STR_UNIT_MCMT_BLAZEMASTER_NAME</displaynameid>
+	<shortrollovertextid>STR_UNIT_MCMT_BLAZEMASTER_SR</shortrollovertextid>
+	<rollovertextid>STR_UNIT_MCMT_BLAZEMASTER_LR</rollovertextid>
     <icon>resources\atlantean\player_color\units\fire_ship_icon.png</icon>
     <animfile>atlantean\units\naval\fire_ship\fire_ship.xml</animfile>
     <soundsetfile>atlantean\vo\fire_ship\fire_ship.xml</soundsetfile>
@@ -6273,9 +6278,9 @@
     </protoaction>
   </unit>
   <unit name="Worldbreaker">
-    <displaynameid>STR_UNIT_LOUCHUAN_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_LOUCHUAN_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_LOUCHUAN_SR</shortrollovertextid>
+    <displaynameid>STR_UNIT_MCMT_WORLDBREAKER_NAME</displaynameid>
+	<shortrollovertextid>STR_UNIT_MCMT_WORLDBREAKER_SR</shortrollovertextid>
+	<rollovertextid>STR_UNIT_MCMT_WORLDBREAKER_LR</rollovertextid>
     <icon>resources\chinese\player_color\units\louchuan_icon.png</icon>
     <animfile>chinese\units\naval\lou_chuan\lou_chuan.xml</animfile>
     <soundsetfile>chinese\vo\lou_chuan\lou_chuan.xml</soundsetfile>
@@ -6455,15 +6460,6 @@
 			<maxrange>0.500000</maxrange>
 		</protoaction>	
 	</unit>
-	
-	<unit name="VillagerAtlanteanHero"></unit>
-	<unit name="ArcusHero"></unit>
-	<unit name="ContariusHero"></unit>
-	<unit name="MurmilloHero"></unit>
-	<unit name="KatapeltesHero"></unit>
-	<unit name="TurmaHero"></unit>
-	<unit name="DestroyerHero"></unit>
-	<unit name="FanaticHero"></unit>
 		
 	<!--MythUnits-->
 	<unit name="Satyr">
@@ -6587,9 +6583,11 @@
 		<flag>CanAutoHeal</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>PreventRespawn</flag>
+
 		<flag>AbilitiesOnBothPages</flag>
 		<flag>ForceBuildingData</flag>
-
+		<unittype>LogicalTypeNorseSoldierThatBuilds</unittype>
+		
 		<tactics>mcmt_automaton.tactics</tactics>
 		<protoaction>
 		<name>HandAttack</name>
@@ -6611,13 +6609,13 @@
 			<rate type="ScoutProbe">5.00000</rate>	
 			<rate type="Ship">5.00000</rate>	
 			<rate type="TheArgo">5.00000</rate>	
-			<rate type="Building">0.85000</rate>	
+			<rate type="Building">1.0000</rate>	
 			<slowhealmultiplier>0.50</slowhealmultiplier>
 			<donotignoredead>1</donotignoredead>
 		</protoaction>
 		<protoaction>
 			<name>Build</name>
-			<rate type="Building">0.85</rate>
+			<rate type="Building">5.00</rate>
 		</protoaction>		
 	</unit>
 	<unit name="Behemoth">
@@ -7390,18 +7388,6 @@
 		<movementtype>amphibious</movementtype>		
 		<flag>TieToWaterSurface</flag>
 		<flag>AmphibiousBirth</flag>
-		<tactics>nidhogg.tactics></tactics>
-		<protoaction>
-			<name>FlyingUnitAttack</name>
-			<rof>2.000000</rof>
-			<damage type="Hack">40.000000</damage>
-			<damage type="Crush">40.000000</damage>
-			<damagearea>8.000000</damagearea>
-			<damageflags>Enemy</damageflags>
-			<damagebonus type="Hero">0.100000</damagebonus>
-			<maxrange>4.0</maxrange>
-			<projectile>ProjectileBallOfFireInvisible</projectile>
-		</protoaction>
 	</unit>
 	
 	<unit name="Leviathan">
@@ -10168,13 +10154,13 @@
 		<trainpoints>10</trainpoints>
 		<buildlimit>1</buildlimit>
 	
-		<displaynameid>STR_UNIT_KEMSYT_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_KEMSYT_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_KEMSYT_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_MCMT_PIRATECAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_MCMT_PIRATECAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_MCMT_PIRATECAPTAIN_SR</shortrollovertextid>
 		<icon>resources\spc\player_color\units\kemsyt_icon.png</icon>
 		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
 		<animfile>spc\units\kemsyt\kemsyt.xml</animfile>
-		<soundsetfile>spc\vo\kemsyt\kemsyt.xml</soundsetfile>
+		<soundsetfile>egyptian\vo\mummy\mummy.xml</soundsetfile>
 		<obstructionradiusx>0.4900</obstructionradiusx>
 		<obstructionradiusz>0.4900</obstructionradiusz>
 		<impacttype>Unarmoured</impacttype>
@@ -10265,10 +10251,11 @@
 		
 		<movementtype>amphibious</movementtype>
 		<flag>TieToWaterSurface</flag>
+		<trainpoints>1</trainpoints>
 		
-		 <displaynameid>STR_UNIT_SHADE_SPC_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_SHADE_SPC_LR</rollovertextid>
-		<editornameid>STR_UNIT_SHADE_SPC_EDITOR_NAME</editornameid>
+		<displaynameid>STR_UNIT_MCMT_GHOSTCREW_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_MCMT_GHOSTCREW_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_MCMT_GHOSTCREW_SR</shortrollovertextid>
 		<icon>resources\spc\player_color\units\shade_spc_icon.png</icon>
 		<animfile>spc\units\shade_spc\shade_spc.xml</animfile>
 		<soundsetfile>greek\vo\hades_shade\hades_shade.xml</soundsetfile>
@@ -10740,11 +10727,105 @@
 	
 	<!-- VILLAGER///BUILDER -->
 	<unit name="VillagerNorse"><unittype>AbstractArcher</unittype><unittype>ArcherLineUpgraded</unittype></unit>
-	<unit name="VillagerAtlantean"><unittype>AbstractArcher</unittype><unittype>ArcherLineUpgraded</unittype></unit>
-	<unit name="VillagerAtlanteanHero"><unittype>AbstractArcher</unittype><unittype>ArcherLineUpgraded</unittype></unit>
-	<unit name="VillagerGreek"><unittype>AbstractArcher</unittype><unittype>ArcherLineUpgraded</unittype></unit>
-	<unit name="VillagerChinese"><unittype>AbstractArcher</unittype><unittype>ArcherLineUpgraded</unittype></unit>
-	<unit name="VillagerEgyptian"><unittype>AbstractArcher</unittype><unittype>ArcherLineUpgraded</unittype></unit>
+	<unit name="VillagerAtlantean">
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<protoaction>
+			<name>Gather</name>
+			<rate type="Huntable">1.500000</rate>
+			<rate type="Herdable">1.350000</rate>
+			<rate type="NonConvertableHerdable">1.350000</rate>
+			<rate type="BerryBush">1.200000</rate>
+			<rate type="AbstractFarm">1.050000</rate>
+			<rate type="WoodResource">1.500000</rate>
+			<rate type="GoldResource">1.280000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Food">1.500000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Wood">1.500000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Gold">1.280000</rate>	
+			<rate type="FishResource">1.0</rate>
+			<rate type="AbstractDock">1.0</rate>
+		</protoaction>
+	</unit>
+	<unit name="VillagerAtlanteanHero">
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<protoaction>
+			<name>Gather</name>
+			<rate type="Huntable">1.650000</rate>
+			<rate type="Herdable">1.490000</rate>
+			<rate type="NonConvertableHerdable">1.490000</rate>
+			<rate type="BerryBush">1.320000</rate>
+			<rate type="AbstractFarm">1.160000</rate>
+			<rate type="WoodResource">1.650000</rate>
+			<rate type="GoldResource">1.400000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Food">1.650000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Wood">1.650000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Gold">1.400000</rate>			
+			<rate type="FishResource">1.65</rate>
+			<rate type="AbstractDock">1.65</rate>
+		</protoaction>
+	</unit>
+	<unit name="VillagerGreek">
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<protoaction>
+		<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="Temple">0.1</rate>
+			<rate type="WoodResource">1.000000</rate>
+			<rate type="GoldResource">0.850000</rate>
+			<rate type="Herdable">0.900000</rate>
+			<rate type="Huntable">1.000000</rate>
+			<rate type="NonConvertableHerdable">0.900000</rate>
+			<rate type="BerryBush">0.800000</rate>
+			<rate type="AbstractFarm">0.700000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Food">1.000000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Wood">1.000000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Gold">0.850000</rate>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
+		</protoaction>
+	</unit>
+	<unit name="VillagerChinese">
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<protoaction>
+			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="WoodResource">0.800000</rate>
+			<rate type="GoldResource">0.680000</rate>
+			<rate type="Herdable">0.720000</rate>
+			<rate type="Huntable">0.800000</rate>
+			<rate type="NonConvertableHerdable">0.720000</rate>
+			<rate type="BerryBush">0.640000</rate>
+			<rate type="AbstractFarm">0.560000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Food">0.800000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Wood">0.800000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Gold">0.680000</rate>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
+		</protoaction>
+	</unit>
+	<unit name="VillagerEgyptian">
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<protoaction>
+			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="WoodResource">0.900000</rate>
+			<rate type="GoldResource">0.770000</rate>
+			<rate type="Herdable">0.810000</rate>
+			<rate type="Huntable">0.900000</rate>
+			<rate type="NonConvertableHerdable">0.810000</rate>
+			<rate type="BerryBush">0.720000</rate>
+			<rate type="AbstractFarm">0.630000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Food">0.900000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Wood">0.900000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Gold">0.770000</rate>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
+		</protoaction>
+	</unit>
 	<unit name="VillagerDwarf">
 		<unittype>AbstractInfantry</unittype><unittype>InfantryLineUpgraded</unittype>
 		<hotkeycontext>BuildNorseAccel</hotkeycontext>
@@ -10761,6 +10842,24 @@
 			<rate type="DwarvenArmory">1.000000</rate>
 			<rate type="MCMT_DwarvenForge">1.000000</rate>
 			<rate type="Dock">1.000000</rate>
+		</protoaction>
+	</unit>
+	<unit name="VillagerNorse">
+		<protoaction>
+			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="WoodResource">0.950000</rate>
+			<rate type="GoldResource">0.810000</rate>
+			<rate type="Herdable">0.860000</rate>
+			<rate type="Huntable">0.950000</rate>
+			<rate type="NonConvertableHerdable">0.860000</rate>
+			<rate type="BerryBush">0.760000</rate>
+			<rate type="AbstractFarm">0.670000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Food">0.950000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Wood">0.950000</rate>
+			<rate type="ThePeachBlossomSpring" resource="Gold">0.810000</rate>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
 		</protoaction>
 	</unit>
 	<unit name="Eitri">
@@ -10780,6 +10879,19 @@
 			<rate type="MCMT_DwarvenForge">1.000000</rate>
 			<rate type="Dock">1.000000</rate>
 		</protoaction>
+		<protoaction>
+			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="WoodResource">0.80000</rate>
+			<rate type="Taproot">0.80000</rate>
+			<rate type="GoldResource">1.020000</rate>
+			<rate type="Herdable">0.720000</rate>
+			<rate type="Huntable">0.800000</rate>
+			<rate type="NonConvertableHerdable">0.720000</rate>
+			<rate type="BerryBush">0.640000</rate>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
+		</protoaction>
 	</unit>
 	<unit name="Brokk">
 		<unittype>AbstractInfantry</unittype><unittype>InfantryLineUpgraded</unittype>
@@ -10797,6 +10909,19 @@
 			<rate type="DwarvenArmory">1.000000</rate>
 			<rate type="MCMT_DwarvenForge">1.000000</rate>
 			<rate type="Dock">1.000000</rate>
+		</protoaction>
+		<protoaction>
+			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="WoodResource">0.80000</rate>
+			<rate type="Taproot">0.80000</rate>
+			<rate type="GoldResource">1.020000</rate>
+			<rate type="Herdable">0.720000</rate>
+			<rate type="Huntable">0.800000</rate>
+			<rate type="NonConvertableHerdable">0.720000</rate>
+			<rate type="BerryBush">0.640000</rate>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
 		</protoaction>
 	</unit>
 	<unit name="VillagerChineseClay">		

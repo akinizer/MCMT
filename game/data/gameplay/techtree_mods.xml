@@ -373,6 +373,9 @@
 				<target type="ProtoUnit">PirateCaptain</target>
 			</effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">GhostCrew</target>
+            </effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Blazemaster</target>
 			</effect>
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
@@ -703,6 +706,8 @@
 	</tech>	
 	
 	<!-- /// Researches /// -->
+
+	<!-- CYBERNETICS TECHNOLOGY FACILITY RESEARCHES -->
 	<tech name="MCMT_DivineArmaments" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
 		<displaynameid>STR_TECH_DIVINEARMAMENTS_NAME</displaynameid>
@@ -1573,10 +1578,10 @@
 	</effects>	
   </tech>  
   
-   <!--SVA TECHS-->
+   <!--STRATEGIC VESSEL ASSEMBLY TECH RESEARCHES-->
   <tech name="MCMT_Explosives">
-    <displaynameid>STR_TECH_DROUGHT_SHIPS_NAME</displaynameid>
-    <rollovertextid>STR_TECH_DROUGHT_SHIPS_LR</rollovertextid>
+    <displaynameid>STR_TECH_EXPLOSIVES_NAME</displaynameid>
+    <rollovertextid>STR_TECH_EXPLOSIVES_LR</rollovertextid>
     <advancedrollovertextoverrideid>STR_TECH_DROUGHT_SHIPS_OVERRIDE</advancedrollovertextoverrideid>
     <cost resourcetype="Wood">150.0000</cost>
     <cost resourcetype="Gold">150.0000</cost>	
@@ -1609,6 +1614,36 @@
       </effect>	  
     </effects>
   </tech>
+   <tech name="Nanomachines">
+	<displaynameid>STR_TECH_NANOMACHINES_NAME</displaynameid>
+    <rollovertextid>STR_TECH_NANOMACHINES_LR</rollovertextid>
+    <cost resourcetype="Gold">250.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\daktyloi_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">Dock</target>
+      </effect>
+      <effect type="Data" amount="3.00" subtype="ModifyRate" action="AreaHeal" relativity="Absolute">
+        <target type="ProtoUnit">Dock</target>
+      </effect>
+	  <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">StrategicVesselAssembly</target>
+      </effect>
+      <effect type="Data" amount="3.00" subtype="ModifyRate" action="AreaHeal" relativity="Absolute">
+        <target type="ProtoUnit">StrategicVesselAssembly</target>
+      </effect>
+	   <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">TechBuilding</target>
+      </effect>
+      <effect type="Data" amount="3.00" subtype="ModifyRate" action="AreaHeal" relativity="Absolute">
+        <target type="ProtoUnit">TechBuilding</target>
+      </effect>
+    </effects>
+	</tech>
   
   <!--TOW Techs
   <tech name="FarmingMachinery">
@@ -1729,9 +1764,332 @@
 		<target type="ProtoUnit">Unit</target>
 		</effect>
 	</effects>
- </tech>-->
+ </tech>--> 
+	
+  <!--  BASTION HUMAN DEVELOPMENT AND EVOLUTION TECH RESEARCHES-->
+	<tech name="MCMT_SVA_ComfortableFireports">
+		<displaynameid>STR_TECH_COMFORTABLE_FIREPORTS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_COMFORTABLE_FIREPORTS_LR</rollovertextid>
+		<cost resourcetype="Food">200.0000</cost>
+		<cost resourcetype="Wood">200.0000</cost>
+		<researchpoints>40.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+		<icon>resources\shared\static_color\technologies\enclosed_deck_icon.png</icon>
+		<flag>CountsTowardMilitaryScore</flag>
+		<effects>
+		  <effect type="Data" amount="1.10" subtype="MaximumContained" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" amount="1.01" subtype="Hitpoints" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" amount="1.01" subtype="Damage" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		</effects>	  
+	</tech>
+  <tech name="MCMT_SVA_EliteFireports">
+		<displaynameid>STR_TECH_ELITE_FIREPORTS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ELITE_FIREPORTS_LR</rollovertextid>
+		<cost resourcetype="Gold">200.0000</cost>
+		<cost resourcetype="Wood">300.0000</cost>
+		<researchpoints>40.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+		<icon>resources\shared\static_color\technologies\enclosed_deck_icon.png</icon>
+		<flag>CountsTowardMilitaryScore</flag>
+		<effects>
+		  <effect type="Data" amount="1.10" subtype="MaximumContained" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" amount="1.01" subtype="Hitpoints" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" amount="1.01" subtype="Damage" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		</effects>	  
+  </tech>
+  <tech name="MCMT_SVA_LuxuriousFireports">
+		<displaynameid>STR_TECH_LUXURIOUS_FIREPORTS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_LUXURIOUS_FIREPORTS_LR</rollovertextid>
+		<cost resourcetype="Gold">350.0000</cost>
+		<cost resourcetype="Wood">350.0000</cost>
+		<researchpoints>40.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+		<icon>resources\shared\static_color\technologies\enclosed_deck_icon.png</icon>
+		<flag>CountsTowardMilitaryScore</flag>
+		<effects>
+		  <effect type="Data" amount="1.10" subtype="MaximumContained" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" amount="1.01" subtype="Hitpoints" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" amount="1.01" subtype="Damage" relativity="BasePercent">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" action="RangedAttack" amount="3.0" subtype="MaximumRange" relativity="Absolute">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" action="RangedAttack" amount="2.00" subtype="Damagebonus" unittype="MythUnit" relativity="Absolute">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		  <effect type="Data" action="RangedAttack" amount="0.5" subtype="OnHitEffect" targettype="HumanSoldier" effecttype="Snare" relativity="Assign" duration="3.00">
+			<target type="ProtoUnit">AbstractTransportShip</target>
+		  </effect>
+		</effects>	  
+  </tech>
+
+  <tech name="ChampionArms">
+    <displaynameid>STR_TECH_CHAMPION_INFANTRY_NAME</displaynameid>
+    <rollovertextid>STR_TECH_CHAMPION_INFANTRY_LR</rollovertextid>
+    <cost resourcetype="Gold">1000.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\champion_infantry_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">InfantryLineUpgraded</target>
+      </effect>
+      <effect type="Data" allactions="1" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">InfantryLineUpgraded</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">InfantryLineUpgraded</target>
+      </effect>
+      <effect type="SetName" proto="Hoplite" newname="STR_UNIT_CHAMPION_HOPLITE_NAME">
+      </effect>
+      <effect type="SetName" proto="Hypaspist" newname="STR_UNIT_CHAMPION_HYPASPIST_NAME">
+      </effect>
+      <effect type="SetName" proto="Myrmidon" newname="STR_UNIT_CHAMPION_MYRMIDON_NAME">
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">ThrowingAxeman</target>
+      </effect>
+      <effect type="SetName" proto="Berserk" newname="STR_UNIT_CHAMPION_BERSERK_NAME">
+      </effect>
+      <effect type="SetName" proto="Hirdman" newname="STR_UNIT_CHAMPION_HIRDMAN_NAME">
+      </effect>
+      <effect type="SetName" proto="Huskarl" newname="STR_UNIT_CHAMPION_HUSKARL_NAME">
+      </effect>
+      <effect type="SetName" proto="ThrowingAxeman" newname="STR_UNIT_CHAMPION_THROWING_AXEMAN_NAME">
+      </effect>
+      <effect type="SetName" proto="Katapeltes" newname="STR_UNIT_CHAMPION_KATAPELTES_NAME">
+      </effect>
+      <effect type="SetName" proto="Murmillo" newname="STR_UNIT_CHAMPION_MURMILLO_NAME">
+      </effect>
+      <effect type="SetName" proto="Destroyer" newname="STR_UNIT_CHAMPION_DESTROYER_NAME">
+      </effect>
+      <effect type="SetName" proto="Fanatic" newname="STR_UNIT_CHAMPION_FANATIC_NAME">
+      </effect>
+      <effect type="SetName" proto="DaoSwordsman" newname="STR_UNIT_CHAMPION_DAO_SWORDSMAN_NAME">
+      </effect>
+      <effect type="SetName" proto="GeHalberdier" newname="STR_UNIT_CHAMPION_GE_HALBERDIER_NAME">
+      </effect>
+	  
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Axeman</target>
+      </effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">Axeman</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">Axeman</target>
+      </effect>
+      <effect type="SetName" proto="Axeman" newname="STR_UNIT_CHAMPION_AXEMAN_NAME">
+      </effect>
+	  
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Spearman</target>
+      </effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">Spearman</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">Spearman</target>
+      </effect>
+      <effect type="SetName" proto="Spearman" newname="STR_UNIT_CHAMPION_SPEARMAN_NAME">
+      </effect>
+    </effects>
+  </tech>
+  <tech name="ChampionRangers">
+    <displaynameid>STR_TECH_CHAMPION_RANGERS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_CHAMPION_RANGERS_LR</rollovertextid>
+    <cost resourcetype="Wood">500.0000</cost>
+    <cost resourcetype="Gold">400.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\champion_archers_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">ArcherLineUpgraded</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">ArcherLineUpgraded</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">ArcherLineUpgraded</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Peltast</target>
+      </effect>
+      <effect type="SetName" proto="Toxotes" newname="STR_UNIT_CHAMPION_TOXOTES_NAME"></effect>
+      <effect type="SetName" proto="Peltast" newname="STR_UNIT_CHAMPION_PELTAST_NAME"></effect>
+      <effect type="SetName" proto="Gastraphetoros" newname="STR_UNIT_CHAMPION_GASTRAPHETOROS_NAME"></effect>
+      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Turma</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">TurmaHero</target>
+      </effect>
+      <effect type="SetName" proto="Turma" newname="STR_UNIT_CHAMPION_TURMA_NAME"></effect>
+      <effect type="SetName" proto="Arcus" newname="STR_UNIT_CHAMPION_ARCUS_NAME"></effect>
+      <effect type="SetName" proto="Cheiroballista" newname="STR_UNIT_CHAMPION_CHEIROBALLISTA_NAME"></effect>
+      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">WuzuJavelineer</target>
+      </effect>
+      <effect type="SetName" proto="WuzuJavelineer" newname="STR_UNIT_CHAMPION_WUZU_JAVELINEER_NAME"></effect>
+      <effect type="SetName" proto="FireArcher" newname="STR_UNIT_CHAMPION_FIRE_ARCHER_NAME"></effect>
+      <effect type="SetName" proto="ChuKoNu" newname="STR_UNIT_CHAMPION_CHUKONU_NAME"></effect>
+	  
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Slinger</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">Slinger</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">Slinger</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Slinger</target>
+      </effect>
+	  
+      <effect type="SetName" proto="Slinger" newname="STR_UNIT_CHAMPION_SLINGER_NAME"></effect>
+	  
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">ChariotArcher</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">ChariotArcher</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">ChariotArcher</target>
+      </effect>
+      <effect type="SetName" proto="ChariotArcher" newname="STR_UNIT_CHAMPION_CHARIOT_ARCHER_NAME">
+      </effect>
+    </effects>
+	</tech>
+	
+	<tech name="ChampionHooves">
+    <displaynameid>STR_TECH_CHAMPION_HOOVES_NAME</displaynameid>
+    <rollovertextid>STR_TECH_CHAMPION_HOOVES_LR</rollovertextid>
+    <cost resourcetype="Food">700.0000</cost>
+    <cost resourcetype="Gold">200.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\champion_cavalry_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">CavalryLineUpgraded</target>
+      </effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">CavalryLineUpgraded</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">CavalryLineUpgraded</target>
+      </effect>
+      <effect type="SetName" proto="Hippeus" newname="STR_UNIT_CHAMPION_HIPPEUS_NAME">
+      </effect>
+      <effect type="SetName" proto="Prodromos" newname="STR_UNIT_CHAMPION_PRODROMOS_NAME">
+      </effect>
+      <effect type="SetName" proto="Hetairos" newname="STR_UNIT_CHAMPION_HETAIROS_NAME">
+      </effect>
+      <effect type="SetName" proto="RaidingCavalry" newname="STR_UNIT_CHAMPION_RAIDING_CAVALRY_NAME">
+      </effect>
+      <effect type="SetName" proto="Jarl" newname="STR_UNIT_LEGENDARY_JARL_NAME">
+      </effect>
+      <effect type="SetName" proto="Contarius" newname="STR_UNIT_CHAMPION_CONTARIUS_NAME">
+      </effect>
+      <effect type="SetName" proto="WhiteHorseCavalry" newname="STR_UNIT_CHAMPION_WHITE_HORSE_CAVALRY_NAME">
+      </effect>
+      <effect type="SetName" proto="TigerCavalry" newname="STR_UNIT_CHAMPION_TIGER_CAVALRY_NAME">
+      </effect>
+      <effect type="SetName" proto="TigerCavalryDismounted" newname="STR_UNIT_CHAMPION_TIGER_CAVALRY_DISMOUNTED_NAME">
+      </effect>
+	  
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">CamelRider</target>
+      </effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">CamelRider</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">CamelRider</target>
+      </effect>
+      <effect type="SetName" proto="CamelRider" newname="STR_UNIT_CHAMPION_CAMEL_RIDER_NAME">
+      </effect>
+	  
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">WarElephant</target>
+      </effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">WarElephant</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">WarElephant</target>
+      </effect>
+      <effect type="SetName" proto="WarElephant" newname="STR_UNIT_CHAMPION_WAR_ELEPHANT_NAME">
+      </effect>
+    </effects>
+  </tech>
+  <tech name="ChampionEngines">
+    <displaynameid>STR_TECH_CHAMPION_ENGINES_NAME</displaynameid>
+    <rollovertextid>STR_TECH_CHAMPION_ENGINES_LR</rollovertextid>
+    <cost resourcetype="Food">300.0000</cost>
+    <cost resourcetype="Gold">500.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\engineers_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <effects>
+      <effect type="Data" allactions="1" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">SiegeLineUpgraded</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Petrobolos</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Catapult</target>
+      </effect>
+      <effect type="Data" action="RangedAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">FireSiphon</target>
+      </effect>
+      <effect type="Data" action="AntiWallAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Petrobolos</target>
+      </effect>
+      <effect type="Data" action="AntiWallAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Catapult</target>
+      </effect>
+      <effect type="Data" action="AntiWallAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">FireSiphon</target>
+      </effect>
+      <effect type="Data" allactions="1" amount="1.00" subtype="Damagebonus" unittype="AbstractWall" relativity="Absolute">
+        <target type="ProtoUnit">SiegeLineUpgraded</target>
+      </effect>
+    </effects>
+  </tech>
   
-  <!--Tech Improvements (mergeMode="add")-->
+  <!--EXISTING TECH IMPROVEMENTS (mergeMode="add")-->
   <tech name="Crenellations">
     <displaynameid>STR_TECH_CRENELLATIONS_NAME</displaynameid>
     <rollovertextid>STR_TECH_CRENELLATIONS_LR</rollovertextid>
@@ -1894,358 +2252,6 @@
       </effect>
 	  <effect type="Data" amount="-0.9" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
         <target type="ProtoUnit">DwarvenArmory</target>
-      </effect>
-    </effects>
-  </tech>
-  <!--CyberTech-->
-  <tech name="Nanomachines">
-	<displaynameid>STR_TECH_DAKTYLOI_NAME</displaynameid>
-    <rollovertextid>STR_TECH_DAKTYLOI_LR</rollovertextid>
-    <cost resourcetype="Gold">250.0000</cost>
-    <researchpoints>30.0000</researchpoints>
-    <status>UNOBTAINABLE</status>
-    <icon>resources\atlantean\static_color\technologies\daktyloi_icon.png</icon>
-    <flag>CountsTowardMilitaryScore</flag>
-    <flag>MythTech</flag>
-    <effects>
-      <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">Dock</target>
-      </effect>
-      <effect type="Data" amount="3.00" subtype="ModifyRate" action="AreaHeal" relativity="Absolute">
-        <target type="ProtoUnit">Dock</target>
-      </effect>
-	  <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">StrategicVesselAssembly</target>
-      </effect>
-      <effect type="Data" amount="3.00" subtype="ModifyRate" action="AreaHeal" relativity="Absolute">
-        <target type="ProtoUnit">StrategicVesselAssembly</target>
-      </effect>
-	   <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">TechBuilding</target>
-      </effect>
-      <effect type="Data" amount="3.00" subtype="ModifyRate" action="AreaHeal" relativity="Absolute">
-        <target type="ProtoUnit">TechBuilding</target>
-      </effect>
-    </effects>
-	</tech>
-	<!--SVA TECHS-->
-	<tech name="MCMT_SVA_ComfortableFireports">
-		<displaynameid>STR_TECH_ENCLOSED_DECK_NAME</displaynameid>
-		<rollovertextid>STR_TECH_ENCLOSED_DECK_LR</rollovertextid>
-		<cost resourcetype="Food">200.0000</cost>
-		<cost resourcetype="Wood">200.0000</cost>
-		<researchpoints>40.0000</researchpoints>
-		<status>UNOBTAINABLE</status>
-		<icon>resources\shared\static_color\technologies\enclosed_deck_icon.png</icon>
-		<flag>CountsTowardMilitaryScore</flag>
-		<effects>
-		  <effect type="Data" amount="1.10" subtype="MaximumContained" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" amount="1.01" subtype="Hitpoints" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" amount="1.01" subtype="Damage" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		</effects>	  
-	</tech>
-  <tech name="MCMT_SVA_EliteFireports">
-		<displaynameid>STR_TECH_ENCLOSED_DECK_NAME</displaynameid>
-		<rollovertextid>STR_TECH_ENCLOSED_DECK_LR</rollovertextid>
-		<cost resourcetype="Gold">200.0000</cost>
-		<cost resourcetype="Wood">300.0000</cost>
-		<researchpoints>40.0000</researchpoints>
-		<status>UNOBTAINABLE</status>
-		<icon>resources\shared\static_color\technologies\enclosed_deck_icon.png</icon>
-		<flag>CountsTowardMilitaryScore</flag>
-		<effects>
-		  <effect type="Data" amount="1.10" subtype="MaximumContained" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" amount="1.01" subtype="Hitpoints" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" amount="1.01" subtype="Damage" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		</effects>	  
-  </tech>
-  <tech name="MCMT_SVA_LuxuriousFireports">
-		<displaynameid>STR_TECH_ENCLOSED_DECK_NAME</displaynameid>
-		<rollovertextid>STR_TECH_ENCLOSED_DECK_LR</rollovertextid>
-		<cost resourcetype="Gold">350.0000</cost>
-		<cost resourcetype="Wood">350.0000</cost>
-		<researchpoints>40.0000</researchpoints>
-		<status>UNOBTAINABLE</status>
-		<icon>resources\shared\static_color\technologies\enclosed_deck_icon.png</icon>
-		<flag>CountsTowardMilitaryScore</flag>
-		<effects>
-		  <effect type="Data" amount="1.10" subtype="MaximumContained" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" amount="1.01" subtype="Hitpoints" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" amount="1.01" subtype="Damage" relativity="BasePercent">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" action="RangedAttack" amount="3.0" subtype="MaximumRange" relativity="Absolute">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" action="RangedAttack" amount="2.00" subtype="Damagebonus" unittype="MythUnit" relativity="Absolute">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		  <effect type="Data" action="RangedAttack" amount="0.5" subtype="OnHitEffect" targettype="HumanSoldier" effecttype="Snare" relativity="Assign" duration="3.00">
-			<target type="ProtoUnit">AbstractTransportShip</target>
-		  </effect>
-		</effects>	  
-  </tech>
-  <tech name="ChampionArms">
-    <displaynameid>STR_TECH_CHAMPION_INFANTRY_NAME</displaynameid>
-    <rollovertextid>STR_TECH_CHAMPION_INFANTRY_LR</rollovertextid>
-    <cost resourcetype="Gold">1000.0000</cost>
-    <researchpoints>40.0000</researchpoints>
-    <status>UNOBTAINABLE</status>
-    <icon>resources\shared\static_color\technologies\champion_infantry_icon.png</icon>
-    <flag>CountsTowardMilitaryScore</flag>
-    <effects>
-      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">InfantryLineUpgraded</target>
-      </effect>
-      <effect type="Data" allactions="1" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">InfantryLineUpgraded</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">InfantryLineUpgraded</target>
-      </effect>
-      <effect type="SetName" proto="Hoplite" newname="STR_UNIT_CHAMPION_HOPLITE_NAME">
-      </effect>
-      <effect type="SetName" proto="Hypaspist" newname="STR_UNIT_CHAMPION_HYPASPIST_NAME">
-      </effect>
-      <effect type="SetName" proto="Myrmidon" newname="STR_UNIT_CHAMPION_MYRMIDON_NAME">
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">ThrowingAxeman</target>
-      </effect>
-      <effect type="SetName" proto="Berserk" newname="STR_UNIT_CHAMPION_BERSERK_NAME">
-      </effect>
-      <effect type="SetName" proto="Hirdman" newname="STR_UNIT_CHAMPION_HIRDMAN_NAME">
-      </effect>
-      <effect type="SetName" proto="Huskarl" newname="STR_UNIT_CHAMPION_HUSKARL_NAME">
-      </effect>
-      <effect type="SetName" proto="ThrowingAxeman" newname="STR_UNIT_CHAMPION_THROWING_AXEMAN_NAME">
-      </effect>
-      <effect type="SetName" proto="Katapeltes" newname="STR_UNIT_CHAMPION_KATAPELTES_NAME">
-      </effect>
-      <effect type="SetName" proto="Murmillo" newname="STR_UNIT_CHAMPION_MURMILLO_NAME">
-      </effect>
-      <effect type="SetName" proto="Destroyer" newname="STR_UNIT_CHAMPION_DESTROYER_NAME">
-      </effect>
-      <effect type="SetName" proto="Fanatic" newname="STR_UNIT_CHAMPION_FANATIC_NAME">
-      </effect>
-      <effect type="SetName" proto="DaoSwordsman" newname="STR_UNIT_CHAMPION_DAO_SWORDSMAN_NAME">
-      </effect>
-      <effect type="SetName" proto="GeHalberdier" newname="STR_UNIT_CHAMPION_GE_HALBERDIER_NAME">
-      </effect>
-	  
-	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">Axeman</target>
-      </effect>
-      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">Axeman</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">Axeman</target>
-      </effect>
-      <effect type="SetName" proto="Axeman" newname="STR_UNIT_CHAMPION_AXEMAN_NAME">
-      </effect>
-	  
-	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">Spearman</target>
-      </effect>
-      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">Spearman</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">Spearman</target>
-      </effect>
-      <effect type="SetName" proto="Spearman" newname="STR_UNIT_CHAMPION_SPEARMAN_NAME">
-      </effect>
-    </effects>
-  </tech>
-  <tech name="ChampionRangers">
-    <displaynameid>STR_TECH_CHAMPION_ARCHERS_NAME</displaynameid>
-    <rollovertextid>STR_TECH_CHAMPION_ARCHERS_LR</rollovertextid>
-    <cost resourcetype="Wood">500.0000</cost>
-    <cost resourcetype="Gold">400.0000</cost>
-    <researchpoints>40.0000</researchpoints>
-    <status>UNOBTAINABLE</status>
-    <icon>resources\shared\static_color\technologies\champion_archers_icon.png</icon>
-    <flag>CountsTowardMilitaryScore</flag>
-    <effects>
-      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">ArcherLineUpgraded</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">ArcherLineUpgraded</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">ArcherLineUpgraded</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Peltast</target>
-      </effect>
-      <effect type="SetName" proto="Toxotes" newname="STR_UNIT_CHAMPION_TOXOTES_NAME"></effect>
-      <effect type="SetName" proto="Peltast" newname="STR_UNIT_CHAMPION_PELTAST_NAME"></effect>
-      <effect type="SetName" proto="Gastraphetoros" newname="STR_UNIT_CHAMPION_GASTRAPHETOROS_NAME"></effect>
-      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Turma</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">TurmaHero</target>
-      </effect>
-      <effect type="SetName" proto="Turma" newname="STR_UNIT_CHAMPION_TURMA_NAME"></effect>
-      <effect type="SetName" proto="Arcus" newname="STR_UNIT_CHAMPION_ARCUS_NAME"></effect>
-      <effect type="SetName" proto="Cheiroballista" newname="STR_UNIT_CHAMPION_CHEIROBALLISTA_NAME"></effect>
-      <effect type="Data" action="RangedAttack" amount="1.0" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">WuzuJavelineer</target>
-      </effect>
-      <effect type="SetName" proto="WuzuJavelineer" newname="STR_UNIT_CHAMPION_WUZU_JAVELINEER_NAME"></effect>
-      <effect type="SetName" proto="FireArcher" newname="STR_UNIT_CHAMPION_FIRE_ARCHER_NAME"></effect>
-      <effect type="SetName" proto="ChuKoNu" newname="STR_UNIT_CHAMPION_CHUKONU_NAME"></effect>
-	  
-	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">Slinger</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">Slinger</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">Slinger</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Slinger</target>
-      </effect>
-	  
-      <effect type="SetName" proto="Slinger" newname="STR_UNIT_CHAMPION_SLINGER_NAME"></effect>
-	  
-	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">ChariotArcher</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">ChariotArcher</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">ChariotArcher</target>
-      </effect>
-      <effect type="SetName" proto="ChariotArcher" newname="STR_UNIT_CHAMPION_CHARIOT_ARCHER_NAME">
-      </effect>
-    </effects>
-	</tech>
-	
-	<tech name="ChampionHooves">
-    <displaynameid>STR_TECH_CHAMPION_CAVALRY_NAME</displaynameid>
-    <rollovertextid>STR_TECH_CHAMPION_CAVALRY_LR</rollovertextid>
-    <cost resourcetype="Food">700.0000</cost>
-    <cost resourcetype="Gold">200.0000</cost>
-    <researchpoints>40.0000</researchpoints>
-    <status>UNOBTAINABLE</status>
-    <icon>resources\shared\static_color\technologies\champion_cavalry_icon.png</icon>
-    <flag>CountsTowardMilitaryScore</flag>
-    <effects>
-      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">CavalryLineUpgraded</target>
-      </effect>
-      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">CavalryLineUpgraded</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">CavalryLineUpgraded</target>
-      </effect>
-      <effect type="SetName" proto="Hippeus" newname="STR_UNIT_CHAMPION_HIPPEUS_NAME">
-      </effect>
-      <effect type="SetName" proto="Prodromos" newname="STR_UNIT_CHAMPION_PRODROMOS_NAME">
-      </effect>
-      <effect type="SetName" proto="Hetairos" newname="STR_UNIT_CHAMPION_HETAIROS_NAME">
-      </effect>
-      <effect type="SetName" proto="RaidingCavalry" newname="STR_UNIT_CHAMPION_RAIDING_CAVALRY_NAME">
-      </effect>
-      <effect type="SetName" proto="Jarl" newname="STR_UNIT_LEGENDARY_JARL_NAME">
-      </effect>
-      <effect type="SetName" proto="Contarius" newname="STR_UNIT_CHAMPION_CONTARIUS_NAME">
-      </effect>
-      <effect type="SetName" proto="WhiteHorseCavalry" newname="STR_UNIT_CHAMPION_WHITE_HORSE_CAVALRY_NAME">
-      </effect>
-      <effect type="SetName" proto="TigerCavalry" newname="STR_UNIT_CHAMPION_TIGER_CAVALRY_NAME">
-      </effect>
-      <effect type="SetName" proto="TigerCavalryDismounted" newname="STR_UNIT_CHAMPION_TIGER_CAVALRY_DISMOUNTED_NAME">
-      </effect>
-	  
-	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">CamelRider</target>
-      </effect>
-      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">CamelRider</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">CamelRider</target>
-      </effect>
-      <effect type="SetName" proto="CamelRider" newname="STR_UNIT_CHAMPION_CAMEL_RIDER_NAME">
-      </effect>
-	  
-	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">WarElephant</target>
-      </effect>
-      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">WarElephant</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">WarElephant</target>
-      </effect>
-      <effect type="SetName" proto="WarElephant" newname="STR_UNIT_CHAMPION_WAR_ELEPHANT_NAME">
-      </effect>
-    </effects>
-  </tech>
-  <tech name="ChampionEngines">
-    <displaynameid>STR_TECH_ENGINEERS_NAME</displaynameid>
-    <rollovertextid>STR_TECH_ENGINEERS_LR</rollovertextid>
-    <cost resourcetype="Food">300.0000</cost>
-    <cost resourcetype="Gold">500.0000</cost>
-    <researchpoints>40.0000</researchpoints>
-    <status>UNOBTAINABLE</status>
-    <icon>resources\shared\static_color\technologies\engineers_icon.png</icon>
-    <flag>CountsTowardMilitaryScore</flag>
-    <effects>
-      <effect type="Data" allactions="1" amount="1.25" subtype="Damage" relativity="BasePercent">
-        <target type="ProtoUnit">SiegeLineUpgraded</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Petrobolos</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Catapult</target>
-      </effect>
-      <effect type="Data" action="RangedAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">FireSiphon</target>
-      </effect>
-      <effect type="Data" action="AntiWallAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Petrobolos</target>
-      </effect>
-      <effect type="Data" action="AntiWallAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">Catapult</target>
-      </effect>
-      <effect type="Data" action="AntiWallAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">FireSiphon</target>
-      </effect>
-      <effect type="Data" allactions="1" amount="1.00" subtype="Damagebonus" unittype="AbstractWall" relativity="Absolute">
-        <target type="ProtoUnit">SiegeLineUpgraded</target>
       </effect>
     </effects>
   </tech>

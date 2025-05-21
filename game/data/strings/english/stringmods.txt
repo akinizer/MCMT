@@ -97,6 +97,46 @@ ID = "STR_UNIT_MR_WUKONG_NAME"   ;   Str = "Mr. Wukong"
 ID = "STR_UNIT_MR_WUKONG_SR"   ;   Str = "Mr. Wukong"
 ID = "STR_UNIT_MR_WUKONG_LR"   ;   Str = "The Monkey King from the Rising Sun Empire in service to establish civilizations"
 
+ID = "STR_UNIT_MCMT_DESOLATOR_NAME"   ;   Str = "Desolator"
+ID = "STR_UNIT_MCMT_DESOLATOR_SR"   ;   Str = "Desolator"
+ID = "STR_UNIT_MCMT_DESOLATOR_LR"   ;   Str = "Corrosive Battleship Loaded with Biotoxin Missiles and Anthrax Field"
+
+ID = "STR_UNIT_MCMT_FLAGSHIP_NAME"   ;   Str = "Flagship"
+ID = "STR_UNIT_MCMT_FLAGSHIP_SR"   ;   Str = "Flagship"
+ID = "STR_UNIT_MCMT_FLAGSHIP_LR"   ;   Str = "Military Beacon of Seven Seas that Fortifies With Passengers"
+
+ID = "STR_UNIT_MCMT_SCORPIONBOAT_NAME"   ;   Str = "Scorpion Boat"
+ID = "STR_UNIT_MCMT_SCORPIONBOAT_SR"   ;   Str = "Scorpion Boat"
+ID = "STR_UNIT_MCMT_SCORPIONBOAT_LR"   ;   Str = "Light Battleship Armed with Minigun"
+
+ID = "STR_UNIT_MCMT_BLAZEMASTER_NAME"   ;   Str = "Blazemaster"
+ID = "STR_UNIT_MCMT_BLAZEMASTER_SR"   ;   Str = "Blazemaster"
+ID = "STR_UNIT_MCMT_BLAZEMASTER_LR"   ;   Str = "Heavy Battleship Armed with Inferno Cannon"
+
+ID = "STR_UNIT_NAVIGATOR_NAME"   ;   Str = "Navigator"
+ID = "STR_UNIT_NAVIGATOR_SR"   ;   Str = "Navigator"
+ID = "STR_UNIT_NAVIGATOR_LR"   ;   Str = "Fast and Agile Ship Excelling in Exploration and Reconnaissance"
+
+ID = "STR_UNIT_MCMT_FLYINGDUTCHMAN_NAME"   ;   Str = "Flying Dutchman"
+ID = "STR_UNIT_MCMT_FLYINGDUTCHMAN_SR"   ;   Str = "Flying Dutchman"
+ID = "STR_UNIT_MCMT_FLYINGDUTCHMAN_LR"   ;   Str = "Ghost Ship of Abyss that Voyages with the Undead"
+
+ID = "STR_UNIT_MCMT_GHOSTCREW_NAME"   ;   Str = "Ghost Crew"
+ID = "STR_UNIT_MCMT_GHOSTCREW_SR"   ;   Str = "Ghost Crew"
+ID = "STR_UNIT_MCMT_GHOSTCREW_LR"   ;   Str = "Passengers of the Legendary Flying Dutchman"
+
+ID = "STR_UNIT_MCMT_PIRATECAPTAIN_NAME"   ;   Str = "Pirate Captain"
+ID = "STR_UNIT_MCMT_PIRATECAPTAIN_SR"   ;   Str = "Pirate Captain"
+ID = "STR_UNIT_MCMT_PIRATECAPTAIN_LR"   ;   Str = "Captain of the Legendary Flying Dutchman"
+
+ID = "STR_UNIT_MCMT_WORLDBREAKER_NAME"   ;   Str = "Worldbreaker"
+ID = "STR_UNIT_MCMT_WORLDBREAKER_SR"   ;   Str = "Worldbreaker"
+ID = "STR_UNIT_MCMT_WORLDBREAKER_LR"   ;   Str = "Superunit of the Rising Sun Empire that Operates as Mobile Dock of Onigami and Naval Fortress. Equipped with Anti-Air, Anti-Army and Anti-Titan Cannons. Bearer of Tsunai Generator Superweapon"
+
+ID = "STR_UNIT_OXCARTMODELX_NAME"   ;   Str = "Ox Cart Model - X"
+ID = "STR_UNIT_OXCARTMODELX_LR"   ;   Str = "Ox Cart Model - X"
+ID = "STR_UNIT_OXCARTMODELX_SR"   ;   Str = "Ox Cart Model - X"
+
 ID = "STR_BLD_BASTION_NAME"   ;   Str = "Bastion"
 ID = "STR_BLD_BASTION_LR"   ;   Str = "Special Units Building"
 
@@ -112,6 +152,10 @@ ID = "STR_BLD_SVA_LR"   ;   Str = "Mechanized Naval Warfare Deployment Center"
 ID = "STR_BLD_AIRCOMMAND_NAME"   ;   Str = "Air Command HQ"
 ID = "STR_BLD_AIRCOMMAND_SR"   ;   Str = "Air Command Headquarters"
 ID = "STR_BLD_AIRCOMMAND_LR"   ;   Str = "Defensive Base of Operations for Aircraft "
+
+ID = "STR_BLD_ATTRACTOR_NAME"   ;   Str = "The Attractor"
+ID = "STR_BLD_ATTRACTOR_SR"   ;   Str = "The Attractor"
+ID = "STR_BLD_ATTRACTOR_LR"   ;   Str = "A Peak of the Economical Development that Broadcast Brainwaves that Instinctively Pulls Preys"
 
 ID = "STR_BLD_MAGETOWER_NAME"   ;   Str = "Mage Tower"
 ID = "STR_BLD_MAGETOWER_SR"   ;   Str = "Mage Tower"
@@ -177,11 +221,37 @@ ID = "STR_TECH_MITHRILARMAMENTS_LR"   ;   Str = "Introduces the Power of Mithril
 ID = "STR_TECH_TURRETINSTALLATION_NAME"   ;   Str = "Turret Installation"
 ID = "STR_TECH_TURRETINSTALLATION_LR"   ;   Str = "Introduces the Automatization Machinery to Tower Structures"
 
-ID = "STR_UNIT_OXCARTMODELX_NAME"   ;   Str = "Ox Cart Model - X"
-ID = "STR_UNIT_OXCARTMODELX_LR"   ;   Str = "Ox Cart Model - X"
-ID = "STR_UNIT_OXCARTMODELX_SR"   ;   Str = "Ox Cart Model - X"
+ID = "STR_TECH_NANOMACHINES_NAME"   ;   Str = "Nanomachines"
+ID = "STR_TECH_NANOMACHINES_LR"   ;   Str = "Introduces the Nanotechnology that Enhances SVA, CyberTech Facility and Docks with Autorepair Machines"
+
+ID = "STR_TECH_EXPLOSIVES_NAME"   ;   Str = "Explosives"
+ID = "STR_TECH_EXPLOSIVES_LR"   ;   Str = "Introduces the Explosive Technology to Onigami Hovercrafts and Overcharged Engines to Economic Ships"
+
+ID = "STR_TECH_COMFORTABLE_FIREPORTS_NAME"   ;   Str = "Comfortable Fireports"
+ID = "STR_TECH_COMFORTABLE_FIREPORTS_LR"   ;   Str = "Installs Passenger Ports with a Better Room Service"
+
+ID = "STR_TECH_ELITE_FIREPORTS_NAME"   ;   Str = "Elite Fireports"
+ID = "STR_TECH_ELITE_FIREPORTS_LR"   ;   Str = "Installs Passenger Ports with a Jacuzzi and a Bar"
+
+ID = "STR_TECH_LUXURIOUS_FIREPORTS_NAME"   ;   Str = "Luxurious Fireports"
+ID = "STR_TECH_LUXURIOUS_FIREPORTS_LR"   ;   Str = "Installs Passenger Ports with a Casino, Kingsize Bed and Personal Assistants"
+
+ID = "STR_TECH_CHAMPION_ARMS_NAME"   ;   Str = "Champion Arms"
+ID = "STR_TECH_CHAMPION_ARMS_LR"   ;   Str = "Champion Infantry Ultimate Promotion"
+
+ID = "STR_TECH_CHAMPION_RANGERS_NAME"   ;   Str = "Champion Rangers"
+ID = "STR_TECH_CHAMPION_RANGERS_LR"   ;   Str = "Champion Archer Ultimate Promotion"
+
+ID = "STR_TECH_CHAMPION_HOOVES_NAME"   ;   Str = "Champion Hooves"
+ID = "STR_TECH_CHAMPION_HOOVES_LR"   ;   Str = "Champion Cavalry Ultimate Promotion"
+
+ID = "STR_TECH_CHAMPION_ENGINES_NAME"   ;   Str = "Champion Engines"
+ID = "STR_TECH_CHAMPION_ENGINES_LR"   ;   Str = "Champion Siege Weapon Ultimate Promotion"
 
 ID = "STR_POWER_PSIONIC_DECIMATOR"   ;   Str = "Psionic Decimator"
 ID = "STR_POWER_PSIONIC_DECIMATOR_LR"   ;   Str = "Psionic Superweapon Unleashed by Matsuri Yurio"
 ID = "STR_POWER_PSIONIC_LEVITATION"   ;   Str = "Psionic Levitation"
 ID = "STR_POWER_PSIONIC_LEVITATION_LR"   ;   Str = "Psionic Energy Unleashed to Blast Targets"
+
+ID = "STR_POWER_TSUNAMI_GENERATOR"   ;   Str = "Tsunami Generator"
+ID = "STR_POWER_TSUNAMI_GENERATOR_LR"   ;   Str = "Seismic Wave Superweapon Unleashed by Worldbreaker Super Battleship"
