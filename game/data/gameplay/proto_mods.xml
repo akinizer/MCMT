@@ -965,7 +965,7 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		
 		<contain external="1">LogicalTypePickable</contain>
-		<tactics>pharaoh.tactics</tactics>
+		<tactics>mcmt_farseer.tactics</tactics>
 		<protoaction>
 			<name>RangedAttack</name>
 			<rof>1.100000</rof>
@@ -1614,13 +1614,9 @@
 			<maxrange>0.750000</maxrange>
 		</protoaction>
 	</unit>
-	<unit name="MatsuriYurioFlight">
+	<unit name="MatsuriYurio">
 		<trainpoints>10.0000</trainpoints>
-
-		<flag>UseSharedBuildLimit</flag>
 		<buildlimit>1</buildlimit>
-		<sharedbuildlimitunit>MatsuriYurio</sharedbuildlimitunit>
-		<sharedbuildlimitunittypes>MatsuriYurio</sharedbuildlimitunittypes>
 		
 		<displaynameid>STR_UNIT_MATSURIYURIO_NAME</displaynameid>
 		<shortrollovertextid>STR_UNIT_MATSURIYURIO_SR</shortrollovertextid>
@@ -1644,8 +1640,8 @@
 		<movementtype>Air</movementtype>
 		
 		<turnrate>18.0000</turnrate>
-		<initialhitpoints>2000.0000</initialhitpoints>
-		<maxhitpoints>2000.0000</maxhitpoints>
+		<initialhitpoints>4800.0000</initialhitpoints>
+		<maxhitpoints>4800.0000</maxhitpoints>
 		<initialshieldpoints>1000</initialshieldpoints>
 		<maxshieldpoints>1000</maxshieldpoints>
 		<unitshieldregen damagetimeout="3.0">1</unitshieldregen>
@@ -1657,6 +1653,8 @@
 		<armor type="Hack" value="0.3000"></armor>
 		<armor type="Pierce" value="0.6500"></armor>
 		<armor type="Crush" value="0.9900"></armor>
+
+		<cost resourcetype="Gold">2500.000</cost>
 
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
 		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
@@ -1731,158 +1729,6 @@
 		  </onhiteffect>	
 		</protoaction>
 		<protoaction>
-			<name>DelayedTransform</name>
-			<modifyduration>10000</modifyduration>
-			<modifyprotoid>MatsuriYurio</modifyprotoid>
-		</protoaction>
-		<protoaction>
-		  <name>Heal</name>
-		  <type>Heal</type>
-		  <rate type="LogicalTypeHealed">15.00000</rate>
-		  <slowhealmultiplier>0.50</slowhealmultiplier>
-		</protoaction>		
-		<protoaction>
-		  <name>Pickup</name>
-		  <type>Pickup</type>
-		  <maxrange>1</maxrange>
-		  <rate type="LogicalTypePickable">1.00000</rate>
-		</protoaction>
-		<protoaction>
-		  <name>DropOff</name>
-		  <type>DropOff</type>
-		  <maxrange>1</maxrange>
-		  <rate type="AbstractTemple">1.00000</rate>
-		</protoaction>	
-	</unit>
-	<unit name="MatsuriYurio">
-		<trainpoints>60.0000</trainpoints>
-		
-		<flag>UseSharedBuildLimit</flag>
-		<sharedbuildlimitunit>MatsuriYurioFlight</sharedbuildlimitunit>
-		<sharedbuildlimitunittypes>MatsuriYurioFlight</sharedbuildlimitunittypes>
-		<buildlimit>1</buildlimit>
-		
-		<displaynameid>STR_UNIT_MATSURIYURIO_NAME</displaynameid>
-		<shortrollovertextid>STR_UNIT_MATSURIYURIO_SR</shortrollovertextid>
-		<rollovertextid>STR_UNIT_MATSURIYURIO_LR</rollovertextid>
-		
-		<icon>resources\spc\player_color\units\shiji_icon.png</icon>
-		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
-		<animfile>spc\units\shi_ji\shi_ji.xml</animfile>
-		<soundsetfile>chinese\vo\shi_ji\shi_ji.xml</soundsetfile>
-		
-		<obstructionradiusx>0.4900</obstructionradiusx>
-		<obstructionradiusz>0.4900</obstructionradiusz>
-		<impacttype>Unarmoured</impacttype>
-		<unitaitype>RangedCombative</unitaitype>
-		<autoattackrange>60.0000</autoattackrange>
-		<formationorder>4</formationorder>
-		
-		<movementtype>amphibious</movementtype>
-		<flag>TieToWaterSurface</flag>
-		
-		<turnrate>18.0000</turnrate>
-		<initialhitpoints>2000.0000</initialhitpoints>
-		<maxhitpoints>2000.0000</maxhitpoints>
-		<initialshieldpoints>1000</initialshieldpoints>
-		<maxshieldpoints>1000</maxshieldpoints>
-		<unitshieldregen damagetimeout="3.0">1</unitshieldregen>
-		
-		<weightclass>150</weightclass>
-		<maxcontained>1</maxcontained>
-		<maxvelocity>3.6000</maxvelocity>
-		<los>20.0000</los>
-		<armor type="Hack" value="0.3000"></armor>
-		<armor type="Pierce" value="0.6500"></armor>
-		<armor type="Crush" value="0.9900"></armor>
-
-		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
-		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-		<unittype>LogicalTypeGarrisonInShips</unittype>
-		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-		<unittype>LogicalTypeVillagersAttack</unittype>
-		<unittype>LogicalTypeHandUnitsAttack</unittype>
-		<unittype>LogicalTypeRangedUnitsAttack</unittype>
-		<unittype>CountsTowardMilitaryScore</unittype>
-		<unittype>Unit</unittype>
-		<unittype>UnitClass</unittype>
-		<unittype>Ranged</unittype>
-		<unittype>MilitaryUnit</unittype>
-		
-		<unittype>Hero</unittype>
-		<unittype>AbstractEmpowerer</unittype>
-		<unittype>AbstractPharaoh</unittype>
-		<unittype>AbstractHealer</unittype>
-		<unittype>MajorHero</unittype>
-		<unittype>HeroShadowUpgraded</unittype>
-		<unittype>AbstractSiegeWeapon</unittype>
-		<unittype>SiegeLineUpgraded</unittype>		
-		
-		<unittype>LogicalTypeConvertsHerds</unittype>
-		<unittype>LogicalTypeEarthquakeAttack</unittype>
-		<unittype>LogicalTypeValidMeteorTarget</unittype>
-		<unittype>LogicalTypeValidTornadoAttack</unittype>
-		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
-		<unittype>LogicalTypeValidSpyTarget</unittype>
-		<unittype>LogicalTypeValidFrostTarget</unittype>
-		
-		<unittype>LogicalTypeLandMilitary</unittype>
-		<unittype>LogicalTypeNeededForVictory</unittype>
-		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
-		
-		<unittype>LogicalTypeFindMilitaryHero</unittype>
-		<unittype>LogicalTypeDivineImmunity</unittype>
-		<hotkeycontext>PharaohAccel</hotkeycontext>
-		<flag>CollidesWithProjectiles</flag>
-		<flag>CorpseDecays</flag>
-		<flag>ShowGarrisonButton</flag>
-		<flag>DontRotateObstruction</flag>
-		<flag>ObscuredByUnits</flag>
-		<flag>CanAutoHeal</flag>
-		<flag>ExcludeFromMoveAllMilitary</flag>
-		<flag>CommonCommands</flag>
-		<flag>MilitaryCommands</flag>
-		<flag>AutoCommandStartDisabled</flag>
-		<flag>HideGarrisonFlag</flag>
-		<flag>CreateUnitGroupAutomatically</flag>
-		
-		<contain external="1">LogicalTypePickable</contain>
-		<tactics>mcmt_matsuriyurio.tactics</tactics>
-		<protoaction>
-		  <name>RangedAttack</name>
-		  <rof>6.00000</rof>
-		  <damage type="Divine">60.00000</damage>
-		  <damagebonus type="AbstractFlyingUnit">10000.000000</damagebonus>
-		  <damagebonus type="AbstractTitan">25.000000</damagebonus>
-		  <damagebonus type="Building">10.000000</damagebonus>
-		  <damagebonus type="LogicalTypeMythUnitNotTitan">5.000000</damagebonus>
-		  <damagebonus type="HumanSoldier">5.000000</damagebonus>
-		  <maxrange>50.000000</maxrange>
-		  
-		  <projectile>ProjectileBallOfFireInvisible</projectile>		  
-		  <trackrating>99</trackrating>
-		  <instantballistics>1</instantballistics>
-		  
-		  <onhiteffect type="Throw">
-			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
-			<target attacktype="HumanSoldier"></target>
-			<target attacktype="AbstractVillager"></target>
-			<target attacktype="NavalUnit"></target>
-		  </onhiteffect>	
-		</protoaction>
-		<protoaction>
-			<name>DelayedTransform</name>
-			<modifyduration>10000</modifyduration>
-			<modifyprotoid>MatsuriYurioFlight</modifyprotoid>
-		</protoaction>
-		<protoaction>
-		  <name>Heal</name>
-		  <type>Heal</type>
-		  <rate type="LogicalTypeHealed">15.00000</rate>
-		  <slowhealmultiplier>0.50</slowhealmultiplier>
-		</protoaction>		
-		<protoaction>
 		  <name>Pickup</name>
 		  <type>Pickup</type>
 		  <maxrange>1</maxrange>
@@ -1897,7 +1743,6 @@
 	</unit>
 	<unit name="MatsuriAzula">
 		<trainpoints>1.0000</trainpoints>
-		<buildlimit>1</buildlimit>
 		
 		<displaynameid>STR_UNIT_MATSURIAZULA_NAME</displaynameid>
 		<shortrollovertextid>STR_UNIT_MATSURIAZULA_SR</shortrollovertextid>
@@ -1922,8 +1767,8 @@
 		<flag>DecalStickToWaterSurface</flag>
 		
 		<turnrate>18.0000</turnrate>
-		<initialhitpoints>1500.0000</initialhitpoints>
-		<maxhitpoints>1500.0000</maxhitpoints>
+		<initialhitpoints>1000.0000</initialhitpoints>
+		<maxhitpoints>1000.0000</maxhitpoints>
 		<initialshieldpoints>2000</initialshieldpoints>
 		<maxshieldpoints>2000</maxshieldpoints>
 		<unitshieldregen damagetimeout="3.0">1</unitshieldregen>
@@ -1935,6 +1780,8 @@
 		<armor type="Hack" value="0.3000"></armor>
 		<armor type="Pierce" value="0.6500"></armor>
 		<armor type="Crush" value="0.9900"></armor>
+
+		<cost resourcetype="Gold">1800.000</cost>
 
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
 		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
@@ -2140,9 +1987,9 @@
 	</unit>
 	
 	<unit name="Spartan">
-		<displaynameid>STR_UNIT_HOPLITE_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_HOPLITE_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_HOPLITE_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_SPARTAN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_SPARTAN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_SPARTAN_SR</shortrollovertextid>
 		<editornameid>STR_UNIT_HOPLITE_EDT_NAME</editornameid>
 		<icon>resources\greek\player_color\units\hoplite_icon.png</icon>
 		<animfile>greek\units\infantry\hoplite\hoplite_spc.xml</animfile>
@@ -2225,9 +2072,9 @@
 		</protoaction>	
 	</unit>
 	<unit name="ImperialGuard">
-		<displaynameid>STR_UNIT_HYPASPIST_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_HYPASPIST_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_HYPASPIST_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_IMPERIALGUARD_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_IMPERIALGUARD_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_IMPERIALGUARD_SR</shortrollovertextid>
 		<icon>resources\greek\player_color\units\hypaspist_icon.png</icon>
 		<animfile>greek\units\infantry\hypaspist\hypaspist.xml</animfile>
 		<soundsetfile>greek\vo\hypaspist\hypaspist.xml</soundsetfile>
@@ -2308,9 +2155,9 @@
 	  </unit>
 	  
 	<unit name="Peacemaker">
-		<displaynameid>STR_UNIT_CHAMPION_DESTROYER_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_DESTROYER_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_DESTROYER_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_PEACEMAKER_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_PEACEMAKER_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_PEACEMAKER_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\destroyer_icon.png</icon>
 		<animfile>atlantean\units\infantry\destroyer\destroyer.xml</animfile>
 		<soundsetfile>atlantean\vo\destroyer\destroyer.xml</soundsetfile>
@@ -2388,9 +2235,9 @@
 	</unit>
 	
 	<unit name="Hitman">
-		<displaynameid>STR_UNIT_PIONEER_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_PIONEER_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_PIONEER_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_HITMAN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_HITMAN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_HITMAN_SR</shortrollovertextid>
 		<icon>resources\chinese\player_color\units\pioneer_icon.png</icon>
 		<animfile>chinese\units\hero\pioneer\pioneer.xml</animfile>
 		<soundsetfile>chinese\vo\pioneer\pioneer.xml</soundsetfile>
@@ -2550,7 +2397,7 @@
 	<!--///New Units Added to Houses and Manor-->
 	<unit name="House">
 		<buildlimit>25</buildlimit>
-		<train row="0" column="5">AttackWolf</train>
+		<train row="3" column="4">AttackWolf</train>
 		
 		<maxcontained>5</maxcontained>
 		<contain>AbstractVillager</contain>
@@ -2558,7 +2405,6 @@
 		
 		<flag>HasGatherPoint</flag>
 		<flag>ObscuresUnits</flag>
-		<maxcontained>5</maxcontained>
 	</unit>	
 	<unit name="Manor">
 		<buildlimit>10</buildlimit>
@@ -2877,6 +2723,7 @@
 		<train row="1" column="0">FlyingDutchman</train>
 		<train row="1" column="1">Blazemaster</train>
 		<train row="1" column="2">Worldbreaker</train>
+		<train row="1" column="3">OilRigPacked</train>
 		
 		<tech row="2" column="0">HeavyWarships</tech>
 		<tech row="2" column="0">ChampionWarships</tech>
@@ -2900,6 +2747,73 @@
 		<command row="3" column="0">SetGatherPoint</command>
 		<command row="3" column="5">Delete</command>
 		<tactics>dock.tactics</tactics>
+	</unit>
+	<unit name="OilRig">
+		<displaynameid>STR_BLD_OILRIG_NAME</displaynameid>
+		<rollovertextid>STR_BLD_OILRIG_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_OILRIG_SR</shortrollovertextid>
+		<icon>resources\shared\static_color\buildings\dock_icon.png</icon>
+		<animfile>atlantean\buildings\dock\dock.xml</animfile>
+		<soundsetfile>atlantean\sfx\buildings\sky_passage.xml</soundsetfile>
+		<obstructionradiusx>3.5000</obstructionradiusx>
+		<obstructionradiusz>3.5000</obstructionradiusz>
+		<impacttype>Metal</impacttype>
+		<movementtype>water</movementtype>
+		<screenshakeondestruction>0.400</screenshakeondestruction>
+		<autoattackrange>24.0000</autoattackrange>
+		<initialhitpoints>1600.0000</initialhitpoints>
+		<maxhitpoints>1600.0000</maxhitpoints>
+		<buildpoints>30.0000</buildpoints>
+		<los>22.0000</los>
+		<cost resourcetype="Gold">2000.0000</cost>
+		<armor type="Hack" value="0.4800"></armor><armor type="Pierce" value="0.9000"></armor><armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>Building</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeBuildingThatCanBeEmpowered</unittype>
+		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
+		<unittype>LogicalTypeBuildingSmall</unittype>
+		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>
+		<unittype>LogicalTypeAffectedByBuildingChainAutoBuild</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>TieToWaterSurface</flag>
+		<flag>DisplayRange</flag>
+		<tactics>mcmt_oilrig.tactics</tactics>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Divine">40.000000</damage>
+			<maxrange>20.000000</maxrange>
+			<projectile>ProjectilePriestPharaoh</projectile>
+			<numberprojectiles>1</numberprojectiles>
+			<volleymode>1</volleymode>
+			<!--special flags
+			<activeifcontainsunits>1</activeifcontainsunits>
+			-->
+		</protoaction>
+		<protoaction>
+			<name>AutoGather</name>
+			<type>AutoGather</type>
+			<rate type="Gold">1.00000</rate>
+			<persistent>1</persistent>
+		</protoaction>
 	</unit>
 	
 	<unit name="TempleOfPrimordials">
@@ -4505,9 +4419,9 @@
 	
 	<!-- Hidden///Scenario///Editor///Units -->
 	<unit name="AttackWolf" mergeMode="add">
-		<displaynameid>STR_EMB_ARCTIC_WOLF_NAME</displaynameid>
-		<rollovertextid>STR_EMB_ARCTIC_WOLF_LR</rollovertextid>
-		<shortrollovertextid>STR_EMB_FOOD_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_ATTACKWOLF_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_ATTACKWOLF_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_ATTACKWOLF_SR</shortrollovertextid>
 		<icon>resources\nature\animals\land\arctic_wolf_icon.png</icon>
 		<animfile>nature\animals\land\arctic_wolf\arctic_wolf.xml</animfile>
 		<soundsetfile>nature\animals\arctic_wolf\arctic_wolf.xml</soundsetfile>
@@ -5257,9 +5171,9 @@
 		</protoaction>
 	</unit>
 		<unit name="SolarBarge">
-		<displaynameid>STR_UNIT_THE_ARGO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_THE_ARGO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_THE_ARGO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_SOLARBARGE_NAME</displaynameid>
+		<shortrollovertextid>STR_UNIT_SOLARBARGE_SR</shortrollovertextid>
+		<rollovertextid>STR_UNIT_SOLARBARGE_LR</rollovertextid>
 		<icon>resources\greek\player_color\units\the_argo_icon.png</icon>
 		<animfile>greek\units\naval\the_argo\the_argo.xml</animfile>
 		<soundsetfile>greek\vo\the_argo\the_argo.xml</soundsetfile>
@@ -5356,9 +5270,9 @@
 	</unit>
 	
 	<unit name="WindRider">	
-    <displaynameid>STR_UNIT_WHITE_HORSE_CAVALRY_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_WHITE_HORSE_CAVALRY_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_WHITE_HORSE_CAVALRY_SR</shortrollovertextid>
+    <displaynameid>STR_UNIT_WINDRIDER_NAME</displaynameid>
+    <rollovertextid>STR_UNIT_WINDRIDER_LR</rollovertextid>
+    <shortrollovertextid>STR_UNIT_WINDRIDER_SR</shortrollovertextid>
     <icon>resources\chinese\player_color\units\white_horse_cavalry_icon.png</icon>
     <animfile>chinese\units\cavalry\white_horse_cavalry\white_horse_cavalry.xml</animfile>
     <soundsetfile>chinese\vo\white_horse_cavalry\white_horse_cavalry.xml</soundsetfile>
@@ -6441,9 +6355,75 @@
 		<scalebycontainedunittype>
 			<rate type="Unit">0.050000</rate>
 		</scalebycontainedunittype>
-  </protoaction>
+ 	 </protoaction>
   </unit>
- 
+  <unit name="OilRigPacked">
+    <displaynameid>STR_BLD_OILRIGPACKED_NAME</displaynameid>
+    <rollovertextid>STR_BLD_OILRIGPACKED_LR</rollovertextid>
+    <shortrollovertextid>STR_BLD_OILRIGPACKED_SR</shortrollovertextid>
+    <editornameid>STR_UNIT_TRANSPORT_SHIP_ATLANTEAN_EDT_NAME</editornameid>
+    <icon>resources\atlantean\player_color\units\transport_ship_atlantean_icon.png</icon>
+    <animfile>atlantean\units\naval\transport_ship_atlantean\transport_ship_atlantean.xml</animfile>
+    <soundsetfile>atlantean\vo\transport_ship_atlantean\transport_ship_atlantean.xml</soundsetfile>
+    <obstructionradiusx>0.9900</obstructionradiusx>
+    <obstructionradiusz>0.9900</obstructionradiusz>
+    <selectionradiusx>1.2500</selectionradiusx>
+    <selectionradiusz>2.5000</selectionradiusz>
+    <impacttype>Metal</impacttype>
+    <unitaitype>RangedCombative</unitaitype>
+    <movementtype>water</movementtype>
+    <turnrate>6.0000</turnrate>
+    <initialhitpoints>1000.0000</initialhitpoints>
+    <maxhitpoints>1000.0000</maxhitpoints>
+    <trainpoints>19.0000</trainpoints>
+    <weightclass>200</weightclass>
+    <sizeclass>1</sizeclass>
+    <populationcount>1</populationcount>
+    <maxvelocity>4.500</maxvelocity>
+    <los>14.0000</los>
+    <cost resourcetype="Gold">2000.0000</cost>
+    <armor type="Hack" value="0.4000"></armor><armor type="Pierce" value="0.8000"></armor><armor type="Crush" value="0.0500"></armor>
+    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeVillagersAttack</unittype>
+    <unittype>LogicalTypeHandUnitsAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAttack</unittype>
+    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
+    <unittype>LogicalTypeHealed</unittype>
+    <unittype>Ship</unittype>
+    <unittype>Unit</unittype>
+    <unittype>UnitClass</unittype>
+    <unittype>CountsTowardMilitaryScore</unittype>
+    <unittype>LogicalTypeConvertsHerds</unittype>
+    <unittype>LogicalTypeEarthquakeAttack</unittype>
+    <unittype>LogicalTypeAffectedByRestoration</unittype>
+    <unittype>LogicalTypeValidMeteorTarget</unittype>
+    <unittype>LogicalTypeValidTornadoAttack</unittype>
+    <unittype>LogicalTypeValidSpyTarget</unittype>
+    <unittype>LogicalTypeValidFrostTarget</unittype>
+    <unittype>NavalUnit</unittype>
+    <unittype>LogicalTypeValidShockwaveTarget</unittype>
+    <unittype>LogicalTypeMinimapFilterEconomic</unittype>
+    <unittype>LogicalTypeShipNotHero</unittype>
+    <unittype>LogicalTypeNotEconomicOrMilitaryUnit</unittype>
+    <unittype>LogicalTypeDivineImmunity</unittype>
+    <flag>TieToWaterSurface</flag>
+    <flag>CollidesWithProjectiles</flag>
+    <flag>DontRotateObstruction</flag>
+    <flag>DecalStickToWaterSurface</flag>
+    <flag>FadeOutDecalOnDeath</flag>
+    <flag>HasContinuousParticles</flag>
+    <flag>NoIdleActions</flag>
+    <flag>CreateUnitGroupAutomatically</flag>
+	<tactics>mcmt_oilrig.tactics</tactics>
+	<protoaction>
+		<name>DelayedTransform</name>
+		<modifyduration>2500</modifyduration>
+		<modifyprotoid>OilRig</modifyprotoid>
+		<cost resourcetype="Favor">100.0000</cost>
+	</protoaction>
+  </unit>
 	<!--IMPROVEMENTS///ATLANTEAN-->
 	
 	<!--OracleHero Stat Improvement, Divine Attack-->
@@ -6609,7 +6589,7 @@
 			<rate type="ScoutProbe">5.00000</rate>	
 			<rate type="Ship">5.00000</rate>	
 			<rate type="TheArgo">5.00000</rate>	
-			<rate type="Building">1.0000</rate>	
+			<rate type="Building">10.0000</rate>	
 			<slowhealmultiplier>0.50</slowhealmultiplier>
 			<donotignoredead>1</donotignoredead>
 		</protoaction>
@@ -6890,36 +6870,90 @@
 		</protoaction>
 	</unit>
 	
-	<unit name="Sentinel">
-		<unittype>MythUnit</unittype>
-		<unittype>MythUnitRanged</unittype>
-		<unittype>AbstractTower</unittype>
-		<unittype>AbstractArcher</unittype>
-		<unittype>ArcherLineUpgraded</unittype>
+	<unit name="Sentinel">		
+		<displaynameid>STR_UNIT_SENTINEL_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_SENTINEL_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_SENTINEL_SR</shortrollovertextid>
+		<icon>resources\greek\player_color\units\sentinel_icon.png</icon>
+		<animfile>greek\units\archery\sentinel\sentinel.xml</animfile>
+		<soundsetfile>greek\vo\sentinel\sentinel.xml</soundsetfile>
+		<obstructionradiusx>0.9900</obstructionradiusx>
+		<obstructionradiusz>0.9900</obstructionradiusz>
+		<selectionradiusx>1.5000</selectionradiusx>
+		<selectionradiusz>1.5000</selectionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<autoattackrange>22.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>9.0000</turnrate>
+		<initialhitpoints>400.0000</initialhitpoints>
+		<maxhitpoints>400.0000</maxhitpoints>
+		<buildpoints>45.0000</buildpoints>
+		<los>26.0000</los>
+		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.1000"></armor>
+		<culture>Greek</culture>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+	
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
 		<unittype>MilitaryBuilding</unittype>
 		<unittype>MilitaryUnit</unittype>
-		<unittype>LogicalTypeLandMilitary</unittype>
-		<unittype>LogicalTypeAffectedBySunRay</unittype>
-		<unittype>LogicalTypeAffectedByValor</unittype>
-		<unittype>LogicalTypeAffectedByValleyOfTheKings</unittype>
-		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>MythUnit</unittype>
+		<unittype>MythUnitRanged</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>Building</unittype>	
+		<unittype>Unit</unittype>	
+		<unittype>UnitClass</unittype>	
+		<unittype>Ranged</unittype>
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<unittype>AbstractTower</unittype>		
 
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeBuildingsThatShoot</unittype>
+		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
+		
+		<flag>RotateInPlace</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>DisplayRange</flag>
+		<flag>Doppled</flag>
+		<flag>Immoveable</flag>
+		<flag>MilitaryCommands</flag>
 		<tactics>rangedattack.tactics</tactics>
 		<protoaction>
-		  <name>RangedAttack</name>
-		  <rof>2.000000</rof>
-		  <damage type="Pierce">20.000000</damage>
-		  <damage type="Crush">5.000000</damage>
-		  <maxrange>18.000000</maxrange>
-		  <projectile>ProjectileSiegeCrossbowArrow</projectile>
-		  
-		  <onhiteffect type="Throw">
-			<target attacktype="HumanSoldier"></target>
-			<target attacktype="AbstractVillager"></target>
-			<target attacktype="AbstractFlyingUnit"></target>
-		  </onhiteffect>	 
+			<name>RangedAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">20.000000</damage>
+			<damage type="Crush">5.000000</damage>
+			<maxrange>18.000000</maxrange>
+			<projectile>ProjectileSiegeCrossbowArrow</projectile>
+			
+			<onhiteffect type="Throw">
+				<target attacktype="HumanSoldier"></target>
+				<target attacktype="AbstractVillager"></target>
+			</onhiteffect>	 
 
-		  <onhiteffect type="Freeze" freezetype="StoneDamage" duration="3.000000"></onhiteffect>		  
+			<onhiteffect type="Freeze" freezetype="StoneDamage" duration="3.000000"></onhiteffect>		  
 		</protoaction>
 	</unit>
 	
@@ -8340,9 +8374,9 @@
 		<unittype>HeroShadowUpgraded</unittype>	
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_ARCUS_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_ARCUS_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_ARCUS_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_ARCUS_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_ARCUS_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_ARCUS_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\arcus_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\arcus_hero\arcus_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\arcus_hero\arcus_hero.xml</soundsetfile>
@@ -8444,9 +8478,9 @@
 		<unittype>LegendHero</unittype>
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_CONTARIUS_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_CONTARIUS_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_CONTARIUS_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_CONTARIUS_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_CONTARIUS_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_CONTARIUS_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\contarius_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\contarius_hero\contarius_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\contarius_hero\contarius_hero.xml</soundsetfile>
@@ -8543,9 +8577,9 @@
 		<unittype>LegendHero</unittype>
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_MURMILLO_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_MURMILLO_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_MURMILLO_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_MURMILLO_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_MURMILLO_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_MURMILLO_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\murmillo_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\murmillo_hero\murmillo_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\murmillo_hero\murmillo_hero.xml</soundsetfile>
@@ -8643,9 +8677,9 @@
 		<unittype>LegendHero</unittype>
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_KATAPELTES_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_KATAPELTES_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_KATAPELTES_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_KATAPELTES_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_KATAPELTES_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_KATAPELTES_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\katapeltes_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\katapeltes_hero\katapeltes_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\katapeltes_hero\katapeltes_hero.xml</soundsetfile>
@@ -8741,9 +8775,9 @@
 		<unittype>LegendHero</unittype>
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_TURMA_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_TURMA_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_TURMA_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_TURMA_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_TURMA_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_TURMA_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\turma_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\turma_hero\turma_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\turma_hero\turma_hero.xml</soundsetfile>
@@ -8842,9 +8876,9 @@
 		<unittype>LegendHero</unittype>
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_DESTROYER_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_DESTROYER_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_DESTROYER_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_DESTROYER_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_DESTROYER_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_DESTROYER_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\destroyer_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\destroyer_hero\destroyer_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\destroyer_hero\destroyer_hero.xml</soundsetfile>
@@ -8941,9 +8975,9 @@
 		<unittype>LegendHero</unittype>
 		<trainpoints>1.0000</trainpoints>
 		
-		<displaynameid>STR_UNIT_FANATIC_HERO_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_FANATIC_HERO_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_FANATIC_HERO_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_FANATIC_CAPTAIN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_FANATIC_CAPTAIN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_FANATIC_CAPTAIN_SR</shortrollovertextid>
 		<icon>resources\atlantean\player_color\units\fanatic_hero_icon.png</icon>
 		<animfile>atlantean\units\hero\fanatic_hero\fanatic_hero.xml</animfile>
 		<soundsetfile>atlantean\vo\fanatic_hero\fanatic_hero.xml</soundsetfile>
@@ -10245,10 +10279,6 @@
 		</protoaction>
 	</unit>
 	<unit name="GhostCrew">
-		<unittype>MilitaryUnit</unittype>
-		<unittype>AbstractInfantry</unittype>
-		<unittype>InfantryLineUpgraded</unittype>
-		
 		<movementtype>amphibious</movementtype>
 		<flag>TieToWaterSurface</flag>
 		<trainpoints>1</trainpoints>
@@ -10263,7 +10293,6 @@
 		<obstructionradiusz>0.4900</obstructionradiusz>
 		<impacttype>Unarmoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
-		<movementtype>land</movementtype>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>10.0000</initialhitpoints>
 		<maxhitpoints>10.0000</maxhitpoints>
@@ -10282,6 +10311,18 @@
 		<unittype>LogicalTypeVillagersAttack</unittype>
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
 		<unittype>CountsTowardMilitaryScore</unittype>
+
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeFreezableMythUnit</unittype>
+		<unittype>LogicalTypeMythUnitNotFlying</unittype>
 		
 		<unittype>MilitaryUnit</unittype>
 		<unittype>UnitClass</unittype>
@@ -10299,12 +10340,16 @@
 		<unittype>LogicalTypeMythUnitNotTitan</unittype>
 		<unittype>LogicalTypeValidFrostTarget</unittype>
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+
+		<!--special flags-->
+		<flag>Invulnerable</flag>
+		<flag>Wanders</flag>
+
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
 		<flag>ShowGarrisonButton</flag>
 		<flag>DontRotateObstruction</flag>
-		<flag>ObscuredByUnits</flag>
-		<flag>Invulnerable</flag>
+		<flag>ObscuredByUnits</flag>			
 		<flag>CommonCommands</flag>
 		<flag>MilitaryCommands</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
@@ -10666,7 +10711,7 @@
 			<maxrange>4.000000</maxrange>
 		</protoaction>
 	</unit>
-	<unit name="TitanYmir"></unit>
+	<unit name="TitanYmir">
 		<armor type="Hack" value="0.8000"></armor>
 		<armor type="Pierce" value="0.4000"></armor>
 		<armor type="Crush" value="0.6000"></armor>
@@ -10683,6 +10728,7 @@
 			<damagebonus type="HumanSoldier">5.000000</damagebonus>
 			<maxrange>4.000000</maxrange>
 		</protoaction>
+	</unit>
 	<unit name="TitanAtlantean">
 		<armor type="Hack" value="0.6000"></armor>
 		<armor type="Pierce" value="0.8000"></armor>
@@ -11151,6 +11197,218 @@
 		</protoaction>
 	</unit>
 	
-	<!--IMPROVEMENTS-CAMPAIGN-->
-		
+	<!--IMPROVEMENTS-NATURE-->
+
+	<!--Trees-->
+	<unit name="TreeCypress">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+  	</unit>
+	<unit name="TreeCypressSnow">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+	</unit>
+	<unit name="TreeHades">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">500</initialresource>
+	</unit>
+	<unit name="TreeMarsh">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreeOak">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1250</initialresource>
+	</unit>
+	<unit name="TreeOakAutumn">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1250</initialresource>
+	</unit>
+	<unit name="TreeOakRound">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">12500</initialresource>
+	</unit>
+	<unit name="TreeOlive">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreePalm">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreePine">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreePineDead">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">500</initialresource>	
+	</unit>
+	<unit name="TreePineSnow">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreePineSnowBurning">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreeSavannah">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreeSavannahOld">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">1100</initialresource>
+	</unit>
+	<unit name="TreeTundra">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>
+	<unit name="TreeTundraSnow">
+		<obstructionradiusx>0.1000</obstructionradiusx>
+		<obstructionradiusz>0.1000</obstructionradiusz>	
+		<initialresource resourcetype="Wood">1000</initialresource>
+	</unit>		
+	<unit name="TreeGaia">
+		<initialresource resourcetype="Wood">2000</initialresource>
+	</unit>	
+	<!--Gold Mines-->
+	<unit name="MineGoldLarge">
+		<initialresource resourcetype="Gold">8000</initialresource>
+		<carrycapacity resourcetype="Gold">8000</carrycapacity>
+	</unit>
+	<unit name="MineGoldMedium">
+		<initialresource resourcetype="Gold">6000</initialresource>
+		<carrycapacity resourcetype="Gold">6000</carrycapacity>		
+	</unit>		
+	<unit name="MineGoldSmall">
+		<initialresource resourcetype="Gold">4000</initialresource>
+		<carrycapacity resourcetype="Gold">4000</carrycapacity>
+	</unit>
+
+	<unit name="MineDwarvenLarge">
+		<initialresource resourcetype="Gold">60000</initialresource>
+		<carrycapacity resourcetype="Gold">60000</carrycapacity>		
+	</unit>
+	<unit name="MineDwarvenMedium">
+		<initialresource resourcetype="Gold">40000</initialresource>
+		<carrycapacity resourcetype="Gold">40000</carrycapacity>		
+	</unit>
+	<unit name="MineDwarvenSmall">
+		<initialresource resourcetype="Gold">25000</initialresource>
+		<carrycapacity resourcetype="Gold">25000</carrycapacity>		
+	</unit>
+
+	<!--Fish Pools-->
+	<unit name="Salmon">
+		<decay delay="0.0000" duration="60.0000"></decay>
+	</unit>
+	<unit name="Perch"></unit>
+	<unit name="Mahi"></unit>
+	<unit name="Herring"></unit>
+	<unit name="WhaleHuntable">
+		<displaynameid>STR_EMB_WHALE_NAME</displaynameid>
+		<shortrollovertextid>STR_EMB_WHALE_NAME</shortrollovertextid>
+		<rollovertextid>STR_EMB_WHALE_NAME</rollovertextid>
+		<icon>resources\nature\animals\naval\fish_icon.png</icon>
+		<animfile>nature\animals\naval\whale\whale.xml</animfile>
+
+		<icon>resources\nature\animals\naval\fish_icon.png</icon>
+		<minimapcolor red="0.5000" blue="0.5000" green="0.5000">
+		</minimapcolor>
+		<obstructionradiusx>3.0000</obstructionradiusx>
+		<obstructionradiusz>3.0000</obstructionradiusz>
+		<decay delay="0.0000" duration="1.0000">
+		</decay>
+		<movementtype>water</movementtype>
+		<gathererlimit>3</gathererlimit>
+		<initialresource resourcetype="Food">10.0000</initialresource>
+		<resourcesubtype>fish</resourcesubtype>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeVillagersRespondToAttack</unittype>
+		<unittype>NatureClass</unittype>
+		<unittype>Nature</unittype>
+		<unittype>FishResource</unittype>
+		<unittype>Resource</unittype>
+		<flag>DontRotateObstruction</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>ForceToNature</flag>
+		<flag>NoHPBar</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>DoNotValidateResourceInventory</flag>
+		<flag>DecalStickToWaterSurface</flag>
+		<flag>NonCollideable</flag>
+		<flag>TieToWaterSurface</flag>
+		<flag>UnlimitedSupply</flag>
+		<flag>Doppled</flag>
+		<flag>NoIdleActions</flag>
+		<flag>ObscuredByUnits</flag>
+		<command row="0" column="0">FishingBoatToGather</command>
+		<command row="0" column="1">MoveNearbyTransportShipToUnit</command>
+		<command row="0" column="2">MoveNearbyPriestToUnit</command>
+		<command row="0" column="3">ResourceUnitConstructDock</command>
+		<command row="0" column="4">MoveNearbyHeroToUnit</command>
+		<command row="0" column="5">MoveNearbyMilitaryToUnit</command>
+		<command row="1" column="0">MoveNearbySiegeToUnit</command>
+		<command row="1" column="1">MoveNearbyNavyToUnit</command>
+	</unit>
+	<unit name="OrcaHuntable">
+		<displaynameid>STR_EMB_ORCA_NAME</displaynameid>
+		<shortrollovertextid>STR_EMB_ORCA_NAME</shortrollovertextid>
+		<rollovertextid>STR_EMB_ORCA_NAME</rollovertextid>
+		<icon>resources\nature\animals\naval\fish_icon.png</icon>
+		<minimapcolor red="0.5000" blue="0.5000" green="0.5000">
+		</minimapcolor>
+		<obstructionradiusx>3.0000</obstructionradiusx>
+		<obstructionradiusz>3.0000</obstructionradiusz>
+		<decay delay="0.0000" duration="1.0000">
+		</decay>
+		<movementtype>water</movementtype>
+		<gathererlimit>3</gathererlimit>
+		<initialresource resourcetype="Food">10.0000</initialresource>
+		<resourcesubtype>fish</resourcesubtype>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeVillagersRespondToAttack</unittype>
+		<unittype>NatureClass</unittype>
+		<unittype>Nature</unittype>
+		<unittype>FishResource</unittype>
+		<unittype>Resource</unittype>
+		<flag>DontRotateObstruction</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>ForceToNature</flag>
+		<flag>NoHPBar</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>DoNotValidateResourceInventory</flag>
+		<flag>DecalStickToWaterSurface</flag>
+		<flag>NonCollideable</flag>
+		<flag>TieToWaterSurface</flag>
+		<flag>UnlimitedSupply</flag>
+		<flag>Doppled</flag>
+		<flag>NoIdleActions</flag>
+		<flag>ObscuredByUnits</flag>
+		<command row="0" column="0">FishingBoatToGather</command>
+		<command row="0" column="1">MoveNearbyTransportShipToUnit</command>
+		<command row="0" column="2">MoveNearbyPriestToUnit</command>
+		<command row="0" column="3">ResourceUnitConstructDock</command>
+		<command row="0" column="4">MoveNearbyHeroToUnit</command>
+		<command row="0" column="5">MoveNearbyMilitaryToUnit</command>
+		<command row="1" column="0">MoveNearbySiegeToUnit</command>
+		<command row="1" column="1">MoveNearbyNavyToUnit</command>
+	</unit>
 </protomods>

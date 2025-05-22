@@ -332,6 +332,7 @@
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StrategicVesselAssembly</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">AirCommand</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">OilRig</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
@@ -388,10 +389,24 @@
 				<target type="ProtoUnit">Worldbreaker</target>
 			</effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">OilRigPacked</target>
+			</effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">MrWukong</target>
 			</effect>
 			
 			<!--General Improvements-->
+				<!--Nature-->
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">WhaleHuntable</target>
+			</effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">OrcaHuntable</target>
+			</effect>
+			<effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="WhaleHuntable" relativity="Assign">
+				<target type="ProtoUnit">Salmon</target>
+			</effect>
+
 				<!--Buildings-->
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">House</target>
@@ -1062,7 +1077,7 @@
 	  <effect type="Data" amount="1.05" subtype="MaximumVelocity" relativity="BasePercent">
         <target type="ProtoUnit">InfantryLineUpgraded</target>
       </effect>
-      <effect type="Data" protoaction="SpeedBonus" amount="1.00" subtype="ProtoActionAdd" unittype="IdleSpeedBonus" relativity="Assign">
+      <effect type="Data" protoaction="IdleSpeedBonus" amount="1.00" subtype="ActionEnable" relativity="Absolute">
         <target type="ProtoUnit">InfantryLineUpgraded</target>
       </effect>
       <effect type="Data" amount="1.05" subtype="Hitpoints" relativity="BasePercent">
@@ -1101,7 +1116,7 @@
         <target type="ProtoUnit">MilitaryUnit</target>
       </effect>
       <effect type="Data" action="DeathBoostDamageBonus" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">Berserk</target>
+        <target type="ProtoUnit">MilitaryUnit</target>
       </effect>
 	  <effect type="Data" action="DeathBoostDamageBonus" amount="1.00" subtype="ActionEnable" relativity="Absolute">
         <target type="ProtoUnit">Landlord</target>
@@ -1603,7 +1618,7 @@
 	  <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="VFXOnigamiTrigger" lifespan="5.00" relativity="Assign">
         <target type="ProtoUnit">Onigami</target>
       </effect>
-	  <effect type="Data" protoaction="SpeedBonus" amount="1.30" subtype="ProtoActionAdd" unittype="IdleSpeedBonus" relativity="Assign">
+	  <effect type="Data" amount="1.30" subtype="MaximumVelocity" relativity="BasePercent">
         <target type="ProtoUnit">AbstractFishingShip</target>
       </effect>
 	  <effect type="Data" action="AreaHeal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
@@ -2178,17 +2193,17 @@
   </tech>
   <tech name="MonstrousRage" mergeMode="add">
 	<effects>
-		<effect type="Data" amount="0.8" subtype="AdditionalScale" relativity="Absolute">
+		<effect type="Data" amount="1.15" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target>
 		</effect>		
 	</effects>
   </tech>
   <tech name="LabyrinthOfMinos" mergeMode="add">
 	<effects>
-		<effect type="Data" amount="0.3" subtype="AdditionalScale" relativity="Absolute">
+		<effect type="Data" amount="1.15" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Minotaur</target>
 		</effect>	
-		<effect type="Data" amount="0.3" subtype="AdditionalScale" relativity="Absolute">
+		<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
 			<target type="ProtoUnit">Cow</target>
 		</effect>	
 		<effect type="Data" amount="15.00" subtype="CarryCapacity" resource="Food" relativity="Absolute">

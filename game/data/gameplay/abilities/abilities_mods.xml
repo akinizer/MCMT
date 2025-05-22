@@ -11,8 +11,6 @@
 	</Landlord>
 	<Farseer>	
 		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
-		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveNaturesEyes<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveHamask<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
@@ -36,21 +34,13 @@
 		<ability>AbilityDraugr<chargetimeasrof>1</chargetimeasrof></ability>
 	</Hitman>
 	<MatsuriYurio>
-		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
 		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-		<ability>MCMT_AbstractUnitTransform<rof>10</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
-		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	</MatsuriYurio>
-	<MatsuriYurioFlight>
-		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
 		<ability>AbilityPsionicDecimatorSuperweapon<rof>1</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
-		<ability>MCMT_AbstractUnitTransform<rof>10</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	</MatsuriYurioFlight>
+		<!--<ability>MCMT_AbstractUnitTransform<rof>10</rof><castonself>true</castonself><noautocast>true</noautocast></ability>-->
+	</MatsuriYurio>
 	<MatsuriAzula>
-		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
 		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
 		<ability>AbilityPsionicLevitation<rof>40</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
@@ -62,6 +52,9 @@
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>AbilityKastorCharisma<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</Worldbreaker>
+	<OilRigPacked>
+		<ability>MCMT_AbstractUnitTransform<rof>40</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</OilRigPacked>
 	
 	<Earthshaker>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
@@ -169,7 +162,7 @@
 		<ability>AbilityPolyphemus<chargetimeasrof>1</chargetimeasrof></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveScourgeOfTheSkies<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	</Polyphemus>-->
+	</Polyphemus>
 		<!--Greek-Hero-Poseidon-->
 	<Ajax>
 		<ability>AbilityAjaxSPC<chargetimeasrof>1</chargetimeasrof></ability>

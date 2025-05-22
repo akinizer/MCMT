@@ -47,6 +47,34 @@ ID = "STR_UNIT_MCMT_HUANGZHAOWUWIFE_LR"   ;   Str = "Resurrected Wife of Huang Z
 ID = "STR_UNIT_MCMT_NVCHOU_NAME"   ;   Str = "Shiji Nüchou"
 ID = "STR_UNIT_MCMT_NVCHOU_LR"   ;   Str = "Old Witch Friend of Houyi"
 
+ID = "STR_UNIT_MURMILLO_CAPTAIN_NAME"   ;   Str = "Murmillo Captain"
+ID = "STR_UNIT_MURMILLO_CAPTAIN_SR"   ;   Str = "Alektus the Plasmasteel"
+ID = "STR_UNIT_MURMILLO_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
+ID = "STR_UNIT_KATAPELTES_CAPTAIN_NAME"   ;   Str = "Katapeltes Captain"
+ID = "STR_UNIT_KATAPELTES_CAPTAIN_SR"   ;   Str = "Christopeles the Daemonhammer"
+ID = "STR_UNIT_KATAPELTES_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
+ID = "STR_UNIT_FANATIC_CAPTAIN_NAME"   ;   Str = "Fanatic Captain"
+ID = "STR_UNIT_FANATIC_CAPTAIN_SR"   ;   Str = "Alexei the Bloodseeker"
+ID = "STR_UNIT_FANATIC_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
+ID = "STR_UNIT_DESTROYER_CAPTAIN_NAME"   ;   Str = "Destroyer Captain"
+ID = "STR_UNIT_DESTROYER_CAPTAIN_SR"   ;   Str = "Hugeus the Titanborn"
+ID = "STR_UNIT_DESTROYER_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
+ID = "STR_UNIT_CONTARIUS_CAPTAIN_NAME"   ;   Str = "Contarius Captain"
+ID = "STR_UNIT_CONTARIUS_CAPTAIN_SR"   ;   Str = "Arthorun Dragonheart"
+ID = "STR_UNIT_CONTARIUS_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
+ID = "STR_UNIT_TURMA_CAPTAIN_NAME"   ;   Str = "Turma Captain"
+ID = "STR_UNIT_TURMA_CAPTAIN_SR"   ;   Str = "Seless of the Huntress Marines"
+ID = "STR_UNIT_TURMA_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
+ID = "STR_UNIT_ARCUS_CAPTAIN_NAME"   ;   Str = "Arcus Captain"
+ID = "STR_UNIT_ARCUS_CAPTAIN_SR"   ;   Str = "Markswell the Deadeye"
+ID = "STR_UNIT_ARCUS_CAPTAIN_LR"   ;   Str = "Veteran of First Chapter in the Battle of Chaos Tartarus Marines"
+
 ID = "STR_UNIT_MOTHERSHIP_NAME"   ;   Str = "Mothership"
 ID = "STR_UNIT_MOTHERSHIP_SR"   ;   Str = "Mothership"
 ID = "STR_UNIT_MOTHERSHIP_LR"   ;   Str = "End of the All Things"
@@ -85,9 +113,33 @@ ID = "STR_UNIT_ONIGAMI_NAME"   ;   Str = "Onigami"
 ID = "STR_UNIT_ONIGAMI_SR"   ;   Str = "Onigami"
 ID = "STR_UNIT_ONIGAMI_LR"   ;   Str = "Nuke Carrier Hovercraft"
 
+ID = "STR_UNIT_SOLARBARGE_NAME"   ;   Str = "Solar Barge"
+ID = "STR_UNIT_SOLARBARGE_SR"   ;   Str = "Solar Barge"
+ID = "STR_UNIT_SOLARBARGE_LR"   ;   Str = "The Divine Construct of Ra that Carries the Sun"
+
 ID = "STR_UNIT_WINDRIDER_NAME"   ;   Str = "Wind Rider"
 ID = "STR_UNIT_WINDRIDER_SR"   ;   Str = "Wind Rider"
 ID = "STR_UNIT_WINDRIDER_LR"   ;   Str = "Mounted Monk of Shangri La that excels in elemental archery"
+
+ID = "STR_UNIT_SPARTAN_NAME"    ;   Str = "Spartan"
+ID = "STR_UNIT_SPARTAN_SR"    ;   Str = "Spartan"
+ID = "STR_UNIT_SPARTAN_LR"    ;   Str = "Warriors of Mars Forged in Fire and Fiery Battles"
+
+ID = "STR_UNIT_IMPERIALGUARD_NAME"    ;   Str = "Imperial Guard"
+ID = "STR_UNIT_IMPERIALGUARD_SR"    ;   Str = "Imperial Guard"
+ID = "STR_UNIT_IMPERIALGUARD_LR"    ;   Str = "Chosen Protectors of Emperor Darthagon"
+
+ID = "STR_UNIT_PEACEMAKER_NAME"    ;   Str = "Peacemaker"
+ID = "STR_UNIT_PEACEMAKER_SR"    ;   Str = "Peacemaker"
+ID = "STR_UNIT_PEACEMAKER_LR"    ;   Str = "Shield of the Mankind and Always Takes It Serious"
+
+ID = "STR_UNIT_HITMAN_NAME"    ;   Str = "Hitman"
+ID = "STR_UNIT_HITMAN_SR"    ;   Str = "Hitman"
+ID = "STR_UNIT_HITMAN_LR"    ;   Str = "Excellent Marksman and Hired Gun that Never Forgives Whoever Approaches"
+
+ID = "STR_UNIT_ATTACKWOLF_NAME"    ;   Str = "Atack Wolf"
+ID = "STR_UNIT_ATTACKWOLF_SR"    ;   Str = "Attack Wolf"
+ID = "STR_UNIT_ATTACKWOLF_LR"    ;   Str = "The Best Friend of Scientific Volunteers. Cybernetically Enhanced Wolf"
 
 ID = "STR_UNIT_EARTHSHAKER_NAME"   ;   Str = "Earthshaker"
 ID = "STR_UNIT_EARTHSHAKER_SR"   ;   Str = "Earthshaker"
@@ -148,6 +200,14 @@ ID = "STR_BLD_TECH_BUILDING_LR"   ;   Str = "Cybertech Researches"
 
 ID = "STR_BLD_SVA_NAME"   ;   Str = "Strategic Vessel Assembly"
 ID = "STR_BLD_SVA_LR"   ;   Str = "Mechanized Naval Warfare Deployment Center"
+
+ID = "STR_BLD_OILRIG_NAME"   ;   Str = "Oil Obscurator Rig"
+ID = "STR_BLD_OILRIG_SR"   ;   Str = "Oil Obscurator Rig"
+ID = "STR_BLD_OILRIG_LR"   ;   Str = "Oil Industry Settles into Mythological Era"
+
+ID = "STR_BLD_OILRIGPACKED_NAME"   ;   Str = "Mobile Oil Obscurator Rig"
+ID = "STR_BLD_OILRIGPACKED_SR"   ;   Str = "M.O.O.R"
+ID = "STR_BLD_OILRIGPACKED_LR"   ;   Str = "Packed Form of the Oil Obscurator Rig Structure"
 
 ID = "STR_BLD_AIRCOMMAND_NAME"   ;   Str = "Air Command HQ"
 ID = "STR_BLD_AIRCOMMAND_SR"   ;   Str = "Air Command Headquarters"
