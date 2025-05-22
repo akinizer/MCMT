@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<randomMaps 
+  displayNameID="STR_QUICK_MATCH_MAP_SET_NAME" 
+  imagepath="resources\maps\MapThumb_Standard.png" 
+  helpTextID="STR_QUICK_MATCH_MAP_SET_DESC" 
+  cannotReplace="">
+  
+  <map>alfheim_colossal</map>
+  <map>bamboo_grove_colossal</map>
+  <map>blue_lagoon_colossal</map>
+  <map>elysium_colossal</map>
+  <map>ghost_lake_colossal</map>
+  <map>giza_colossal</map>
+  <map>marsh_colossal</map>
+  <map>megalopolis_colossal</map>
+  <map>nile_shallows_colossal</map>
+  <map>oasis_colossal</map>
+  <map>savannah_colossal</map>
+  <map>steppe_colossal</map>
+  <map>tundra_colossal</map>
+  <map>watering_hole_colossal</map>
+</randomMaps>

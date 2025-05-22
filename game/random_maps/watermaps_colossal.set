@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<randomMaps 
+  displayNameID="STR_MAP_NAVAL" 
+  imagepath="resources\maps\MapThumb_Navy.png" 
+  helpTextID="STR_NAVAL_MAP_SET_DESC" 
+  cannotReplace=""
+  watermap="">
+  
+  <map>anatolia_colossal</map>
+  <map>archipelago_colossal</map>
+  <map>black_sea_colossal</map>
+  <map>highland_colossal</map>
+  <map>islands_colossal</map>
+  <map>kerlaugar_colossal</map>
+  <map>mediterranean_colossal</map>
+  <map>midgard_colossal</map>
+  <map>peach_blossom_land_colossal</map>
+  <map>qinghai_lake_colossal</map>
+  <map>river_nile_colossal</map>
+  <map>river_styx_colossal</map>
+  <map>yellow_river_colossal</map>
+  <map>sea_of_worms_colossal</map>
+  <map>team_migration_colossal</map>
+  <map>vinlandsaga_colossal</map>
+</randomMaps>
