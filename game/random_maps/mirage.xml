@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_MIRAGE_COLOSSAL_NAME" 
+    details = "STR_MAP_MIRAGE_DESC" 
+    loadDetails="STR_MAP_MIRAGE_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\mirage.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\mirage.png"
+    watermap="">
+</mapinfo>

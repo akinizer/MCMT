@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_ARCHIPELAGO_COLOSSAL_NAME" 
+    details = "STR_MAP_ARCHIPELAGO_DESC" 
+    loadDetails="STR_MAP_ARCHIPELAGO_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\archipelago.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\archipelago.png"
+    watermap="">
+</mapinfo>

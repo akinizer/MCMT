@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_BLUE_LAGOON_COLOSSAL_NAME" 
+    details = "STR_MAP_BLUE_LAGOON_DESC" 
+    loadDetails="STR_MAP_BLUE_LAGOON_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\blue_lagoon.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\blue_lagoon.png"
+    landmap="">
+</mapinfo>

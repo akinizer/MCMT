@@ -1,0 +1,9 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_THE_UNKNOWN_COLOSSAL_NAME" 
+    details = "STR_MAP_THE_UNKNOWN_DESC" 
+    loadDetails="STR_MAP_THE_UNKNOWN_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\the_unknown.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\the_unknown.png">
+</mapinfo>

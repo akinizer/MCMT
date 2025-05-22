@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_TEAM_MIGRATION_COLOSSAL_NAME" 
+    details = "STR_MAP_TEAM_MIGRATION_DESC" 
+    loadDetails="STR_MAP_TEAM_MIGRATION_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\team_migration.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\team_migration.png"
+    watermap="">
+</mapinfo>

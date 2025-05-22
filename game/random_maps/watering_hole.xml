@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_WATERING_HOLE_COLOSSAL_NAME" 
+    details = "STR_MAP_WATERING_HOLE_DESC" 
+    loadDetails="STR_MAP_WATERING_HOLE_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\watering_hole.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\watering_hole.png"
+    landmap="">
+</mapinfo>

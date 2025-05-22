@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_NILE_SHALLOWS_COLOSSAL_NAME" 
+    details = "STR_MAP_NILE_SHALLOWS_DESC" 
+    loadDetails="STR_MAP_NILE_SHALLOWS_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\nile_shallows.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\nile_shallows.png"
+    landmap="">
+</mapinfo>

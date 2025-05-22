@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_OASIS_COLOSSAL_NAME" 
+    details = "STR_MAP_OASIS_DESC" 
+    loadDetails="STR_MAP_OASIS_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\oasis.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\oasis.png"
+    landmap="">
+</mapinfo>

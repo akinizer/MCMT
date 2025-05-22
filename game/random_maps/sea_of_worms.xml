@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_SEA_OF_WORMS_COLOSSAL_NAME" 
+    details = "STR_MAP_SEA_OF_WORMS_DESC" 
+    loadDetails="STR_MAP_SEA_OF_WORMS_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\sea_of_worms.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\sea_of_worms.png"
+    watermap="">
+</mapinfo>

@@ -1,6 +1,6 @@
 ﻿<?xml version = "1.0" encoding = "UTF-8"?>
 <mapinfo 
-    displayNameID = "STR_MAP_ACROPOLIS_NAME" 
+    displayNameID = "STR_MAP_ACROPOLIS_COLOSSAL_NAME" 
     details = "STR_MAP_ACROPOLIS_DESC" 
     loadDetails= "STR_MAP_ACROPOLIS_DESC_LOAD"
     imagepath = "resources\maps\map_picker\acropolis.png" 

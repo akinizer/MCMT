@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_ISLANDS_COLOSSAL_NAME" 
+    details = "STR_MAP_ISLANDS_DESC" 
+    loadDetails="STR_MAP_ISLANDS_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\islands.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\islands.png"
+    watermap="">
+</mapinfo>

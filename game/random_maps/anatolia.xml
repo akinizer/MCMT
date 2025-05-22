@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_ANATOLIA_COLOSSAL_NAME" 
+    details = "STR_MAP_ANATOLIA_DESC" 
+    loadDetails="STR_MAP_ANATOLIA_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\anatolia.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\anatolia.png"
+    watermap="">
+</mapinfo>

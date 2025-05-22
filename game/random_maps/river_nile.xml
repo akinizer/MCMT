@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_RIVER_NILE_COLOSSAL_NAME" 
+    details = "STR_MAP_RIVER_NILE_DESC" 
+    loadDetails="STR_MAP_RIVER_NILE_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\river_nile.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\river_nile.png"
+    watermap="">
+</mapinfo>

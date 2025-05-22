@@ -1,0 +1,10 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<mapinfo 
+    displayNameID = "STR_MAP_LAND_UNKNOWN_COLOSSAL_NAME" 
+    details = "STR_MAP_LAND_UNKNOWN_DESC" 
+    loadDetails="STR_MAP_LAND_UNKNOWN_DESC_LOAD"
+    imagepath = "resources\maps\map_picker\land_unknown.png" 
+    cannotReplace = "" 
+    loadBackground="resources\maps\previews\land_unknown.png"
+    landmap="">
+</mapinfo>
