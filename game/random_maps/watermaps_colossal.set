@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <randomMaps 
-  displayNameID="STR_MAP_NAVAL" 
+  displayNameID="STR_MAP_NAVAL_COLOSSAL_NAME" 
   imagepath="resources\maps\MapThumb_Navy.png" 
   helpTextID="STR_NAVAL_MAP_SET_DESC" 
   cannotReplace=""

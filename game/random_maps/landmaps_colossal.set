@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <randomMaps 
-  displayNameID="STR_MAP_LAND" 
+  displayNameID="STR_MAP_LAND_COLOSSAL_NAME" 
   imagepath="resources\maps\MapThumb_Land.png" 
   helpTextID="STR_LAND_MAP_SET_DESC" 
   cannotReplace=""

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <randomMaps 
-  displayNameID="STR_STANDARD_MAP_SET_NAME" 
+  displayNameID="STR_STANDARD_MAP_SET_COLOSSAL_NAME" 
   imagepath="resources\maps\MapThumb_Standard.png" 
   helpTextID="STR_STANDARD_MAP_SET_DESC" 
   cannotReplace="">

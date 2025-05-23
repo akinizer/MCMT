@@ -365,3 +365,10 @@ ID = "STR_MAP_VINLANDSAGA_COLOSSAL_NAME" ;   Str = "Vinlandsaga Colossal Map"
 ID = "STR_MAP_WATERING_HOLE_COLOSSAL_NAME" ;   Str = "Watering Hole Colossal Map"
 ID = "STR_MAP_YELLOW_RIVER_COLOSSAL_NAME" ;   Str = "Yellow River Colossal Map"
 
+ID = "STR_MAP_NAVAL_COLOSSAL_NAME" ;   Str = "Naval Colossal Maps"
+ID = "STR_MAP_LAND_COLOSSAL_NAME" ;   Str = "Land Colossal Maps"
+ID = "STR_RANDOM_MAP_SET_COLOSSAL_NAME" ;   Str = "Random Colossal Maps"
+ID = "STR_STANDARD_MAP_SET_COLOSSAL_NAME" ;   Str = "Standard Colossal Maps"
+ID = "STR_QUICK_MATCH_MAP_SET_COLOSSAL_NAME" ;   Str = "Quick Match Colossal Maps"
+
+

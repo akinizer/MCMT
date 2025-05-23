@@ -21,10 +21,10 @@ void generate()
    int axisTiles = (gameIs1v1() == true) ? getScaledAxisTiles(144) : getScaledAxisTiles(136);
 
    // Set size.
-   float sclr=6.9;
+   float sclr=3;
    if(cMapSizeCurrent == 1)
    {
-      sclr=8.4;
+      sclr=3.5;
    }
 
    rmSetMapSize(axisTiles * sclr);

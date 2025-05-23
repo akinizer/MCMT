@@ -15,14 +15,13 @@ void generate()
    rmCustomMixAddPaintEntry(baseMixID, cTerrainNorseGrassDirt2, 5.0);
 
  // Set size.
-   int playerTiles=20000;
-   int cNumberNonGaiaPlayers = 10;
+   float sclr=1.5;
    if(cMapSizeCurrent == 1)
    {
-      playerTiles = 30000;
+      sclr=3;
    }
-   int size=2.0*sqrt(cNumberNonGaiaPlayers*playerTiles/0.9);
-   rmSetMapSize(size, size);
+   
+   rmSetMapSize(getScaledAxisTiles(144)*sclr);
    rmInitializeMix(baseMixID);
 
    // Player placement.

@@ -38,10 +38,10 @@ void generate()
    rmWaterTypeAddBeachLayer(cWaterAtlanteanSea, cTerrainAtlanteanDirt1, 6.0);
 
    // Set size.
-   float sclr=6.9;
+   float sclr=3;
    if(cMapSizeCurrent == 1)
    {
-      sclr=8.4;
+      sclr=4;
    }
 
    // Map size and terrain init.

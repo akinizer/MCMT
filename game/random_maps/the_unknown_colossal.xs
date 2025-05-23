@@ -424,10 +424,10 @@ void initTerrain()
    }
 
    // Set size.
-   float sclr=6.9;
+   float sclr=2;
    if(cMapSizeCurrent == 1)
    {
-      sclr=8.4;
+      sclr=3;
    }
 
    rmSetMapSize(xAxisTiles * sclr, zAxisTiles * sclr);
