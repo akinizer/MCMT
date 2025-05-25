@@ -1,8 +1,12 @@
+
+ID = "STR_UNIT_LANDLORD_NAME"   ;   Str = "Landlord"
+ID = "STR_UNIT_LANDLORD_LR"   ;   Str = "Elite Infantry. All-around. Head of Household and stronger than the basic variant."
+ID = "STR_MSG_LANDLORD_SPAWN"   ;   Str = "CyberTech has granted you a founding father!"
+ID = "STR_UNIT_MOUNTAINDWARF_NAME"   ;   Str = "Mountain Dwarf"
+
 ID = "STR_UNIT_TRAVELER_OX_CART_NAME"   ;   Str = "Traveler's Ox Wagon"
 ID = "STR_UNIT_TRAVELER_OX_CART_LR"   ;   Str = "Desgined to help Merchants to travel in long distances with their precious supplies"
 ID = "STR_UNIT_TRAVELER_OX_CART_SR"   ;   Str = "T.O.W"
-ID = "STR_UNIT_LANDLORD_NAME"   ;   Str = "Landlord"
-ID = "STR_UNIT_LANDLORD_LR"   ;   Str = "Elite Infantry. All-around. Head of Household and stronger than the basic variant."
 ID = "STR_UNIT_CHIEFTAIN_NAME"   ;   Str = "Chieftain"
 ID = "STR_UNIT_CHIEFTAIN_LR"   ;   Str = "Veteran Tribal Villager. Faster, Stronger, Tougher."
 ID = "STR_UNIT_CONAN_NAME"   ;   Str = "Conan"
@@ -189,6 +193,39 @@ ID = "STR_UNIT_OXCARTMODELX_NAME"   ;   Str = "Ox Cart Model - X"
 ID = "STR_UNIT_OXCARTMODELX_LR"   ;   Str = "Ox Cart Model - X"
 ID = "STR_UNIT_OXCARTMODELX_SR"   ;   Str = "Ox Cart Model - X"
 
+ID = "STR_UNIT_MAIAR_NAME"   ;   Str = "Maiar Wizard"
+ID = "STR_UNIT_MAIAR_SR"   ;   Str = "Maiar Wizard"
+ID = "STR_UNIT_MAIAR_LR"   ;   Str = "Primordial Spirits that Shaped the World with Valar and Establishd Order of Wizards. Capable of Shapeshifting"
+
+ID = "STR_UNIT_HOBBIT_NAME"   ;   Str = "Hobbit"
+ID = "STR_UNIT_HOBBIT_SR"   ;   Str = "Hobbit"
+ID = "STR_UNIT_HOBBIT_LR"   ;   Str = "Small People with Large Hearts"
+
+ID = "STR_UNIT_MORADIN_NAME"   ;   Str = "King Moradin"
+ID = "STR_UNIT_MORADIN_ENT_SR"   ;   Str = "King of Mountain Dwarves"
+ID = "STR_UNIT_MORADIN_ENT_LR"   ;   Str = "Legendary Dwarf that Rules over the Mountain Dwarves Kingdom, Ironhammer"
+
+ID = "STR_UNIT_TREEBEARD_ENT_NAME"   ;   Str = "Treebeard of Fangorn"
+ID = "STR_UNIT_TREEBEARD_ENT_SR"   ;   Str = "Treebeard of Fangorn"
+ID = "STR_UNIT_TREEBEARD_ENT_LR"   ;   Str = "Leader of Ent People"
+
+ID = "STR_UNIT_LOKI_NAME"   ;   Str = "Thökk (Loki)"
+ID = "STR_UNIT_LOKI_SR"   ;   Str = "Human Form of Loki"
+ID = "STR_UNIT_LOKI_LR"   ;   Str = "God of Mischief. Good at Conviction"
+
+ID = "STR_UNIT_LOKI_MARE_NAME"   ;   Str = "Svadillfari (Loki)"
+ID = "STR_UNIT_LOKI_MARE_SR"   ;   Str = "Loki in Mare Form"
+ID = "STR_UNIT_LOKI_MARE_LR"   ;   Str = "God of Mischief. Good at Infiltration "
+
+ID = "STR_UNIT_LOKI_JOTNAR_NAME"   ;   Str = "Loki Odinson (God)"
+ID = "STR_UNIT_LOKI_JOTNAR_SR"   ;   Str = "Loki in True Form"
+ID = "STR_UNIT_LOKI_JOTNAR_LR"   ;   Str = "God of Mischief. Has Never Been This Serious"
+
+ID = "STR_UNIT_NOAH_NAME"   ;   Str = "Noah"
+ID = "STR_UNIT_NOAH_SR"   ;   Str = "Oracle of Guidance"
+ID = "STR_UNIT_NOAH_LR"   ;   Str = "The Legendary Oracle that Arrived Egyptian Kingdom"
+ID = "STR_MSG_NOAH_SPAWN"   ;   Str = "Noah has returned to teach Pharaoh a new lesson!"
+
 ID = "STR_BLD_BASTION_NAME"   ;   Str = "Bastion"
 ID = "STR_BLD_BASTION_LR"   ;   Str = "Special Units Building"
 
@@ -221,8 +258,20 @@ ID = "STR_BLD_MAGETOWER_NAME"   ;   Str = "Mage Tower"
 ID = "STR_BLD_MAGETOWER_SR"   ;   Str = "Mage Tower"
 ID = "STR_BLD_MAGETOWER_LR"   ;   Str = "Akashic Archive and Residence of the Archmage"
 
+ID = "STR_BLD_FORTIFIED_WARTOWER_NAME"   ;   Str = "Fortified Wartower"
+ID = "STR_BLD_TITAN_WALL_NAME"   ;   Str = "Titan Wall of Aegis"
+
 ID = "STR_TECH_MCMT_PAGE_1"   ;   Str = "Page1"
 ID = "STR_TECH_MCMT_PAGE_2"   ;   Str = "Page2"
+
+ID = "STR_TECH_RECRUITING_MOUNTAINDWARVES_NAME"   ;   Str = "Recruiting Mountain Dwarves"
+ID = "STR_TECH_RECRUITING_MOUNTAINDWARVES_LR"    ;   Str = "Work Force now becomes Dwarf Force"
+
+ID = "STR_TECH_ARCHITECTS_OF_MARLEY_NAME"   ;   Str = "Architects of Marley"
+ID = "STR_TECH_ARCHITECTS_OF_MARLEY_LR"   ;   Str = "Architects from Kingdom of Marley share their pride in the Anti-Titan Walls"
+
+ID = "STR_TECH_ORACLEWATCHERS_NAME"   ;   Str = "Oracle Watchers"
+ID = "STR_TECH_ORACLEWATCHERS_LR"   ;   Str = "Oracles with Excellent Psionic Sight have been assigned to Towers as Watcher Commanders"
 
 ID = "STR_TECH_DIVINEARMAMENTS_NAME"   ;   Str = "Divine Armaments"
 ID = "STR_TECH_DIVINEARMAMENTS_LR"   ;   Str = "Improves Offensive Capabilities of Military Units, Heroes and Hunters with Divine Weaponry"

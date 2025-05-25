@@ -56,6 +56,13 @@
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Landlord</target>
 			</effect>
+
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Noah</target>
+			</effect>
+			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Landlord</target>
+			</effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Conan</target>
@@ -297,6 +304,7 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">OxCartModelX</target>
 			</effect>
+			
 				<!--CyberTech Units-->
 			<effect type="Data" amount="3.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">PrismTank</target></effect>		
@@ -315,7 +323,22 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TurmaCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">DestroyerCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">FanaticCaptain</target></effect>		
-			
+
+				<!--Mage Tower Special Units-->
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Maiar</target></effect>
+
+				<!--Norse New Special Units-->
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Hobbit</target></effect>
+			<effect type="Data" amount="0.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Hobbit</target></effect>
+			<effect type="Data" action="Gather" amount="1.50" subtype="WorkRate" unittype="FoodResource" relativity="BasePercent"><target type="ProtoUnit">Hobbit</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Moradin</target></effect>
+			<effect type="Data" amount="2.25" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Moradin</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Loki</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">LokiJotnar</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">LokiMare</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TreebeardOfFangorn</target></effect>
+			<effect type="Data" amount="1.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TreebeardOfFangorn</target></effect>
+
 				<!--New Buildings-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Bastion</target></effect>
 			
@@ -435,25 +458,11 @@
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Dock</target>
 			</effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">WallShort</target>
-			</effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">WallMedium</target>
-			</effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">WallLong</target>
-			</effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">WallGate</target>
-			</effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">WallConnector</target>
-			</effect>
 				<!--Naval Units-->
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Ship</target>
 			</effect>
+
 			<!--Norse Improvements-->
 			
 				<!--Norse MythUnits-->
@@ -499,6 +508,7 @@
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">GullinburstiMythic</target>
 			</effect>
+
 			<!--Egyptian Improvements-->
 				<!--Egyptian MythUnits-->
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
@@ -572,15 +582,24 @@
 			<effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="VillagerChinese" relativity="Absolute">
 				<target type="ProtoUnit">VillagerChineseClay</target>
 			</effect>
-
+			<effect type="Data" amount="1.25" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">VillagerDwarf</target>
+			</effect>
 			<!-- Atlantean Improvements-->
 			 	<!-- Atlantean MythUnit-->
 		</effects>
 	</tech>	
+	<!--MCMT Special Tech Researches-->
 	<tech name="MCMT_Researches" mergeMode="add">
 		<status>UNOBTAINABLE</status>
 		<effects>
 			<!---->
+			<effect type="TechStatus" status="active">MCMT_SpecialService</effect>
+			<effect type="TechStatus" status="obtainable">MCMT_RecruitingMountainDwarves</effect>	
+			<effect type="TechStatus" status="obtainable">MCMT_ArchitectsOfMarley</effect>		
+			<effect type="TechStatus" status="obtainable">MCMT_OracleWatchers</effect>
+
+			<!--TechBuilding FutureTech-->
 			<effect type="TechStatus" status="obtainable">MCMT_DivineArmaments</effect>
 			<effect type="TechStatus" status="obtainable">MCMT_NanofiberPlatings</effect>
 			<effect type="TechStatus" status="obtainable">MCMT_BowOfOrion</effect>
@@ -606,7 +625,7 @@
 			<effect type="TechStatus" status="obtainable">MCMT_SVA_ComfortableFireports</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_SVA_EliteFireports</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_SVA_LuxuriousFireports</effect>	
-			<!--Bastion Techs-->
+			<!--Bastion FutureTech-->
 			<effect type="TechStatus" status="obtainable">ChampionArms</effect>			
 			<effect type="TechStatus" status="obtainable">ChampionHooves</effect>			
 			<effect type="TechStatus" status="obtainable">ChampionRangers</effect>			
@@ -721,8 +740,140 @@
 	</tech>	
 	
 	<!-- /// Researches /// -->
+	
+	<!--- LANDLORD SPAWN TECH-->
+	<tech name="MCMT_SpecialService">
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+		
+		<researchpoints>1.0000</researchpoints>
+		<effects><effect type="TechStatus" status="obtainable">MCMT_Landlord_Respawn</effect></effects>
+		<effects><effect type="TechStatus" status="obtainable">MCMT_Noah_Respawn</effect></effects>
+	</tech>
 
+	<tech name="MCMT_Landlord_Respawn">
+		<status>UNOBTAINABLE</status>
+		<delay>10.0000</delay>
+		<flag>Volatile</flag>
+		<flag>Persistent</flag>
+		<flag>HideFromDialogs</flag>
+		<prereqs>
+			<typecount unit="AbstractTownCenter" count="0.00" state="aliveState" operator="gt"></typecount>
+			<typecount unit="Landlord" count="1.00" state="aliveState" operator="lt"></typecount>
+		</prereqs>
+		<effects>
+			<effect type="CreateUnit" unit="Landlord" generator="AbstractTownCenter">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00"><offset x="0.00" y="0.00" z="0.00"></offset></pattern>
+			</effect>
+		</effects>
+		<effect type="TextOutput">STR_MSG_LANDLORD_SPAWN</effect>
+	</tech>
+
+	<!-- KINGDOM OF IRONHAMMER /// DWARVEN FORGE RESEARCHES -->
+	<tech name="MCMT_RecruitingMountainDwarves" mergeMode="add">
+		<displaynameid>STR_TECH_RECRUITING_MOUNTAINDWARVES_NAME</displaynameid>
+		<rollovertextid>STR_TECH_RECRUITING_MOUNTAINDWARVES_LR</rollovertextid>
+		<icon>resources\tech\kingdom_dwarf.jpg</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardEconomicScore</flag>
+		<flag>MythTech</flag>
+		
+		<researchpoints>3.0000</researchpoints>
+		<cost resourcetype="Gold">300.0000</cost>
+		<effects>
+			<!-- Dwarf Improvement -->
+			<effect type="Data" amount="1.05" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">VillagerDwarf</target></effect>
+			<effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="GoldResource" relativity="BasePercent"><target type="ProtoUnit">AbstractDwarf</target></effect>
+
+			<!-- VillagerNorse is removed. All VillagerNorse becomes VillagerDwarf -->
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="VillagerNorse" relativity="Assign"><target type="ProtoUnit">TownCenter</target></effect>
+			<effect type="TransformUnit" toprotoid="VillagerDwarf" fromprotoid="VillagerNorse" includequeued="true"></effect>
+			<effect type="SetName" proto="VillagerDwarf" newname="STR_UNIT_MOUNTAINDWARF_NAME"></effect>
+		</effects>		
+	</tech>
+	<tech name="MCMT_ArchitectsOfMarley" mergeMode="add">
+		<flag>NeverAutoResearch</flag>
+		<displaynameid>STR_TECH_ARCHITECTS_OF_MARLEY_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ARCHITECTS_OF_MARLEY_LR</rollovertextid>
+		<icon>resources\tech\architect_marley.png</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+
+		<researchpoints>10.0000</researchpoints>
+		<cost resourcetype="Gold">1000</cost>
+		<cost resourcetype="Wood">500</cost>
+		<effects>
+			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallShort</target></effect>
+			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallMedium</target></effect>
+			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallLong</target></effect>
+			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallGate</target></effect>
+			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallConnector</target></effect>
+
+			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallShort</target></effect>
+			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallMedium</target></effect>
+			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallLong</target></effect>
+			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallGate</target></effect>
+			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallConnector</target></effect>
+
+			<!-- Ultimate Walls-->
+			<effect type="TechStatus" status="active">StoneWall</effect>
+			<effect type="TechStatus" status="active">BronzeWall</effect>
+			<effect type="TechStatus" status="active">IronWall</effect>
+			<effect type="TechStatus" status="active">FortifiedWall</effect>
+			<effect type="TechStatus" status="active">CitadelWall</effect>
+			<effect type="TechStatus" status="active">GreatWall</effect>
+			<effect type="TechStatus" status="active">OrichalcumWall</effect>
+			<effect type="SetName" proto="WallShort" newname="STR_BLD_TITAN_WALL_NAME"></effect>
+			<effect type="SetName" proto="WallMedium" newname="STR_BLD_TITAN_WALL_NAME"></effect>
+			<effect type="SetName" proto="WallLong" newname="STR_BLD_TITAN_WALL_NAME"></effect>
+			<effect type="SetName" proto="WallConnector" newname="STR_BLD_TITAN_WALL_NAME"></effect>
+			<effect type="SetName" proto="WallGate" newname="STR_BLD_TITAN_WALL_NAME"></effect>
+
+			<!-- Ultimate Towers-->
+			<effect type="TechStatus" status="active">WatchTower</effect>
+			<effect type="TechStatus" status="active">GuardTower</effect>
+			<effect type="TechStatus" status="active">BallistaTower</effect>
+			<effect type="TechStatus" status="active">CrossbowTower</effect>
+			<effect type="SetName" proto="SentryTower" newname="STR_BLD_FORTIFIED_WARTOWER_NAME"></effect>
+		</effects>
+	</tech>
+	<tech name="MCMT_OracleWatchers" mergeMode="add">
+		<flag>NeverAutoResearch</flag>
+		<displaynameid>STR_TECH_ORACLEWATCHERS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ORACLEWATCHERS_LR</rollovertextid>
+		<icon>resources\atlantean\static_color\technologies\sons_of_the_sun_icon.png</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+
+		<researchpoints>5.0000</researchpoints>
+		<cost resourcetype="Favor">5</cost>
+		<cost resourcetype="Food">200</cost>
+		<effects>
+			<effect type="Data" amount="20.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">AbstractTower</target></effect>
+		</effects>
+	</tech>
+	<tech name="MCMT_Noah_Respawn">
+		<status>UNOBTAINABLE</status>
+		<delay>2.0000</delay>
+		<flag>Volatile</flag>
+		<flag>Persistent</flag>
+		<flag>HideFromDialogs</flag>
+		<prereqs>
+			<typecount unit="AbstractTownCenter" count="0.00" state="aliveState" operator="gt"></typecount>
+			<typecount unit="Noah" count="1.00" state="aliveState" operator="lt"></typecount>
+		</prereqs>
+		<effects>
+			<effect type="CreateUnit" unit="Noah" generator="AbstractTownCenter">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00"><offset x="0.00" y="0.00" z="0.00"></offset></pattern>
+			</effect>
+		</effects>
+		<effect type="TextOutput">STR_MSG_NOAH_SPAWN</effect>
+	</tech>
 	<!-- CYBERNETICS TECHNOLOGY FACILITY RESEARCHES -->
+
 	<tech name="MCMT_DivineArmaments" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
 		<displaynameid>STR_TECH_DIVINEARMAMENTS_NAME</displaynameid>
@@ -1409,7 +1560,7 @@
 	  <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="FoodResource" relativity="BasePercent">
         <target type="ProtoUnit">EconomicUpgraded</target>
       </effect>
-	  <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="GoodResource" relativity="BasePercent">
+	  <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="GoldResource" relativity="BasePercent">
         <target type="ProtoUnit">EconomicUpgraded</target>
       </effect>
 	  
@@ -2231,7 +2382,7 @@
 	</effect>
   </tech>
   <tech name="GuardTower" mergeMode="add">
-	 <effect type="Data" action="RangedAttack" amount="5" subtype="CrashAttack" relativity="Absolute">
+	 <effect type="Data" action="RangedAttack" amount="5" subtype="CrushAttack" relativity="Absolute">
         <target type="ProtoUnit">SentryTower</target>
       </effect>
   </tech>
@@ -2268,6 +2419,112 @@
 	  <effect type="Data" amount="-0.9" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
         <target type="ProtoUnit">DwarvenArmory</target>
       </effect>
+    </effects>
+  </tech>
+  <tech name="DwarvenWeapons">
+	<displaynameid>STR_TECH_DWARVEN_WEAPONS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DWARVEN_WEAPONS_LR</rollovertextid>
+    <cost resourcetype="Food">500.0000</cost>
+    <cost resourcetype="Gold">500.0000</cost>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\norse\static_color\technologies\dwarven_weapons_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>ArmoryTechnology</techtype>
+    <techtype>ArmoryWeaponsTechnology</techtype>
+    <techage>MythicAge</techage>
+    <prereqs>
+      <techstatus status="Active">IronWeapons</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" allactions="1" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" allactions="1" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" allactions="1" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Ship</target></effect>
+      <effect type="Data" allactions="1" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Building</target></effect>
+      <effect type="Data" allactions="1" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">AbstractDwarf</target></effect>
+    </effects>
+  </tech>
+  <tech name="MeteoricIronArmor">
+	<displaynameid>STR_TECH_METEORIC_IRON_ARMOR_NAME</displaynameid>
+    <rollovertextid>STR_TECH_METEORIC_IRON_ARMOR_LR</rollovertextid>
+    <cost resourcetype="Food">500.0000</cost>
+    <cost resourcetype="Gold">500.0000</cost>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\norse\static_color\technologies\meteoric_iron_armor_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>ArmoryTechnology</techtype>
+    <techtype>ArmoryArmorTechnology</techtype>
+    <techage>MythicAge</techage>
+    <prereqs>
+      <techstatus status="Active">IronArmor</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">Ship</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Crush" relativity="Percent"><target type="ProtoUnit">Ship</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
+    </effects>
+  </tech>
+  <tech name="DragonscaleShields">
+	<displaynameid>STR_TECH_DRAGONSCALE_SHIELDS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DRAGONSCALE_SHIELDS_LR</rollovertextid>
+    <cost resourcetype="Wood">500.0000</cost>
+    <cost resourcetype="Gold">500.0000</cost>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\norse\static_color\technologies\dragonscale_shields_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>ArmoryTechnology</techtype>
+    <techtype>ArmoryShieldsTechnology</techtype>
+    <techage>MythicAge</techage>
+    <prereqs>
+      <techstatus status="Active">IronShields</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent"><target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent"><target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent"><target type="ProtoUnit">Ship</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
+    </effects>
+  </tech>
+  <tech name="HammerOfThunder">
+    <displaynameid>STR_TECH_HAMMER_OF_THUNDER_NAME</displaynameid>
+    <rollovertextid>STR_TECH_HAMMER_OF_THUNDER_LR</rollovertextid>
+    <cost resourcetype="Gold">125.0000</cost>
+    <cost resourcetype="Favor">10.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\norse\static_color\technologies\hammer_of_thunder_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>ArmoryTechnology</techtype>
+    <techage>HeroicAge</techage>
+    <effects>
+	  <effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">AbstractDwarf</target></effect>
+      <effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">Hersir</target></effect>
+      <effect type="Data" action="AutoGather" amount="2.00" subtype="WorkRate" unittype="Favor" relativity="BasePercent"><target type="ProtoUnit">Hersir</target></effect>
+    </effects>
+  </tech>
+  <tech name="DwarvenBreastplate">
+    <displaynameid>STR_TECH_DWARVEN_BREASTPLATE_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DWARVEN_BREASTPLATE_LR</rollovertextid>
+    <cost resourcetype="Gold">150.0000</cost>
+    <cost resourcetype="Favor">15.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\norse\static_color\technologies\dwarven_breastplate_icon.png</icon>
+    <techtype>ArmoryTechnology</techtype>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">Hirdman</target></effect>
+      <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">Berserk</target></effect>
+      <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
     </effects>
   </tech>
 </techtreemods>

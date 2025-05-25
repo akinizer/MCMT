@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_BUILD">Build</name>
+    <type>Build</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+    <typedanim type="AbstractFarm">Sow</typedanim>
+    <typedanim type="Excavation">Dig</typedanim>
+    <typedanim type="DigPile">Dig</typedanim>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_REPAIR">Repair</name>
+    <type>Repair</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>0</maxspread>
+    <trackrating>99.0</trackrating>
+    <unintentionaldamagemultiplier>0</unintentionaldamagemultiplier>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>
+    <onhiteffect type="Snare" duration="2" rate="0.85"></onhiteffect>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HUNTING">Hunting</name>
+    <type>Hunting</type>
+    <maxrange>10</maxrange>
+    <rate type="Huntable">1.0</rate>
+    <rate type="HuntedResource">1.0</rate>
+    <rate type="Tree">1.0</rate>
+    <typedmaxrange type="Herdable">1</typedmaxrange>
+    <typedmaxrange type="NonConvertableHerdable">1</typedmaxrange>
+    <typedmaxrange type="Taproot">1</typedmaxrange>
+    <typedmaxrange type="Tree">1</typedmaxrange>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_GATHER">Gather</name>
+    <type>Gather</type>
+    <maxrange>0.5</maxrange>
+    <rate type="GoldResource">1.0</rate>
+    <rate type="AbstractFarm">1.0</rate>
+    <rate type="BerryBush">1.0</rate>
+    <rate type="WoodResource">1.0</rate>
+    <rate type="Herdable">1.0</rate>
+    <rate type="Huntable">1.0</rate>
+    <rate type="Dropsite">1.0</rate>
+    <typedmaxrange type="Tree">0.1</typedmaxrange>
+    <typedmaxrange type="GoldResource">0.1</typedmaxrange>
+    <typedmaxrange type="Dropsite">1.0</typedmaxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_NO_WORK">NoWork</name>
+    <type>NoWork</type>
+    <maxrange>10</maxrange>
+    <rate type="Herdable">1.0</rate>
+    <rate type="Huntable">1.0</rate>
+    <rate type="GoldResource">1.0</rate>
+    <typedmaxrange type="Herdable">1</typedmaxrange>
+    <typedmaxrange type="GoldResource">1</typedmaxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_CHOP">ChopAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>ChopDownTree</anim>
+    <maxrange>1</maxrange>
+    <rate type="Tree">1.0</rate>
+    <rate type="Taproot">1.0</rate>
+    <hidefromstats>1</hidefromstats>
+    <impacteffect>effects\impacts\chop</impacteffect>
+  </action>
+  <action>
+    <name>SmartDropsite</name>
+    <type>SmartDropsite</type>
+    <maxrange>2</maxrange>
+    <rate type="Dropsite">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_AUTO_GATHER">AutoGather</name>
+    <type>AutoGather</type>
+    <persistent>1</persistent>
+    <active>0</active>
+    <autogatherscalebygatherrate>1</autogatherscalebygatherrate>
+    <donotautogatherunlessgatheringtypes>
+      <unittype>Tree</unittype>
+    </donotautogatherunlessgatheringtypes>
+  </action>
+  <tactic>Default<action priority="100">ChopAttack</action><action priority="90">RangedAttack</action><action priority="80">HandAttack</action><action>Build</action><action>Repair</action><action>Gather</action><action>NoWork</action><action>Hunting</action><action>SmartDropsite</action><action>AutoGather</action><attackresponsetype>LogicalTypeVillagersAttackResponse</attackresponsetype><attacktype>LogicalTypeVillagersAttack</attacktype><attackmovetype>LogicalTypeHandUnitsAutoAttack</attackmovetype></tactic>
+</tactics>

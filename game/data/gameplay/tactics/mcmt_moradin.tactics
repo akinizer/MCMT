@@ -1,0 +1,43 @@
+<tactics>
+   <action>
+    <name stringid="STR_ACTION_GATHER">Gather</name>
+    <type>Gather</type>
+    <maxrange>0.5</maxrange>
+    <rate type="GoldResource">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <maxrange>1</maxrange>
+    <rate type="All">1.0</rate>
+    <onhiteffect type="Snare" duration="2" rate="0.85"></onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_CHOP">ChopAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>ChopDownTree</anim>
+    <maxrange>2</maxrange>
+    <rate type="Tree">1.0</rate>
+    <rate type="Taproot">1.0</rate>
+    <hidefromstats>1</hidefromstats>
+    <impacteffect>effects\impacts\chop</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_AUTO_GATHER">AutoGather</name>
+    <type>AutoGather</type>
+    <persistent>1</persistent>
+    <active>0</active>
+    <autogatherscalebygatherrate>1</autogatherscalebygatherrate>
+    <donotautogatherunlessgatheringtypes>
+      <unittype>Tree</unittype>
+    </donotautogatherunlessgatheringtypes>
+  </action>
+  <tactic>Default<action priority="80">HandAttack</action><action>Gather</action><action>AutoGather</action><attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>
