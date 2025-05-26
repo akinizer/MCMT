@@ -1,29 +1,10 @@
 <techtreemods>
-	<tech name="ArchaicAgeAtlantean">
-		<effects>
-			<effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect>
-		</effects>	
-	</tech>
-	<tech name="ArchaicAgeGreek">
-		<effects>
-			<effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect>
-		</effects>	
-	</tech>
-	<tech name="ArchaicAgeEgyptian">	
-		<effects>
-			<effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect>
-		</effects>
-	</tech>
-	<tech name="ArchaicAgeNorse">
-		<effects>
-			<effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect>
-		</effects>	
-	</tech>
-	<tech name="ArchaicAgeChinese">
-		<effects>
-			<effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect>
-		</effects>	
-	</tech>
+	<!-- /////////////////////////////////////////////////////// MCMT TECH ENABLE  //////////////////////////////////////////////// -->
+	<tech name="ArchaicAgeAtlantean"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
+	<tech name="ArchaicAgeGreek"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
+	<tech name="ArchaicAgeEgyptian"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
+	<tech name="ArchaicAgeNorse"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
+	<tech name="ArchaicAgeChinese"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects>	</tech>
 	
 	<!-- /////////////////////////////////////////////////////// MCMT CONTENTS //////////////////////////////////////////////// -->
 	<!-- //// MCMT Mod Main Trees////// -->
@@ -35,11 +16,33 @@
 			<effect type="TechStatus" status="active" mergeMode="add">MCMT_UnitAccelPanels</effect>
 		</effects>
 	</tech>
+	
+	<!--Norse Special Units and Improvements-->
+	<tech name="ArchaicAgeNorse" mergeMode="add">
+		<effects>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Hobbit</target></effect>
+			<effect type="Data" amount="0.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Hobbit</target></effect>
+			<effect type="Data" action="Gather" amount="1.50" subtype="WorkRate" unittype="FoodResource" relativity="BasePercent"><target type="ProtoUnit">Hobbit</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Moradin</target></effect>
+			<effect type="Data" amount="2.25" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Moradin</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Loki</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">LokiJotnar</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">LokiMare</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TreebeardOfFangorn</target></effect>
+			<effect type="Data" amount="1.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TreebeardOfFangorn</target></effect>
+		</effects>
+	</tech>
+
+	<!--Egyptialn Special Units and Improvements-->
+	<tech name="ArchaicAgeEgyptian" mergeMode="add">
+		<!--Noah-->
+		<effects><effect type="TechStatus" status="active">MCMT_EgyptianRenovation</effect></effects>
+	</tech>
+
+	<!-- Geneal Special Units and Improvements -->
 	<tech name="MCMT_SpecialUnits" mergeMode="add">
 		<status>UNOBTAINABLE</status>
-		<effects>
-			<!-- New Special Units and Improvements -->
-			
+		<effects>			
 				<!--Legendary Heroes-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Landlord</target>
@@ -327,20 +330,9 @@
 				<!--Mage Tower Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Maiar</target></effect>
 
-				<!--Norse New Special Units-->
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Hobbit</target></effect>
-			<effect type="Data" amount="0.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Hobbit</target></effect>
-			<effect type="Data" action="Gather" amount="1.50" subtype="WorkRate" unittype="FoodResource" relativity="BasePercent"><target type="ProtoUnit">Hobbit</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Moradin</target></effect>
-			<effect type="Data" amount="2.25" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Moradin</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Loki</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">LokiJotnar</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">LokiMare</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TreebeardOfFangorn</target></effect>
-			<effect type="Data" amount="1.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TreebeardOfFangorn</target></effect>
-
 				<!--New Buildings-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Bastion</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StellarGateway</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target>
@@ -589,6 +581,7 @@
 			 	<!-- Atlantean MythUnit-->
 		</effects>
 	</tech>	
+
 	<!--MCMT Special Tech Researches-->
 	<tech name="MCMT_Researches" mergeMode="add">
 		<status>UNOBTAINABLE</status>
@@ -635,8 +628,7 @@
 			<!--TOW Techs
 			<effect type="TechStatus" status="obtainable">FarmingMachinery</effect>
 			<effect type="TechStatus" status="obtainable">IndustrialTools</effect>
-			<effect type="TechStatus" status="obtainable">ManufactionRobotics</effect>-->
-			
+			<effect type="TechStatus" status="obtainable">ManufactionRobotics</effect>-->			
 		</effects>
 	</tech>	
 	<!-- /// Unit Panels /// -->
@@ -741,7 +733,7 @@
 	
 	<!-- /// Researches /// -->
 	
-	<!--- LANDLORD SPAWN TECH-->
+	<!--- LANDLORD AND NOAH SPAWN TECH-->
 	<tech name="MCMT_SpecialService">
 		<status>UNOBTAINABLE</status>
 		<flag>CountsTowardMilitaryScore</flag>
@@ -749,7 +741,6 @@
 		
 		<researchpoints>1.0000</researchpoints>
 		<effects><effect type="TechStatus" status="obtainable">MCMT_Landlord_Respawn</effect></effects>
-		<effects><effect type="TechStatus" status="obtainable">MCMT_Noah_Respawn</effect></effects>
 	</tech>
 
 	<tech name="MCMT_Landlord_Respawn">
@@ -770,7 +761,18 @@
 		<effect type="TextOutput">STR_MSG_LANDLORD_SPAWN</effect>
 	</tech>
 
+	<tech name="MCMT_EgyptianRenovation">
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+		
+		<researchpoints>1.0000</researchpoints>
+		<effects><effect type="TechStatus" status="obtainable">MCMT_Noah_Respawn</effect></effects>
+	</tech>
+
 	<!-- KINGDOM OF IRONHAMMER /// DWARVEN FORGE RESEARCHES -->
+	 
+	<!--Development Techs-->
 	<tech name="MCMT_RecruitingMountainDwarves" mergeMode="add">
 		<displaynameid>STR_TECH_RECRUITING_MOUNTAINDWARVES_NAME</displaynameid>
 		<rollovertextid>STR_TECH_RECRUITING_MOUNTAINDWARVES_LR</rollovertextid>
@@ -852,8 +854,15 @@
 		<cost resourcetype="Favor">5</cost>
 		<cost resourcetype="Food">200</cost>
 		<effects>
-			<effect type="Data" amount="20.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">AbstractTower</target></effect>
+			<effect type="Data" amount="20.00" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">SentryTower</target>
+				<target type="ProtoUnit">MirrorTower</target>
+				<target type="ProtoUnit">MageTower</target>
+				<target type="ProtoUnit">Lighthouse</target>
+				<target type="ProtoUnit">AirCommand</target>
+			</effect>
 		</effects>
+		
 	</tech>
 	<tech name="MCMT_Noah_Respawn">
 		<status>UNOBTAINABLE</status>

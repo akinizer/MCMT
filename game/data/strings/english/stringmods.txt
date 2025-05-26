@@ -221,10 +221,13 @@ ID = "STR_UNIT_LOKI_JOTNAR_NAME"   ;   Str = "Loki Odinson (God)"
 ID = "STR_UNIT_LOKI_JOTNAR_SR"   ;   Str = "Loki in True Form"
 ID = "STR_UNIT_LOKI_JOTNAR_LR"   ;   Str = "God of Mischief. Has Never Been This Serious"
 
-ID = "STR_UNIT_NOAH_NAME"   ;   Str = "Noah"
-ID = "STR_UNIT_NOAH_SR"   ;   Str = "Oracle of Guidance"
-ID = "STR_UNIT_NOAH_LR"   ;   Str = "The Legendary Oracle that Arrived Egyptian Kingdom"
+ID = "STR_UNIT_NOAH_NAME"   ;   Str = "Noah "
+ID = "STR_UNIT_NOAH_SR"   ;   Str = "Noah the Oracle of Guidance"
+ID = "STR_UNIT_NOAH_LR"   ;   Str = "The Legendary Oracle that Visited Many Eras for Millenia in Many Forms; Widely Known as Moses and Pharaoh; Noah of Ark; King David;  "
 ID = "STR_MSG_NOAH_SPAWN"   ;   Str = "Noah has returned to teach Pharaoh a new lesson!"
+
+ID = "STR_BLD_STELLAR_GATEWAY_NAME"   ;   Str = "Stellar Gateway"
+ID = "STR_BLD_STELLAR_GATEWAY_LR"   ;   Str = "FutureTech Teleportation Building"
 
 ID = "STR_BLD_BASTION_NAME"   ;   Str = "Bastion"
 ID = "STR_BLD_BASTION_LR"   ;   Str = "Special Units Building"

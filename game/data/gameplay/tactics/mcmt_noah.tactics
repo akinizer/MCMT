@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_BUILD">Build</name>
+    <type>Build</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+  </action>
+ <action>
+    <name stringid="STR_ACTION_EMPOWER">Empower</name>
+    <type>Empower</type>
+    <anim>AutoLOS</anim>
+    <empowerdata>
+      <logicaltypebuildingempoweredforlos>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+        <empowerrate modifytype="LOSFactor">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </logicaltypebuildingempoweredforlos>
+      <logicaltypeaffectedbyvalleyofthekings>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </logicaltypeaffectedbyvalleyofthekings>
+      <logicaltypebuildingthatcanbeempowered>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <empowerrate modifytype="ResearchRate">3.00</empowerrate>
+		<empowerrate modifytype="ROF">0.1</empowerrate>
+		<empowerrate modifytype="MilitaryTrainingRate">3.00</empowerrate>
+		<empowerrate modifytype="FavorGatherRate">3.00</empowerrate>
+		<empowerrate modifytype="DropsiteRate">3.00</empowerrate>
+        <empowerrate modifytype="GodPowerBlockRadius">3.00</empowerrate>
+		<modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </logicaltypebuildingthatcanbeempowered>
+    </empowerdata>
+    <natureempowerdata>
+      <abstractsettlement>
+        <empowerrate modifytype="BuildRate">3.00</empowerrate>
+        <modelattachment>vfx\glow\empower_pharaoh.xml</modelattachment>
+        <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+      </abstractsettlement>
+    </natureempowerdata>
+    <maxrange>20</maxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_CONVERT">Convert</name>
+    <type>Convert</type>
+    <anim>Convert</anim>
+    <attackaction>1</attackaction>
+    <modelattachment>vfx\conversion\conversion_vfx.xml</modelattachment>
+    <modelattachmentbone>vfx_top</modelattachmentbone>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HEAL">Heal</name>
+    <type>Heal</type>
+    <anim>Heal</anim>
+    <modelattachment>greek\godpowers\restoration\healing_vfx.xml</modelattachment>
+    <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+  </action>
+  <action>
+    <name >HandAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <maxrange>1</maxrange>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>
+    <onhiteffect type="Snare" duration="2" rate="0.85"></onhiteffect>
+  </action>
+  <tactic>Default
+    <action priority="100">Convert</action>
+    <action priority="90">HandAttack</action>
+    <action>Heal</action><action>Empower</action><action>Build</action>
+    <attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype>
+  </tactic>
+</tactics>

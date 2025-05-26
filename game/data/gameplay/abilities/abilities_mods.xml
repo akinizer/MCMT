@@ -1,5 +1,5 @@
 <abilities>	
-	<!-- /////// MyCustomModTechs ///////// -->
+	<!-- Founding Father-->
 	<Landlord>
 		<ability>PassiveLifesteal<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>	
 		<ability>PassiveNaturesEyes<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
@@ -9,6 +9,19 @@
 		<ability>PassiveSerratedBlades<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>AbilityMinotaur<chargetimeasrof>1</chargetimeasrof></ability>
 	</Landlord>
+
+	<!-- CyberTech Egyptian Units-->
+	<Noah>
+		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
+		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>AbilityConvertAnimal<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+		<ability>PassiveHeka<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Noah>
+
+	<!-- CyberTech Norse Units-->
+
+	<!-- CyberTech Manor Units -->
 	<Farseer>	
 		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
