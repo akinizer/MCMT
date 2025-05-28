@@ -18,6 +18,9 @@
 		<ability>PassiveHeka<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</Noah>
+	<SiegeTower>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</SiegeTower>
 
 	<!-- CyberTech Norse Units-->
 

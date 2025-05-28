@@ -33,13 +33,45 @@
 		</effects>
 	</tech>
 
-	<!--Egyptialn Special Units and Improvements-->
+	<!--Egyptian Special Units and Tech Improvements-->
 	<tech name="ArchaicAgeEgyptian" mergeMode="add">
-		<!--Noah-->
-		<effects><effect type="TechStatus" status="active">MCMT_EgyptianRenovation</effect></effects>
+		
+		<effects>
+			<!--Noah-->
+			<effect type="TechStatus" status="active">MCMT_EgyptianRenovation</effect>
+			<!--Son of Osiris / Horus-->
+			<effect type="Data" action="Empower" amount="1.25" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingthatcanbeempowered" modifytype="FavorGatherRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="1.25" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingthatcanbeempowered" modifytype="DropsiteRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			
+			<effect type="Data" action="Empower" amount="1.25" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingempoweredforlos" modifytype="BuildRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="1.25" subtype="EmpowerModify" empowertype="self" unittype="logicaltypeaffectedbyvalleyofthekings" modifytype="BuildRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="1.25" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingthatcanbeempowered" modifytype="BuildRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+					
+			<effect type="Data" action="Empower" amount="1.15" subtype="EmpowerModify" empowertype="self" unittype="logicaltypeaffectedbyvalleyofthekings" modifytype="MilitaryTrainingRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="1.15" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingthatcanbeempowered" modifytype="MilitaryTrainingRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+		
+			<effect type="Data" action="Empower" amount="1.15" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingempoweredforlos" modifytype="ResearchRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="1.15" subtype="EmpowerModify" empowertype="self" unittype="logicaltypeaffectedbyvalleyofthekings" modifytype="ResearchRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="1.15" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingthatcanbeempowered" modifytype="ResearchRate" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+
+			<effect type="Data" action="Empower" amount="0.75" subtype="EmpowerModify" empowertype="self" unittype="logicaltypeaffectedbyvalleyofthekings" modifytype="ROF" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" action="Empower" amount="0.75" subtype="EmpowerModify" empowertype="self" unittype="logicaltypebuildingthatcanbeempowered" modifytype="ROF" relativity="BasePercent"><target type="ProtoUnit">SonOfOsiris</target></effect>
+
+			<effect type="Data" amount="5" subtype="OnHitEffect" action="LightningAttack" effecttype="DamageOverTime" duration="10.00" targettype="Building" relativity="Assign">
+				<target type="ProtoUnit">SonOfOsiris</target></effect>
+
+			<effect type="Data" amount="0.7" subtype="OnHitEffect" action="LightningAttack" effecttype="Stun" duration="1.00" targettype="NavalUnit" relativity="Assign">
+				<target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" amount="0.7" subtype="OnHitEffect" action="LightningAttack" effecttype="Stun" duration="1.00" targettype="HumanSoldier" relativity="Assign">
+				<target type="ProtoUnit">SonOfOsiris</target></effect>
+			<effect type="Data" amount="0.7" subtype="OnHitEffect" action="LightningAttack" effecttype="Stun" duration="6.00" targettype="Civilian" relativity="Assign">
+				<target type="ProtoUnit">SonOfOsiris</target></effect>
+			
+			<effect type="SetName" proto="SonOfOsiris" newname="STR_UNIT_SON_OF_HORUS_NAME"></effect>
+		</effects>
 	</tech>
 
-	<!-- Geneal Special Units and Improvements -->
+	<!-- General Special Units and Improvements -->
 	<tech name="MCMT_SpecialUnits" mergeMode="add">
 		<status>UNOBTAINABLE</status>
 		<effects>			
@@ -309,7 +341,7 @@
 			</effect>
 			
 				<!--CyberTech Units-->
-			<effect type="Data" amount="3.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>	
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">PrismTank</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MirageTank</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MirrorTank</target></effect>		
@@ -318,6 +350,12 @@
 			<effect type="Data" amount="0.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ScoutProbe</target></effect>
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>
 			
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+			<effect type="Data" amount="4.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+			<effect type="Data" amount="2.00" subtype="ObstructionRadiusX" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+			<effect type="Data" amount="2.00" subtype="ObstructionRadiusZ" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+			
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SiegeTurret</target></effect>
 				<!--Atlantean Captains-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ArcusCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ContariusCaptain</target></effect>
@@ -409,6 +447,11 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">MrWukong</target>
 			</effect>
+
+			<!-- CyberTech Projectiles -->
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ProjectileDisintegrationBolt</target></effect>
+			<effect type="Data" amount="10.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ProjectileDisintegrationBolt</target></effect>
+			 
 			
 			<!--General Improvements-->
 				<!--Nature-->
@@ -577,8 +620,7 @@
 			<effect type="Data" amount="1.25" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">VillagerDwarf</target>
 			</effect>
-			<!-- Atlantean Improvements-->
-			 	<!-- Atlantean MythUnit-->
+			
 		</effects>
 	</tech>	
 
@@ -821,7 +863,7 @@
 
 			<!-- Ultimate Walls-->
 			<effect type="TechStatus" status="active">StoneWall</effect>
-			<effect type="TechStatus" status="active">BronzeWall</effect>
+			<effect type="TechStatus" status="active">BronzeWall</effect>	
 			<effect type="TechStatus" status="active">IronWall</effect>
 			<effect type="TechStatus" status="active">FortifiedWall</effect>
 			<effect type="TechStatus" status="active">CitadelWall</effect>
@@ -2265,7 +2307,7 @@
   </tech>
   
   <!--EXISTING TECH IMPROVEMENTS (mergeMode="add")-->
-  <tech name="Crenellations">
+  <tech name="Crenellations" mergeMode="add">
     <displaynameid>STR_TECH_CRENELLATIONS_NAME</displaynameid>
     <rollovertextid>STR_TECH_CRENELLATIONS_LR</rollovertextid>
     <cost resourcetype="Food">150.0000</cost>
@@ -2309,7 +2351,7 @@
       </effect>
     </effects>
   </tech>
-  <tech name="Ballistics">
+  <tech name="Ballistics" mergeMode="add">
     <displaynameid>STR_TECH_BALLISTICS_NAME</displaynameid>
     <rollovertextid>STR_TECH_BALLISTICS_LR</rollovertextid>
     <cost resourcetype="Wood">200.0000</cost>
@@ -2335,7 +2377,7 @@
       </effect>
     </effects>
   </tech>
-  <tech name="FortifiedTownCenter">
+  <tech name="FortifiedTownCenter" mergeMode="add">
 	<effects>
       <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent" mergeMode="add">
         <target type="ProtoUnit">VillageCenter</target>
@@ -2395,7 +2437,7 @@
         <target type="ProtoUnit">SentryTower</target>
       </effect>
   </tech>
-  <tech name="VolcanicForge">
+  <tech name="VolcanicForge" mergeMode="add">
     <displaynameid>STR_TECH_VOLCANIC_FORGE_NAME</displaynameid>
     <rollovertextid>STR_TECH_VOLCANIC_FORGE_LR</rollovertextid>
     <cost resourcetype="Food">100.0000</cost>
@@ -2430,7 +2472,7 @@
       </effect>
     </effects>
   </tech>
-  <tech name="DwarvenWeapons">
+  <tech name="DwarvenWeapons" mergeMode="add">
 	<displaynameid>STR_TECH_DWARVEN_WEAPONS_NAME</displaynameid>
     <rollovertextid>STR_TECH_DWARVEN_WEAPONS_LR</rollovertextid>
     <cost resourcetype="Food">500.0000</cost>
@@ -2454,7 +2496,7 @@
       <effect type="Data" allactions="1" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">AbstractDwarf</target></effect>
     </effects>
   </tech>
-  <tech name="MeteoricIronArmor">
+  <tech name="MeteoricIronArmor" mergeMode="add">
 	<displaynameid>STR_TECH_METEORIC_IRON_ARMOR_NAME</displaynameid>
     <rollovertextid>STR_TECH_METEORIC_IRON_ARMOR_LR</rollovertextid>
     <cost resourcetype="Food">500.0000</cost>
@@ -2478,7 +2520,7 @@
       <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
     </effects>
   </tech>
-  <tech name="DragonscaleShields">
+  <tech name="DragonscaleShields" mergeMode="add">
 	<displaynameid>STR_TECH_DRAGONSCALE_SHIELDS_NAME</displaynameid>
     <rollovertextid>STR_TECH_DRAGONSCALE_SHIELDS_LR</rollovertextid>
     <cost resourcetype="Wood">500.0000</cost>
@@ -2501,7 +2543,7 @@
       <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
     </effects>
   </tech>
-  <tech name="HammerOfThunder">
+  <tech name="HammerOfThunder" mergeMode="add">
     <displaynameid>STR_TECH_HAMMER_OF_THUNDER_NAME</displaynameid>
     <rollovertextid>STR_TECH_HAMMER_OF_THUNDER_LR</rollovertextid>
     <cost resourcetype="Gold">125.0000</cost>
@@ -2519,7 +2561,7 @@
       <effect type="Data" action="AutoGather" amount="2.00" subtype="WorkRate" unittype="Favor" relativity="BasePercent"><target type="ProtoUnit">Hersir</target></effect>
     </effects>
   </tech>
-  <tech name="DwarvenBreastplate">
+  <tech name="DwarvenBreastplate" mergeMode="add">
     <displaynameid>STR_TECH_DWARVEN_BREASTPLATE_NAME</displaynameid>
     <rollovertextid>STR_TECH_DWARVEN_BREASTPLATE_LR</rollovertextid>
     <cost resourcetype="Gold">150.0000</cost>
@@ -2535,5 +2577,95 @@
       <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">Berserk</target></effect>
       <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
     </effects>
+  </tech>
+  <!-- Egyptian - Military Unit Upgrade Techs-->
+   <tech name="MediumSlingers" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">Priest</target></effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+	</effects>
+  </tech>
+  <tech name="HeavySlingers" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.15" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">Priest</target></effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.15" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+	</effects>
+  </tech>
+  <tech name="ChampionSlingers" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">Priest</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">Priest</target></effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.20" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">AbstractPharaoh</target></effect>
+    </effects>
+  </tech>
+   <tech name="MediumWarElephants" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+    </effects>
+  </tech>
+  <tech name="HeavyWarElephants" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.15" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+    </effects>
+  </tech>
+  <tech name="ChampionWarElephants" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
+    </effects>
+  </tech>
+  <!-- Egyptian - Hero Techs-->
+  <tech name="HandsOfThePharaoh" mergeMode="add">
+    <effects>
+	  <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Priest</target>
+      </effect>
+	  <effect type="Data" action="RangedAttack" amount="1.00" subtype="Damagebonus" unittype="MythUnit" relativity="Absolute">
+        <target type="ProtoUnit">Priest</target>
+      </effect>
+	  <effect type="Data" action="RangedAttack" amount="2.00" subtype="Damagebonus" unittype="AnimalOfSet" relativity="Absolute">
+        <target type="ProtoUnit">Priest</target>
+      </effect>
+	  <effect type="Data" amount="1.50" subtype="Damage" action="RangedAttack" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractPharaoh</target>
+      </effect>
+	  <effect type="Data" amount="4.50" subtype="Damage" action="RangedAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Priest</target>
+      </effect>
+	  <effect type="Data" action="Empower" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">Priest</target>
+      </effect>	  
+    </effects>
+  </tech>
+  <tech name="CrimsonLinen" mergeMode="add">
+	<effects>
+		<effect type="Data" amount="2.0" subtype="OnHitEffect" action="SelfDestructAttack" effecttype="DamageOverTime" duration="6.00" targettype="Unit" dmgtype="Divine" relativity="Assign">
+			<target type="ProtoUnit">Scarab</target>
+		</effect>
+	</effects>
   </tech>
 </techtreemods>

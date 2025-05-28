@@ -1,3 +1,4 @@
+ID = "STR_UNIT_SON_OF_HORUS_NAME"  ;   Str = "Son of Horus"
 
 ID = "STR_UNIT_LANDLORD_NAME"   ;   Str = "Landlord"
 ID = "STR_UNIT_LANDLORD_LR"   ;   Str = "Elite Infantry. All-around. Head of Household and stronger than the basic variant."
@@ -226,8 +227,13 @@ ID = "STR_UNIT_NOAH_SR"   ;   Str = "Noah the Oracle of Guidance"
 ID = "STR_UNIT_NOAH_LR"   ;   Str = "The Legendary Oracle that Visited Many Eras for Millenia in Many Forms; Widely Known as Moses and Pharaoh; Noah of Ark; King David;  "
 ID = "STR_MSG_NOAH_SPAWN"   ;   Str = "Noah has returned to teach Pharaoh a new lesson!"
 
-ID = "STR_BLD_STELLAR_GATEWAY_NAME"   ;   Str = "Stellar Gateway"
-ID = "STR_BLD_STELLAR_GATEWAY_LR"   ;   Str = "FutureTech Teleportation Building"
+ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_NAME"   ;   Str = "Mechanized Mammoth Unit"
+ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_SR"   ;   Str = "Mechanized Mammoth Unit"
+ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_LR"   ;   Str = "CyberTech Super Unit Unexpectedly Possessed By Set"
+
+ID = "STR_BLD_STELLAR_GATEWAY_NAME"   ;   Str = "Advanced Relocation Kapsule"
+ID = "STR_BLD_STELLAR_GATEWAY_SR"   ;   Str = "A.R.K"
+ID = "STR_BLD_STELLAR_GATEWAY_LR"   ;   Str = "FutureTech Personalized Transportation Unit"
 
 ID = "STR_BLD_BASTION_NAME"   ;   Str = "Bastion"
 ID = "STR_BLD_BASTION_LR"   ;   Str = "Special Units Building"
@@ -263,6 +269,10 @@ ID = "STR_BLD_MAGETOWER_LR"   ;   Str = "Akashic Archive and Residence of the Ar
 
 ID = "STR_BLD_FORTIFIED_WARTOWER_NAME"   ;   Str = "Fortified Wartower"
 ID = "STR_BLD_TITAN_WALL_NAME"   ;   Str = "Titan Wall of Aegis"
+
+ID = "STR_UNIT_SIEGE_TURRET_NAME"   ;   Str = "Siege Turret"
+ID = "STR_UNIT_SIEGE_TURRET_SR"   ;   Str = "Siege Turret"
+ID = "STR_UNIT_SIEGE_TURRET_LR"   ;   Str = "Siege Tower Entrenchment in a Defensive Position"
 
 ID = "STR_TECH_MCMT_PAGE_1"   ;   Str = "Page1"
 ID = "STR_TECH_MCMT_PAGE_2"   ;   Str = "Page2"

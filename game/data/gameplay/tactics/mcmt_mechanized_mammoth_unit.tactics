@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="Building">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\crush</impacteffect>
+  </action>
+  <action>
+    <name>DisintegrationAttack</name>
+    <type>Attack</type>
+    <rate type="Unit">1</rate>
+    <rate type="AbstractFlyingUnit">1</rate>
+    <rate type="Building">0</rate>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <tactic>Default
+    <action priority="100">DisintegrationAttack</action>
+    <action priority="90">HandAttack</action>
+    <attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>

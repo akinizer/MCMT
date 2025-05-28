@@ -1059,28 +1059,29 @@
 		<armor type="Crush" value="0.9900"></armor>
 		
 		<autoattackrange>20.0000</autoattackrange>		
-		
-		<unittype>LogicalTypeNeededForVictory</unittype>
-		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-		<unittype>LogicalTypeLandMilitary</unittype>
-		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-		<unittype>LogicalTypeGarrisonInShips</unittype>
-		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-		<unittype>LogicalTypeVillagersAttack</unittype>
-		<unittype>LogicalTypeHandUnitsAttack</unittype>
-		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
 		<unittype>CountsTowardMilitaryScore</unittype>
-		
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+	
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
 		
 		<unittype>Hero</unittype>
-		<unittype>VillagerHero</unittype>
 		<unittype>MajorHero</unittype>
 		<unittype>HeroShadowUpgraded</unittype>
 		
+		<unittype>Ranged</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>		
 		
@@ -1095,7 +1096,7 @@
 		<unittype>LogicalTypeHealed</unittype>
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
 		<unittype>LogicalTypeNorseSoldierThatBuilds</unittype>
-		
+	
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
 		<flag>ShowGarrisonButton</flag>
@@ -1103,23 +1104,50 @@
 		<flag>ObscuredByUnits</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>AbilitiesOnBothPages</flag>
-		
-		<tactics>handattack.tactics</tactics>
+		<flag>HasDefaultAttack</flag>
+	
+		<tactics>mcmt_landlord.tactics</tactics>
 		<protoaction>
 			<name>HandAttack</name>
 			<rof>1.500000</rof>
 			<damage type="Hack">15.00000</damage>
 			<maxrange>0.500000</maxrange>
-			<onhiteffect type="Lifesteal" rate="1.0" targetunittype="Building"></onhiteffect>
 			<onhiteffect type="Lifesteal" rate="2.0" targetunittype="Unit"></onhiteffect>
-			<rate type="Landlord">1.000000</rate>
-			<rate type="Sentinel">1.000000</rate>
 			<damage type="Hack">20.00000</damage>
-			<damage type="Crush">5.00000</damage>
-			<damage type="Pierce">8.00000</damage>
+			<damage type="Crush">8.00000</damage>
 			<damagebonus type="MythUnit">5.000000</damagebonus>
 			<damagebonus type="Building">3.000000</damagebonus>
+			<defaultattack>1</defaultattack>
 		</protoaction>
+		<protoaction>
+			<name>ThrowAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Hack">20.000000</damage>
+			<damage type="Pierce">8.000000</damage>
+			<maxrange>28.0000</maxrange>
+			<projectile>ProjectileAxeFlaming</projectile>
+			<numberprojectiles>1</numberprojectiles>
+			<volleymode>1</volleymode>
+			<active>1</active>
+		</protoaction>
+		<!-- 
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Hack">9.00000</damage>
+			<damagebonus type="MythUnit">12.000000</damagebonus>
+			<maxrange>0.750000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Pierce">4.000000</damage>
+			<damagebonus type="MythUnit">9.000000</damagebonus>
+			<maxrange>12.000000</maxrange>
+			<projectile>ProjectileArrowFlaming</projectile>
+		</protoaction>
+		-->
 		<protoaction>
 			<name>Build</name>
 			<type>Build</type>
@@ -1144,7 +1172,7 @@
 			<modifyratecap>1.3000</modifyratecap>
 			<modifybase>1.0000</modifybase>
 			<modifydecay>0.00250</modifydecay>
-		</protoaction>
+		</protoaction>	
 		<protoaction>
 			<name stringid="STR_TECH_FURY_OF_THE_FALLEN_NAME">DeathBoostDamageBonus</name>
 			<type>LikeBonus</type>
@@ -1162,7 +1190,6 @@
 		<cost resourcetype="Food">80.000</cost>
 		<cost resourcetype="Wood">120.000</cost>
 		<cost resourcetype="Favor">1.000</cost>
-		<cost resourcetype="Population">3</cost>
 		
 	</unit>	
 	<unit name="Noah">
@@ -2977,6 +3004,104 @@
 		</protoaction>
 	</unit>
 
+	<!-- CyberTech Workshop Special Units -->
+	 <unit name="MechanizedMammothUnit">
+		<displaynameid>STR_UNIT_MECHANIZED_MAMMOTH_UNIT_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_MECHANIZED_MAMMOTH_UNIT_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_MECHANIZED_MAMMOTH_UNIT_SR</shortrollovertextid>
+		<icon>resources\egyptian\player_color\units\elephant_of_set_icon.png</icon>
+		<animfile>egyptian\units\animals_of_set\elephant_of_set\elephant_of_set.xml</animfile>
+		<soundsetfile>nature\animals\elephant\elephant.xml</soundsetfile>
+		<obstructionradiusx>1.4900</obstructionradiusx>
+		<obstructionradiusz>1.4900</obstructionradiusz>
+		<selectionradiusx>1.5000</selectionradiusx>
+		<selectionradiusz>2.0000</selectionradiusz>
+
+		<impacttype>Metal</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<movementtype>amphibious</movementtype>
+		<turnrate>10.0000</turnrate>
+		<initialhitpoints>4000.0000</initialhitpoints>
+		<maxhitpoints>4000.0000</maxhitpoints>
+		<unitregen>1.5000</unitregen>
+
+		<trainpoints>15.0000</trainpoints>
+		<weightclass>100</weightclass>
+		<populationcount>3</populationcount>
+		<maxvelocity>3.5000</maxvelocity>
+		<buildlimit>1</buildlimit>
+
+		<los>18.0000</los>
+		<cost resourcetype="Gold">200.0000</cost>
+		<cost resourcetype="Food">400.0000</cost>
+		<cost resourcetype="Favor">30.0000</cost>
+
+		<armor type="Hack" value="0.7000"></armor>
+		<armor type="Pierce" value="0.85000"></armor>
+		<armor type="Crush" value="0.8000"></armor>
+
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+
+		<unittype>AbstractSiegeWeapon</unittype>
+		<unittype>SiegeLineUpgraded</unittype>
+
+		<unittype>AbstractTitan</unittype>
+		<unittype>AnimalOfSet</unittype>
+
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>		
+
+		<flag>CollidesWithProjectiles</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+
+		<command row="0" column="5">FlareAtUnit</command>
+		<tactics>mcmt_mechanized_mammoth_unit.tactics</tactics>
+
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>4.000000</rof>
+			<damage type="Crush">45.000000</damage>
+			<damage type="Hack">35.000000</damage>
+			<damagearea>5</damagearea>
+			<damagebonus type="AbstractWall">5.00000</damagebonus>
+			<damagebonus type="AbstractTower">5.00000</damagebonus>
+			<damagebonus type="Building">2.500000</damagebonus>
+			<damagebonus type="AbstractSiegeWeapon">1.500000</damagebonus>
+			<maxrange>2.0000</maxrange>
+			<onhiteffect type="Throw" targetunittype="EconomicUnit"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>DisintegrationAttack</name>
+			<rof>5.000000</rof>
+			<damage type="Divine">200.000000</damage>
+			<maxrange>45.0000</maxrange>
+			<projectile>ProjectileDisintegrationBolt</projectile>
+			<numberprojectiles>2</numberprojectiles>
+			<volleymode>1</volleymode>
+		</protoaction>
+	</unit>
+
 	<!--///ADDITIONS-->
 	
 	<!--///New Units Added to Houses and Manor-->
@@ -3017,6 +3142,10 @@
 		<train row="2" column="3">Igniter</train>
 		<train row="2" column="4">ScoutProbe</train>
 		<train row="2" column="5">MotherShip</train>			
+	</unit>
+
+	<unit name="SiegeWorks">
+		<train row="0" column="5">MechanizedMammothUnit</train>		
 	</unit>
 	
 	<unit name="TechBuilding">
@@ -3116,7 +3245,7 @@
 	<unit name="StellarGateway">
 		<displaynameid>STR_BLD_STELLAR_GATEWAY_NAME</displaynameid>
 		<rollovertextid>STR_BLD_STELLAR_GATEWAY_LR</rollovertextid>
-		<shortrollovertextid>STR_BLD_STELLAR_GATEWAY_LR</shortrollovertextid>
+		<shortrollovertextid>STR_BLD_STELLAR_GATEWAY_SR</shortrollovertextid>
 		<icon>resources\atlantean\static_color\buildings\sky_passage_icon.png</icon>
 		<minimapicon>ui\minimap\minimap_sky_passage</minimapicon>
 		<animfile>atlantean\buildings\sky_passage\sky_passage.xml</animfile>
@@ -3126,15 +3255,16 @@
 		<obstructionradiusz>3.0000</obstructionradiusz>
 		<impacttype>Armored</impacttype>
 		<movementtype>amphibious</movementtype>
+		<flag>TieToWaterSurface</flag>
 
 		<initialhitpoints>100.0000</initialhitpoints>
 		<maxhitpoints>100.0000</maxhitpoints>
 		<weightclass>10</weightclass>
-		<populationcount>2</populationcount>
+		<populationcount>1</populationcount>
 		
 		<buildlimit>1</buildlimit>
 		<trainpoints>10</trainpoints>
-		<maxcontained>100</maxcontained>
+		<maxcontained>1</maxcontained>
 		<maxvelocity>10</maxvelocity>
 
 		<los>12.0000</los>
@@ -3959,10 +4089,10 @@
 		<protoaction>
 			<name>RangedAttack</name>
 			<rof>1.200000</rof>
-			<damage type="Pierce">20.000000</damage>
+			<damage type="Hack">20.000000</damage>
 			<damage type="Divine">5.000000</damage>
 			<damagebonus type="MythUnit">4.000000</damagebonus>
-			<maxrange>17.000000</maxrange>
+			<maxrange>0.800000</maxrange>
 			<projectile>ProjectileJavelinFlaming</projectile>
 		</protoaction>
 		<protoaction>
@@ -5101,6 +5231,116 @@
 			<name>DelayedTransform</name>
 			<modifyduration>2500</modifyduration>
 			<modifyprotoid>Pegasus</modifyprotoid>
+		</protoaction>
+	<!-- Siege Turret -->
+	</unit>
+		<unit name="SiegeTurret" mergeMode="Add">
+		<displaynameid>STR_UNIT_SIEGE_TURRET_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_SIEGE_TURRET_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_SIEGE_TURRET_SR</shortrollovertextid>
+		<icon>resources\egyptian\player_color\units\siege_tower_icon.png</icon>
+		<animfile>egyptian\units\siege\siege_tower\siege_tower.xml</animfile>
+		<soundsetfile>egyptian\vo\siege_tower\siege_tower.xml</soundsetfile>
+		<obstructionradiusx>1.4900</obstructionradiusx>
+		<obstructionradiusz>1.4900</obstructionradiusz>
+		<selectionradiusx>2.5000</selectionradiusx>
+		<selectionradiusz>2.5000</selectionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<formationorder>1</formationorder>
+		<movementtype>air</movementtype>
+		<turnrate>3.0000</turnrate>
+		<initialhitpoints>1000.0000</initialhitpoints>
+		<maxhitpoints>1000.0000</maxhitpoints>
+		<trainpoints>15.0000</trainpoints>
+		<weightclass>10</weightclass>
+		<maxcontained>5</maxcontained>
+		
+		<autoattackrange>20</autoattackrange>
+		<los>20.0000</los>
+		<armor type="Hack" value="0.0500"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.6500"></armor>
+		
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeAutoAttackFocusBuildings</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>AbstractSiegeWeapon</unittype>
+		<unittype>SiegeLineUpgraded</unittype>
+		
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>	
+		
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>OrientUnitWithGround</flag>
+		<flag>ConstrainOrientation</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>Immoveable</flag>
+
+		<contain>Unit</contain>
+		<notcontain>AbstractCavalry</notcontain>
+		<notcontain>MythUnit</notcontain>
+		<notcontain>AbstractSiegeWeapon</notcontain>
+		<notcontain>Ship</notcontain>
+		<notcontain>Resource</notcontain>
+		<command row="3" column="1">Eject</command>
+		<tactics>mcmt_siegetowerturret.tactics</tactics>
+		<protoaction>
+			<name>AntiWallAttack</name>
+			<rof>4.000000</rof>
+			<damage type="Crush">200.000000</damage>
+			<damagearea>8.000000</damagearea>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>3.000000</maxrange>
+			<scalebycontainedunittype>
+				<rate type="Unit">0.050000</rate>
+			</scalebycontainedunittype>
+			<active>0</active>
+		</protoaction>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>4.000000</rof>
+			<damage type="Crush">200.000000</damage>
+			<maxrange>3.000000</maxrange>
+			<scalebycontainedunittype>
+				<rate type="Unit">0.050000</rate>
+			</scalebycontainedunittype>	
+			<active>0</active>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.50000</rof>
+			<damage type="Pierce">12.000000</damage>
+			<damage type="Crush">8.000000</damage>
+			<maxrange>25.000000</maxrange>
+			<projectile>ProjectileArrowNotFlaming</projectile>
+			<numberprojectiles>3</numberprojectiles>
+			<rate type="Building">1.000000</rate>
+			<rate type="AbstractFlyingUnit">1.000000</rate>
+			<scalebycontainedunittype>
+				<rate type="Unit">0.050000</rate>
+			</scalebycontainedunittype>			
 		</protoaction>
 	</unit>
 	
@@ -7630,6 +7870,7 @@
 		<flag>Immoveable</flag>
 		<flag>MilitaryCommands</flag>
 		<tactics>rangedattack.tactics</tactics>
+		<!---->
 		<protoaction>
 			<name>RangedAttack</name>
 			<rof>2.000000</rof>
@@ -7638,12 +7879,8 @@
 			<maxrange>18.000000</maxrange>
 			<projectile>ProjectileSiegeCrossbowArrow</projectile>
 			
-			<onhiteffect type="Throw">
-				<target attacktype="HumanSoldier"></target>
-				<target attacktype="AbstractVillager"></target>
-			</onhiteffect>	 
-
-			<onhiteffect type="Freeze" freezetype="StoneDamage" duration="3.000000"></onhiteffect>		  
+			<onhiteffect type="Throw"><target attacktype="AbstractVillager"></target></onhiteffect>	 
+			<onhiteffect type="Freeze" freezetype="StoneDamage" duration="3.000000" damage="0.1"></onhiteffect>  
 		</protoaction>
 	</unit>
 	
@@ -8486,24 +8723,20 @@
 	<unit name="SonOfOsiris">
 		<unittype>AbstractArcher</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
-		<unittype>ArcherLineUpgraded</unittype>
 		<unitregen>10.0000</unitregen>
 	</unit>
 	<unit name="Pharaoh">
 		<unittype>AbstractArcher</unittype>
-		<unittype>ArcherLineUpgraded</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
 		<unitregen>10.0000</unitregen>
 	</unit>
 	<unit name="PharaohNewKingdom">
 		<unittype>AbstractArcher</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
-		<unittype>ArcherLineUpgraded</unittype>
 		<unitregen>5.0000</unitregen>
 	</unit>
 	<unit name="Priest">
 		<unittype>AbstractArcher</unittype>
-		<unittype>ArcherLineUpgraded</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
 		<unitregen>1.0000</unitregen>
 	</unit>
@@ -11786,6 +12019,12 @@
 	<unit name="SiegeTower">
 		<unittype>AbstractTower</unittype>
 		<unittype>AbstractTransportShip</unittype>
+		<tactics>mcmt_siegetowerturret.tactics</tactics>
+		<protoaction>
+			<name>DelayedTransform</name>
+			<modifyduration>2500</modifyduration>
+			<modifyprotoid>SiegeTurret</modifyprotoid>
+		</protoaction>
 	</unit>
 	<unit name="Helepolis">
 		<unittype>AbstractTower</unittype>
@@ -12116,4 +12355,35 @@
 		<command row="1" column="0">MoveNearbySiegeToUnit</command>
 		<command row="1" column="1">MoveNearbyNavyToUnit</command>
 	</unit>
+
+	<!-- CyberTech Projectiles -->
+	<unit name="ProjectileDisintegrationBolt">
+		<animfile>vfx\projectiles\priest_pharaoh\priest_pharaoh.xml</animfile>
+		<obstructionradiusx>0.2000</obstructionradiusx>
+		<obstructionradiusz>0.2000</obstructionradiusz>
+		<lifespan>2.0000</lifespan>
+		<decay delay="4.0000" duration="0.1000"></decay>
+		<movementtype>air</movementtype>
+		<maxvelocity>40.0000</maxvelocity>
+		<unittype>Projectile</unittype>
+		<unittype>LogicalTypeSunRayProjectile</unittype>
+		<flag>Invulnerable</flag>
+		<flag>NoUnitAI</flag>
+		<flag>NoIdleActions</flag>
+		<flag>NonCollideable</flag>
+		<flag>NotSearchable</flag>
+		<flag>Projectile</flag>
+		<flag>NoTieToGround</flag>
+		<flag>DoNotShowOnMiniMap</flag>
+		<flag>NotSelectable</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>NoHPBar</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>AdjustPositionOnTerrainCollision</flag>
+		<flag>NotPlayerPlaceable</flag>
+		<flag>HasContinuousParticles</flag>
+		<flag>NotKBTracked</flag>
+		<flag>NotDeathTracked</flag>
+ 	</unit>
 </protomods>

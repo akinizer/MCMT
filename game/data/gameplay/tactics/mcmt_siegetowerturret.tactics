@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_ANTI_WALL">AntiWallAttack</name>
+    <type>Attack</type>
+    <rate type="AbstractWall">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <impacteffect>effects\impacts\hack</impacteffect>
+    <hidefromstats>1</hidefromstats>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="Building">1.0</rate>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\crush</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="Unit">1.0</rate>
+    <volleymode>1</volleymode>
+  </action>
+  <action>
+    <name>DelayedTransform</name>
+    <type>DelayedTransform</type>
+    <anim>Transform</anim>
+  </action>
+  <tactic>
+    Default<action priority="100">AntiWallAttack</action><action priority="90">HandAttack</action><action priority="80">RangedAttack</action>
+    <attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype>
+    <attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype>
+    <action>DelayedTransform</action>
+  </tactic>
+</tactics>
