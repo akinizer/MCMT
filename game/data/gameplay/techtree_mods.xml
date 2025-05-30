@@ -5,7 +5,7 @@
 	<tech name="ArchaicAgeEgyptian"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeNorse"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeChinese"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects>	</tech>
-	
+		
 	<!-- /////////////////////////////////////////////////////// MCMT CONTENTS //////////////////////////////////////////////// -->
 	<!-- //// MCMT Mod Main Trees////// -->
 	<tech name="MCMT_Techs" mergeMode="add">
@@ -2307,6 +2307,8 @@
   </tech>
   
   <!--EXISTING TECH IMPROVEMENTS (mergeMode="add")-->
+
+  <!--General-->
   <tech name="Crenellations" mergeMode="add">
     <displaynameid>STR_TECH_CRENELLATIONS_NAME</displaynameid>
     <rollovertextid>STR_TECH_CRENELLATIONS_LR</rollovertextid>
@@ -2393,6 +2395,8 @@
       </effect>
     </effects>
   </tech>
+  
+  <!-- Greek -->
   <tech name="MonstrousRage" mergeMode="add">
 	<effects>
 		<effect type="Data" amount="1.15" subtype="AdditionalScale" relativity="Absolute">
@@ -2578,7 +2582,30 @@
       <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">AbstractDwarf</target></effect>
     </effects>
   </tech>
+
   <!-- Egyptian - Military Unit Upgrade Techs-->
+  <tech name="MediumSpearmen" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.10" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">Mercenary</target></effect>
+    </effects>
+  </tech>
+  <tech name="HeavySpearmen" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.15" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">Mercenary</target></effect>
+    </effects>
+  </tech>
+  <tech name="ChampionSpearmen" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.20" subtype="Damage" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">Mercenary</target></effect>
+    </effects>
+  </tech>
+
    <tech name="MediumSlingers" mergeMode="add">
     <effects>
       <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Priest</target></effect>
@@ -2668,4 +2695,159 @@
 		</effect>
 	</effects>
   </tech>
+  
+  <tech name="FloodOfTheNile" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="0.50" subtype="ResourceTrickleRate" resource="Food" relativity="Absolute">
+        <target type="Player"></target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="Criosphinx" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="4.00" subtype="Damage" action="AoEAttack" relativity="BasePercent"><target type="ProtoUnit">Sphinx</target></effect>
+	  <effect type="Data" action="AoEAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">Sphinx</target></effect>
+    </effects>
+  </tech>
+  <tech name="Hieracosphinx" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="4.00" subtype="Damage" action="AoEAttack" relativity="BasePercent"><target type="ProtoUnit">Sphinx</target></effect>
+	  <effect type="Data" action="AoEAttack" amount="2.00" subtype="MaximumRange" relativity="Absolute"><target type="ProtoUnit">Sphinx</target></effect>
+    </effects>
+  </tech>
+  <tech name="FeetOfTheJackal" mergeMode="add">
+	<effects>
+	  <effect type="Data" action="JumpAttack" amount="6.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">Anubite</target></effect>
+	  <effect type="Data" amount="2.00" subtype="Damage" action="JumpAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Anubite</target>
+      </effect>
+	</effects>
+  </tech>
+  <tech name="Necropolis" mergeMode="add">
+	<effects>
+	  <effect type="Data" amount="0.50" subtype="TrainPoints" relativity="Percent">
+        <target type="ProtoUnit">Anubite</target>
+      </effect>
+	  <effect type="Data" amount="1.50" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Anubite</target>
+      </effect>
+
+	  <effect type="Data" amount="0.50" subtype="TrainPoints" relativity="Percent">
+        <target type="ProtoUnit">AnimalOfSet</target>
+      </effect>
+	  <effect type="Data" amount="1.50" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">AnimalOfSet</target>
+      </effect>
+
+	  <effect type="Data" amount="1.50" subtype="Lifespan" relativity="BasePercent">
+        <target type="ProtoUnit">MummyReincarnated</target>
+      </effect>
+	  <effect type="Data" amount="1.50" subtype="Lifespan" relativity="BasePercent">
+        <target type="ProtoUnit">MinionReincarnated</target>
+      </effect>
+
+	  <effect type="Data" action="Autogather" amount="1.25" subtype="WorkRate" unittype="Favor" relativity="BasePercent">
+        <target type="ProtoUnit">Priest</target>
+      </effect>
+	  <effect type="Data" action="Autogather" amount="1.25" subtype="WorkRate" unittype="Favor" relativity="BasePercent">
+        <target type="ProtoUnit">SonOfOsiris</target>
+      </effect>
+	  <effect type="Data" action="Autogather" amount="1.25" subtype="WorkRate" unittype="Favor" relativity="BasePercent">
+        <target type="ProtoUnit">Pharaoh</target>
+      </effect>
+	</effects>	
+  </tech>
+  <tech name="FuneralBarge" mergeMode="add">
+	<effects>
+	  <effect type="Data" amount="1.25" subtype="MaximumVelocity" relativity="BasePercent">
+		<target type="ProtoUnit">Priest</target>
+	  </effect>
+	</effects>
+  </tech>
+  <tech name="SkinOfTheRhino" mergeMode="add">
+	<effects>
+	  <effect type="Data" amount="-0.25" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+      <effect type="Data" amount="-0.25" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+  	</effects>
+  </tech>
+  <tech name="TusksOfApedemak" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="1.10" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+      <effect type="Data" amount="0.90" subtype="cost" resource="Food" relativity="BasePercent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+      <effect type="Data" amount="0.90" subtype="cost" resource="Gold" relativity="BasePercent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+      <effect type="Data" amount="-1.00" subtype="PopulationCount" relativity="Absolute"><target type="ProtoUnit">AnimalOfSet</target></effect>
+    </effects>
+  </tech>
+  <tech name="DesertWind" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+      <effect type="Data" amount="1.15" subtype="MaximumVelocity" relativity="BasePercent"><target type="ProtoUnit">AnimalOfSet</target></effect>
+    </effects>
+  </tech>
+  <tech name="GreatestOfFifty" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Pharaoh</target></effect>
+      <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent"><target type="ProtoUnit">Pharaoh</target></effect>
+    </effects>
+  </tech>
+  <tech name="SerpentSpear" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="0.125" subtype="OnHitEffect" action="HandAttack" effecttype="DamageOverTime" duration="6.00" targettype="Unit" relativity="Assign"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXPoison" attachbone="spine" relativity="Assign"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffectAttachBone" action="HandAttack" effecttype="Attach" targettype="Unit" attachbone="spine" relativity="Assign"><target type="ProtoUnit">Mercenary</target></effect>
+      
+	  <effect type="Data" amount="0.125" subtype="OnHitEffect" action="HandAttack" effecttype="DamageOverTime" duration="6.00" targettype="Unit" relativity="Assign"><target type="ProtoUnit">WarElephant</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXPoison" attachbone="spine" relativity="Assign"><target type="ProtoUnit">WarElephant</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffectAttachBone" action="HandAttack" effecttype="Attach" targettype="Unit" attachbone="spine" relativity="Assign"><target type="ProtoUnit">WarElephant</target></effect>
+    </effects>
+  </tech>
+  <tech name="SpearOfHorus" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="1.10" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">Mercenary</target></effect>
+      <effect type="Data" action="HandAttack" amount="1.00" subtype="Damagebonus" unittype="AbstractCavalry" relativity="Absolute"><target type="ProtoUnit">Mercenary</target></effect>
+    </effects>
+  </tech>
+  <tech name="SacredCats" mergeMode="add">
+	<effects>
+	  <effect type="Data" amount="1.5" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">Sphinx</target></effect>
+	  <effect type="Data" amount="1.5" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">NemeanLion</target></effect>
+	  <effect type="Data" amount="1.5" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">Chimera</target></effect>
+	  <effect type="Data" amount="1.5" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">LionOfSet</target></effect>
+	  <effect type="Data" amount="1.5" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">QiongQi</target></effect>
+	  <effect type="Data" amount="1.5" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">Baihu</target></effect>
+	</effects>
+  </tech>
+  <tech name="SunDriedMudBrick" mergeMode="add">
+    <displaynameid>STR_TECH_SUN_DRIED_MUD_BRICK_NAME</displaynameid>
+    <rollovertextid>STR_TECH_SUN_DRIED_MUD_BRICK_LR</rollovertextid>
+    <cost resourcetype="Wood">200.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>15.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\egyptian\static_color\technologies\sundried_mud_brick_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>MythTechDefensive</techtype>
+    <effects>
+      <effect type="Data" amount="1.05" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Building</target>
+      </effect>
+   	  <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+        <target type="ProtoUnit">Building</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="BookOfThoth" mergeMode="add">
+	<effects>
+	  <effect type="Data" action="AutoGather" amount="1.25" subtype="WorkRate" unittype="Favor" relativity="BasePercent">
+        <target type="ProtoUnit">EconomicUpgraded</target>
+      </effect>
+	  <effect type="Data" action="AutoGather" amount="1.25" subtype="WorkRate" unittype="Favor" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractMonument</target>
+      </effect>
+	</effects>
+  </tech>
+  
 </techtreemods>

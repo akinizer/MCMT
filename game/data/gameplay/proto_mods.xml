@@ -11926,6 +11926,8 @@
 	</unit>
 	
 	<!--IMPROVEMENTS///ALL-->
+
+	<!--buildings improvements-->
 	<unit name="SentryTower">
 		<unittype>ArcherLineUpgraded</unittype>
 		<armor type="Hack" value="0.5000"></armor>
