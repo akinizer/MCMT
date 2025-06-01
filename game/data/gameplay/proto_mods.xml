@@ -6,6 +6,11 @@
 	<unit name="BattleBoar">
 		<soundsetfile>norse\vo\gullinbursti\gullinbursti.xml</soundsetfile>
 	</unit>	
+	<unit name="Raven">
+		<flag>Invulnerable</flag>
+		<lifespan>30.0000</lifespan>
+		<unittype>AbstractScout</unittype>
+  	</unit>
 	
 	<!--/// New Special Units /// -->
 	
@@ -4125,7 +4130,7 @@
 		<shortrollovertextid>STR_UNIT_VALKYRIE_WARRIOR_HORSE_LR</shortrollovertextid>
 		<icon>resources\norse\player_color\units\valkyrie_icon.png</icon>
 		<animfile>norse\units\myth\valkyrie\valkyrie_horse.xml</animfile>
-		<soundsetfile>norse\vo\valkyrie\valkyrie.xml</soundsetfile>	
+		<soundsetfile>greek\vo\hippocampus\hippocampus.xml</soundsetfile>
 		<obstructionradiusx>0.7400</obstructionradiusx>
 		<obstructionradiusz>0.7400</obstructionradiusz>
 		<selectionradiusx>1.0000</selectionradiusx>
@@ -4539,6 +4544,8 @@
 			<projectile>ProjectileBallOfFireInvisible</projectile>
 			<onhiteffect type="Freeze" duration="20.000000" freezetype="default"></onhiteffect>
 			<workonfrozenunits>0</workonfrozenunits>
+			<maxarea>15</maxarea>
+			<rate type="AbstractWarship">1.0</rate>
 		</protoaction>
 		<protoaction>
 			<name>FreezeTitan</name>
@@ -4653,12 +4660,13 @@
 			<damagebonus type="Hero">8.000000</damagebonus>
 			<damageflags>Nature|Enemy</damageflags>
 			
-			<maxrange>14.000000</maxrange>
-			<damagearea>14.000000</damagearea>
-			
+			<maxrange>0.800000</maxrange>
+			<damagearea>14.000000</damagearea>			
+
 			<projectile>ProjectileBallOfFire</projectile>
 			<impacteffect>effects\impacts\fireball</impacteffect>
-			<displayednumberprojectiles>2</displayednumberprojectiles>
+			
+			<displayednumberprojectiles>5</displayednumberprojectiles>
 			<autoretarget>1</autoretarget>
 			<canattackground>1</canattackground>							
 		</protoaction>
@@ -4667,13 +4675,14 @@
 			<rof>7.000000</rof>
 			<damage type="Hack">20.000000</damage>
 			<damage type="Divine">50.000000</damage>
-			<damagearea>4.000000</damagearea>
+			<damagearea>10.000000</damagearea>
 			<damageflags>Nature|Enemy</damageflags>
 			<damagebonus type="MythUnit">5.000000</damagebonus>
 			<damagebonus type="AbstractTitan">20.000000</damagebonus>
 			<maxrange>30.000000</maxrange>
+
 			<projectile>ProjectileBallOfFireTaotie</projectile>
-			<numberprojectiles>1</numberprojectiles>
+			<numberprojectiles>5</numberprojectiles>
 			<impacteffect>effects\impacts\fireball</impacteffect>
 			<volleymode></volleymode>
 		</protoaction>
@@ -8280,6 +8289,23 @@
 			<modelattachment>vfx\glow\einheri_boost.xml</modelattachment>
 			<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
 		</protoaction>
+		<protoaction>
+			<name>Build</name>
+			<type>Build</type>
+			<anim>Build</anim>
+			<rate type="Building">1.000000</rate>
+			<maxrange>0.2</maxrange>
+			<typedmaxrange type="Dock">2.0</typedmaxrange>
+		</protoaction>
+		<protoaction>
+			<name>Repair</name>
+			<type>Repair</type>
+			<anim>Build</anim>
+			<maxrange>0.2</maxrange>
+			<rate type="AbstractWall">0.2500</rate>
+			<rate type="Building">0.5000</rate>
+			<typedmaxrange type="Dock">2.0</typedmaxrange>
+		</protoaction>
 	</unit>
 	
 	<unit name="Kraken">		
@@ -8742,6 +8768,19 @@
 	</unit>
 	
 	<!--Norse///Heroes-->
+	<unit name="KingFolstag">
+		<tactics>king_folstag.tactics</tactics>
+		<protoaction>
+			<name>FreezeAttack</name>
+			<rof>2.000000</rof>
+			<maxrange>4.000000</maxrange>
+			<maxarea>10</maxarea>
+			<rate type="Ship">1.0</rate>
+			<projectile>ProjectileBallOfFireInvisible</projectile>
+			<onhiteffect type="Freeze" duration="20.000000" freezetype="default"></onhiteffect>
+			<workonfrozenunits>0</workonfrozenunits>
+		</protoaction>
+	</unit>
 	<unit name="Godi">
 		<armor type="Hack" value="0.5000"></armor>
 		<armor type="Pierce" value="0.4500"></armor>
@@ -8781,6 +8820,20 @@
 			<rate type="Favor">0.050000</rate>
 			<persistent>1</persistent>
 		</protoaction>
+		<veterancybonus>
+			<rank id="0">
+				<veterancymodify modifytype="Damage">1.8000</veterancymodify>
+			</rank>
+			<rank id="1">
+				<veterancymodify modifytype="Damage">2.0000</veterancymodify>
+			</rank>
+			<rank id="2">
+				<veterancymodify modifytype="Damage">2.2000</veterancymodify>
+			</rank>
+			<includetypes>
+				<unittype>Unit</unittype>
+			</includetypes>
+		</veterancybonus>
 	</unit>
 	<unit name="HeroOfRagnarok">
 		<initialhitpoints>130.0000</initialhitpoints>
@@ -11993,6 +12046,27 @@
 		<tech row="1" column="0">HammerOfThunder</tech>
 		<tech row="1" column="1">DwarvenBreastplate</tech>
 		<tech row="1" column="2">MCMT_RecruitingMountainDwarves</tech>
+	</unit>
+	<unit name="GreatHall">
+		<hotkeycontext>GreatHallAccel</hotkeycontext>
+		<train row="0" column="0">Hersir</train>
+		<train row="0" column="1">RaidingCavalry</train>
+		<train row="0" column="2">Godi</train>
+		<train row="0" column="3">Jarl</train>
+		<tech row="1" column="1">MediumCavalry</tech>
+		<tech row="1" column="1">HeavyCavalry</tech>
+		<tech row="1" column="1">ChampionCavalry</tech>
+		<tech row="1" column="4">LevyGreatHallSoldiers</tech>
+		<tech row="1" column="4">ConscriptGreatHallSoldiers</tech>
+		<tech row="2" column="1">HammerOfThunder</tech>
+		<tech row="1" column="0">HallOfThanes</tech>
+		<tech row="1" column="0">AvengingSpirit</tech>
+		<tech row="2" column="0">Sessrumnir</tech>
+		<tech row="1" column="3">RingGiver</tech>
+		<tech row="2" column="1">Vikings</tech>
+		<tech row="2" column="2">ThunderingHooves</tech>
+		<tech row="2" column="3">SonsOfSleipnir</tech>
+		<tech row="2" column="4">TwilightOfTheGods</tech>
 	</unit>
 	<unit name="MilitaryCampTower">
 		<unittype>AbstractTower</unittype>

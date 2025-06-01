@@ -22,7 +22,7 @@ ID = "STR_UNIT_PARTISAN_NAME"   ;   Str = "Partisan"
 ID = "STR_UNIT_PARTISAN_NAME"   ;   Str = "Partisan"
 ID = "STR_UNIT_VALKYRIE_WARRIOR_NAME"   ;   Str = "Valkyrie Warrior"
 ID = "STR_UNIT_VALKYRIE_WARRIOR_LR"   ;   Str = "Valkyrie Dismounted. Ranged Hero Infantry. Unyielding protector of Valhalla."
-ID = "STR_UNIT_VALKYRIE_WARRIOR_HORSE_NAME"   ;   Str = "Valkyrie Horse."
+ID = "STR_UNIT_VALKYRIE_WARRIOR_HORSE_NAME"   ;   Str = "Valkyrie Horse"
 ID = "STR_UNIT_VALKYRIE_WARRIOR_HORSE_LR"   ;   Str = "Valkyrie Dismounted. Ranged Hero Infantry. Unyielding protector of Valhalla."
 
 ID = "STR_UNIT_FARSEER_NAME"   ;   Str = "Farseer"

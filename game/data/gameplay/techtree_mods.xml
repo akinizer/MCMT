@@ -5,7 +5,87 @@
 	<tech name="ArchaicAgeEgyptian"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeNorse"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeChinese"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects>	</tech>
+	
+	<tech name="ArchaicAgeLoki">
+	  	<effects>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Draugr</target></effect>
+			<effect type="Data" amount="0.00" subtype="Cost" resource="Favor" relativity="Percent"><target type="ProtoUnit">Draugr</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Draugr" relativity="Assign"><target type="ProtoUnit">Temple</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Draugr" row="0" column="4" relativity="Assign"><target type="ProtoUnit">GreatHall</target></effect>
+
+			<effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+			<effect type="Data" amount="0.75" subtype="TrainPoints" relativity="Percent"><target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="Food" relativity="Percent"><target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="Wood" relativity="Percent"><target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="Gold" relativity="Percent"><target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
 		
+			<effect type="TechStatus" status="active">Rime</effect>
+			<effect type="TechStatus" status="active">Jotuns</effect>
+			<effect type="TechStatus" status="active">Valgaldr</effect>
+		</effects>
+	</tech>
+
+	<tech name="ArchaicAgeOdin">
+	  	<effects>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Einheri</target></effect>
+			<effect type="Data" amount="0.00" subtype="Cost" resource="Favor" relativity="Percent"><target type="ProtoUnit">Einheri</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Einheri" relativity="Assign"><target type="ProtoUnit">Temple</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Einheri" row="0" column="4" relativity="Assign"><target type="ProtoUnit">GreatHall</target></effect>
+
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Berserk" relativity="Assign"><target type="ProtoUnit">Longhouse</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Berserk" relativity="Assign"><target type="ProtoUnit">TownCenter</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="HeroOfRagnarok" row="0" column="2" relativity="Assign"><target type="ProtoUnit">TownCenter</target></effect>
+			<effect type="TransformUnit" toprotoid="HeroOfRagnarok" fromprotoid="Berserk" includequeued="true"></effect>
+			
+			<effect type="TechStatus" status="active">Gjallarhorn</effect>
+			<effect type="TechStatus" status="active">CallOfValhalla</effect>
+			<effect type="TechStatus" status="active">AvengingSpirit</effect>
+
+			<effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">HumanSoldier</target></effect>
+			<effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Hero</target></effect>
+		</effects>
+	</tech>
+
+	<tech name="ArchaicAgeThor">
+	  	<effects>
+			<effect type="Data" action="Build" amount="1.10" subtype="WorkRate" unittype="Building" relativity="BasePercent"><target type="ProtoUnit">EconomicUpgraded</target></effect>
+			<effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">DwarvenArmory</target></effect>
+			
+			<effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target	type="ProtoUnit">Hersir</target></effect>
+			<effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target	type="ProtoUnit">Jarl</target></effect>
+			<effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target	type="ProtoUnit">HeroOfRagnarok</target></effect>
+			<effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target	type="ProtoUnit">HeroOfRagnarokDwarf</target></effect>
+
+			<effect type="Data" action="RangedAttack" amount="0.90" subtype="RoF" relativity="BasePercent"><target type="ProtoUnit">HumanSoldier</target></effect>
+			<effect type="Data" action="HandAttack" amount="0.90" subtype="RoF" relativity="BasePercent"><target type="ProtoUnit">HumanSoldier</target></effect>
+		</effects>
+	</tech>
+
+	<tech name="ArchaicAgeFreyr">
+		<effects>
+			<effect type="Data" amount="1.35" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">BattleBoar</target></effect>
+			<effect type="Data" amount="1.15" subtype="MaximumVelocity" relativity="BasePercent"><target type="ProtoUnit">BattleBoar</target></effect>
+
+			<effect type="Data" amount="1.35" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">Hillfort</target></effect>
+			<effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">Hillfort</target></effect>
+			<effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="MythUnit" relativity="Absolute"><target type="ProtoUnit">Hillfort</target></effect>
+
+			<effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">VillagerNorse</target></effect>
+			<effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent"><target type="ProtoUnit">VillagerDwarf</target></effect>
+			<effect type="Data" amount="0.80" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">VillagerNorse</target></effect>
+			<effect type="Data" amount="0.80" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">VillagerDwarf</target></effect>
+			<effect type="Data" amount="1.25" subtype="MaximumVelocity" relativity="BasePercent"><target type="ProtoUnit">VillagerNorse</target></effect>
+			<effect type="Data" amount="1.25" subtype="MaximumVelocity" relativity="BasePercent"><target type="ProtoUnit">VillagerDwarf</target></effect>
+			<effect type="Data" amount="0.75" subtype="TrainPoints" relativity="Percent"><target type="ProtoUnit">VillagerNorse</target></effect>
+			<effect type="Data" amount="0.75" subtype="TrainPoints" relativity="Percent"><target type="ProtoUnit">VillagerDwarf</target></effect>
+			
+			<effect type="Data" action="Gather" amount="1.50" subtype="WorkRate" unittype="AbstractFarm" relativity="BasePercent"><target type="ProtoUnit">EconomicUpgraded</target></effect>
+			<effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">AbstractFarm</target></effect>
+			<effect type="Data" amount="1.00" subtype="UnitRegenRate" relativity="Absolute"><target type="ProtoUnit">AbstractFarm</target></effect>
+			<effect type="Data" amount="0.01" subtype="BuildPoints" relativity="Percent"><target type="ProtoUnit">AbstractFarm</target></effect>
+		</effects>
+	</tech>
+
 	<!-- /////////////////////////////////////////////////////// MCMT CONTENTS //////////////////////////////////////////////// -->
 	<!-- //// MCMT Mod Main Trees////// -->
 	<tech name="MCMT_Techs" mergeMode="add">
@@ -2665,7 +2745,7 @@
       <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
     </effects>
   </tech>
-  <!-- Egyptian - Hero Techs-->
+  <!-- Egyptian - Techs-->
   <tech name="HandsOfThePharaoh" mergeMode="add">
     <effects>
 	  <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
@@ -2849,5 +2929,369 @@
       </effect>
 	</effects>
   </tech>
+  
+  <!-- Norse - Techs-->
+   <tech name="EyesInTheForest" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="5" subtype="LOS" relativity="Absolute">
+        <target type="ProtoUnit">Unit</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="ArcticWinds" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.20" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">FrostGiant</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWarship</target>
+      </effect>
+
+	  <effect type="Data" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">FrostGiant</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">ThrowingAxeman</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="Bravery" mergeMode="add">
+    <effects>
+      <effect type="Data" action="HandAttack" amount="1.25" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+	  <effect type="Data" action="RangedAttack" amount="1.25" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+	  <effect type="Data" action="HandAttack" amount="1.25" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+
+      <effect type="Data" amount="1.20" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="Damage" action="RangedAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="Disablot" mergeMode="add">
+	<cost resourcetype="Gold">500.0000</cost>
+    <cost resourcetype="Favor">25.0000</cost>
+
+    <effects>
+      <effect type="Data" amount="1.50" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+      <effect type="Data" action="Heal" amount="1.33" unittype="LogicalTypeHealed" subtype="WorkRate" relativity="BasePercent">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+	  <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+
+	  <effect type="Data" amount="1.50" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Brunhild</target>
+      </effect>
+      <effect type="Data" action="Heal" amount="1.33" unittype="LogicalTypeHealed" subtype="WorkRate" relativity="BasePercent">
+        <target type="ProtoUnit">Brunhild</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Brunhild</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Brunhild</target>
+      </effect>
+	  <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+        <target type="ProtoUnit">Brunhild</target>
+      </effect>
+
+	  <effect type="Data" amount="1.50" subtype="Damage" action="RangedAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+      <effect type="Data" action="Heal" amount="1.33" unittype="LogicalTypeHealed" subtype="WorkRate" relativity="BasePercent">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+	  <effect type="Data" amount="1.20" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+	  <effect type="Data" amount="-0.20" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+
+	  <effect type="Data" amount="0.00" subtype="Cost" resource="Food" relativity="Assign">
+       <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+	  <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+       <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+	  <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+       <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+
+	  <effect type="Data" amount="0.00" subtype="Cost" resource="Food" relativity="Assign">
+       <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+	  <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+       <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+	  <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+       <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+    </effects>
+  </tech>
+
+  <tech name="CallOfValhalla" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Einheri</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">Einheri</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">Valkyrie</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">ValkyrieWarrior</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">Reginleif</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">HeroOfRagnarok</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">HeroOfRagnarok</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">HeroOfRagnarokDwarf</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">HeroOfRagnarokDwarf</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="NineWaves" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.20" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWarship</target>
+      </effect>
+	  <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">NavalUnit</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">NavalUnit</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="ThurisazRune" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">ThorDescended</target>
+      </effect>
+      <effect type="Data" amount="0.25" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">ThorDescended</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Hersir</target>
+      </effect>
+      <effect type="Data" amount="0.25" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Hersir</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="SonsOfSleipnir" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.10" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractCavalry</target>
+      </effect>
+      <effect type="Data" action="HandAttack" amount="1.00" subtype="Damagebonus" unittype="AbstractArcher" relativity="Absolute">
+        <target type="ProtoUnit">AbstractCavalry</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="Hamask" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="0.0025" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
+        <target type="ProtoUnit">HumanSoldier</target>
+      </effect>
+      <effect type="Data" amount="0.0025" subtype="OnDamageModify" modifytype="Damage" relativity="Assign">
+        <target type="ProtoUnit">HumanSoldier</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="FreyrsGift" mergeMode="add">
+	<effects>
+      <effect type="Data" action="AutoGatherFood" amount="1.25" subtype="WorkRate" unittype="Food" relativity="BasePercent">
+        <target type="ProtoUnit">Herdable</target>
+      </effect>
+	</effects>
+  </tech>
+  <tech name="Rime" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1.33" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">KingFolstag</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">KingFolstag</target>
+      </effect>
+      <effect type="Data" amount="0.75" subtype="RechargeTime" relativity="BasePercent">
+        <target type="ProtoUnit">KingFolstag</target>
+      </effect>
+
+	  <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">TitanYmir</target>
+      </effect>
+      <effect type="Data" amount="1.10" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">TitanYmir</target>
+      </effect>
+	  <effect type="Data" amount="1.30" subtype="Damage" action="ChargedHandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">TitanYmir</target>
+      </effect>
+
+	  <effect type="Data" amount="1.33" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">VolstaggAwakened</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">VolstaggAwakened</target>
+      </effect>
+      <effect type="Data" amount="0.75" subtype="RechargeTime" relativity="BasePercent">
+        <target type="ProtoUnit">VolstaggAwakened</target>
+      </effect>
+    </effects>
+  </tech>
+
+  <tech name="Berserkergang" mergeMode="add">    
+    <effects>
+      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="Bear" relativity="Absolute">
+		<target type="ProtoUnit">Berserk</target>
+	  </effect>
+    </effects>
+  </tech>
+
+  <tech name="TwilightOfTheGods" mergeMode="add">
+	<effects>
+      <effect type="Data" amount="1.40" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractInfantry</target>
+      </effect>
+ 
+	  <effect type="Data" allactions="1" amount="5.00" subtype="Damagebonus" unittype="LogicalTypeMythUnitNotTitan" relativity="Absolute">
+        <target type="ProtoUnit">AbstractInfantry</target>
+      </effect>
+
+	  <effect type="Data" allactions="1" amount="10.00" subtype="Damagebonus" unittype="AbstractTitan" relativity="Absolute">
+        <target type="ProtoUnit">AbstractInfantry</target>
+      </effect>
+    </effects>
+  </tech>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </techtreemods>
