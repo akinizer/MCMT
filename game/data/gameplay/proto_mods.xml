@@ -4545,7 +4545,6 @@
 			<onhiteffect type="Freeze" duration="20.000000" freezetype="default"></onhiteffect>
 			<workonfrozenunits>0</workonfrozenunits>
 			<maxarea>15</maxarea>
-			<rate type="AbstractWarship">1.0</rate>
 		</protoaction>
 		<protoaction>
 			<name>FreezeTitan</name>
@@ -7381,8 +7380,24 @@
 	<unit name="Satyr">
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractArcher</unittype>
-		<unittype>ArcherLineUpgraded
-		</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+
+		<protoaction>
+			<name>ChargedRangedAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Pierce">20.000000</damage>
+			<damageflags>Nature|Enemy</damageflags>
+			<damagebonus type="MythUnit">3.000000</damagebonus>
+			<damagebonus type="Hero">0.250000</damagebonus>
+			<maxrange>18.000000</maxrange>
+			<projectile>ProjectileArrowCentaurAttack</projectile>
+			<numberprojectiles>1</numberprojectiles>
+			<passthrough>1</passthrough>
+			<passthroughbuildings>1</passthroughbuildings>
+			<maxheight>2</maxheight>
+			<perfectaccuracy>1</perfectaccuracy>
+			<launchpoint>ChargeAttackLaunchPoint</launchpoint>
+		</protoaction>
 	</unit>
 	<unit name="Centimanus">
 		<unittype>AbstractSiegeWeapon</unittype>
@@ -7399,7 +7414,7 @@
 		<protoaction>
 			<name>ShockwaveAttack</name>
 			<rof>2.000000</rof>
-			<damage type="Hack">40.000000</damage>
+			<damage type="Hack">0.000000</damage>
 			<damage type="Crush">50.000000</damage>
 			<damagebonus type="MythUnit">2.000000</damagebonus>
 			<damagebonus type="Hero">0.250000</damagebonus>
@@ -7535,6 +7550,7 @@
 		</protoaction>		
 	</unit>
 	<unit name="Behemoth">
+		<unitregen>6</unitregen>
 		<unittype>AbstractSiegeWeapon</unittype>
 		<unittype>SiegeLineUpgraded</unittype>
 		<movementtype>amphibious</movementtype>		
@@ -7590,7 +7606,7 @@
 			<damage type="Pierce">24.000000</damage>
 			<damage type="Divine">20.000000</damage>
 			<damagebonus type="MythUnit">5.000000</damagebonus>
-			<damagebonus type="Hero">0.250000</damagebonus>
+			<damagebonus type="Hero">2.000000</damagebonus>
 			<maxrange>22.000000</maxrange>
 			<projectile>ProjectileLampadesBolt</projectile>
 		</protoaction>
@@ -7609,6 +7625,13 @@
 			<damagebonus type="MythUnit">2.000000</damagebonus>
 			<damagebonus type="Hero">0.500000</damagebonus>
 		</protoaction>
+	</unit>
+	<unit name="Servant">
+		<cost resourcetype="Favor">10.0000</cost>
+	</unit>
+	<unit name="Promethean">
+		<cost resourcetype="Gold">0.0000</cost>
+		<cost resourcetype="Food">80.0000</cost>
 	</unit>
 	
 	<!--IMPROVEMENTS///GREEK-->
@@ -8233,6 +8256,7 @@
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
+		<unittype>LogicalTypeNorseSoldierThatBuilds</unittype>
 		<maxvelocity>6.5000</maxvelocity>
 		<flag>ExperienceUnit</flag>
 		<veterancyranks>
@@ -8289,6 +8313,30 @@
 			<modelattachment>vfx\glow\einheri_boost.xml</modelattachment>
 			<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
 		</protoaction>
+
+		<hotkeycontext>BuildNorseAccel</hotkeycontext>
+		<train row="0" column="0">House</train>
+		<train row="0" column="1">OxCartBuilding</train>
+		<train row="1" column="3">Farm</train>
+		<train row="0" column="0">House</train>
+		<train row="0" column="4">Temple</train>
+		<train row="0" column="5">Dock</train>
+		<train row="1" column="1">Longhouse</train>
+		<train row="1" column="2">GreatHall</train>
+		<train row="1" column="4">Market</train>
+		<train row="1" column="5">Armory</train>
+		<train row="1" column="5">DwarvenArmory</train>
+		<train row="2" column="0">TownCenter</train>
+		<train row="255" column="0">VillageCenter</train>
+		<train row="2" column="1">WallConnector</train>
+		<train row="255" column="255">WallShort</train>
+		<train row="255" column="255">WallMedium</train>
+		<train row="255" column="255">WallLong</train>
+		<train row="2" column="2">SentryTower</train>
+		<train row="2" column="3">HillFort</train>
+		<train row="2" column="5">Wonder</train>
+		<train>TitanGate</train>
+		<train>AsgardianHillFort</train>
 		<protoaction>
 			<name>Build</name>
 			<type>Build</type>
@@ -12185,6 +12233,7 @@
 	</unit>
 	<unit name="Cheiroballista">
 		<unittype>SiegeLineUpgraded</unittype>
+		<unittype>HumanSoldier</unittype>
 		<protoaction>
 		  <name>RangedAttack</name>
 		  <rof>2.000000</rof>
@@ -12201,6 +12250,7 @@
 	</unit>
 	<unit name="CheiroballistaHero">
 		<unittype>SiegeLineUpgraded</unittype>
+		<unittype>HumanSoldier</unittype>
 		<protoaction>
 		  <name>RangedAttack</name>
 		  <rof>2.000000</rof>

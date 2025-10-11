@@ -6,6 +6,28 @@
 	<tech name="ArchaicAgeNorse"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeChinese"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects>	</tech>
 	
+	<!-- /// CIVILIZATION SPECIFIC IMPROVEMENTS -->
+	<tech name="ArchaicAgeAtlantean">
+		<effects>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Arcus" relativity="Assign"><target type="ProtoUnit">MilitaryBarracks</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Contarius" relativity="Assign"><target type="ProtoUnit">MilitaryBarracks</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Destroyer" relativity="Assign"><target type="ProtoUnit">Palace</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Fanatic" relativity="Assign"><target type="ProtoUnit">Palace</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Katapeltes" relativity="Assign"><target type="ProtoUnit">CounterBarracks</target></effect>
+
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Katapeltes" row="0" column="0" relativity="Assign"><target type="ProtoUnit">Palace</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Contarius" row="0" column="1" relativity="Assign"><target type="ProtoUnit">Palace</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Fanatic" row="0" column="1" relativity="Assign"><target type="ProtoUnit">MilitaryBarracks</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Destroyer" row="0" column="2" relativity="Assign"><target type="ProtoUnit">MilitaryBarracks</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Arcus" row="0" column="0" relativity="Assign"><target type="ProtoUnit">CounterBarracks</target></effect>
+			<!--Military Barracks: Murmillo, Fanatic, Destroyer-->
+			<!--Counter Barracks: Arcus, Turma, Cheiroballista-->
+			<!--Palace Barracks: Katapeltes, Contairus, Fire Siphon-->
+		</effects>
+	</tech>
+
+	
+	<!-- /// MAJOR GOD SPECIFIC IMPROVEMENTS /// -->
 	<tech name="ArchaicAgeLoki">
 	  	<effects>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Draugr</target></effect>
@@ -1572,7 +1594,7 @@
 		<flag>MythTech</flag>
 		<cost resourcetype="Favor">840</cost>
 		<effects>
-			<effect type="Data" action="Build" amount="0.30" subtype="WorkRate" unittype="Building" relativity="BasePercent">
+			<effect type="Data" action="Build" amount="1.70" subtype="WorkRate" unittype="Building" relativity="BasePercent">
 				<target type="ProtoUnit">Unit</target>
 			</effect>
 		</effects>
@@ -3209,6 +3231,31 @@
 
 	  <effect type="Data" allactions="1" amount="10.00" subtype="Damagebonus" unittype="AbstractTitan" relativity="Absolute">
         <target type="ProtoUnit">AbstractInfantry</target>
+      </effect>
+    </effects>
+  </tech>
+
+  <!-- Atlantean Techs -->
+   <tech name="LanceOfStone" mergeMode="replace">
+    <displaynameid>STR_TECH_LANCE_OF_STONE_NAME</displaynameid>
+    <rollovertextid>STR_TECH_LANCE_OF_STONE_LR</rollovertextid>
+    <cost resourcetype="Gold">100.0000</cost>
+    <cost resourcetype="Favor">12.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\lance_of_stone_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">HumanSoldier</target>
+      </effect>
+
+      <effect type="Data" amount="0.7" subtype="OnHitEffect" action="HandAttack" effecttype="Snare" duration="2.00" relativity="Assign">
+        <target type="ProtoUnit">Contarius</target>
+      </effect>
+      <effect type="Data" amount="0.7" subtype="OnHitEffect" action="HandAttack" effecttype="Snare" duration="2.00" relativity="Assign">
+        <target type="ProtoUnit">ContariusHero</target>
       </effect>
     </effects>
   </tech>
