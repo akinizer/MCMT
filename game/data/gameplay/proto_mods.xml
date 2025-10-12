@@ -7414,8 +7414,8 @@
 		<protoaction>
 			<name>ShockwaveAttack</name>
 			<rof>2.000000</rof>
-			<damage type="Hack">0.000000</damage>
-			<damage type="Crush">50.000000</damage>
+			<damage type="Hack">120.000000</damage>
+			<damage type="Crush">0.000000</damage>
 			<damagebonus type="MythUnit">2.000000</damagebonus>
 			<damagebonus type="Hero">0.250000</damagebonus>
 			<damagebonus type="AbstractTitan">20.000000</damagebonus>
@@ -7623,7 +7623,7 @@
 			<damagearea>15.000000</damagearea>
 			<damageflags>Nature|Enemy</damageflags>
 			<damagebonus type="MythUnit">2.000000</damagebonus>
-			<damagebonus type="Hero">0.500000</damagebonus>
+			<damagebonus type="Hero">2.000000</damagebonus>
 		</protoaction>
 	</unit>
 	<unit name="Servant">
@@ -8415,8 +8415,42 @@
 			<onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" duration="5.0" targetunittype="Unit"></onhiteffect>
 			<autoretarget>1</autoretarget>
 			<canattackground>1</canattackground>
+		</protoaction>		
+	</unit>
+	<unit name="FireSiphon">
+		<tactics>mcmt_firesiphon.tactics</tactics>
+		<protoaction>
+			<name>FlameAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Hack">20.000000</damage>
+			<damage type="Crush">100.000000</damage>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>20.000000</maxrange>
+			<projectile>ProjectileFireGiantSpecialAttack</projectile>
+			<numberprojectiles>4</numberprojectiles>
+			<impacteffect>effects\impacts\fireball</impacteffect>
 		</protoaction>
-		
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.700000</rof>
+			<damage type="Pierce">20.000000</damage>
+			<damage type="Crush">100.000000</damage>
+			<minrange>3.000000</minrange>
+			<maxrange>16.000000</maxrange>
+			<projectile>ProjectileFireSiphonFire</projectile>
+		</protoaction>		
+		<protoaction>
+			<name>PetrificationBonus</name>
+			<type>IdleStatBonus</type>
+			<modifyamount>0.025000</modifyamount>
+			<modifydamagetype>Hack</modifydamagetype>
+			<modifyratecap>1.250000</modifyratecap>
+			<modifybase>1.000000</modifybase>
+			<modifydecay>0.005000</modifydecay>
+			<active>0</active>
+			<persistent>1</persistent>
+			<modifytype>ArmorSpecific</modifytype>
+		</protoaction>
 	</unit>
 	<!--IMPROVEMENTS///EGYPTIAN-->
 	<unit name="Wadjet">

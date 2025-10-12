@@ -22,7 +22,7 @@
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Arcus" row="0" column="0" relativity="Assign"><target type="ProtoUnit">CounterBarracks</target></effect>
 			<!--Military Barracks: Murmillo, Fanatic, Destroyer-->
 			<!--Counter Barracks: Arcus, Turma, Cheiroballista-->
-			<!--Palace Barracks: Katapeltes, Contairus, Fire Siphon-->
+			<!--Palace Barracks: Katapeltes, Contarius, Fire Siphon-->
 		</effects>
 	</tech>
 
@@ -3259,86 +3259,343 @@
       </effect>
     </effects>
   </tech>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  <tech name="OrichalcumMail" mergeMode="replace">
+    <displaynameid>STR_TECH_ORICHALCUM_MAIL_NAME</displaynameid>
+    <rollovertextid>STR_TECH_ORICHALCUM_MAIL_LR</rollovertextid>
+    <cost resourcetype="Gold">175.0000</cost>
+    <cost resourcetype="Favor">25.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\orichalcum_mail_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+        <target type="ProtoUnit">HumanSoldier</target>
+      </effect>
+	  <effect type="Data" amount="-0.15" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="HeroicRenewal" mergeMode="replace">
+    <displaynameid>STR_TECH_PRIMORDIAL_LIGHT_NAME</displaynameid>
+    <rollovertextid>STR_TECH_PRIMORDIAL_LIGHT_LR</rollovertextid>
+    <cost resourcetype="Gold">400.0000</cost>
+    <cost resourcetype="Favor">30.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\heroic_renewal_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+	  <effect type="Data" allactions="1" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">Hero</target></effect>
+	  <effect type="Data" allactions="1" amount="1.25" subtype="Damagebonus" unittype="Hero" relativity="Absolute">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+	</effects>
+  </tech>
+  <tech name="MythicRejuvenation" mergeMode="replace">
+    <displaynameid>STR_TECH_MYTHIC_REJUVENATION_NAME</displaynameid>
+    <rollovertextid>STR_TECH_MYTHIC_REJUVENATION_LR</rollovertextid>
+    <cost resourcetype="Gold">150.0000</cost>
+    <cost resourcetype="Favor">30.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\mythic_rejuvenation_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>MythUnitUpgrade</techtype>
+    <effects>
+      <effect type="Data" amount="6.00" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">MythUnit</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="HeartOfTheTitans" mergeMode="replace">
+    <displaynameid>STR_TECH_HEART_OF_THE_TITANS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_HEART_OF_THE_TITANS_LR</rollovertextid>
+    <cost resourcetype="Gold">100.0000</cost>
+    <cost resourcetype="Favor">10.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\heart_of_the_titans_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="0.25" subtype="ResearchPoints" relativity="Percent">
+        <target type="techType">HeroPromotion</target></effect>
+	  <effect type="Data" amount="0.80" subtype="Cost" resource="Favor" relativity="Percent">
+		<target type="ProtoUnit">MythUnit</target></effect>
+	  <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractTitan</target></effect>
+    </effects>
+  </tech>
+  <tech name="WeightlessMace" mergeMode="replace">
+    <displaynameid>STR_TECH_WEIGHTLESS_MACE_NAME</displaynameid>
+    <rollovertextid>STR_TECH_WEIGHTLESS_MACE_LR</rollovertextid>
+    <cost resourcetype="Gold">50.0000</cost>
+    <cost resourcetype="Wood">50.0000</cost>
+    <cost resourcetype="Favor">15.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\weightless_mace_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Katapeltes</target></effect>
+      <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">KatapeltesHero</target></effect>
+
+	  <effect type="Data" allactions="1" amount="1.50" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+	</effects>
+  </tech>
+  <tech name="AlluvialClay" mergeMode="replace">
+    <displaynameid>STR_TECH_ALLUVIAL_CLAY_NAME</displaynameid>
+    <rollovertextid>STR_TECH_ALLUVIAL_CLAY_LR</rollovertextid>
+    <cost resourcetype="Food">140.0000</cost>
+    <cost resourcetype="Favor">10.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\alluvial_clay_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>MythUnitUpgrade</techtype>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Promethean</target></effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">PrometheanOffspring</target></effect>
+	  <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">VillagerChineseClay</target></effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">TerracottaRider</target></effect>
+
+	   <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Building</target></effect>
+
+      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="PrometheanOffspring" relativity="Absolute">
+        <target type="ProtoUnit">Promethean</target></effect>
+    </effects>
+  </tech>
+  <tech name="RheiasGift" mergeMode="replace">
+    <displaynameid>STR_TECH_RHEIAS_GIFT_NAME</displaynameid>
+    <rollovertextid>STR_TECH_RHEIAS_GIFT_LR</rollovertextid>
+    <valuetext>{techResourceAmount(RheiasGift)}</valuetext>
+    <cost resourcetype="Food">75.0000</cost>
+    <cost resourcetype="Gold">75.0000</cost>
+    <researchpoints>5.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\rheias_gift_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <flag>UsesValueText</flag>
+    <effects>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Favor" relativity="BasePercent">
+        <target type="techAll"></target></effect>
+      <effect type="Data" amount="2.00" subtype="Cost" resource="Favor" relativity="BasePercent" hidetooltip="">
+        <target type="Tech">SecretsOfTheTitans</target></effect>
+      <effect type="Data" amount="2.00" subtype="Cost" resource="Favor" relativity="BasePercent" hidetooltip="">
+        <target type="TechType">HeroPromotion</target></effect>
+      <effect type="Data" amount="1.00" subtype="ResourceByKBStat" kbstat="totalTechCost" kbparamresource="Favor" resource="Favor" resourcecap="2000.00" relativity="Absolute">
+        <target type="Player"></target></effect>
+	  
+	  <effect type="Data" amount="1.50" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractTitan</target></effect>	  
+    </effects>
+  </tech>
+  <tech name="Titanomachy" mergeMode="replace">
+    <displaynameid>STR_TECH_TITANOMACHY_NAME</displaynameid>
+    <rollovertextid>STR_TECH_TITANOMACHY_LR</rollovertextid>
+    <cost resourcetype="Food">400.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\titanomachy_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>MythUnitUpgrade</techtype>
+    <effects>
+      <effect type="Data" amount="1.5" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">Centimanus</target></effect>
+      <effect type="SetName" proto="Centimanus" newname="STR_UNIT_WARDEN_OF_TARTARUS_NAME"></effect>
+
+	  <effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
+		<target type="ProtoUnit">Centimanus</target></effect>
+	  <effect type="Data" amount="1.15" subtype="AdditionalScale" relativity="Absolute">
+		<target type="ProtoUnit">AbstractTitan</target></effect>
+    </effects>
+  </tech>
+  <tech name="DevoteesOfAtlas" mergeMode="replace">
+    <displaynameid>STR_TECH_DEVOTEES_OF_ATLAS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DEVOTEES_OF_ATLAS_LR</rollovertextid>
+    <cost resourcetype="Food">50.0000</cost>
+    <cost resourcetype="Gold">100.0000</cost>
+    <cost resourcetype="Favor">5.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\devotees_of_atlas_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="0.002" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
+        <target type="ProtoUnit">Fanatic</target>
+      </effect>
+      <effect type="Data" amount="-0.005" subtype="OnDamageModify" modifytype="ROF" relativity="Assign">
+        <target type="ProtoUnit">Fanatic</target>
+      </effect>
+      <effect type="Data" amount="0.002" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
+        <target type="ProtoUnit">FanaticHero</target>
+      </effect>
+      <effect type="Data" amount="-0.005" subtype="OnDamageModify" modifytype="ROF" relativity="Assign">
+        <target type="ProtoUnit">FanaticHero</target>
+      </effect>
+      <effect type="Data" amount="0.002" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
+        <target type="ProtoUnit">Murmillo</target>
+      </effect>
+      <effect type="Data" amount="-0.005" subtype="OnDamageModify" modifytype="ROF" relativity="Assign">
+        <target type="ProtoUnit">Murmillo</target>
+      </effect>
+      <effect type="Data" amount="0.002" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
+        <target type="ProtoUnit">MurmilloHero</target>
+      </effect>
+      <effect type="Data" amount="-0.005" subtype="OnDamageModify" modifytype="ROF" relativity="Assign">
+        <target type="ProtoUnit">MurmilloHero</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="TitanShield" mergeMode="replace">
+    <displaynameid>STR_TECH_TITAN_SHIELD_NAME</displaynameid>
+    <rollovertextid>STR_TECH_TITAN_SHIELD_LR</rollovertextid>
+    <cost resourcetype="Wood">200.0000</cost>
+    <cost resourcetype="Gold">75.0000</cost>
+    <cost resourcetype="Favor">15.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\titan_shield_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="-0.50" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Destroyer</target>
+      </effect>
+      <effect type="Data" amount="-0.50" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">DestroyerHero</target>
+      </effect>
+      <effect type="Data" amount="-0.50" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">Murmillo</target>
+      </effect>
+      <effect type="Data" amount="-0.50" subtype="ArmorVulnerability" armortype="Pierce" relativity="Percent">
+        <target type="ProtoUnit">MurmilloHero</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="PioneerOfTheSkies" mergeMode="replace">
+    <displaynameid>STR_TECH_PIONEER_OF_THE_SKIES_NAME</displaynameid>
+    <rollovertextid>STR_TECH_PIONEER_OF_THE_SKIES_LR</rollovertextid>
+    <cost resourcetype="Food">50.0000</cost>
+    <cost resourcetype="Gold">150.0000</cost>
+    <cost resourcetype="Favor">15.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\pioneer_of_the_skies_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="RangedAttack" amount="0.00" subtype="ActionEnable" relativity="Absolute" hidetooltip="">
+        <target type="ProtoUnit">SiegeBireme</target>
+      </effect>
+      <effect type="Data" action="FlameAttack" amount="1.00" subtype="ActionEnable" relativity="Absolute" hidetooltip="">
+        <target type="ProtoUnit">SiegeBireme</target>
+      </effect>
+      <effect type="Data" action="FlameAttack" amount="4.00" subtype="DamageArea" relativity="Absolute">
+        <target type="ProtoUnit">SiegeBireme</target>
+      </effect>
+
+      <effect type="Data" action="FlameAttack" amount="1.00" subtype="ActionEnable" relativity="Absolute" hidetooltip="">
+        <target type="ProtoUnit">FireSiphon</target>
+      </effect>
+      <effect type="Data" action="FlameAttack" amount="4.00" subtype="DamageArea" relativity="Absolute">
+        <target type="ProtoUnit">FireSiphon</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="Perception" mergeMode="replace">
+    <displaynameid>STR_TECH_PERCEPTION_NAME</displaynameid>
+    <rollovertextid>STR_TECH_PERCEPTION_LR</rollovertextid>
+    <cost resourcetype="Wood">100.0000</cost>
+    <cost resourcetype="Food">50.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\perception_icon.png</icon>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="1.50" subtype="LOS" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractScout</target>
+      </effect>
+      <effect type="Data" action="AutoGatherFavor" amount="1.10" subtype="FullCapacityMultiplier" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOracle</target>
+      </effect>
+      <effect type="Data" action="AutoLOS" amount="1.10" subtype="ModifyRateCap" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOracle</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="EmpyreanSpeed" mergeMode="replace">
+    <displaynameid>STR_TECH_EMPYREAN_SPEED_NAME</displaynameid>
+    <rollovertextid>STR_TECH_EMPYREAN_SPEED_LR</rollovertextid>
+    <cost resourcetype="Gold">100.0000</cost>
+    <cost resourcetype="Favor">5.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\empyrean_speed_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Hero</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="Channels" mergeMode="replace">
+    <displaynameid>STR_TECH_CHANNELS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_CHANNELS_LR</rollovertextid>
+    <advancedrollovertextoverrideid>STR_TECH_CHANNELS_OVERRIDE</advancedrollovertextoverrideid>
+    <cost resourcetype="Gold">100.0000</cost>
+    <cost resourcetype="Favor">10.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\channels_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+		<effect type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="AbstractFarm" relativity="BasePercent"><target type="ProtoUnit">EconomicUpgraded</target></effect>
+    </effects>
+  </tech>
+  <tech name="HornsOfConsecration" mergeMode="replace">
+    <displaynameid>STR_TECH_HORNS_OF_CONSECRATION_NAME</displaynameid>
+    <rollovertextid>STR_TECH_HORNS_OF_CONSECRATION_LR</rollovertextid>
+    <cost resourcetype="Gold">150.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\horns_of_consecration_icon.png</icon>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">Fanatic</target>
+      </effect>
+
+	  <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
+        <target type="ProtoUnit">Katapeltes</target>
+      </effect>
+	  <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
+        <target type="ProtoUnit">Contarius</target>
+      </effect>
+    </effects>
+  </tech>
 </techtreemods>
