@@ -373,6 +373,9 @@ ID = "STR_TECH_CHAMPION_ENGINES_LR"   ;   Str = "Champion Siege Weapon Ultimate 
 ID = "STR_TECH_PRIMORDIAL_LIGHT_NAME"   ;   Str = "Primordial Light"
 ID = "STR_TECH_PRIMORDIAL_LIGHT_LR"   ;   Str = "Empowers Damages of Heroes and Myth Units"
 
+ID = "STR_TECH_OLYMPICGAMES_NAME"   ;   Str = "Olympic Games"
+ID = "STR_TECH_OLYMPICGAMES_LR"   ;   Str = "Integrates Era with Sports, Athletes and Mounted Racers"
+
 ID = "STR_POWER_PSIONIC_DECIMATOR"   ;   Str = "Psionic Decimator"
 ID = "STR_POWER_PSIONIC_DECIMATOR_LR"   ;   Str = "Psionic Superweapon Unleashed by Matsuri Yurio"
 ID = "STR_POWER_PSIONIC_LEVITATION"   ;   Str = "Psionic Levitation"
