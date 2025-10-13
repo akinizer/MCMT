@@ -1,0 +1,30 @@
+<tactics>
+  <action>
+    <name>BunkerbusterAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\crush</impacteffect>
+    <rate type="Building">1.0</rate>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+    <rate type="Ship">1.0</rate>
+    <volleymode>1</volleymode>
+  </action>
+  <action>
+    <name>GattlingAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>1.0</accuracy>
+    <trackrating>99.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>
+  </action>  
+  <tactic>Default<action priority="100">BunkerbusterAttack</action><action priority="90">GattlingAttack</action><attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype></tactic>
+</tactics>

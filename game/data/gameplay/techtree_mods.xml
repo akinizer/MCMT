@@ -262,6 +262,20 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">ValkyrieWarriorHorse</target>
 			</effect>
+
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Multigunner</target>
+			</effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Multigunner</target>
+			</effect>	
+
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Constructor</target>
+			</effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Constructor</target>
+			</effect>	
 			
 				<!--Elite Warriors-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
@@ -438,6 +452,13 @@
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">SolarBarge</target>
 			</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">NukeCannon</target>
+			</effect>
+			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">NukeCannon</target>
+			</effect>
+
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">OxCartModelX</target>
 			</effect>
@@ -458,7 +479,12 @@
 			<effect type="Data" amount="2.00" subtype="ObstructionRadiusZ" relativity="Absolute"><target type="ProtoUnit">MechanizedMammothUnit</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SiegeTurret</target></effect>
-				<!--Atlantean Captains-->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">NukeCannonDeployed</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">FireArcherSandbag</target></effect>					
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ChuKoNuSandbag</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">WuzuJavelineerSandbag</target></effect>
+
+      <!--Atlantean Captains-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ArcusCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ContariusCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MurmilloCaptain</target></effect>
@@ -553,8 +579,7 @@
 			<!-- CyberTech Projectiles -->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ProjectileDisintegrationBolt</target></effect>
 			<effect type="Data" amount="10.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ProjectileDisintegrationBolt</target></effect>
-			 
-			
+			 			
 			<!--General Improvements-->
 				<!--Nature-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
@@ -569,34 +594,45 @@
 
 				<!--Buildings-->
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">House</target>
-			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Farm</target>
-			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">TownCenter</target>
-			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">SentryTower</target>
-			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Temple</target>
-			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Market</target>
-			</effect>
+				<target type="ProtoUnit">House</target></effect>
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">GreatHall</target>
-			</effect>
+				<target type="ProtoUnit">Farm</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">TownCenter</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">SentryTower</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Market</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">GreatHall</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">AbstractFortress</target></effect>
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">AbstractFortress</target>
-			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Dock</target>
-			</effect>
+				<target type="ProtoUnit">Dock</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">MilitaryCamp</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">ImperialAcademy</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Stable</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">MilitaryAcademy</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">ArcheryRange</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Barracks</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Lighthouse</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Longhouse</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">MilitaryBarracks</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">CounterBarracks</target></effect>
 				<!--Naval Units-->
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
+			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Ship</target>
 			</effect>
 
@@ -951,11 +987,11 @@
 		<cost resourcetype="Gold">1000</cost>
 		<cost resourcetype="Wood">500</cost>
 		<effects>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallShort</target></effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallMedium</target></effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallLong</target></effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallGate</target></effect>
-			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallConnector</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallShort</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallMedium</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallLong</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallGate</target></effect>
+			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">WallConnector</target></effect>
 
 			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallShort</target></effect>
 			<effect type="Data" amount="5.0" subtype="Hitpoints" relativity="BasePercent"><target type="ProtoUnit">WallMedium</target></effect>
@@ -1419,9 +1455,9 @@
 	  <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="BerserkDamageBoost" relativity="Assign">
         <target type="ProtoUnit">MilitaryUnit</target>
       </effect>
-      <effect type="Data" action="DeathBoostDamageBonus" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">MilitaryUnit</target>
-      </effect>
+    <effect type="Data" action="DeathBoostDamageBonus" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+      <target type="ProtoUnit">MilitaryUnit</target>
+    </effect>
 	  <effect type="Data" action="DeathBoostDamageBonus" amount="1.00" subtype="ActionEnable" relativity="Absolute">
         <target type="ProtoUnit">Landlord</target>
       </effect>
@@ -2411,6 +2447,23 @@
   <!--EXISTING TECH IMPROVEMENTS (mergeMode="add")-->
 
   <!-- General - Techs -->
+  <tech name="Omniscience" mergeMode="replace">
+    <displaynameid>STR_TECH_OMNISCIENCE_NAME</displaynameid>
+    <rollovertextid>STR_TECH_OMNISCIENCE_LR</rollovertextid>
+    <cost resourcetype="Gold">100.0000</cost>
+    <researchpoints>4.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\omniscience_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>DynamicCost</flag>
+    <effects>
+      <effect all="true" type="SharedLOS"></effect>
+       <effect type="Data" amount="1.00" subtype="RevealEnemyUI" relativity="Absolute">
+        <target type="Player"></target></effect>
+      <effect type="Data" amount="1.00" subtype="RevealAllyUI" relativity="Absolute">
+        <target type="Player"></target></effect>
+    </effects>
+  </tech>
   <tech name="Crenellations" mergeMode="add">
     <displaynameid>STR_TECH_CRENELLATIONS_NAME</displaynameid>
     <rollovertextid>STR_TECH_CRENELLATIONS_LR</rollovertextid>
@@ -2637,14 +2690,6 @@
 
       <effect type="Data" action="RangedAttack" amount="10.00" subtype="MaximumRange" relativity="Absolute">
         <target type="ProtoUnit">Hero</target>
-      </effect>
-
-      <effect type="Data" amount="1.00" subtype="RevealEnemyUI" relativity="Absolute">
-        <target type="Player">
-        </target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="RevealAllyUI" relativity="Absolute">
-        <target type="Player"></target>
       </effect>
 
       <effect type="CreateUnit" unit="Oracle" generator="AbstractTemple">
@@ -4152,6 +4197,48 @@
 	  <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
         <target type="ProtoUnit">Contarius</target>
       </effect>
+    </effects>
+  </tech>
+  <!-- Chinese - Techs -->
+  <tech name="PeachOfImmortality" orderhint="0" mergeMode="replace">
+    <displaynameid>STR_TECH_PEACH_OF_IMMORTALITY_NAME</displaynameid>
+    <rollovertextid>STR_TECH_PEACH_OF_IMMORTALITY_LR</rollovertextid>
+    <cost resourcetype="Food">150.0000</cost>
+    <cost resourcetype="Favor">10.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\chinese\static_color\technologies\peach_of_immortality_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <techtype>MythUnitUpgrade</techtype>
+    <effects>
+      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">MythUnit</target></effect>
+      <effect type="Data" amount="0.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Hero</target></effect>
+    </effects>
+  </tech>
+  <tech name="ChasingTheSun" orderhint="0" mergeMode="replace">
+    <displaynameid>STR_TECH_CHASING_THE_SUN_NAME</displaynameid>
+    <rollovertextid>STR_TECH_CHASING_THE_SUN_LR</rollovertextid>
+    <cost resourcetype="Wood">100.0000</cost>
+    <cost resourcetype="Favor">5.0000</cost>
+    <researchpoints>20.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\chinese\static_color\technologies\chasing_the_sun_icon.png</icon>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="Build" amount="1.25" subtype="WorkRate" unittype="Building" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target></effect>
+      <effect type="Data" action="Build" amount="1.25" subtype="WorkRate" unittype="AbstractTownCenter" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target></effect>
+      <effect type="Data" amount="1.25" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">Kuafu</target></effect>
+      <effect type="Data" amount="1.50" subtype="MaximumVelocity" relativity="BasePercent">
+        <target type="ProtoUnit">KuafuHero</target></effect>
     </effects>
   </tech>
 </techtreemods>

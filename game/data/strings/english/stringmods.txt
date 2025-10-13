@@ -1,4 +1,9 @@
 ID = "STR_UNIT_SON_OF_HORUS_NAME"  ;   Str = "Son of Horus"
+ID = "STR_UNIT_TITAN_CERBERUS_NAME"  ;   Str = "Cerberus (Titan)"
+ID = "STR_UNIT_TITAN_RA_NAME"  ;   Str = "Ra (Titan)"
+ID = "STR_UNIT_TITAN_YMIR_NAME"  ;   Str = "Ymir (Titan)"
+ID = "STR_UNIT_TITAN_CHTHONIAN_NAME"  ;   Str = "Chthonian (Titan)"
+ID = "STR_UNIT_TITAN_XINGTIAN_NAME"  ;   Str = "Xing Tian (Titan)"
 
 ID = "STR_UNIT_LANDLORD_NAME"   ;   Str = "Landlord"
 ID = "STR_UNIT_LANDLORD_LR"   ;   Str = "Elite Infantry. All-around. Head of Household and stronger than the basic variant."
@@ -190,6 +195,15 @@ ID = "STR_UNIT_MCMT_WORLDBREAKER_NAME"   ;   Str = "Worldbreaker"
 ID = "STR_UNIT_MCMT_WORLDBREAKER_SR"   ;   Str = "Worldbreaker"
 ID = "STR_UNIT_MCMT_WORLDBREAKER_LR"   ;   Str = "Superunit of the Rising Sun Empire that Operates as Mobile Dock of Onigami and Naval Fortress. Equipped with Anti-Air, Anti-Army and Anti-Titan Cannons. Bearer of Tsunai Generator Superweapon"
 
+ID = "STR_UNIT_NUKECANNON_NAME"   ;   Str = "Nuke Cannon"
+ID = "STR_UNIT_NUKECANNON_DEPLOYED_NAME"   ;   Str = "Nuke Cannon (Deployed)"
+ID = "STR_UNIT_NUKECANNON_LR"   ;   Str = "Nuke Cannon"
+ID = "STR_UNIT_NUKECANNON_SR"   ;   Str = "The Worst Enemy of Structures"
+
+ID = "STR_UNIT_FIRE_ARCHER_SANDBAG_NAME"   ;   Str = "Fire Archer (Sandbag)"
+ID = "STR_UNIT_WUZU_JAVELINEER_SANDBAG_NAME"   ;   Str = "Wuzu Javelineer (Sandbag)"
+ID = "STR_UNIT_CHUKONU_SANDBAG_NAME"   ;   Str = "ChuKoNu (Sandbag)"
+
 ID = "STR_UNIT_OXCARTMODELX_NAME"   ;   Str = "Ox Cart Model - X"
 ID = "STR_UNIT_OXCARTMODELX_LR"   ;   Str = "Ox Cart Model - X"
 ID = "STR_UNIT_OXCARTMODELX_SR"   ;   Str = "Ox Cart Model - X"
@@ -230,6 +244,14 @@ ID = "STR_MSG_NOAH_SPAWN"   ;   Str = "Noah has returned to teach Pharaoh a new 
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_NAME"   ;   Str = "Mechanized Mammoth Unit"
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_SR"   ;   Str = "Mechanized Mammoth Unit"
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_LR"   ;   Str = "CyberTech Super Unit Unexpectedly Possessed By Set"
+
+ID = "STR_UNIT_MULTIGUNNER_UNIT_NAME"   ;   Str = "Multigunner"
+ID = "STR_UNIT_MULTIGUNNER_UNIT_SR"   ;   Str = "Multigunner Super Infantry"
+ID = "STR_UNIT_MULTIGUNNER_UNIT_LR"   ;   Str = "CyberTech Super Unit Armed with Technological Weaponry"
+
+ID = "STR_UNIT_CONSTRUCTOR_UNIT_NAME"   ;   Str = "Constructor"
+ID = "STR_UNIT_CONSTRUCTOR_UNIT_SR"   ;   Str = "Mechanical Construction Unit"
+ID = "STR_UNIT_CONSTRUCTOR_UNIT_LR"   ;   Str = "FutureTech Mechanical Construction Unit"
 
 ID = "STR_BLD_STELLAR_GATEWAY_NAME"   ;   Str = "Advanced Relocation Kapsule"
 ID = "STR_BLD_STELLAR_GATEWAY_SR"   ;   Str = "A.R.K"

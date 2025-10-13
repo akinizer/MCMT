@@ -21,6 +21,25 @@
 	<SiegeTower>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 	</SiegeTower>
+	<NukeCannon>
+		<ability>PassiveNeZhaWheel<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+    	<ability>AbilityFafnirBillowingSmog<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</NukeCannon>
+	<NukeCannonDeployed>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></NukeCannonDeployed>
+	<FireArcher>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></FireArcher>
+	<FireArcherSandbag>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></FireArcherSandbag>
+	<ChuKoNu>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></ChuKoNu>
+	<ChuKoNuSandbag>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></ChuKoNuSandbag>
+	<WuzuJavelineer>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></WuzuJavelineer>
+	<WuzuJavelineerSandbag>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></WuzuJavelineerSandbag>
 
 	<!-- CyberTech Norse Units-->
 
