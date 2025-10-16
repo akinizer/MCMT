@@ -2553,9 +2553,9 @@
 	<!--Kingdom Tech House Special Units-->
 
 	<unit name="Hobbit">
-		<displaynameid>STR_UNIT_GATHERER_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_GATHERER_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_GATHERER_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_HOBBIT_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_HOBBIT_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_HOBBIT_SR</shortrollovertextid>
 		<editornameid>STR_UNIT_GATHERER_EDT_NAME</editornameid>
 		<icon>resources\norse\player_color\units\villager_norse_icon.png</icon>
 		<animfile>norse\units\economic\villager_norse\villager_norse.xml</animfile>
@@ -3418,6 +3418,7 @@
 		<train row="0" column="0">Landlord</train>
 		<train row="0" column="1">Chieftain</train>
 		<train row="0" column="2">Constructor</train>		
+		<train row="0" column="3">EstablishmentAssistProbe</train>		
 		<train row="0" column="5">TravelerOxWagon</train>		
 		
 		<train row="1" column="0">Conan</train>
@@ -3869,12 +3870,6 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>UnitTransformFree</flag>
 		<flag>UnitTransformBuildLimit</flag>
-		<contain>Unit</contain>
-		<notcontain>AbstractCavalry</notcontain>
-		<notcontain>AbstractSiegeWeapon</notcontain>
-		<notcontain>AbstractTitan</notcontain>
-		<notcontain>Ship</notcontain>
-		<notcontain>Resource</notcontain>
 		<tactics>mcmt_magetower.tactics</tactics>
 		
 		<protoaction>
@@ -3888,6 +3883,7 @@
 		  <displayednumberprojectiles>1</displayednumberprojectiles>
 		  <autoretarget>1</autoretarget>
 		  <canattackground>1</canattackground>
+		  <trackrating>99</trackrating>
 
 		  <rate type="All">1.0</rate> 		 
 		  <rate type="AbstractFlyingUnit">0.0</rate> 		 
@@ -3905,7 +3901,8 @@
 		  <projectile>ProjectileLiJingAttack</projectile>
 		  <displayednumberprojectiles>1</displayednumberprojectiles>
 		  <autoretarget>1</autoretarget>
-		  <canattackground>1</canattackground>				  
+		  <canattackground>1</canattackground>
+		  <trackrating>99</trackrating>				  
 		  
 		  <rate type="AbstractFlyingUnit">1.0</rate> 		 
 		  <rate type="Building">1.0</rate>
@@ -3986,6 +3983,7 @@
 		<flag>ForceEmpowerable</flag>
 		<flag>DisplayRangeOverride</flag>
 		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
 		<contain>Unit</contain>
 		<notcontain>MythUnit</notcontain>
 		<notcontain>AbstractSiegeWeapon</notcontain>
@@ -4005,6 +4003,64 @@
 		  <maxrange>60</maxrange>
 		  <onhiteffect type="Attach" targetunittype="Unit" proto="VFXFire" attachbone="spine" duration="5.000000"></onhiteffect>
 		  <onhiteffect type="Attach" targetunittype="Unit" proto="VFXChaos" attachbone="vfx_top" duration="5.000000"></onhiteffect>
+		</protoaction>
+	</unit>
+	<unit name="SonicDisruptorArray">
+		<displaynameid>STR_BLD_SONICDISRUPTORARRAY_NAME</displaynameid>
+		<rollovertextid>STR_BLD_SONICDISRUPTORARRAY_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_SONICDISRUPTORARRAY_SR</shortrollovertextid>
+		<icon>resources\egyptian\static_color\buildings\obelisk_icon.png</icon>
+		<animfile>egyptian\buildings\obelisk\obelisk.xml</animfile>
+		<soundsetfile>egyptian\sfx\buildings\obelisk.xml</soundsetfile>
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<impacttype>Stone</impacttype>
+		<movementtype>land</movementtype>
+		<initialhitpoints>50.0000</initialhitpoints>
+		<maxhitpoints>50.0000</maxhitpoints>
+		<buildpoints>20.0000</buildpoints>
+		<buildlimit>10</buildlimit>
+		<los>32.0000</los>
+		<cost resourcetype="Gold">10.0000</cost>
+		<cost resourcetype="Favor">10.0000</cost>
+		<armor type="Hack" value="0.0500"></armor>
+		<armor type="Pierce" value="0.0500"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>Building</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeBuildingEmpoweredForLOS</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>
+		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NoIdleActions</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>DisplayRange</flag>
+		<flag>DynamicUpdate</flag>
+		<tactics>area_invisibility.tactics</tactics>
+		<protoaction>
+			<name>Invisibility</name>
+			<type>AreaStealth</type>
+			<maxrange>20.0</maxrange>
+      		<rate type="Unit">1.0</rate>
+			<persistent>1</persistent>
 		</protoaction>
 	</unit>
 	<!--///New Units-->
@@ -5243,6 +5299,7 @@
 			<modifyduration>2500</modifyduration>
 			<modifyprotoid>Pegasus</modifyprotoid>
 		</protoaction>
+	
 	<!-- Siege Turret -->
 	</unit>
 		<unit name="SiegeTurret" mergeMode="Add">
@@ -10734,6 +10791,57 @@
 			<canattackground>1</canattackground>
 		</protoaction>
 	</unit>
+	<unit name="EstablishmentAssistProbe">
+		<displaynameid>STR_UNIT_SKY_LANTERN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_SKY_LANTERN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_SKY_LANTERN_SR</shortrollovertextid>
+		<icon>resources\chinese\player_color\units\sky_lantern_icon.png</icon>
+		<animfile>chinese\units\attachments\sky_lantern\sky_lantern.xml</animfile>
+		<soundsetfile>chinese\vo\sky_lantern\sky_lantern.xml</soundsetfile>
+		<obstructionradiusx>0.9900</obstructionradiusx>
+		<obstructionradiusz>0.9900</obstructionradiusz>
+		<impacttype>Metal</impacttype>
+		<unitaitype>Civilian</unitaitype>
+		<wanderdistance>10</wanderdistance>
+		<movementtype>land</movementtype>
+		<turnrate>9.0000</turnrate>
+		<initialhitpoints>30.0000</initialhitpoints>
+		<maxhitpoints>30.0000</maxhitpoints>
+		<maxvelocity>3.0000</maxvelocity>
+		<los>25.0000</los>
+		<armor type="Hack" value="0.1500"></armor>
+		<armor type="Pierce" value="0.3000"></armor>
+		<armor type="Crush" value="0.8000"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>AbstractFlyingUnit</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<flag>TieToWaterSurface</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>ForceDeletable</flag>
+		<flag>HideStances</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>ExcludeFromIdleQuery</flag>
+		<train row="0" column="0">SonicDisruptorArray</train>
+		<tactics>handattack.tactics</tactics>
+		<protoaction>
+			<name>Build</name>
+			<type>Build</type>
+			<anim>HandAttack</anim>
+			<rate type="SonicDisruptorArray">1.000000</rate>
+			<maxrange>0.2</maxrange>
+		</protoaction>
+	</unit>
 	
 	<!--Chinese///Heroes-->
 	<unit name="Pioneer">
@@ -11518,6 +11626,17 @@
 			<projectile>ProjectileYaZiDash</projectile>
 			<attachprotounit>SunRayRevealer</attachprotounit>
 		</protoaction>
+		<protoaction>
+			<name>IncreaseSpeedWithLikeUnits</name>
+			<type>LikeBonus</type>
+			<persistent>1</persistent>
+			<modifytype>Speed</modifytype>
+			<modifyexponent>1.0</modifyexponent>
+			<modifybase>1.0</modifybase>
+			<maxrange>30</maxrange>
+			<modifymultiplier>0.05</modifymultiplier>
+			<modifytargetlimit>10</modifytargetlimit>
+		</protoaction>
 	</unit>
 	<unit name="TaoWu">
 		<armor type="Hack" value="0.6500"></armor>
@@ -11532,6 +11651,28 @@
 			<damagebonus type="Building">5.0000000</damagebonus>
 			<damagebonus type="Hero">0.5000000</damagebonus>
 			<maxrange>1.500000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_CHARGE">Charge</name>
+			<type>Rampage</type>
+			<damage type="Crush">150.0</damage>
+			<damage type="Hack">10.0</damage>
+			<damagearea>3.0</damagearea>
+			<rate type="all">1.0</rate>
+			<onhiteffect type="Throw">
+				<target attacktype="HumanSoldier"></target>
+				<target attacktype="LogicalTypeVillagerNotHero"></target>
+			</onhiteffect>
+			<charged>
+				<chargedmodify modifytype="Speed" applytype="Multiply">4.0</chargedmodify>
+				<duration>3.0</duration>
+			</charged>
+			<projectile>VFXRampage</projectile>
+			<chargeaction>1</chargeaction>
+			<modifyduration>3000</modifyduration>
+			<maxsizeclass>6</maxsizeclass>
+			<autocastbyself>1</autocastbyself>
+			<autocastdistance>15.000000</autocastdistance>
 		</protoaction>
 	</unit>
 	<unit name="XuanWu">
@@ -11642,6 +11783,8 @@
 			<modifyamount>2.0</modifyamount>
 			<maxrange>20.0</maxrange>
 			<rate type="MilitaryUnit">1.0</rate>
+			<rate type="MilitaryBuilding">1.0</rate>
+			<rate type="ChiWen">0.0</rate>
 			<anim>Bolster</anim>
 			<attackaction>1</attackaction>
 			<projectile>ProjectileChiwenLaser</projectile>
@@ -11656,6 +11799,13 @@
 			<charged>
 				<chargedmodify modifytype="ArmorSpecific" param="Crush" applytype="Add">0.7500</chargedmodify>
 			</charged>
+		</protoaction>
+		<protoaction>
+			<name>Invisibility</name>
+			<type>AreaStealth</type>
+			<maxrange>20.0</maxrange>
+      		<rate type="unit">1.0</rate>
+			<persistent>1</persistent>
 		</protoaction>
 	</unit>
 	
@@ -11695,6 +11845,18 @@
 			<projectile>ProjectileQingLongAttackWater</projectile>
 			<perfectaccuracy>1</perfectaccuracy>
 			<instantballistics>1</instantballistics>
+		</protoaction>
+		<protoaction>
+			<name>AreaHarvest</name>
+			<type>AutoRangedModify</type>
+			<modifyabstracttype>AbstractFarm</modifyabstracttype>
+			<maxrange>20</maxrange>
+			<nostack>1</nostack>
+			<persistent>1</persistent>
+			<modifytype>GatherRateMultiplier</modifytype>
+			<modifymultiplier>1.10</modifymultiplier>
+			<modelattachment>vfx\water\rain_farm.xml</modelattachment>
+			<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
 		</protoaction>
 	</unit>
 	
@@ -13204,7 +13366,7 @@
 		  <projectile>ProjectilePetrobolosShot</projectile>
 		  <numberprojectiles>3</numberprojectiles>
 		  <impacteffect>effects\impacts\crush_medium</impacteffect>
-		  <onhiteffect type="Throw" targetunittype="HumanSoldier"></onhiteffect><onhiteffect type="Throw">
+		  <onhiteffect type="Throw">
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="LogicalTypeVillagerNotHero"></target>
 			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
@@ -13231,36 +13393,57 @@
 	<unit name="Cheiroballista">
 		<unittype>SiegeLineUpgraded</unittype>
 		<unittype>HumanSoldier</unittype>
+		<tactics>mcmt_firesiphon.tactics</tactics>
 		<protoaction>
-		  <name>RangedAttack</name>
-		  <rof>2.000000</rof>
-		  <damage type="Pierce">3.000000</damage>
-		  <damagebonus type="AbstractInfantry">5.000000</damagebonus>
-		  <damagebonus type="Ship">3.000000</damagebonus>
-		  <maxrange>18.000000</maxrange>
-		  <projectile>ProjectileArrowFlaming</projectile>
-		  <numberprojectiles>5</numberprojectiles>
-		  <displayednumberprojectiles>5</displayednumberprojectiles>
-		  <volleymode>
-		  </volleymode>
+			<name>FlameAttack</name>
+			<type>Attack</type>
+			<active>0</active>
+			<attackaction>1</attackaction>attackaction
+			<rangedlogic>1</rangedlogic>
+			<anim>RangedAttack</anim>
+			<rate type="Building">1.0</rate>
+			<rof>2.000000</rof>
+			<accuracy>0.8</accuracy>
+			<maxspread>5</maxspread>
+			<spreadfactor>0.25</spreadfactor>
+			<trackrating>1.0</trackrating>
+			<volleymode>1</volleymode>
+			<damage type="Pierce">3.000000</damage>
+			<damage type="Crush">25.000000</damage>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>20.000000</maxrange>
+			<projectile>ProjectileFireSiphonFire</projectile>
+			<numberprojectiles>2</numberprojectiles>
+			<numberprojectiles>4</numberprojectiles>
+			<impacteffect>effects\impacts\fireball</impacteffect>
 		</protoaction>
 	</unit>
 	<unit name="CheiroballistaHero">
 		<unittype>SiegeLineUpgraded</unittype>
 		<unittype>HumanSoldier</unittype>
+		<tactics>mcmt_firesiphon.tactics</tactics>
 		<protoaction>
-		  <name>RangedAttack</name>
-		  <rof>2.000000</rof>
-		  <damage type="Pierce">3.000000</damage>
-		  <damagebonus type="AbstractInfantry">5.000000</damagebonus>
-		  <damagebonus type="AbstractCavalry">5.000000</damagebonus>
-		  <damagebonus type="Ship">3.000000</damagebonus>
-		  <maxrange>18.000000</maxrange>
-		  <projectile>ProjectileArrowFlaming</projectile>
-		  <numberprojectiles>5</numberprojectiles>
-		  <displayednumberprojectiles>5</displayednumberprojectiles>
-		  <volleymode></volleymode>		  
-		  <trackrating>60</trackrating>
+			<name>FlameAttack</name>
+			<type>Attack</type>
+			<active>0</active>
+			<attackaction>1</attackaction>attackaction
+			<rangedlogic>1</rangedlogic>
+			<anim>RangedAttack</anim>
+			<rate type="Building">1.0</rate>
+			<rof>2.000000</rof>
+			<accuracy>0.8</accuracy>
+			<maxspread>5</maxspread>
+			<spreadfactor>0.25</spreadfactor>
+			<trackrating>1.0</trackrating>
+			<volleymode>1</volleymode>
+			<damage type="Pierce">3.000000</damage>
+			<damage type="Crush">25.000000</damage>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>20.000000</maxrange>
+			<projectile>ProjectileFireSiphonFire</projectile>
+			<numberprojectiles>2</numberprojectiles>
+			<numberprojectiles>4</numberprojectiles>
+			<impacteffect>effects\impacts\fireball</impacteffect>
 		</protoaction>
 	</unit>
 	

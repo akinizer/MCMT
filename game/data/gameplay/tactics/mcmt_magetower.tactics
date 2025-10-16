@@ -10,9 +10,6 @@
     <maxspread>5.0</maxspread>
     <spreadfactor>0.25</spreadfactor>
     <trackrating>1.0</trackrating>
-    <scalebycontainedunittype>
-      <rate type="Unit">0.05</rate>
-    </scalebycontainedunittype>
     <impacteffect>effects\impacts\pierce</impacteffect>
   </action>
   <action>
@@ -25,9 +22,6 @@
     <maxspread>5.0</maxspread>
     <spreadfactor>0.25</spreadfactor>
     <trackrating>1.0</trackrating>
-    <scalebycontainedunittype>
-      <rate type="Unit">0.05</rate>
-    </scalebycontainedunittype>
     <impacteffect>effects\impacts\pierce</impacteffect>
   </action>
   <action>
@@ -36,9 +30,6 @@
     <attackaction>1</attackaction>
     <anim>HandAttack</anim>
     <impacteffect>effects\impacts\hack</impacteffect>
-    <scalebycontainedunittype>
-      <rate type="Unit">0.05</rate>
-    </scalebycontainedunittype>
     <rate type="All">1.0</rate>
   </action>
   <tactic>Default

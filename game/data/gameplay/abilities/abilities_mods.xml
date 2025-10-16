@@ -151,9 +151,9 @@
 	<LiJing>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</LiJing>
+		<!--Chinese-HumanSoldier-->	
 		<!--Chinese-MythUnit-->	
-	<QiongQiAir><ability>AbilityAutoScout<noautocast>true</noautocast></ability></QiongQiAir>
-	
+	<QiongQiAir><ability>AbilityAutoScout<noautocast>true</noautocast></ability></QiongQiAir>	
 		<!--Greek-Hero-Zeus-->	
 	<Jason>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>

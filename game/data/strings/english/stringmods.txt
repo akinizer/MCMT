@@ -281,6 +281,10 @@ ID = "STR_BLD_AIRCOMMAND_NAME"   ;   Str = "Air Command HQ"
 ID = "STR_BLD_AIRCOMMAND_SR"   ;   Str = "Air Command Headquarters"
 ID = "STR_BLD_AIRCOMMAND_LR"   ;   Str = "Defensive Base of Operations for Aircraft "
 
+ID = "STR_BLD_SONICDISRUPTORARRAY_NAME"   ;   Str = "Sonic Disruptor Array"
+ID = "STR_BLD_SONICDISRUPTORARRAY_SR"   ;   Str = "S.D.A"
+ID = "STR_BLD_SONICDISRUPTORARRAY_LR"   ;   Str = "Stealth Cloaking Technology for Units"
+
 ID = "STR_BLD_ATTRACTOR_NAME"   ;   Str = "The Attractor"
 ID = "STR_BLD_ATTRACTOR_SR"   ;   Str = "The Attractor"
 ID = "STR_BLD_ATTRACTOR_LR"   ;   Str = "A Peak of the Economical Development that Broadcast Brainwaves that Instinctively Pulls Preys"
@@ -290,6 +294,7 @@ ID = "STR_BLD_MAGETOWER_SR"   ;   Str = "Mage Tower"
 ID = "STR_BLD_MAGETOWER_LR"   ;   Str = "Akashic Archive and Residence of the Archmage"
 
 ID = "STR_BLD_FORTIFIED_WARTOWER_NAME"   ;   Str = "Fortified Wartower"
+ID = "STR_BLD_FORTIFIED_WARTOWERII_NAME"   ;   Str = "Fortified Wartower II"
 ID = "STR_BLD_TITAN_WALL_NAME"   ;   Str = "Titan Wall of Aegis"
 
 ID = "STR_UNIT_SIEGE_TURRET_NAME"   ;   Str = "Siege Turret"
