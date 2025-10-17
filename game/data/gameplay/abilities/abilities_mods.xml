@@ -10,6 +10,14 @@
 		<ability>AbilityMinotaur<chargetimeasrof>1</chargetimeasrof></ability>
 	</Landlord>
 
+	<!-- TODO /// MCMT New God Powers
+	<ability>MCMT_Meteor<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+	<ability>MCMT_LightningStorm<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
+	<ability>MCMT_Earthquake<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>	
+	-->
+
+	<!-- FutureTech Units-->
+	 
 	<!-- CyberTech Egyptian Units-->
 	<Noah>
 		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
@@ -232,11 +240,4 @@
 	<PegasusGroundedMessenger>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 	</PegasusGroundedMessenger>
-	
-		<!--MCMT Buildings-->
-	<Bastion>
-		<ability>MCMT_Meteor<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-		<ability>MCMT_LightningStorm<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-		<ability>MCMT_Earthquake<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-	</Bastion>
 </abilities>

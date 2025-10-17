@@ -109,6 +109,14 @@ ID = "STR_UNIT_SCOUTPROBE_NAME"   ;   Str = "Scout Probe"
 ID = "STR_UNIT_SCOUTPROBE_SR"   ;   Str = "Scout Probe"
 ID = "STR_UNIT_SCOUTPROBE_LR"   ;   Str = "Fast Drone with Lightweight Plating"
 
+ID = "STR_UNIT_EMFU_NAME"   ;   Str = "Electromagnetic Flying Unit"
+ID = "STR_UNIT_EMFU_SR"   ;   Str = "E.M.F.U"
+ID = "STR_UNIT_EMFU_LR"   ;   Str = "Shortcircuit Drone"
+
+ID = "STR_UNIT_EAP_NAME"   ;   Str = "Establishment Assist Probe"
+ID = "STR_UNIT_EAP_SR"   ;   Str = "E.A.P"
+ID = "STR_UNIT_EAP_LR"   ;   Str = "AI-Assisted Worker for FutureTech Foundations"
+
 ID = "STR_UNIT_MCMT_GIANTSIEGECROSSBOW_NAME"   ;   Str = "Giant Siege Crossbow"
 ID = "STR_UNIT_MCMT_GIANTSIEGECROSSBOW_LR"   ;   Str = "Anti-Pillar SuperWeapon"
 
@@ -378,6 +386,9 @@ ID = "STR_TECH_EXPLOSIVES_LR"   ;   Str = "Introduces the Explosive Technology t
 
 ID = "STR_TECH_COMFORTABLE_FIREPORTS_NAME"   ;   Str = "Comfortable Fireports"
 ID = "STR_TECH_COMFORTABLE_FIREPORTS_LR"   ;   Str = "Installs Passenger Ports with a Better Room Service"
+
+ID = "STR_TECH_NAVAL_DEFENSIVE_SYSTEMS_NAME"   ;   Str = "Naval Defensive Systems"
+ID = "STR_TECH_NAVAL_DEFENSIVE_SYSTEMS_LR"   ;   Str = "Coastal Defense That Carries Big Guns"
 
 ID = "STR_TECH_ELITE_FIREPORTS_NAME"   ;   Str = "Elite Fireports"
 ID = "STR_TECH_ELITE_FIREPORTS_LR"   ;   Str = "Installs Passenger Ports with a Jacuzzi and a Bar"

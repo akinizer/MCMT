@@ -471,6 +471,8 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Igniter</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ScoutProbe</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">EstablishmentAssistProbe</target></effect>		
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>		
+			<effect type="Data" amount="0.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>
 			<effect type="Data" amount="0.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ScoutProbe</target></effect>
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>
 			
@@ -809,6 +811,7 @@
 			<effect type="TechStatus" status="obtainable">ChampionEngines</effect>			
 			<!--SVA Techs-->
 			<effect type="TechStatus" status="obtainable">MCMT_Explosives</effect>
+			<effect type="TechStatus" status="obtainable">NavalDefensiveSystems</effect>
 			<!--TOW Techs
 			<effect type="TechStatus" status="obtainable">FarmingMachinery</effect>
 			<effect type="TechStatus" status="obtainable">IndustrialTools</effect>
@@ -1047,9 +1050,28 @@
 				<target type="ProtoUnit">Lighthouse</target>
 				<target type="ProtoUnit">AirCommand</target>
 			</effect>
-		</effects>
-		
+		</effects>		
 	</tech>
+  <tech name="NavalDefensiveSystems" mergeMode="add">
+		<flag>NeverAutoResearch</flag>
+		<displaynameid>STR_TECH_NAVAL_DEFENSIVE_SYSTEMS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_NAVAL_DEFENSIVE_SYSTEMS_LR</rollovertextid>
+		<icon>resources\tech\architect_marley.png</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+
+		<researchpoints>10.0000</researchpoints>
+		<cost resourcetype="Gold">3000</cost>
+		<cost resourcetype="Favor">1000</cost>
+		<effects>
+      <effect type="Data" action="RangedAttack" amount="30.0" subtype="DamageBonus" unittype="AbstractTitan" relativity="Assign">
+        <target type="ProtoUnit">Dock</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.5" subtype="DamageBonus" unittype="AbstractFlyingUnit" relativity="Assign">
+        <target type="ProtoUnit">Dock</target></effect>
+		</effects>
+	</tech>
+
 	<tech name="MCMT_Noah_Respawn">
 		<status>UNOBTAINABLE</status>
 		<delay>2.0000</delay>
@@ -2614,6 +2636,32 @@
         <target type="ProtoUnit">SentryTower</target></effect>
     </effects>
   </tech>
+  <tech name="SecretsOfTheTitans" mergeMode="replace">
+    <displaynameid>STR_TECH_SECRETS_OF_THE_TITANS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_SECRETS_OF_THE_TITANS_LR</rollovertextid>
+    <cost resourcetype="Food">800.0000</cost>
+    <cost resourcetype="Wood">800.0000</cost>
+    <cost resourcetype="Gold">800.0000</cost>
+    <cost resourcetype="Favor">50.0000</cost>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\secrets_of_the_titans_icon.png</icon>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>ExcludeFromKBCostTracking</flag>
+    <flag>Titans</flag>
+    <effects>
+      <effect type="Data" subtype="GodPower" power="TitanGate" amount="1.0" relativity="Absolute">
+        <target type="Player"></target></effect>
+      <effect type="TechStatus" status="obtainable">WonderAgeTitan</effect>
+
+      <effect type="Data" amount="1.05" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+      <effect type="Data" amount="1.10" subtype="Damage" action="HandAttack" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+      <effect type="Data" amount="1.10" subtype="Damage" action="RangedAttack" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+    </effects>
+  </tech>
 
   <!-- Greek - Techs -->
   <tech name="MonstrousRage" mergeMode="add">
@@ -3416,6 +3464,20 @@
   </tech>  
 
   <!-- Norse - Techs-->
+  <tech name="ThorDwarfSpawn" mergeMode="replace">
+    <status>UNOBTAINABLE</status>
+    <flag>InfiniteTech</flag>
+    <flag>IgnoreIfAutoActivated</flag>
+    <effects>
+      <effect type="CreateUnit" unit="VillagerDwarf" generator="DwarvenArmory">
+        <pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+          <offset x="-5.00" y="0.00" z="0.00"></offset></pattern></effect>
+      <effect type="Data" action="Gather" amount="0.05" subtype="WorkRate" unittype="GoldResource" relativity="Absolute" hidetooltip="">
+        <target type="ProtoUnit">VillagerDwarf</target></effect>
+      <effect type="Data" action="Repair" amount="0.75" subtype="WorkRate" unittype="Buiiding" relativity="BasePercent" hidetooltip="">
+        <target type="ProtoUnit">VillagerDwarf</target></effect>
+    </effects>
+  </tech>
   <tech name="EyesInTheForest" mergeMode="add">
     <effects>
       <effect type="Data" amount="5" subtype="LOS" relativity="Absolute">
@@ -4074,8 +4136,7 @@
   <tech name="TitanShield" mergeMode="replace">
     <displaynameid>STR_TECH_TITAN_SHIELD_NAME</displaynameid>
     <rollovertextid>STR_TECH_TITAN_SHIELD_LR</rollovertextid>
-    <cost resourcetype="Wood">200.0000</cost>
-    <cost resourcetype="Gold">75.0000</cost>
+    <cost resourcetype="Gold">300.0000</cost>
     <cost resourcetype="Favor">15.0000</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -4214,6 +4275,42 @@
 	  <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
         <target type="ProtoUnit">Contarius</target>
       </effect>
+    </effects>
+  </tech>
+  <tech name="HaloOfTheSun" mergeMode="replace">
+    <displaynameid>STR_TECH_HALO_OF_THE_SUN_NAME</displaynameid>
+    <rollovertextid>STR_TECH_HALO_OF_THE_SUN_LR</rollovertextid>
+    <cost resourcetype="Gold">150.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\atlantean\static_color\technologies\halo_of_the_sun_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="RangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">FireSiphon</target></effect>
+      <effect type="Data" amount="1.15" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">FireSiphon</target></effect>
+      <effect type="Data" action="RangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">FireShip</target></effect>
+      <effect type="Data" amount="1.15" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">FireShip</target></effect>
+
+      <effect type="Data" action="RangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">MirrorTower</target></effect>
+      <effect type="Data" amount="1.15" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">MirrorTower</target></effect>
+
+      <effect type="Data" amount="0.20" subtype="OnHitEffect" action="RangedAttack" effecttype="DamageOverTime" duration="2.00" targettype="HumanSoldier" dmgtype="Divine" relativity="Assign">
+        <target type="ProtoUnit">MirrorTower</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="RangedAttack" effecttype="Attach" duration="6.00" targettype="HumanSoldier" proto="VFXFire" relativity="Assign">
+        <target type="ProtoUnit">MirrorTower</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffectAttachBone" action="RangedAttack" effecttype="Attach" targettype="HumanSoldier" attachbone="spine" relativity="Assign">
+        <target type="ProtoUnit">MirrorTower</target></effect>
+
+      <effect type="Data" allactions="1" amount="1.00" subtype="Damagebonus" unittype="AbstractWarship" relativity="Absolute">
+        <target type="MirrorTower">MirrorTower</target></effect>
     </effects>
   </tech>
   <!-- Chinese - Techs -->

@@ -1135,24 +1135,6 @@
 			<volleymode>1</volleymode>
 			<active>1</active>
 		</protoaction>
-		<!-- 
-		<protoaction>
-			<name>HandAttack</name>
-			<rof>1.500000</rof>
-			<damage type="Hack">9.00000</damage>
-			<damagebonus type="MythUnit">12.000000</damagebonus>
-			<maxrange>0.750000</maxrange>
-			<defaultattack>1</defaultattack>
-		</protoaction>
-		<protoaction>
-			<name>RangedAttack</name>
-			<rof>1.000000</rof>
-			<damage type="Pierce">4.000000</damage>
-			<damagebonus type="MythUnit">9.000000</damagebonus>
-			<maxrange>12.000000</maxrange>
-			<projectile>ProjectileArrowFlaming</projectile>
-		</protoaction>
-		-->
 		<protoaction>
 			<name>Build</name>
 			<type>Build</type>
@@ -3418,7 +3400,7 @@
 		<train row="0" column="0">Landlord</train>
 		<train row="0" column="1">Chieftain</train>
 		<train row="0" column="2">Constructor</train>		
-		<train row="0" column="3">EstablishmentAssistProbe</train>		
+		<train row="0" column="3">EstablishmentAssistProbe</train>			
 		<train row="0" column="5">TravelerOxWagon</train>		
 		
 		<train row="1" column="0">Conan</train>
@@ -3433,6 +3415,7 @@
 		<train row="2" column="2">Spartan</train>		
 		<train row="2" column="3">ImperialGuard</train>		
 		<train row="2" column="4">Peacemaker</train>	
+		<train row="2" column="5">ElectromagneticFloatingunit</train>	
 		
 		<tech row="3" column="0">ChampionArms</tech>		
 		<tech row="3" column="0">ChampionHooves</tech>		
@@ -3556,6 +3539,7 @@
 		<tech row="2" column="0">HeroicFleet</tech>
 		<tech row="2" column="1">Nanomachines</tech>		
 		<tech row="2" column="2">MCMT_Explosives</tech>		
+		<tech row="2" column="3">NavalDefensiveSystems</tech>		
 		
 		<flag>CollidesWithProjectiles</flag>
 		<flag>Immoveable</flag>
@@ -5431,10 +5415,11 @@
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>45.0000</initialhitpoints>
 		<maxhitpoints>45.0000</maxhitpoints>
-		<trainpoints>0.5000</trainpoints>
+		<trainpoints>3.0000</trainpoints>
 		<weightclass>4</weightclass>
 		<maxvelocity>5.7000</maxvelocity>
 		<los>14.0000</los>
+		<cost resourcetype="Food">15.0000</cost>
 		<armor type="Hack" value="0.2000"></armor>
 		<armor type="Pierce" value="0.3000"></armor>
 		<armor type="Crush" value="0.4900"></armor>
@@ -10792,9 +10777,9 @@
 		</protoaction>
 	</unit>
 	<unit name="EstablishmentAssistProbe">
-		<displaynameid>STR_UNIT_SKY_LANTERN_NAME</displaynameid>
-		<rollovertextid>STR_UNIT_SKY_LANTERN_LR</rollovertextid>
-		<shortrollovertextid>STR_UNIT_SKY_LANTERN_SR</shortrollovertextid>
+		<displaynameid>STR_UNIT_EAP_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_EAP_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_EAP_SR</shortrollovertextid>
 		<icon>resources\chinese\player_color\units\sky_lantern_icon.png</icon>
 		<animfile>chinese\units\attachments\sky_lantern\sky_lantern.xml</animfile>
 		<soundsetfile>chinese\vo\sky_lantern\sky_lantern.xml</soundsetfile>
@@ -10802,7 +10787,11 @@
 		<obstructionradiusz>0.9900</obstructionradiusz>
 		<impacttype>Metal</impacttype>
 		<unitaitype>Civilian</unitaitype>
-		<wanderdistance>10</wanderdistance>
+
+		<trainpoints>15</trainpoints>
+		<cost resourcetype="gold">20</cost>
+		<cost resourcetype="favor">5</cost>
+
 		<movementtype>land</movementtype>
 		<turnrate>9.0000</turnrate>
 		<initialhitpoints>30.0000</initialhitpoints>
@@ -10822,7 +10811,6 @@
 		<unittype>LogicalTypeAffectedByRestoration</unittype>
 		<unittype>LogicalTypeValidTornadoAttack</unittype>
 		<unittype>LogicalTypeValidSpyTarget</unittype>
-		<unittype>AbstractFlyingUnit</unittype>
 		<unittype>LogicalTypeHealed</unittype>
 		<unittype>LogicalTypeEasySelectAvoid</unittype>
 		<unittype>LogicalTypeConvertsHerds</unittype>
@@ -10833,13 +10821,105 @@
 		<flag>CollidesWithProjectiles</flag>
 		<flag>ExcludeFromIdleQuery</flag>
 		<train row="0" column="0">SonicDisruptorArray</train>
-		<tactics>handattack.tactics</tactics>
+		<tactics>default.tactics</tactics>
 		<protoaction>
 			<name>Build</name>
 			<type>Build</type>
 			<anim>HandAttack</anim>
 			<rate type="SonicDisruptorArray">1.000000</rate>
 			<maxrange>0.2</maxrange>
+		</protoaction>
+	</unit>
+	<unit name="ElectromagneticFloatingUnit">
+		<displaynameid>STR_UNIT_EMFU_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_EMFU_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_EMFU_SR</shortrollovertextid>
+		<icon>resources\atlantean\player_color\units\man_o_war_icon.png</icon>
+		<animfile>atlantean\units\myth\man_o_war\man_o_war.xml</animfile>
+		<soundsetfile>atlantean\vo\man_o_war\man_o_war.xml</soundsetfile>
+		<obstructionradiusx>1.4900</obstructionradiusx>
+		<obstructionradiusz>1.4900</obstructionradiusz>
+		<selectionradiusx>1.5000</selectionradiusx>
+		<selectionradiusz>1.7500</selectionradiusz>
+		<impacttype>Metal</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<formationorder>1</formationorder>
+		<movementtype>amphibious</movementtype>
+
+		<turnrate>13.5000</turnrate>
+		<initialhitpoints>72.0000</initialhitpoints>
+		<maxhitpoints>72.0000</maxhitpoints>
+
+		<trainpoints>3.0000</trainpoints>
+		<weightclass>10</weightclass>
+		<populationcount>1</populationcount>
+		<maxvelocity>6.0000</maxvelocity>
+		<rechargetime>60.0000</rechargetime>
+
+		<los>16.0000</los>
+		<cost resourcetype="Food">250.0000</cost>
+		<cost resourcetype="Favor">15.0000</cost>
+		<armor type="Hack" value="0.2000"></armor>
+		<armor type="Pierce" value="0.7000"></armor>
+		<armor type="Crush" value="0.2000"></armor>
+		<unittype>LogicalTypeNavalMilitary</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeMythicMythUnit</unittype>
+		<unittype>MythUnit</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeMythUnitNotTitan</unittype>
+		<unittype>LogicalTypeRangedMythUnit</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>NavalUnit</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFreezableMythUnit</unittype>
+		<unittype>LogicalTypeMythUnitNotFlying</unittype>
+		<flag>TieToWaterSurface</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>DecalStickToWaterSurface</flag>
+		<flag>FadeOutDecalOnDeath</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>HasContinuousParticles</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>mcmt_electromagnetic_floating_unit.tactics</tactics>
+		<protoaction>	
+			<name>LightningAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Divine">0.10000</damage>
+			<maxrange>30.000000</maxrange>
+			<numberbounces>1</numberbounces>
+			<onhiteffect type="Snare" duration="3.00" rate="0.50"></onhiteffect>
+		  	<onhiteffect type="Stun" duration="1.00"></onhiteffect>
+		</protoaction>
+		<!-- Godpower Pestilence as Attack Effect Ability-->
+		<protoaction>
+			<name>ChargedRangedAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Divine">1.000000</damage>
+			<damagebonus type="MythUnit">1.000000</damagebonus>
+			<damagebonus type="Hero">0.250000</damagebonus>
+			<maxrange>8.000000</maxrange>
 		</protoaction>
 	</unit>
 	
@@ -13191,6 +13271,7 @@
 		<unittype>AbstractWall</unittype>
 
 		<tech row="0" column="0">MCMT_OracleWatchers</tech>
+		<buildlimit>10</buildlimit>
 
 		<protoaction>
 			<name>RangedAttack</name>
@@ -13283,7 +13364,8 @@
 		<protoaction>
 		  <name>BeamAttack</name>
 		  <rof>3.000000</rof>
-		  <damage type="Divine">35.000000</damage>
+		  <damage type="Divine">8.000000</damage>
+		  <damage type="Pierce">0.10000</damage>
 		  <damagebonus type="Ship">3.000000</damagebonus>
 		  <maxrange>22.000000</maxrange>
 		  <projectile>ProjectileMirrorTowerLazer</projectile>

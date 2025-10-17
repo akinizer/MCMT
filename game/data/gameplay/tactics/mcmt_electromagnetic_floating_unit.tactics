@@ -1,0 +1,28 @@
+<tactics>
+  <action>
+    <name>LightningAttack</name>
+    <type>ChainAttack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>Charging</anim>
+    <projectile>ProjectileChainLightning</projectile>
+    <accuracy>1.0</accuracy>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+    <rate type="AbstractWarship">1.0</rate>
+    <rate type="MythUnit">0.0</rate>
+  </action>
+  <action>
+    <name>ChargedRangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <chargeaction>1</chargeaction>
+    <rangedlogic>1</rangedlogic>
+    <rate type="Building">1.0</rate>
+    <anim>Charging</anim>
+    <impacteffect>effects\impacts\crush</impacteffect>
+    <castpower>Pestilence</castpower>          
+    <castpowertargettype>Building</castpowertargettype>     
+  </action>
+  <tactic>Default<action priority="100">LightningAttack</action><action priority="90">ChargedRangedAttack</action><attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype></tactic>
+</tactics>
