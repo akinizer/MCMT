@@ -8,9 +8,9 @@
     <projectile>ProjectileChainLightning</projectile>
     <accuracy>1.0</accuracy>
     <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="MythUnit">0.0</rate>
     <rate type="AbstractSiegeWeapon">1.0</rate>
     <rate type="AbstractWarship">1.0</rate>
-    <rate type="MythUnit">0.0</rate>
   </action>
   <action>
     <name>ChargedRangedAttack</name>

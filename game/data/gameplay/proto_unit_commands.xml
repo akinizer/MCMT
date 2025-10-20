@@ -812,4 +812,26 @@
     <unitcommand>
     </unitcommand>
   </protounitcommand>
+  <!--MCMT NEW UNIT COMMANDS-->
+  <protounitcommand>
+    <name>AchillesToAchillesDismounted</name>
+    <icon>resources\shared\hud\command\wall_to_gate_icon.png</icon>
+    <command>uiTransformSelectedUnit("AchillesDismounted",true)</command>
+    <displaynameid>STR_PUC_GATE</displaynameid>
+    <rollovertextid>STR_PUC_GATE_LR</rollovertextid>
+  </protounitcommand>
+  <protounitcommand>
+    <name>AchillesDismountedToAchilles</name>
+    <icon>resources\shared\hud\command\wall_to_gate_icon.png</icon>
+    <command>uiTransformSelectedUnit("Achilles",true)</command>
+    <displaynameid>STR_PUC_GATE</displaynameid>
+    <rollovertextid>STR_PUC_GATE_LR</rollovertextid>
+  </protounitcommand>
+  <protounitcommand>
+    <name>ElectrofenceToHolofenceGate</name>
+    <icon>resources\shared\hud\command\wall_to_gate_icon.png</icon>
+    <command>uiTransformSelectedUnit("HolofenceGate",true)</command>
+    <displaynameid>STR_PUC_GATE</displaynameid>
+    <rollovertextid>STR_PUC_GATE_LR</rollovertextid>
+  </protounitcommand>
 </protounitcommands>

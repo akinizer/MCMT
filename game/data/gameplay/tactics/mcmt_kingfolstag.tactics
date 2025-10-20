@@ -1,0 +1,47 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="All">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name>FreezeTitan</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>FreezeAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>0</maxspread>
+    <trackrating>99.0</trackrating>
+    <auxchargeaction>1</auxchargeaction>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractTitan">1.0</rate>
+    <perfectaccuracy>1</perfectaccuracy>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">FreezeAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>FreezeAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>0</maxspread>
+    <trackrating>99.0</trackrating>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="HumanSoldier">1.0</rate>
+    <rate type="LogicalTypeMythUnitNotTitan">1.0</rate>
+    <rate type="LogicalTypeVillagerNotHero">1.0</rate>
+    <rate type="TradeUnit">1.0</rate>
+    <rate type="Huntable">1.0</rate>
+    <rate type="Ship">1.0</rate>
+    <perfectaccuracy>1</perfectaccuracy>
+  </action>
+  <tactic>Default<action priority="100">FreezeTitan</action><action priority="90">FreezeAttack</action><action priority="80">HandAttack</action><attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>

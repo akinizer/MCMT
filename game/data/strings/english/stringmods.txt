@@ -305,6 +305,14 @@ ID = "STR_BLD_FORTIFIED_WARTOWER_NAME"   ;   Str = "Fortified Wartower"
 ID = "STR_BLD_FORTIFIED_WARTOWERII_NAME"   ;   Str = "Fortified Wartower II"
 ID = "STR_BLD_TITAN_WALL_NAME"   ;   Str = "Titan Wall of Aegis"
 
+ID = "STR_BLD_ELECTROFENCE_NAME"   ;   Str = "Electrofence"
+ID = "STR_BLD_ELECTROFENCE_SR"   ;   Str = "Powered Barrier"
+ID = "STR_BLD_ELECTROFENCE_LR"   ;   Str = "FutureTech Fortification Barrier"
+
+ID = "STR_BLD_HOLOFENCE_GATE_NAME"   ;   Str = "Holofence Gate"
+ID = "STR_BLD_HOLOFENCE_GATE_SR"   ;   Str = "Powered Gate"
+ID = "STR_BLD_HOLOFENCE_GATE_LR"   ;   Str = "FutureTech Fortification Gate"
+
 ID = "STR_UNIT_SIEGE_TURRET_NAME"   ;   Str = "Siege Turret"
 ID = "STR_UNIT_SIEGE_TURRET_SR"   ;   Str = "Siege Turret"
 ID = "STR_UNIT_SIEGE_TURRET_LR"   ;   Str = "Siege Tower Entrenchment in a Defensive Position"

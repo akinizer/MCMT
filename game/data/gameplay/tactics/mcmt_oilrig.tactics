@@ -1,6 +1,7 @@
 <tactics>
     <action>
         <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+        <active>0</active>
         <type>Attack</type>
         <attackaction>1</attackaction>
         <rangedlogic>1</rangedlogic>

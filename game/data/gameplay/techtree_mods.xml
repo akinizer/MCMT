@@ -1,6 +1,6 @@
 <techtreemods>
 	<!-- /////////////////////////////////////////////////////// MCMT TECH ENABLE  //////////////////////////////////////////////// -->
-	<tech name="ArchaicAgeAtlantean"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
+  <tech name="ArchaicAgeAtlantean"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeGreek"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeEgyptian"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
 	<tech name="ArchaicAgeNorse"><effects><effect type="TechStatus" status="active" mergeMode="add">MCMT_Techs</effect></effects></tech>
@@ -324,6 +324,13 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">AttackWolf</target>
 			</effect>
+
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Superpig</target>
+			</effect>
+      <effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Superpig</target>
+			</effect>
 			
 				<!--Economic Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
@@ -335,17 +342,7 @@
 			<effect type="Data" action="Heal" amount="1.33" unittype="LogicalTypeHealed" subtype="WorkRate" relativity="BasePercent">
 				<target type="ProtoUnit">TravelerOxWagon</target>
 			</effect>
-			<!--
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">VillagerDwarfHero</target>
-			</effect>
-			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">VillagerDwarfHero</target>
-			</effect>	
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">VillagerNorseVeteran</target>
-			</effect>				
-			-->
+	
 				<!--Gods and Mythical Beasts-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">ThorDescended</target>
@@ -460,8 +457,9 @@
 			</effect>
 
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">OxCartModelX</target>
-			</effect>
+				<target type="ProtoUnit">OxCartModelX</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">OxCartModelX</target></effect>
 			
 				<!--CyberTech Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>	
@@ -472,7 +470,10 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ScoutProbe</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">EstablishmentAssistProbe</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>		
-			<effect type="Data" amount="0.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MobileFortress</target></effect>		
+			
+      <effect type="Data" amount="0.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>
+			<effect type="Data" amount="0.60" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MobileFortress</target></effect>
 			<effect type="Data" amount="0.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ScoutProbe</target></effect>
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>
 			
@@ -518,6 +519,10 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">AirCommand</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SonicDisruptorArray</target></effect>
       <effect type="Data" amount="0.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">SonicDisruptorArray</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Electrofence</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">HolofenceGate</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">WarpPortal</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfLightning</target></effect>
 
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">OilRig</target></effect>
 			
@@ -799,6 +804,7 @@
 			<effect type="TechStatus" status="obtainable">MCMT_MithrilArmaments</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_TurretInstallation</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_DivineProtection</effect>	
+			<effect type="TechStatus" status="obtainable">MCMT_AssistedTradeNetworks</effect>	
 			<!---->
 			<effect type="TechStatus" status="obtainable">Nanomachines</effect>			
 			<effect type="TechStatus" status="obtainable">MCMT_SVA_ComfortableFireports</effect>			
@@ -1957,7 +1963,24 @@
 		</timeshifting>
 	</effects>	
   </tech>  
-  
+  <tech name="MCMT_AssistedTradeNetworks" orderhint="0">
+    <displaynameid>STR_TECH_AUTUMN_OF_ABUNDANCE_NAME</displaynameid>
+    <rollovertextid>STR_TECH_AUTUMN_OF_ABUNDANCE_LR</rollovertextid>
+    <cost resourcetype="Gold">200.0000</cost>
+    <cost resourcetype="Favor">30.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\chinese\static_color\technologies\autumn_of_abundance_icon.png</icon>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="Trade" amount="0.20" subtype="MinWorkRate" unittype="Food" relativity="Assign">
+        <target type="ProtoUnit">OxCartModelX</target></effect>
+      <effect type="Data" action="Trade" amount="0.20" subtype="MinWorkRate" unittype="Wood" relativity="Assign">
+        <target type="ProtoUnit">OxCartModelX</target></effect>
+    </effects>
+  </tech>
+
    <!--STRATEGIC VESSEL ASSEMBLY TECH RESEARCHES-->
   <tech name="MCMT_Explosives">
     <displaynameid>STR_TECH_EXPLOSIVES_NAME</displaynameid>
