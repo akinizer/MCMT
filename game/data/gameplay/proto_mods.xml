@@ -102,7 +102,7 @@
 		<tech row="1" column="0">WinterHarvest</tech>
 		<tech row="1" column="1">GoldenApples</tech>
 
-		<tech row="3" column="1">SuperPig</tech>
+		<train row="3" column="1">Superpig</train>
 		
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
@@ -446,7 +446,6 @@
 	
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
-		<unittype>MilitaryUnit</unittype>
 		
 		<unittype>Hero</unittype>
 		<unittype>MajorHero</unittype>
@@ -467,6 +466,7 @@
 		<unittype>LogicalTypeHealed</unittype>
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
 		<unittype>LogicalTypeNorseSoldierThatBuilds</unittype>
+		<unittype>LogicalTypeNotEconomicOrMilitaryUnit</unittype>
 	
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
@@ -476,6 +476,7 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>AbilitiesOnBothPages</flag>
 		<flag>HasDefaultAttack</flag>
+		<flag>HideStances</flag>
 	
 		<tactics>mcmt_landlord.tactics</tactics>
 		<protoaction>
@@ -538,6 +539,21 @@
 			<modifybase>1.0</modifybase>
 			<modelattachment>vfx\glow\arkantos_boost.xml</modelattachment>
 			<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
 		</protoaction>
 		<!--cost added-->
 		<cost resourcetype="Food">80.000</cost>
@@ -977,6 +993,22 @@
 			<damagebonus type="MythUnit">3.000000</damagebonus>
 			<maxrange>0.750000</maxrange>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+		<!--cost added-->
 	</unit>
 	
 	<unit name="MatsuriYurio">
@@ -1349,6 +1381,22 @@
 			<maxrange>0.750000</maxrange>
 			<defaultattack>1</defaultattack>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+		<!--cost added-->
 	</unit>
 	
 	<unit name="Spartan">
@@ -1435,6 +1483,22 @@
 			<damagebonus type="AbstractInfantry">1.500000</damagebonus>
 			<maxrange>1.20000</maxrange>
 		</protoaction>	
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+		<!--cost added-->
 	</unit>
 	<unit name="ImperialGuard">
 		<displaynameid>STR_UNIT_IMPERIALGUARD_NAME</displaynameid>
@@ -1517,6 +1581,22 @@
 		  <damagebonus type="AbstractInfantry">5.00000</damagebonus>
 		  <maxrange>0.500000</maxrange>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+		<!--cost added-->
 	  </unit>
 	  
 	<unit name="Peacemaker">
@@ -1597,6 +1677,22 @@
 		  <damage type="Hack">5.000000</damage>
 		  <maxrange>2.000000</maxrange>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+		<!--cost added-->
 	</unit>	
 	<unit name="Hitman">
 		<displaynameid>STR_UNIT_HITMAN_NAME</displaynameid>
@@ -1761,63 +1857,93 @@
 		<shortrollovertextid>STR_UNIT_EAP_SR</shortrollovertextid>
 		<icon>resources\chinese\player_color\units\sky_lantern_icon.png</icon>
 		<animfile>chinese\units\attachments\sky_lantern\sky_lantern.xml</animfile>
+
 		<soundsetfile>chinese\vo\sky_lantern\sky_lantern.xml</soundsetfile>
 		<obstructionradiusx>0.9900</obstructionradiusx>
 		<obstructionradiusz>0.9900</obstructionradiusz>
-		<impacttype>Metal</impacttype>
+		<selectionradiusx>0.7500</selectionradiusx>
+		<selectionradiusz>1.0000</selectionradiusz>
+
+		<impacttype>Unarmoured</impacttype>
 		<unitaitype>Civilian</unitaitype>
-
-		<trainpoints>15</trainpoints>
-		<cost resourcetype="gold">20</cost>
-		<cost resourcetype="favor">5</cost>
-
 		<movementtype>amphibious</movementtype>
 		<turnrate>9.0000</turnrate>
+
 		<initialhitpoints>30.0000</initialhitpoints>
 		<maxhitpoints>30.0000</maxhitpoints>
+
+		<trainpoints>15</trainpoints>
+		<weightclass>1</weightclass>
+		<populationcount>1</populationcount>
 		<maxvelocity>3.0000</maxvelocity>
 		<los>25.0000</los>
+
+		<cost resourcetype="Gold">20.0</cost>
+		<cost resourcetype="Favor">5.0</cost>
+
 		<armor type="Hack" value="0.1500"></armor>
 		<armor type="Pierce" value="0.3000"></armor>
-		<armor type="Crush" value="0.8000"></armor>
+		<armor type="Crush" value="0.8000"></armor>	
+
 		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
 		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
 		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeHealed</unittype>
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
 		<unittype>CountsTowardEconomicScore</unittype>
-		<unittype>LogicalTypeValidBoltTarget</unittype>
-		<unittype>LogicalTypeAffectedByRestoration</unittype>
-		<unittype>LogicalTypeValidTornadoAttack</unittype>
-		<unittype>LogicalTypeValidSpyTarget</unittype>
-		<unittype>LogicalTypeHealed</unittype>
-		<unittype>LogicalTypeEasySelectAvoid</unittype>
 		<unittype>LogicalTypeConvertsHerds</unittype>
-		<unittype>ValidIdleVillager</unittype>
-		<unittype>AffectedByTownBell</unittype>
-
-		<flag>TieToWaterSurface</flag>
-		<flag>SelectWithObstruction</flag>
-		<flag>ForceDeletable</flag>
-		<flag>HideStances</flag>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
 		<flag>CollidesWithProjectiles</flag>
-		<flag>ExcludeFromIdleQuery</flag>
-		<train row="0" column="0">SonicDisruptorArray</train>
-		<train row="0" column="1">Electrofence</train>
-		<train row="0" column="2">HolofenceGate</train>
-		<train row="0" column="3">WarpPortal</train>
-		<train row="0" column="4">BeaconOfLightning</train>
+		<flag>CorpseDecays</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>ColorTransformNonNature</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>AutoTrainable</flag>
+		<flag>NoIdleActions</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>TieToWaterSurface</flag>
+
+		<train row="0" column="0">BeaconOfLightning</train>
+		<train row="0" column="1">BeaconOfTruth</train>
+		<train row="0" column="2">BeaconOfSun</train>
+		<train row="0" column="3">BeaconOfSea</train>
+		<train row="0" column="4">BeaconOfAffection</train>
+		<train row="0" column="5">BeaconOfAmbition</train>
+
+		<train row="1" column="0">SonicDisruptorArray</train>
+		<train row="1" column="4">Electrofence</train>
+		<train row="1" column="5">HolofenceGate</train>
+
+		<train row="2" column="0">WarpPortal</train>
 		<tactics>default.tactics</tactics>
 		<protoaction>
 			<name>Build</name>
 			<type>Build</type>
-			<anim>HandAttack</anim>
 			<rate type="SonicDisruptorArray">1.000000</rate>
+			<rate type="BeaconOfLightning">1.000000</rate>
+			<rate type="BeaconOfSun">1.000000</rate>
+			<rate type="BeaconOfSea">1.000000</rate>
+			<rate type="BeaconAffection">1.000000</rate>
+			<rate type="BeaconOfAmbition">1.000000</rate>
 			<rate type="Electrofence">1.000000</rate>
 			<rate type="HolofenceGate">1.000000</rate>
 			<rate type="WarpPortal">1.000000</rate>
-			<rate type="BeaconOfLightning">1.000000</rate>
-			<maxrange>0.2</maxrange>
+			<maxrange>1.0</maxrange>
 		</protoaction>
 	</unit>
 	<unit name="ElectromagneticFloatingUnit">
@@ -2626,6 +2752,21 @@
 			<maxrange>1.5</maxrange>
 			<defaultattack>1</defaultattack>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	<unit name="Loki">
 		<displaynameid>STR_UNIT_LOKI_NAME</displaynameid>
@@ -2714,6 +2855,21 @@
 			<damagebonus type="AbstractVillager">20.000000</damagebonus>
 			<defaultattack>1</defaultattack>
 			<maxrange>12.000000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
 		</protoaction>
 	</unit>
 
@@ -2955,6 +3111,94 @@
 		<flag>NoIdleActions</flag>
 		<flag>DynamicUpdate</flag>
 	</unit>
+	<unit name="Ecomarket">
+		<displaynameid>STR_BLD_TRADING_POST_NAME</displaynameid>
+		<rollovertextid>STR_BLD_TRADING_POST_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_TRADING_POST_SR</shortrollovertextid>
+		<icon>resources\greek\static_color\god_powers\plenty_vault_icon.png</icon>
+		<minimapicon>ui\minimap\minimap_highlighted_item</minimapicon>
+		<animfile>chinese\buildings\trading_post\trading_post.xml</animfile>
+		<soundsetfile>chinese\sfx\buildings\trading_post.xml</soundsetfile>
+		<obstructionradiusx>6.0000</obstructionradiusx>
+		<obstructionradiusz>6.0000</obstructionradiusz>
+		<impacttype>Stone</impacttype>		
+		<movementtype>land</movementtype>
+		<buildingworkrate>1.0000</buildingworkrate>
+		<rechargetime>3.0000</rechargetime>
+		<initialhitpoints>1200.0000</initialhitpoints>
+    	<maxhitpoints>1200.0000</maxhitpoints>
+		<buildpoints>40.0000</buildpoints>
+		<los>9.0000</los>
+
+		<cost resourcetype="Wood">150.0000</cost>
+		<cost resourcetype="Food">150.0000</cost>
+		<cost resourcetype="Gold">150.0000</cost>
+		<cost resourcetype="Favor">50.0000</cost>
+
+		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>AbstractMarket</unittype>
+		<unittype>TradeableFrom</unittype>
+
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeBuildingThatCanBeEmpowered</unittype>
+		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
+		<unittype>LogicalTypeBuildingLarge</unittype>
+		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>
+		<unittype>LogicalTypeAffectedByBuildingChainAutoBuild</unittype>
+
+		<hotkeycontext>TacticAccel</hotkeycontext>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>RevealFoundation</flag>
+		<flag>NoIdleActions</flag>
+		<flag>MinimapDisplayOnTop</flag>
+		<flag>BuildingShowTactics</flag>
+
+		<flag>CollidesWithProjectiles</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>InitialGarrisonOnly</flag>
+
+		<tactics>trading_post.tactics</tactics>
+		<protoaction>
+			<name>AutoConvert</name>
+			<maxrange>12</maxrange>
+			<includenature>1</includenature>
+			<cannotbeconvertedbyallies>1</cannotbeconvertedbyallies>
+			<modifyabstracttype>Building</modifyabstracttype>
+			<forbidabstracttype>AbstractWall</forbidabstracttype>
+			<forbidabstracttype>AbstractHouseBuildLimit</forbidabstracttype>
+			<forbidabstracttype>AbstractFarm</forbidabstracttype>
+			<forbidabstracttype>LogicalTypeCapturableBuilding</forbidabstracttype>
+			<active>0</active>
+		</protoaction>
+		<protoaction>
+			<name>AutoGatherFavor</name>
+			<type>AutoGather</type>
+			<rate type="Favor">0.500000</rate>
+			<persistent>1</persistent>
+		</protoaction>
+	</unit>
 
 	<unit name="StellarGateway">
 		<displaynameid>STR_BLD_STELLAR_GATEWAY_NAME</displaynameid>
@@ -3152,8 +3396,7 @@
 		<tech row="3" column="1">MCMT_SVA_EliteFireports</tech>		
 		<tech row="3" column="1">MCMT_SVA_LuxuriousFireports</tech>		
 		
-		<train row="3" column="5">MobileFortress</train>		
-		
+		<train row="3" column="5">MobileFortress</train>				
 		
 		<flag>ShowGarrisonButton</flag>
 		<flag>DisplayRange</flag>
@@ -3967,8 +4210,9 @@
 	</unit>
 
 	<unit name="BeaconOfLightning" mergeMode="add">
-		<displaynameid>STR_BLD_STATUE_LIGHTNING_NAME</displaynameid>
-		<rollovertextid>STR_BLD_STATUE_LIGHTNING_LR</rollovertextid>
+		<displaynameid>STR_BLD_BEACON_OF_LIGHTNING_NAME</displaynameid>
+		<rollovertextid>STR_BLD_BEACON_OF_LIGHTNING_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_BEACON_OF_LIGHTNING_SR</shortrollovertextid>
 		<icon>resources\spc\static_color\buildings\statue_major_god_icon.png</icon>
 		<animfile culture="greek">greek\buildings\statue_major_god\statue_major_god_greek.xml</animfile>
 		<animfile culture="egyptian">egyptian\buildings\statue_major_god\statue_major_god_egyptian.xml</animfile>
@@ -3984,9 +4228,9 @@
 		<maxhitpoints>750.0000</maxhitpoints>
 		<unitregen>15.0000</unitregen>
 		<los>35.0000</los>
-		<armor type="Hack" value="0.9900"></armor>
-		<armor type="Pierce" value="0.9900"></armor>
-		<armor type="Crush" value="0.9900"></armor>
+		<armor type="Hack" value="0.6900"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.3000"></armor>
 		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
 		<unittype>LogicalTypeBuildingsNotWalls</unittype>
 		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
@@ -4014,17 +4258,324 @@
 		<flag>HasGatherPoint</flag>
 		<flag>DisplayRange</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
-		<flag>NotRepairable</flag>
-		<command row="3" column="5">Delete</command>
+		<tactics>statue_of_lightning.tactics</tactics>
+		<protoaction>
+			<name>LightningAttack</name>
+			<rof>10.000000</rof>
+			<damage type="Divine">20.000000</damage>
+			<damagebonus type="HumanSoldier">5.000000</damagebonus>
+			<damagebonus type="AbstractVillager">5.000000</damagebonus>
+			<damagebonus type="AbstractSiegeWeapon">6.000000</damagebonus>
+			<damagebonus type="NavalUnit">7.5.000000</damagebonus>
+			<maxrange>35.000000</maxrange>
+			<projectile>ProjectileChainLightning</projectile>
+			<onhiteffect type="Attach" targetunittype="Unit" proto="VFXLightningWeaponsUnitImpact" duration="5.000000"></onhiteffect>
+		</protoaction>
+	</unit>
+	<unit name="BeaconOfTruth" mergeMode="add">
+		<displaynameid>STR_BLD_BEACON_OF_TRUTH_NAME</displaynameid>
+		<rollovertextid>STR_BLD_BEACON_OF_TRUTH_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_BEACON_OF_TRUTH_SR</shortrollovertextid>
+		<icon>resources\spc\static_color\buildings\statue_major_god_icon.png</icon>
+		<animfile culture="greek">greek\buildings\statue_major_god\statue_major_god_greek.xml</animfile>
+		<animfile culture="egyptian">egyptian\buildings\statue_major_god\statue_major_god_egyptian.xml</animfile>
+		<animfile culture="norse">norse\buildings\statue_major_god\statue_major_god_norse.xml</animfile>
+		<animfile culture="atlantean">atlantean\buildings\statue_major_god\statue_major_god_atlantean.xml</animfile>
+		<soundsetfile>egyptian\sfx\buildings\monument_to_villagers.xml</soundsetfile>
+		<obstructionradiusx>1.0000</obstructionradiusx>
+		<obstructionradiusz>1.0000</obstructionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>air</movementtype>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<unitregen>15.0000</unitregen>
+		<los>35.0000</los>
+		<armor type="Hack" value="0.6900"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.3000"></armor>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByCeaseFireBuildingSlow</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>MilitaryBuilding</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>statue_of_lightning.tactics</tactics>
+		<protoaction>
+			<name>LightningAttack</name>
+			<rof>10.000000</rof>
+			<damage type="Divine">20.000000</damage>
+			<damagebonus type="Unit">7.500000</damagebonus>
+			<damagebonus type="Building">10.000000</damagebonus>
+			<maxrange>35.000000</maxrange>
+			<projectile>ProjectilePetsuchosLazer</projectile>
+			<numberbounces>3</numberbounces>
+		</protoaction>
+	</unit>
+	<unit name="BeaconOfSun" mergeMode="add">
+		<displaynameid>STR_BLD_BEACON_OF_SUN_NAME</displaynameid>
+		<rollovertextid>STR_BLD_BEACON_OF_SUN_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_BEACON_OF_SUN_SR</shortrollovertextid>
+		<icon>resources\spc\static_color\buildings\statue_major_god_icon.png</icon>
+		<animfile culture="greek">greek\buildings\statue_major_god\statue_major_god_greek.xml</animfile>
+		<animfile culture="egyptian">egyptian\buildings\statue_major_god\statue_major_god_egyptian.xml</animfile>
+		<animfile culture="norse">norse\buildings\statue_major_god\statue_major_god_norse.xml</animfile>
+		<animfile culture="atlantean">atlantean\buildings\statue_major_god\statue_major_god_atlantean.xml</animfile>
+		<soundsetfile>egyptian\sfx\buildings\monument_to_villagers.xml</soundsetfile>
+		<obstructionradiusx>1.0000</obstructionradiusx>
+		<obstructionradiusz>1.0000</obstructionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>air</movementtype>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<unitregen>15.0000</unitregen>
+		<los>35.0000</los>
+		<armor type="Hack" value="0.6900"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.3000"></armor>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByCeaseFireBuildingSlow</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>MilitaryBuilding</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>statue_of_lightning.tactics</tactics>
+		<protoaction>
+			<name>LightningAttack</name>
+			<rof>0.100000</rof>
+			<damage type="Divine">4.000000</damage>
+			<damagebonus type="AbstractSiegeWeapon">4.000000</damagebonus>
+			<damagebonus type="HumanSoldier">2.000000</damagebonus>
+			<maxrange>35.000000</maxrange>
+			<projectile>ProjectileMirrorTowerLazer</projectile>
+			<onhiteffect type="Attach" targetunittype="Unit" proto="VFXNeZhaFire" duration="5.000000"></onhiteffect>
+		</protoaction>
+	</unit>
+	<unit name="BeaconOfSea" mergeMode="add">
+		<displaynameid>STR_BLD_BEACON_OF_SEA_NAME</displaynameid>
+		<rollovertextid>STR_BLD_BEACON_OF_SEA_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_BEACON_OF_SEA_SR</shortrollovertextid>
+		<icon>resources\spc\static_color\buildings\statue_major_god_icon.png</icon>
+		<animfile culture="greek">greek\buildings\statue_major_god\statue_major_god_greek.xml</animfile>
+		<animfile culture="egyptian">egyptian\buildings\statue_major_god\statue_major_god_egyptian.xml</animfile>
+		<animfile culture="norse">norse\buildings\statue_major_god\statue_major_god_norse.xml</animfile>
+		<animfile culture="atlantean">atlantean\buildings\statue_major_god\statue_major_god_atlantean.xml</animfile>
+		<soundsetfile>egyptian\sfx\buildings\monument_to_villagers.xml</soundsetfile>
+		<obstructionradiusx>1.0000</obstructionradiusx>
+		<obstructionradiusz>1.0000</obstructionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>air</movementtype>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<unitregen>15.0000</unitregen>
+		<los>35.0000</los>
+		<armor type="Hack" value="0.6900"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.3000"></armor>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByCeaseFireBuildingSlow</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>MilitaryBuilding</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
 		<tactics>statue_of_lightning.tactics</tactics>
 		<protoaction>
 			<name>LightningAttack</name>
 			<rof>4.000000</rof>
-			<damage type="Divine">125.000000</damage>
+			<damage type="Hack">80.000000</damage>
+			<damage type="Crush">40.000000</damage>
 			<damagebonus type="MythUnit">2.000000</damagebonus>
+			<damagebonus type="AbstractFlyingUnit">2.000000</damagebonus>
 			<maxrange>35.000000</maxrange>
+			<projectile>ProjectileQingLongAttackLazer</projectile>
+			<onhiteffect type="Spawn" proto="YingLongDeluge" amount="1"></onhiteffect>
+		</protoaction>
+	</unit>
+	<unit name="BeaconOfAffection" mergeMode="add">
+		<displaynameid>STR_BLD_BEACON_OF_AFFECTION_NAME</displaynameid>
+		<rollovertextid>STR_BLD_BEACON_OF_AFFECTION_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_BEACON_OF_AFFECTION_SR</shortrollovertextid>
+		<icon>resources\spc\static_color\buildings\statue_major_god_icon.png</icon>
+		<animfile>greek\buildings\statue_major_god\statue_major_god_greek.xml</animfile>
+		<soundsetfile>egyptian\sfx\buildings\monument_to_villagers.xml</soundsetfile>
+		<obstructionradiusx>1.0000</obstructionradiusx>
+		<obstructionradiusz>1.0000</obstructionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>air</movementtype>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<los>35.0000</los>
+		<armor type="Hack" value="0.6900"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.3000"></armor>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByCeaseFireBuildingSlow</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>MilitaryBuilding</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>statue_of_lightning.tactics</tactics>
+		<protoaction>
+			<name>LightningAttack</name>
+			<rof>0.100000</rof>
+			<damage type="Divine">0.100000</damage>
+			<maxrange>70.000000</maxrange>
 			<projectile>ProjectileChainLightning</projectile>
-			<numberbounces>4</numberbounces>
+			<onhiteffect type="Pull" targetunittype="Unit" radius="35.00000"></onhiteffect>
+			<active>1</active>
+		</protoaction>	
+	</unit>
+	<unit name="BeaconOfAmbition" mergeMode="add">
+		<displaynameid>STR_BLD_BEACON_OF_AMBITION_NAME</displaynameid>
+		<rollovertextid>STR_BLD_BEACON_OF_AMBITION_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_BEACON_OF_AMBITION_SR</shortrollovertextid>
+		<icon>resources\spc\static_color\buildings\statue_major_god_icon.png</icon>
+		<animfile culture="greek">greek\buildings\statue_major_god\statue_major_god_greek.xml</animfile>
+		<animfile culture="egyptian">egyptian\buildings\statue_major_god\statue_major_god_egyptian.xml</animfile>
+		<animfile culture="norse">norse\buildings\statue_major_god\statue_major_god_norse.xml</animfile>
+		<animfile culture="atlantean">atlantean\buildings\statue_major_god\statue_major_god_atlantean.xml</animfile>
+		<soundsetfile>egyptian\sfx\buildings\monument_to_villagers.xml</soundsetfile>
+		<obstructionradiusx>1.0000</obstructionradiusx>
+		<obstructionradiusz>1.0000</obstructionradiusz>
+		<impacttype>Stone</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>air</movementtype>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<unitregen>15.0000</unitregen>
+		<los>35.0000</los>
+		<armor type="Hack" value="0.6900"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.3000"></armor>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByCeaseFireBuildingSlow</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>MilitaryBuilding</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>area_slow.tactics</tactics>
+		<protoaction>
+			<name>BlessingSlowDownEnemyHumanUnitsMundane</name>
+		</protoaction>
+		<protoaction>
+			<name>BlessingSlowDownEnemyHumanUnitsRare</name>
+		</protoaction>
+		<protoaction>
+			<name>BlessingSlowDownEnemyHumanUnitsHeroic</name>
+		</protoaction>
+		<protoaction>
+			<name>BlessingSlowDownEnemyHumanUnitsMythical</name>
+		</protoaction>
+		<protoaction>
+			<name>BlessingSlowDownEnemyHumanUnitsDivine</name>
 		</protoaction>
 	</unit>
 
@@ -4039,17 +4590,18 @@
 		<obstructionradiusx>0.4900</obstructionradiusx>
 		<obstructionradiusz>0.4900</obstructionradiusz>
 		<impacttype>Unarmoured</impacttype>
-		<movementtype>land</movementtype>
+		<movementtype>amphibious</movementtype>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>80.0000</initialhitpoints>
 		<maxhitpoints>80.0000</maxhitpoints>
 		<maxvelocity>3.5000</maxvelocity>
 
 		<trainpoints>300</trainpoints>
+		<buildlimit>1</buildlimit>
 
 		<los>6.0000</los>
 		<initialresource resourcetype="Food">100.0000</initialresource>
-		<carrycapacity resourcetype="Food">500.0000</carrycapacity>
+		<carrycapacity resourcetype="Food">2000.0000</carrycapacity>
 		<resourcesubtype>meat</resourcesubtype>
 		<resourcedecay>0.3000</resourcedecay>
 		<workersoftlimit>7</workersoftlimit>
@@ -4083,6 +4635,11 @@
 		<command row="3" column="0">SetVillagerToGather</command>
 		<command row="3" column="1">ResourceUnitConstructGranary</command>
 		<tactics>animal_herdable.tactics</tactics>
+		<protoaction>
+			<name>AutoConvert</name>
+			<maxrange>12</maxrange>
+			<active>0</active>
+		</protoaction>
 		<protoaction>
 			<name>AutoGatherFood</name>
 			<rate type="Food">0.250000</rate>
@@ -6396,6 +6953,22 @@
         <target ignoretype="AbstractTitan"></target>
       </onhiteffect>
     </protoaction>
+	<protoaction>
+		<name>HeroRingOnSelf</name>
+		<type>Modify</type>
+		<modifyselfonly>1</modifyselfonly>
+		<persistent>1</persistent>
+		<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+		</protoaction>
+	<protoaction>
+		<name>HeroGlowOnSelf</name>
+		<type>Modify</type>
+		<modifyselfonly>1</modifyselfonly>
+		<persistent>1</persistent>
+		<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+		<modelattachmentbone>Spine</modelattachmentbone>
+	</protoaction>
+	
   </unit>
 	
 	<!--Naval///Special///Units-->
@@ -9319,6 +9892,7 @@
 		
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
 		
 		<unittype>Hero</unittype>
 		<unittype>HeroShadowUpgraded</unittype>
@@ -9348,33 +9922,12 @@
 		<flag>ObscuredByUnits</flag>
 		<flag>HideGarrisonFlag</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
-		<flag>HideStances</flag>
+		<flag>HideStances</flag>	
 		
 		<contain external="1">LogicalTypePickable</contain>
 
 		<command row="1" column="5">AchillesDismountedsToAchilles</command>
 		<tactics>greek_hero.tactics</tactics>
-		<protoaction>
-			<name>HandAttack</name>
-			<rof>1.000000</rof>
-			<damage type="Hack">18.000000</damage>
-			<damage type="Divine">4.00000</damage>
-			<damagebonus type="MythUnit">5.000000</damagebonus>
-			<damagebonus type="HumanSoldier">2.000000</damagebonus>
-			<maxrange>0.500000</maxrange>
-			<onhiteffect type="DamageOverTime" duration="5.000000">
-				<damage type="Divine">3.00000</damage>
-			</onhiteffect>
-		</protoaction>
-		<protoaction>
-			<name>RangedAttack</name>
-			<rof>2.000000</rof>
-			<damage type="Pierce">5.0000</damage>
-			<damagebonus type="MythUnit">8.000000</damagebonus>
-			<maxrange>12.000000</maxrange>
-			<projectile>ProjectileJavelinFlaming</projectile>
-			<active>0</active>
-		</protoaction>
 		<protoaction>
 			<name>Pickup</name>
 			<type>Pickup</type>
@@ -9386,14 +9939,6 @@
 			<type>DropOff</type>
 			<maxrange>1</maxrange>
 			<rate type="AbstractTemple">1.00000</rate>
-		</protoaction>
-		<protoaction>
-			<name>DelayedTransform</name>			
-    		<type>DelayedTransform</type>
-			<anim>Transform</anim>
-			<modifyduration>2500</modifyduration>
-			<modifyprotoid>Achilles</modifyprotoid>
-			<active>0</active>
 		</protoaction>
 	</unit>
 	<unit name="Chiron">
@@ -12127,6 +12672,16 @@
 			<autoretarget>1</autoretarget>
 			<canattackground>1</canattackground>
 		</protoaction>
+		<protoaction>
+			<name>DelugeAttack</name>
+			<rof>3.00000</rof>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>10.000000</maxrange>
+			<onhiteffect type="Spawn" proto="YingLongDeluge" amount="1">
+			</onhiteffect>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+		</protoaction>
 	</unit>
 	
 	<unit name="QiongQi">
@@ -12374,6 +12929,21 @@
 			<numberprojectiles>1</numberprojectiles>
 			<impacteffect>effects\impacts\fireball</impacteffect>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	<unit name="Constructor">
 		<displaynameid>STR_UNIT_CONSTRUCTOR_UNIT_NAME</displaynameid>
@@ -12414,7 +12984,6 @@
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
 		<unittype>LogicalTypeAutoAttackFocusBuildings</unittype>
 		<unittype>Unit</unittype>
-		<unittype>MilitaryUnit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>CountsTowardMilitaryScore</unittype>
 		<unittype>LogicalTypeValidBoltTarget</unittype>

@@ -313,6 +313,30 @@ ID = "STR_BLD_HOLOFENCE_GATE_NAME"   ;   Str = "Holofence Gate"
 ID = "STR_BLD_HOLOFENCE_GATE_SR"   ;   Str = "Powered Gate"
 ID = "STR_BLD_HOLOFENCE_GATE_LR"   ;   Str = "FutureTech Fortification Gate"
 
+ID = "STR_BLD_BEACON_OF_LIGHTNING_NAME"   ;   Str = "Beacon of Lightning"
+ID = "STR_BLD_BEACON_OF_LIGHTNING_SR"   ;   Str = "B.O.LIG"
+ID = "STR_BLD_BEACON_OF_LIGHTNING_LR"   ;   Str = "FutureTech Electrokinetic Defense System. Overseen by Nikola Tesla himself. Electrocutes unworthy"
+
+ID = "STR_BLD_BEACON_OF_TRUTH_NAME"   ;   Str = "Beacon of Truth"
+ID = "STR_BLD_BEACON_OF_TRUTH_SR"   ;   Str = "B.O.TR"
+ID = "STR_BLD_BEACON_OF_TRUTH_LR"   ;   Str = "FutureTech Illumokinetic Defense System. Overseen by Justice herself. Unveils the blinded"
+
+ID = "STR_BLD_BEACON_OF_SUN_NAME"   ;   Str = "Beacon of Sun"
+ID = "STR_BLD_BEACON_OF_SUN_SR"   ;   Str = "B.O.SUN"
+ID = "STR_BLD_BEACON_OF_SUN_LR"   ;   Str = "FutureTech Pyrokinetic Defense System. Overseen by August von Marquardt himself. Fires concentrated sunfire beam"
+
+ID = "STR_BLD_BEACON_OF_SEA_NAME"   ;   Str = "Beacon of Sea"
+ID = "STR_BLD_BEACON_OF_SEA_SR"   ;   Str = "B.O.SEA"
+ID = "STR_BLD_BEACON_OF_SEA_LR"   ;   Str = "FutureTech Hydrokinetic Defense System. Overseen by Lonnie Johnson himself. Absorbs and unleashes water blast via weathercontrol generator"
+
+ID = "STR_BLD_BEACON_OF_AFFECTION_NAME"   ;   Str = "Beacon of Affection"
+ID = "STR_BLD_BEACON_OF_AFFECTION_SR"   ;   Str = "B.O.AFF"
+ID = "STR_BLD_BEACON_OF_AFFECTION_LR"   ;   Str = "FutureTech Cerebral Defense System. Operated by elite psionics serving chosen by the God Emperor. Influences minds"
+
+ID = "STR_BLD_BEACON_OF_AMBITION_NAME"   ;   Str = "Beacon of Ambition"
+ID = "STR_BLD_BEACON_OF_AMBITION_SR"   ;   Str = "B.O.AMB"
+ID = "STR_BLD_BEACON_OF_AMBITION_LR"   ;   Str = "FutureTech Celerital Defense System. Overseen by August von Marquardt himself. Weakens motivation of enemies"
+
 ID = "STR_UNIT_SIEGE_TURRET_NAME"   ;   Str = "Siege Turret"
 ID = "STR_UNIT_SIEGE_TURRET_SR"   ;   Str = "Siege Turret"
 ID = "STR_UNIT_SIEGE_TURRET_LR"   ;   Str = "Siege Tower Entrenchment in a Defensive Position"

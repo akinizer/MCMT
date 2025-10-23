@@ -328,7 +328,8 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Superpig</target>
 			</effect>
-      <effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
+      
+      <effect type="Data" amount="4.50" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Superpig</target>
 			</effect>
 			
@@ -505,10 +506,12 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StellarGateway</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
-			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target>
-			</effect>
+			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TechBuilding</target></effect>
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TechBuilding</target></effect>
+
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Ecomarket</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_DwarvenForge</target></effect>	
 			
@@ -517,15 +520,22 @@
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StrategicVesselAssembly</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">AirCommand</target></effect>
+
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfLightning</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfTruth</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfSun</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfSea</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfAffection</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfAmbition</target></effect>
+
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Electrofence</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">HolofenceGate</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SonicDisruptorArray</target></effect>
       <effect type="Data" amount="0.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">SonicDisruptorArray</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Electrofence</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">HolofenceGate</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">WarpPortal</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfLightning</target></effect>
+
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">WarpPortal</target></effect>
 
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">OilRig</target></effect>
-			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
 			
@@ -856,9 +866,9 @@
 			<!-- Landlord Page 1 -->
 			<!--Clear-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="TechBuilding" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Ecomarket" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="TechBuilding" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="SonicDisruptorArray" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="SonicDisruptorArray" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Ecomarket" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<!--Assign-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Bastion" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="TempleOfPrimordials" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
@@ -919,9 +929,9 @@
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="AirCommand" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<!--Assign-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="TechBuilding" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Ecomarket" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="TechBuilding" row="1" column="1" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="SonicDisruptorArray" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="SonicDisruptorArray" row="1" column="2" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Ecomarket" row="1" column="2" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<!--Arrows-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" tech="MCMT_Page2" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" tech="MCMT_Page1" row="3" column="5" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>				
