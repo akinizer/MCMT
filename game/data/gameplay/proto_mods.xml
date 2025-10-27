@@ -103,6 +103,10 @@
 		<tech row="1" column="1">GoldenApples</tech>
 
 		<train row="3" column="1">Superpig</train>
+		<train row="3" column="2">Merchant</train>
+		<train row="3" column="3">MerchantFarmer</train>
+		<train row="3" column="4">MerchantHunter</train>
+		<train row="3" column="5">MerchantLumberjack</train>
 		
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
@@ -187,6 +191,384 @@
 		<cost resourcetype="Wood">175.000</cost>
 		<cost resourcetype="Population">3</cost>
 	</unit>	  
+	<unit name="Merchant">
+		<displaynameid>STR_UNIT_MERCHANT_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_MERCHANT_LR</rollovertextid>
+		<rollovertextid>STR_UNIT_MERCHANT_SR</rollovertextid>
+		<icon>resources\spc\player_color\units\prisoner_icon.png</icon>
+		<animfile>greek\units\economic\villager_greek\villager_greek.xml</animfile>
+		<soundsetfile>greek\vo\villager_greek\villager_greek.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<trainpoints>1.0</trainpoints>
+
+		<initialhitpoints>40.0000</initialhitpoints>
+		<maxhitpoints>40.0000</maxhitpoints>
+		<weightclass>4</weightclass>
+		<maxvelocity>3.8000</maxvelocity>
+		<los>8.0000</los>
+		<armor type="Hack" value="0.0500"></armor>
+		<armor type="Pierce" value="0.1500"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>AbstractVillager</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeNotEconomicOrMilitaryUnit</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>handattack.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Hack">6.000000</damage>
+			<damagebonus type="AbstractVillager">2.50000</damagebonus>
+			<maxrange>0.500000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+	  </unit>
+	  <unit name="MerchantFarmer">
+		<displaynameid>STR_UNIT_MERCHANTFARMER_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_CITIZEN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_CITIZEN_SR</shortrollovertextid>
+		<icon>resources\atlantean\player_color\units\villager_atlantean_icon.png</icon>
+		<animfile>atlantean\units\economic\villager_atlantean\villager_atlantean.xml</animfile>
+		<soundsetfile>atlantean\vo\villager_atlantean\villager_atlantean.xml</soundsetfile>
+
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>1.0000</selectionradiusx>
+		<selectionradiusz>1.2500</selectionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>Civilian</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>100.0000</initialhitpoints>
+		<maxhitpoints>100.0000</maxhitpoints>
+		<trainpoints>25.0000</trainpoints>
+		<weightclass>4</weightclass>
+		<populationcount>5</populationcount>
+		<maxvelocity>3.8000</maxvelocity>
+		<los>16.0000</los>
+		<cost resourcetype="Food">85.0000</cost>
+		<cost resourcetype="Wood">15.0000</cost>
+		<carrycapacity resourcetype="Food">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Wood">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Gold">1.0000</carrycapacity>
+		<armor type="Hack" value="0.2500"></armor>
+		<armor type="Pierce" value="0.3500"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>EconomicUnit</unittype>
+		<unittype>AbstractVillager</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>ValidIdleVillager</unittype>
+		<unittype>AffectedByTownBell</unittype>
+		<unittype>DisplayQueue</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeVillagerNotHero</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeAffectedByValor</unittype>
+		<unittype>EconomicUpgraded</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<train row="0" column="0">Farm</train>
+
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>AutoTrainable</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>NoIdleActions</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<command row="3" column="2">SeekShelter</command>
+		<command row="3" column="3">Repair</command>
+		<command row="3" column="4">AttackMove</command>
+		<tactics>mcmt_merchantfarmer.tactics</tactics>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">20.000000</damage>
+			<maxrange>14.000000</maxrange>
+			<projectille>ProjectileArrowNotFlaming</projectille>
+		</protoaction>
+		<protoaction>
+			<name>Build</name>
+			<rate type="Farm">1.2500</rate>
+		</protoaction>
+		<protoaction>
+			<name>Repair</name>
+			<rate type="Farm">0.3750</rate>
+		</protoaction>
+		<protoaction>
+			<name>Gather</name>
+			<rate type="BerryBush">1.200000</rate>
+			<rate type="AbstractFarm">1.050000</rate>				
+		</protoaction>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Hack">10.000000</damage>
+			<damagebonus type="AbstractVillager">2.50000</damagebonus>
+			<maxrange>0.800000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+	  </unit>
+	  <unit name="MerchantLumberjack">
+		<displaynameid>STR_UNIT_MERCHANTLUMBERJACK_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_CITIZEN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_CITIZEN_SR</shortrollovertextid>
+		<icon>resources\atlantean\player_color\units\villager_atlantean_icon.png</icon>
+		<animfile>atlantean\units\economic\villager_atlantean\villager_atlantean.xml</animfile>
+		<soundsetfile>atlantean\vo\villager_atlantean\villager_atlantean.xml</soundsetfile>
+
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>1.0000</selectionradiusx>
+		<selectionradiusz>1.2500</selectionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>Civilian</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>100.0000</initialhitpoints>
+		<maxhitpoints>100.0000</maxhitpoints>
+		<trainpoints>25.0000</trainpoints>
+		<weightclass>4</weightclass>
+		<populationcount>5</populationcount>
+		<maxvelocity>3.8000</maxvelocity>
+		<los>16.0000</los>
+		<cost resourcetype="Food">85.0000</cost>
+		<cost resourcetype="Wood">15.0000</cost>
+		<carrycapacity resourcetype="Food">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Wood">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Gold">1.0000</carrycapacity>
+		<armor type="Hack" value="0.2500"></armor>
+		<armor type="Pierce" value="0.3500"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>EconomicUnit</unittype>
+		<unittype>AbstractVillager</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>ValidIdleVillager</unittype>
+		<unittype>AffectedByTownBell</unittype>
+		<unittype>DisplayQueue</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeVillagerNotHero</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeAffectedByValor</unittype>
+		<unittype>EconomicUpgraded</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>AutoTrainable</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>NoIdleActions</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<command row="1" column="0">VillagerAtlanteanToHero</command>
+		<command row="3" column="2">SeekShelter</command>
+		<command row="3" column="3">Repair</command>
+		<command row="3" column="4">AttackMove</command>
+		<tactics>mcmt_merchantlumberjack.tactics</tactics>
+		<protoaction>
+			<name>Hunting</name>
+			<rate type="Tree">1.000000</rate>
+		</protoaction>
+		<protoaction>
+			<name>ChopAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Hack">8.000000</damage>
+		</protoaction>
+		<protoaction>
+			<name>Gather</name>
+			<rate type="WoodResource">1.500000</rate>
+		</protoaction>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Hack">10.000000</damage>
+			<damagebonus type="AbstractVillager">2.50000</damagebonus>
+			<maxrange>0.800000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+	  </unit>
+	  <unit name="MerchantHunter">
+		<displaynameid>STR_UNIT_MERCHANTHUNTER_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_CITIZEN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_CITIZEN_SR</shortrollovertextid>
+		<icon>resources\atlantean\player_color\units\villager_atlantean_icon.png</icon>
+		<animfile>atlantean\units\economic\villager_atlantean\villager_atlantean.xml</animfile>
+		<soundsetfile>atlantean\vo\villager_atlantean\villager_atlantean.xml</soundsetfile>
+
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>1.0000</selectionradiusx>
+		<selectionradiusz>1.2500</selectionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>Civilian</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>100.0000</initialhitpoints>
+		<maxhitpoints>100.0000</maxhitpoints>
+		<trainpoints>25.0000</trainpoints>
+		<weightclass>4</weightclass>
+		<populationcount>5</populationcount>
+		<maxvelocity>3.8000</maxvelocity>
+		<los>16.0000</los>
+		<cost resourcetype="Food">85.0000</cost>
+		<cost resourcetype="Wood">15.0000</cost>
+		<carrycapacity resourcetype="Food">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Wood">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Gold">1.0000</carrycapacity>
+		<armor type="Hack" value="0.2500"></armor>
+		<armor type="Pierce" value="0.3500"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>EconomicUnit</unittype>
+		<unittype>AbstractVillager</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>ValidIdleVillager</unittype>
+		<unittype>AffectedByTownBell</unittype>
+		<unittype>DisplayQueue</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeVillagerNotHero</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeAffectedByValor</unittype>
+		<unittype>EconomicUpgraded</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>AutoTrainable</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>NoIdleActions</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<command row="1" column="0">VillagerAtlanteanToHero</command>
+		<command row="3" column="2">SeekShelter</command>
+		<command row="3" column="3">Repair</command>
+		<command row="3" column="4">AttackMove</command>
+		<tactics>mcmt_merchanthunter.tactics</tactics>
+		<protoaction>
+			<name>Hunting</name>
+			<rate type="Herdable">1.000000</rate>
+			<rate type="Huntable">1.000000</rate>
+			<rate type="NonConvertableHerdable">1.000000</rate>
+			<damagebonus type="Huntable">2.50000</damagebonus>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">20.000000</damage>
+			<maxrange>20.000000</maxrange>
+			<projectile>ProjectileArrowNotFlaming</projectile>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>Gather</name>
+			<rate type="Huntable">1.500000</rate>
+			<rate type="Herdable">1.350000</rate>
+			<rate type="NonConvertableHerdable">1.350000</rate>
+		</protoaction>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Hack">10.000000</damage>
+			<damagebonus type="AbstractVillager">2.50000</damagebonus>
+			<maxrange>0.800000</maxrange>			
+		</protoaction>
+	  </unit>
 	  <unit name="TheAttractor">
 		<buildpoints>20.0000</buildpoints>
 	  
@@ -467,7 +849,7 @@
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
 		<unittype>LogicalTypeNorseSoldierThatBuilds</unittype>
 		<unittype>LogicalTypeNotEconomicOrMilitaryUnit</unittype>
-	
+
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
 		<flag>ShowGarrisonButton</flag>
@@ -693,7 +1075,6 @@
 			<maxrange>18.000000</maxrange>
 			<projectile>ProjectileBoulder</projectile>
 			<onhiteffect type="Throw">
-			<target attacktype="AbstractFishingShip"></target>
 			<target attacktype="AbstractVillager"></target>
 		  </onhiteffect>
 			<damagearea>3</damagearea>
@@ -1122,7 +1503,7 @@
 			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="AbstractVillager"></target>
-			<target attacktype="NavalUnit"></target>
+			<target attacktype="AbstractWarship"></target>
 		  </onhiteffect>	
 		</protoaction>
 		<protoaction>
@@ -1255,7 +1636,7 @@
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="AbstractVillager"></target>
 			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
-			<target attacktype="NavalUnit"></target>
+			<target attacktype="AbstractWarship"></target>
 			<target attacktype="Huntable"></target>
 		  </onhiteffect>	
 		</protoaction>
@@ -1455,7 +1836,6 @@
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
-		<unittype>HumanSoldier</unittype>
 		<unittype>Hero</unittype>
 		<unittype>MinorHero</unittype>
 		<unittype>HeroShadowUpgraded</unittype>		
@@ -1548,7 +1928,6 @@
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractInfantry</unittype>
-		<unittype>HumanSoldier</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
 		<unittype>Hero</unittype>
 		<unittype>MinorHero</unittype>
@@ -1638,7 +2017,6 @@
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
-		<unittype>HumanSoldier</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
 		<unittype>AbstractSiegeWeapon</unittype>
@@ -1806,9 +2184,6 @@
 		  <onhiteffect type="Throw">
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="AbstractVillager"></target>
-			<target attacktype="AbstractInfantry"></target>
-			<target attacktype="AbstractCavalry"></target>
-			<target attacktype="AbstractArcher"></target>
 		  </onhiteffect>
 		</protoaction>
 		<protoaction>
@@ -1852,15 +2227,17 @@
 		</protoaction>
 	</unit>
 	<unit name="EstablishmentAssistProbe">
+		<!--
 		<displaynameid>STR_UNIT_EAP_NAME</displaynameid>
 		<rollovertextid>STR_UNIT_EAP_LR</rollovertextid>
 		<shortrollovertextid>STR_UNIT_EAP_SR</shortrollovertextid>
 		<icon>resources\chinese\player_color\units\sky_lantern_icon.png</icon>
 		<animfile>chinese\units\attachments\sky_lantern\sky_lantern.xml</animfile>
-
 		<soundsetfile>chinese\vo\sky_lantern\sky_lantern.xml</soundsetfile>
+
 		<obstructionradiusx>0.9900</obstructionradiusx>
 		<obstructionradiusz>0.9900</obstructionradiusz>
+		
 		<selectionradiusx>0.7500</selectionradiusx>
 		<selectionradiusz>1.0000</selectionradiusz>
 
@@ -1896,6 +2273,7 @@
 		<unittype>LogicalTypeHealed</unittype>
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
 		<unittype>LogicalTypeGarrisonInShips</unittype>
 		<unittype>CountsTowardEconomicScore</unittype>
 		<unittype>LogicalTypeConvertsHerds</unittype>
@@ -1934,6 +2312,95 @@
 		<protoaction>
 			<name>Build</name>
 			<type>Build</type>
+			<rate type="SonicDisruptorArray">1.000000</rate>
+			<rate type="BeaconOfLightning">1.000000</rate>
+			<rate type="BeaconOfSun">1.000000</rate>
+			<rate type="BeaconOfSea">1.000000</rate>
+			<rate type="BeaconAffection">1.000000</rate>
+			<rate type="BeaconOfAmbition">1.000000</rate>
+			<rate type="Electrofence">1.000000</rate>
+			<rate type="HolofenceGate">1.000000</rate>
+			<rate type="WarpPortal">1.000000</rate>
+			<maxrange>1.0</maxrange>
+		</protoaction>
+	-->
+		<displaynameid>STR_UNIT_EAP_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_EAP_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_EAP_SR</shortrollovertextid>
+		<icon>resources\chinese\player_color\units\sky_lantern_icon.png</icon>
+		<animfile>chinese\units\attachments\sky_lantern\sky_lantern.xml</animfile>
+    	<soundsetfile>chinese\vo\sky_lantern\sky_lantern.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>Civilian</unitaitype>
+		<movementtype>amphibious</movementtype>
+		<turnrate>9.0000</turnrate>
+
+		<initialhitpoints>30.0000</initialhitpoints>
+		<maxhitpoints>30.0000</maxhitpoints>
+		<trainpoints>15</trainpoints>
+		<weightclass>1</weightclass>
+		<populationcount>1</populationcount>
+		<maxvelocity>3.0000</maxvelocity>
+		<los>25.0000</los>
+
+		<cost resourcetype="Gold">20.0</cost>
+		<cost resourcetype="Favor">5.0</cost>
+		<armor type="Hack" value="0.1500"></armor>
+		<armor type="Pierce" value="0.3000"></armor>
+		<armor type="Crush" value="0.8000"></armor>	
+		<!---->
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>EconomicUnit</unittype>
+		<unittype>AbstractVillager</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>ValidIdleVillager</unittype>
+		<unittype>AffectedByTownBell</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeVillagerNotHero</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>EconomicUpgraded</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>AutoTrainable</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>NoIdleActions</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>TieToWaterSurface</flag>
+
+		<protoaction>
+			<name>Build</name>
+			<type>Build</type>
+			<anim>Birth</anim>
 			<rate type="SonicDisruptorArray">1.000000</rate>
 			<rate type="BeaconOfLightning">1.000000</rate>
 			<rate type="BeaconOfSun">1.000000</rate>
@@ -2028,7 +2495,6 @@
 			<onhiteffect type="Snare" duration="3.00" rate="0.50"></onhiteffect>
 		  	<onhiteffect type="Stun" duration="3.00"></onhiteffect>
 		</protoaction>
-		<!-- Godpower Pestilence as Attack Effect Ability-->
 		<protoaction>
 			<name>ChargedRangedAttack</name>
 			<rof>1.000000</rof>
@@ -3957,6 +4423,21 @@
 		  <onhiteffect type="Attach" targetunittype="Unit" proto="VFXFire" attachbone="spine" duration="5.000000"></onhiteffect>
 		  <onhiteffect type="Attach" targetunittype="Unit" proto="VFXChaos" attachbone="vfx_top" duration="5.000000"></onhiteffect>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	<unit name="SonicDisruptorArray">
 		<displaynameid>STR_BLD_SONICDISRUPTORARRAY_NAME</displaynameid>
@@ -5069,6 +5550,21 @@
 			<rate type="Favor">0.030000</rate>
 			<persistent>1</persistent>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	
 	<unit name="VolstaggAwakened">
@@ -5491,6 +5987,21 @@
 		  <onhiteffect type="TreeFlatten" targetunittype="Tree">
 		  </onhiteffect>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	
 	<unit name="FenrisulfrAwakened">
@@ -5588,6 +6099,21 @@
 			<damageflags>Nature|Enemy</damageflags>
 			<maxrange>10.000000</maxrange>			
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	
 	<unit name="Grootia">
@@ -5684,6 +6210,13 @@
 			<damagebonus type="AbstractTitan">10.000000</damagebonus>
 			<maxrange>2.000000</maxrange>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+		</protoaction> 
 	</unit>
 	
 	<unit name="Earthshaker">
@@ -5812,6 +6345,13 @@
 		  <damageflags>Nature|Enemy</damageflags>
 		  <damagebonus type="MilitaryUnit">8.000000</damagebonus>
 		  <maxrange>10.000000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
 		</protoaction>
 	</unit>
 	
@@ -6845,6 +7385,21 @@
 		  <numberprojectiles>5</numberprojectiles>
 		  <volleymode></volleymode>
 		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
 	</unit>
 	
 	<unit name="WindRider">	
@@ -6902,7 +7457,6 @@
 	<unittype>AbstractArcher</unittype>
 	<unittype>ArcherLineUpgraded</unittype>
 	<unittype>AbstractScout</unittype>	
-    <unittype>HumanSoldier</unittype>	
 	
     <unittype>Hero</unittype>	
     <unittype>MinorHero</unittype>	   
@@ -7949,6 +8503,21 @@
 			<rate type="Unit">0.050000</rate>
 		</scalebycontainedunittype>
  	 </protoaction>
+	 <protoaction>
+		<name>HeroRingOnSelf</name>
+		<type>Modify</type>
+		<modifyselfonly>1</modifyselfonly>
+		<persistent>1</persistent>
+		<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+		</protoaction>
+	<protoaction>
+		<name>HeroGlowOnSelf</name>
+		<type>Modify</type>
+		<modifyselfonly>1</modifyselfonly>
+		<persistent>1</persistent>
+		<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+		<modelattachmentbone>Spine</modelattachmentbone>
+	</protoaction>
   </unit>
   <unit name="OilRigPacked">
     <displaynameid>STR_BLD_OILRIGPACKED_NAME</displaynameid>
@@ -9281,6 +9850,7 @@
 	</unit>
 	
 	<unit name="Petsuchos">
+		<displaynameid>STR_UNIT_NILECROCODILE_NAME</displaynameid>
 		<unittype>MilitaryUnit</unittype>
 		<flag>TieToWaterSurface</flag>
 		<flag>AmphibiousBirth</flag>
@@ -9846,39 +10416,47 @@
 			<active>0</active>
 		</protoaction>
 	</unit>
-	<unit name="AchillesDismounted">
+	<unit name="AchillesDismounted">	
 		<displaynameid>STR_UNIT_ACHILLES_NAME</displaynameid>
 		<rollovertextid>STR_UNIT_ACHILLES_LR</rollovertextid>
 		<shortrollovertextid>STR_UNIT_ACHILLES_SR</shortrollovertextid>
-		<soundsetfile>greek\vo\achilles\achilles.xml</soundsetfile>
-		
 		<icon>resources\special\regent_icon.png</icon>
 		<animfile>shared\units\regent\regent.xml</animfile>
+		<soundsetfile>greek\vo\achilles\achilles.xml</soundsetfile>
 		<minimapicon>ui\minimap\minimap_hero</minimapicon>
-		
-		<obstructionradiusx>0.7400</obstructionradiusx>
-		<obstructionradiusz>0.7400</obstructionradiusz>
-		<impacttype>Armored</impacttype>
+
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>16.0000</autoattackrange>
 		<movementtype>land</movementtype>
 		<turnrate>18.0000</turnrate>
-		<trainpoints>1.0</trainpoints>
-		
-		<weightclass>5</weightclass>
+
+		<initialhitpoints>1.0000</initialhitpoints>
+		<maxhitpoints>1.0000</maxhitpoints>
+		<trainpoints>5.0000</trainpoints>
+		<initialshieldpoints>100</initialshieldpoints>
+		<maxshieldpoints>100</maxshieldpoints>
+		<unitshieldregen>5.0000</unitshieldregen>
+
+		<buildlimit>1</buildlimit>
+		<weightclass>7</weightclass>
+		<maxcontained>1</maxcontained>
+		<populationcount>2</populationcount>
 		<maxvelocity>4.8000</maxvelocity>
 		<los>16.0000</los>
-		
-		<armor type="Hack" value="0.6400"></armor>
-		<armor type="Pierce" value="0.8500"></armor>
-		<armor type="Crush" value="0.6900"></armor>
-		
-		<initialshieldpoints>300</initialshieldpoints>
-		<maxshieldpoints>300</maxshieldpoints>
-		<unitshieldregen>5</unitshieldregen>
-		
-		<initialhitpoints>1.0000</initialhitpoints>
-		<maxhitpoints>1.0000</maxhitpoints>		
-		
+		<sharedselectionunittypes>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<cost resourcetype="Gold">100.0000</cost>
+		<cost resourcetype="Favor">5.0000</cost>
+		<armor type="Hack" value="0.7800">
+		</armor>
+		<armor type="Pierce" value="0.9000">
+		</armor>
+		<armor type="Crush" value="0.9900">
+		</armor>
 		<unittype>LogicalTypeNeededForVictory</unittype>
 		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
 		<unittype>LogicalTypeLandMilitary</unittype>
@@ -9889,15 +10467,16 @@
 		<unittype>LogicalTypeHandUnitsAttack</unittype>
 		<unittype>LogicalTypeRangedUnitsAttack</unittype>
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
-		
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
-		
 		<unittype>Hero</unittype>
 		<unittype>HeroShadowUpgraded</unittype>
-		<unittype>MajorHero</unittype>
-		
+		<unittype>MajorHero</unittype>		
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
 		
@@ -9907,27 +10486,43 @@
 		<unittype>LogicalTypeValidMeteorTarget</unittype>
 		<unittype>LogicalTypeValidTornadoAttack</unittype>
 		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
 		<unittype>LogicalTypeValidSpyTarget</unittype>
 		<unittype>LogicalTypeValidFrostTarget</unittype>
-		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
 		<unittype>CountsTowardMilitaryScore</unittype>
 		<unittype>LogicalTypeFindMilitaryHero</unittype>
-		<unittype>LogicalTypeNotEconomicOrMilitaryUnit</unittype>
-		
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
 		<flag>ShowGarrisonButton</flag>
 		<flag>DontRotateObstruction</flag>
 		<flag>ObscuredByUnits</flag>
+		<flag>RotateInPlace</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
 		<flag>HideGarrisonFlag</flag>
+		<flag>HasDefaultAttack</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
-		<flag>HideStances</flag>	
-		
+		<flag>SplitQueue</flag>
 		<contain external="1">LogicalTypePickable</contain>
-
-		<command row="1" column="5">AchillesDismountedsToAchilles</command>
 		<tactics>greek_hero.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>3.000000</rof>
+			<damage type="Hack">9.00000</damage>
+			<damagebonus type="MythUnit">4.000000</damagebonus>
+			<maxrange>0.750000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Pierce">16.000000</damage>
+			<damagebonus type="MythUnit">1.500000</damagebonus>
+			<maxrange>20.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
 		<protoaction>
 			<name>Pickup</name>
 			<type>Pickup</type>
@@ -12885,8 +13480,9 @@
 		<unittype>Ranged</unittype>
 		<unittype>AbstractArcher</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
-		<unittype>HumanSoldier</unittype>
 		<unittype>Hero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>MinorHero</unittype>
 		
 		<unittype>LogicalTypeConvertsHerds</unittype>
 		<unittype>LogicalTypeEarthquakeAttack</unittype>

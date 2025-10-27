@@ -10,18 +10,18 @@
 		<ability>AbilityMinotaur<chargetimeasrof>1</chargetimeasrof></ability>
 	</Landlord>
 
-	<!-- TODO /// MCMT New God Powers
-	<ability>MCMT_Meteor<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-	<ability>MCMT_LightningStorm<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
-	<ability>MCMT_Earthquake<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>	
-	-->
-
+	<!-- Economic Units-->
+	<TravelerOxCart>
+		<ability>Heal<actioncommand>true</actioncommand></ability>
+		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</TravelerOxCart>
+	
 	<!-- FutureTech Units-->
 	<Electrofence>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
-	</Electrofence>
-	 
-	<!-- CyberTech Egyptian Units-->
+	</Electrofence>	 
+	
+	<!--KingdomTech Units-->
 	<Noah>
 		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
 		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
@@ -29,14 +29,18 @@
 		<ability>PassiveHeka<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</Noah>
+	
+	<!-- CyberTech Egyptian Units-->
 	<SiegeTower>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 	</SiegeTower>
+	
 	<NukeCannon>
 		<ability>PassiveNeZhaWheel<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
     	<ability>AbilityFafnirBillowingSmog<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 	</NukeCannon>
+	
 	<NukeCannonDeployed>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></NukeCannonDeployed>
 	<FireArcher>
@@ -51,16 +55,15 @@
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></WuzuJavelineer>
 	<WuzuJavelineerSandbag>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability></WuzuJavelineerSandbag>
-
-	<!-- CyberTech Norse Units-->
-
-	<!-- CyberTech Manor Units -->
+	
+		<!-- Bastion Elite Units -->
 	<Farseer>	
 		<ability>AbilityEgyptianHeal<actioncommand>true</actioncommand></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveNaturesEyes<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveHamask<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</Farseer>
+	
 	<Conan>
 		<ability>Bronze<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
 		<ability>FlamingWeapons<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
@@ -73,48 +76,43 @@
 		<ability>PassiveHamask<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveBattleFrenzy<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveSerratedBlades<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	</Conan>
+	</Conan>	
 	
 	<Hitman>
 		<ability>Heal<actioncommand>true</actioncommand></ability>
 		<ability>AbilityDraugr<chargetimeasrof>1</chargetimeasrof></ability>
 	</Hitman>
-	<MatsuriYurio>
+	
+	<WindRider>
+		<ability>AbilityWhiteHorseCavalry<chargetimeasrof>1</chargetimeasrof></ability>
+		<ability>PassiveLastStand<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	 </WindRider>
+	
+	 <MatsuriYurio>
 		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
 		<ability>AbilityPsionicDecimatorSuperweapon<rof>1</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-		<!--<ability>MCMT_AbstractUnitTransform<rof>10</rof><castonself>true</castonself><noautocast>true</noautocast></ability>-->
 	</MatsuriYurio>
+	
 	<MatsuriAzula>
 		<ability>AbilityEmpower<actioncommand>true</actioncommand><noautocast>true</noautocast></ability>
 		<ability>AbilityPsionicLevitation<rof>40</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</MatsuriAzula>
-
+	
+	<!--Temple of Primordials and Constructions of Hephaestos-->
 	<Worldbreaker>
 		<ability>AbilityTsunamiGenerator<rof>60</rof><actioncommand>true</actioncommand><noautocast>false</noautocast></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>AbilityKastorCharisma<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	</Worldbreaker>
-	<OilRigPacked>
-		<ability>MCMT_AbstractUnitTransform<rof>40</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
-	</OilRigPacked>
-	
+	</Worldbreaker>	
+
 	<Earthshaker>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</Earthshaker>
-	
-	<TravelerOxCart>
-		<ability>Heal<actioncommand>true</actioncommand></ability>
-		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	</TravelerOxCart>
-	<WindRider>
-		<ability>AbilityWhiteHorseCavalry<chargetimeasrof>1</chargetimeasrof></ability>
-		<ability>PassiveLastStand<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
-	 </WindRider>
-	
+
 	<ThorDescended>
 		<ability>AbilityTitan<chargetimeasrof>1</chargetimeasrof></ability>
 		<ability>PassiveTitanicStature<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
@@ -152,6 +150,11 @@
 		<ability>Heal<actioncommand>true</actioncommand></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</MCMT_HuangZhaowuWife>
+
+	<!--Strategical Naval Assembly-->
+	<OilRigPacked>
+		<ability>MCMT_AbstractUnitTransform<rof>40</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</OilRigPacked>
 	
 	<!-- /////// Existing Unit Override ///////// -->
 	

@@ -1,0 +1,63 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_BUILD">Build</name>
+    <type>Build</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+    <rate type="AbstractFarm">0.8</rate>
+    <typedanim type="AbstractFarm">Sow</typedanim>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_REPAIR">Repair</name>
+    <type>Repair</type>
+    <anim>Build</anim>
+    <maxrange>0.2</maxrange>
+    <rate type="AbstractFarm">0.8</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>0</maxspread>
+    <trackrating>99.0</trackrating>
+    <unintentionaldamagemultiplier>0</unintentionaldamagemultiplier>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_GATHER">Gather</name>
+    <type>Gather</type>
+    <maxrange>0.5</maxrange>
+    <rate type="AbstractFarm">1.0</rate>
+    <rate type="BerryBush">1.0</rate>
+    <rate type="Dropsite">1.0</rate>
+    <typedmaxrange type="Dropsite">1.0</typedmaxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <maxrange>1</maxrange>
+    <rate type="MilitaryUnit">1.0</rate>
+    <rate type="Building">1.0</rate>
+    <onhiteffect type="Snare" duration="2" rate="0.85"></onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name>SmartDropsite</name>
+    <type>SmartDropsite</type>
+    <maxrange>2</maxrange>
+    <rate type="Dropsite">1.0</rate>
+  </action>
+  <tactic>Default
+    <action priority="100">RangedAttack</action>
+    <action priority="90">HandAttack</action>
+    <action>Build</action><action>Repair</action>
+    <action>SmartDropsite</action>
+    <attackresponsetype>LogicalTypeVillagersAttackResponse</attackresponsetype><attacktype>LogicalTypeVillagersAttack</attacktype><attackmovetype>LogicalTypeHandUnitsAutoAttack</attackmovetype></tactic>
+</tactics>

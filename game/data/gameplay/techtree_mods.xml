@@ -190,7 +190,7 @@
 			<effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
 				<target type="ProtoUnit">Landlord</target>
 			</effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
+			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Landlord</target>
 			</effect>
 
@@ -335,14 +335,21 @@
 			
 				<!--Economic Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">TravelerOxWagon</target>
-			</effect>
+				<target type="ProtoUnit">TravelerOxWagon</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">TravelerOxWagon</target>
-			</effect>			
+				<target type="ProtoUnit">TravelerOxWagon</target></effect>			
 			<effect type="Data" action="Heal" amount="1.33" unittype="LogicalTypeHealed" subtype="WorkRate" relativity="BasePercent">
 				<target type="ProtoUnit">TravelerOxWagon</target>
-			</effect>
+      </effect>
+    
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Merchant</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">MerchantHunter</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">MerchantFarmer</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">MerchantLumberjack</target></effect>
 	
 				<!--Gods and Mythical Beasts-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
