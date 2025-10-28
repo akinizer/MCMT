@@ -102,11 +102,12 @@
 		<tech row="1" column="0">WinterHarvest</tech>
 		<tech row="1" column="1">GoldenApples</tech>
 
-		<train row="3" column="1">Superpig</train>
-		<train row="3" column="2">Merchant</train>
-		<train row="3" column="3">MerchantFarmer</train>
-		<train row="3" column="4">MerchantHunter</train>
-		<train row="3" column="5">MerchantLumberjack</train>
+		<train row="3" column="0">Superpig</train>
+		<train row="3" column="1">Merchant</train>
+		<train row="3" column="2">MerchantFarmer</train>
+		<train row="3" column="3">MerchantHunter</train>
+		<train row="3" column="4">MerchantLumberjack</train>
+		<train row="3" column="5">MerchantFisherman</train>
 		
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
@@ -196,8 +197,9 @@
 		<rollovertextid>STR_UNIT_MERCHANT_LR</rollovertextid>
 		<rollovertextid>STR_UNIT_MERCHANT_SR</rollovertextid>
 		<icon>resources\spc\player_color\units\prisoner_icon.png</icon>
-		<animfile>greek\units\economic\villager_greek\villager_greek.xml</animfile>
-		<soundsetfile>greek\vo\villager_greek\villager_greek.xml</soundsetfile>
+		<animfile>spc\units\prisoner\prisoner.xml</animfile>
+    	<soundsetfile>spc\vo\prisoner\prisoner.xml</soundsetfile>
+
 		<obstructionradiusx>0.4900</obstructionradiusx>
 		<obstructionradiusz>0.4900</obstructionradiusz>
 		<impacttype>Unarmoured</impacttype>
@@ -238,6 +240,7 @@
 		<flag>ObscuredByUnits</flag>
 		<flag>CommonCommands</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
+
 		<tactics>handattack.tactics</tactics>
 		<protoaction>
 			<name>HandAttack</name>
@@ -246,6 +249,13 @@
 			<damagebonus type="AbstractVillager">2.50000</damagebonus>
 			<maxrange>0.500000</maxrange>
 			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>DelayedTransform</name>			
+    		<type>DelayedTransform</type>
+			<anim>Transform</anim>
+			<modifyduration>2500</modifyduration>
+			<modifyprotoid>Militia</modifyprotoid>
 		</protoaction>
 	  </unit>
 	  <unit name="MerchantFarmer">
@@ -312,7 +322,8 @@
 		<unittype>LogicalTypeHealed</unittype>
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
 		<unittype>LogicalTypeValidTraitorTarget</unittype>
-		<train row="0" column="0">Farm</train>
+		<train row="1" column="0">SeasonalFarm</train>
+		<train row="1" column="1">IndustrialFarm</train>
 
 		<flag>CollidesWithProjectiles</flag>
 		<flag>CorpseDecays</flag>
@@ -325,9 +336,7 @@
 		<flag>NoIdleActions</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NonAutoFormedUnit</flag>
-		<command row="3" column="2">SeekShelter</command>
-		<command row="3" column="3">Repair</command>
-		<command row="3" column="4">AttackMove</command>
+		
 		<tactics>mcmt_merchantfarmer.tactics</tactics>
 		<protoaction>
 			<name>RangedAttack</name>
@@ -338,16 +347,19 @@
 		</protoaction>
 		<protoaction>
 			<name>Build</name>
-			<rate type="Farm">1.2500</rate>
+			<rate type="SeasonalFarm">1.2500</rate>
+			<rate type="IndustrialFarm">1.2500</rate>
 		</protoaction>
 		<protoaction>
 			<name>Repair</name>
-			<rate type="Farm">0.3750</rate>
+			<rate type="SeasonalFarm">0.3750</rate>
+			<rate type="IndustrialFarm">0.3750</rate>
 		</protoaction>
 		<protoaction>
 			<name>Gather</name>
-			<rate type="BerryBush">1.200000</rate>
-			<rate type="AbstractFarm">1.050000</rate>				
+			<rate type="BerryBush">1.200000</rate>				
+			<rate type="AbstractFarm">1.200000</rate>
+			<dropsitegathering>1</dropsitegathering>
 		</protoaction>
 		<protoaction>
 			<name>HandAttack</name>
@@ -433,10 +445,7 @@
 		<flag>NoIdleActions</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NonAutoFormedUnit</flag>
-		<command row="1" column="0">VillagerAtlanteanToHero</command>
-		<command row="3" column="2">SeekShelter</command>
-		<command row="3" column="3">Repair</command>
-		<command row="3" column="4">AttackMove</command>
+		
 		<tactics>mcmt_merchantlumberjack.tactics</tactics>
 		<protoaction>
 			<name>Hunting</name>
@@ -449,6 +458,7 @@
 		</protoaction>
 		<protoaction>
 			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
 			<rate type="WoodResource">1.500000</rate>
 		</protoaction>
 		<protoaction>
@@ -535,10 +545,7 @@
 		<flag>NoIdleActions</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>NonAutoFormedUnit</flag>
-		<command row="1" column="0">VillagerAtlanteanToHero</command>
-		<command row="3" column="2">SeekShelter</command>
-		<command row="3" column="3">Repair</command>
-		<command row="3" column="4">AttackMove</command>
+		
 		<tactics>mcmt_merchanthunter.tactics</tactics>
 		<protoaction>
 			<name>Hunting</name>
@@ -557,6 +564,7 @@
 		</protoaction>
 		<protoaction>
 			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
 			<rate type="Huntable">1.500000</rate>
 			<rate type="Herdable">1.350000</rate>
 			<rate type="NonConvertableHerdable">1.350000</rate>
@@ -567,6 +575,99 @@
 			<damage type="Hack">10.000000</damage>
 			<damagebonus type="AbstractVillager">2.50000</damagebonus>
 			<maxrange>0.800000</maxrange>			
+		</protoaction>
+	  </unit>
+	  <unit name="MerchantFisherman">
+		<displaynameid>STR_UNIT_MERCHANTFISHERMAN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_MERCHANTFISHERMAN_LR</rollovertextid>
+		<rollovertextid>STR_UNIT_MERCHANTFISHERMAN_SR</rollovertextid>
+		<icon>resources\atlantean\player_color\units\villager_atlantean_icon.png</icon>
+		<animfile>atlantean\units\economic\villager_atlantean\villager_atlantean.xml</animfile>
+		<soundsetfile>atlantean\vo\villager_atlantean\villager_atlantean.xml</soundsetfile>
+
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>1.0000</selectionradiusx>
+		<selectionradiusz>1.2500</selectionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>Civilian</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>100.0000</initialhitpoints>
+		<maxhitpoints>100.0000</maxhitpoints>
+		<trainpoints>25.0000</trainpoints>
+		<weightclass>4</weightclass>
+		<populationcount>2</populationcount>
+		<maxvelocity>3.8000</maxvelocity>
+		<los>16.0000</los>
+		<cost resourcetype="Food">85.0000</cost>
+		<cost resourcetype="Wood">15.0000</cost>
+		<carrycapacity resourcetype="Food">10.0000</carrycapacity>
+		<carrycapacity resourcetype="Wood">1.0000</carrycapacity>
+		<carrycapacity resourcetype="Gold">1.0000</carrycapacity>
+		<armor type="Hack" value="0.2500"></armor>
+		<armor type="Pierce" value="0.3500"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeEasySelectAvoid</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>EconomicUnit</unittype>
+		<unittype>AbstractVillager</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>ValidIdleVillager</unittype>
+		<unittype>AffectedByTownBell</unittype>
+		<unittype>DisplayQueue</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeVillagerNotHero</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeAffectedByValor</unittype>
+		<unittype>EconomicUpgraded</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<train row="1" column="0">Dock</train>
+		<train row="1" column="1">NavalShipyard</train>
+
+		<tactics>mcmt_merchantfisherman.tactics</tactics>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">10.000000</damage>
+			<damagebonus type="NavalUnit">5.0000</damagebonus>
+			<damagebonus type="Ship">0.2000</damagebonus>
+			<maxrange>14.000000</maxrange>
+			<projectile>ProjectileSatyrSpear</projectile>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>Build</name>
+			<rate type="AbstractDock">1.2500</rate>
+		</protoaction>
+		<protoaction>
+			<name>Repair</name>
+			<rate type="AbstractDock">0.3750</rate>
+		</protoaction>
+		<protoaction>
+			<name>Gather</name>
+			<dropsitegathering>1</dropsitegathering>
+			<rate type="FishResource">1.30</rate>
+			<rate type="AbstractDock">1.30</rate>
 		</protoaction>
 	  </unit>
 	  <unit name="TheAttractor">
@@ -628,8 +729,117 @@
 		<flag>NoIdleActions</flag>
 		<flag>MagnetDoesNotLockUnits</flag>
 		<flag>DynamicUpdate</flag>
-	  </unit>
-	
+	</unit>
+	<unit name="SeasonalFarm">
+		<displaynameid>STR_BLD_SEASONAL_FARM_NAME</displaynameid>
+		<rollovertextid>STR_BLD_SEASONAL_FARM_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_SEASONAL_FARM_SR</shortrollovertextid>
+		<icon>resources\shared\static_color\buildings\farm_icon.png</icon>
+		<icon culture="chinese">resources\chinese\static_color\buildings\farm_rice_icon.png</icon>
+		<animfile>shared\buildings\farm\farm.xml</animfile>
+		<animfile culture="chinese">chinese\buildings\farm\farm.xml</animfile>
+		<soundsetfile>shared\sfx\buildings\farm.xml</soundsetfile>
+		<obstructionradiusx>3.0000</obstructionradiusx>
+		<obstructionradiusz>3.0000</obstructionradiusz>
+		<selectionradiusx>2.5000</selectionradiusx>
+		<selectionradiusz>2.5000</selectionradiusz>
+		<farmingradiusx>3.0000</farmingradiusx>
+		<farmingradiusz>3.0000</farmingradiusz>
+		<farmingobstructionradiusx>0.5000</farmingobstructionradiusx>
+		<farmingobstructionradiusz>0.5000</farmingobstructionradiusz>
+		<farmingnumstops>2</farmingnumstops>
+		<movementtype>land</movementtype>
+		<initialhitpoints>200.0000</initialhitpoints>
+		<maxhitpoints>200.0000</maxhitpoints>
+		<buildpoints>10.0000</buildpoints>
+		<gathererlimit>1</gathererlimit>
+		<los>6.0000</los>
+		<cost resourcetype="Food">50.0000</cost>
+		<initialresource resourcetype="Food">125.0000</initialresource>
+		<resourcesubtype>grain</resourcesubtype>
+		<carrycapacity resourcetype="Food">125.0000</carrycapacity>
+		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Pierce" value="0.8000"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>Resource</unittype>
+		<unittype>Building</unittype>
+		<unittype>AbstractFarm</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeBuildingSmall</unittype>
+		<flag>EnterHotkeyContext</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>NonSolid</flag>
+		<flag>UseFarmingAnims</flag>
+		<flag>NoIdleActions</flag>
+		<flag>DynamicUpdate</flag>
+		<flag>DieAtZeroResources</flag>
+	</unit>
+	<unit name="IndustrialFarm">
+		<displaynameid>STR_BLD_INDUSTRIAL_FARM_NAME</displaynameid>
+		<rollovertextid>STR_BLD_INDUSTRIAL_FARM_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_INDUSTRIAL_FARM_SR</shortrollovertextid>
+		<icon>resources\shared\static_color\buildings\farm_icon.png</icon>
+		<icon culture="chinese">resources\chinese\static_color\buildings\farm_rice_icon.png</icon>
+		<animfile>shared\buildings\farm\farm.xml</animfile>
+		<animfile culture="chinese">chinese\buildings\farm\farm.xml</animfile>
+		<soundsetfile>shared\sfx\buildings\farm.xml</soundsetfile>
+		<obstructionradiusx>3.0000</obstructionradiusx>
+		<obstructionradiusz>3.0000</obstructionradiusz>
+		<selectionradiusx>2.5000</selectionradiusx>
+		<selectionradiusz>2.5000</selectionradiusz>
+		<farmingradiusx>3.0000</farmingradiusx>
+		<farmingradiusz>3.0000</farmingradiusz>
+		<farmingobstructionradiusx>0.5000</farmingobstructionradiusx>
+		<farmingobstructionradiusz>0.5000</farmingobstructionradiusz>
+		<farmingnumstops>2</farmingnumstops>
+		<movementtype>land</movementtype>
+		<initialhitpoints>1000.0000</initialhitpoints>
+		<maxhitpoints>1000.0000</maxhitpoints>
+		<buildpoints>10.0000</buildpoints>
+		<gathererlimit>1</gathererlimit>
+		<los>6.0000</los>
+		<cost resourcetype="Food">400.0000</cost>
+		<initialresource resourcetype="Food">1200.0000</initialresource>
+		<resourcesubtype>grain</resourcesubtype>
+		<carrycapacity resourcetype="Food">1200.0000</carrycapacity>
+		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>Resource</unittype>
+		<unittype>Building</unittype>
+		<unittype>AbstractFarm</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeBuildingSmall</unittype>
+		<flag>EnterHotkeyContext</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>NonSolid</flag>
+		<flag>UseFarmingAnims</flag>
+		<flag>NoIdleActions</flag>
+		<flag>DynamicUpdate</flag>
+		<command row="1" column="5">Restock</command>
+	</unit>
 	<unit name="Farseer" mergeMode="add">
 		<displaynameid>STR_UNIT_FARSEER_NAME</displaynameid>
 		<rollovertextid>STR_UNIT_FARSEER_LR</rollovertextid>
@@ -1732,10 +1942,6 @@
 		<unittype>LogicalTypeValidFrostTarget</unittype>
 		<unittype>LogicalTypeValidTraitorTarget</unittype>
 		<unittype>LogicalTypeValidShockwaveTarget</unittype>
-		<unittype>CountsTowardEconomicScore</unittype>
-		<unittype>ValidIdleVillager</unittype>
-		<unittype>AffectedByTownBell</unittype>
-		<unittype>LogicalTypeVillagerNotHero</unittype>
 		<unittype>EconomicUpgraded</unittype>
 		
 		<autoattackrange>14.0000</autoattackrange>		
@@ -3959,6 +4165,7 @@
 		<unittype>CountsTowardMilitaryScore</unittype>
 		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
 		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>
+		<unittype>LogicalTypeValidSentinelTarget</unittype>
 		
 		<hotkeycontext>DockAccel</hotkeycontext>
 		<train row="0" column="0">Onigami</train>
@@ -4118,6 +4325,7 @@
 		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
 		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>	
 		<unittype>LogicalTypeBuildingThatCanBeEmpowered</unittype>
+		<unittype>LogicalTypeValidSentinelTarget</unittype>
 		
 		<!--Gods and Mythical Beasts-->
 		<train row="0" column="0">ThorDescended</train>
@@ -6413,6 +6621,16 @@
 		<flag>GroupSelection</flag>
 		<flag>CorpseDecays</flag>
 		<flag>IgnoreForFavoriteUnitCount</flag>
+		<flag>HideGarrisonFlag</flag>
+
+		<maxcontained>1</maxcontained>
+		<contain>AbstractInfantry</contain>
+		<notcontain>MythUnit</notcontain>
+		<notcontain>AbstractCavalry</notcontain>
+		<notcontain>MythUnit</notcontain>
+		<notcontain>AbstractSiegeWeapon</notcontain>
+		<notcontain>Ship</notcontain>
+		<notcontain>Resource</notcontain>
 		
 		<tactics>delayed_transform.tactics</tactics>
 		<protoaction>
@@ -7284,8 +7502,11 @@
 		<protoaction>
 			<name>Eat</name>
 			<maxrange>8.0</maxrange>
-			<rate type="GoldResource">30.0</rate>
-			<rate type="Tree">30.0</rate>
+			<rate type="Tree">100.0</rate>
+			<rate type="Ship">30.0</rate>
+			<rate type="AbstractSiegeWeapon">30.0</rate>
+			<rate type="HumanSoldier">50.0</rate>
+			<rate type="Colossus">50.0</rate>
 		</protoaction>
 	</unit>
 		<unit name="SolarBarge">
@@ -9075,7 +9296,7 @@
 		<impacttype>Stone</impacttype>
 		<unitaitype>RangedCombative</unitaitype>
 		<autoattackrange>22.0000</autoattackrange>
-		<movementtype>land</movementtype>
+		<movementtype>Amphibious</movementtype>
 		<turnrate>9.0000</turnrate>
 		<initialhitpoints>400.0000</initialhitpoints>
 		<maxhitpoints>400.0000</maxhitpoints>
@@ -9133,6 +9354,8 @@
 		<flag>Doppled</flag>
 		<flag>Immoveable</flag>
 		<flag>MilitaryCommands</flag>
+		<flag>SnapPlacement</flag>
+		<flag>PlaceAnywhere</flag>
 		<tactics>rangedattack.tactics</tactics>
 		<!---->
 		<protoaction>
@@ -13753,7 +13976,7 @@
 		<protoaction>
 			<name>Repair</name>
 			<type>Repair</type>
-			<anim>HandAttack</anim>
+			<anim>Attack</anim>
 			<maxrange>0.2</maxrange>
 			<rate type="AbstractWall">1.0000</rate>
 			<rate type="Building">1.0000</rate>
@@ -14505,7 +14728,7 @@
 		</protoaction>
 	</unit>
 	
-	<!--IMPROVEMENTS///ALL-->
+	<!--REWORK IMPROVEMENTS///ALL-->
 
 	<!--general buildings improvements-->
 	<unit name="SentryTower">
@@ -14561,6 +14784,69 @@
 				<rate type="AbstractFishingShip">0.500000</rate>
 			</scalebycontainedunittype>
 		</protoaction>
+	</unit>
+	<unit name="Farm" mergeMode="replace">
+		<displaynameid>STR_BLD_FARM_NAME</displaynameid>
+		<rollovertextid>STR_BLD_FARM_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_FARM_SR</shortrollovertextid>
+		<icon>resources\shared\static_color\buildings\farm_icon.png</icon>
+		<icon culture="chinese">resources\chinese\static_color\buildings\farm_rice_icon.png</icon>
+		<animfile>shared\buildings\farm\farm.xml</animfile>
+		<animfile culture="chinese">chinese\buildings\farm\farm.xml</animfile>
+		<soundsetfile>shared\sfx\buildings\farm.xml</soundsetfile>
+		<obstructionradiusx>5.000</obstructionradiusx>
+		<obstructionradiusz>5.000</obstructionradiusz>
+		<selectionradiusx>2.500</selectionradiusx>
+		<selectionradiusz>2.500</selectionradiusz>
+		<farmingradiusx>5.000</farmingradiusx>
+		<farmingradiusz>5.000</farmingradiusz>
+		<farmingobstructionradiusx>5.000</farmingobstructionradiusx>
+		<farmingobstructionradiusz>5.000</farmingobstructionradiusz>
+		<farmingnumstops>8</farmingnumstops>
+		<movementtype>land</movementtype>
+		<initialhitpoints>200.0000</initialhitpoints>
+		<maxhitpoints>200.0000</maxhitpoints>
+		<buildpoints>10.0000</buildpoints>
+		<gathererlimit>4</gathererlimit>
+		<los>6.0000</los>
+		<cost resourcetype="Food">75.0000</cost>
+		<initialresource resourcetype="Food">9999.0000</initialresource>
+		<resourcesubtype>grain</resourcesubtype>
+		<carrycapacity resourcetype="Food">9999.0000</carrycapacity>
+		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Pierce" value="0.8000"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>Resource</unittype>
+		<unittype>Building</unittype>
+		<unittype>AbstractFarm</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeBuildingSmall</unittype>
+		<flag>EnterHotkeyContext</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>UnlimitedSupply</flag>
+		<flag>NonSolid</flag>
+		<flag>UseFarmingAnims</flag>
+		<flag>NoIdleActions</flag>
+		<flag>DynamicUpdate</flag>
+		<command row="0" column="1">ResourceUnitConstructSilo</command>
+		<command row="1" column="0">SetVillagerToGather</command>
+		<command row="0" column="1">ResourceUnitConstructGranary</command>
+		<command row="1" column="2">FlareAtUnit</command>
+		<command row="1" column="1">CancelBuilding</command>
+		<command row="3" column="0">SetRallyPointOfNearbyEconUnitsToUnitPos</command>
+		<command row="3" column="1">SetRallyPointOfNearbyMilitaryUnitsToUnitPos</command>
+		<command row="3" column="5">Delete</command>
 	</unit>
 	<unit name="DwarvenArmory">
 		<hotkeycontext>ArmoryAccel</hotkeycontext>
@@ -14679,7 +14965,18 @@
 		<unittype>AbstractTransportShip</unittype>
 		<maxcontained>3</maxcontained>
 		<contain>Civilian</contain>
-	  </unit>
+	</unit>
+	<unit name="Kataskopos">
+		<tactics>handattack.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.100000</rof>
+			<damage type="Hack">1.000000</damage>
+			<damagebonus type="AbstractVillager">10.00000</damagebonus>
+			<damagebonus type="TradeUnit">5.00000</damagebonus>
+			<maxrange>1.00000</maxrange>
+		</protoaction>
+	</unit>
 	
 	<unit name="Petrobolos">
 		<protoaction>

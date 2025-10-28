@@ -177,163 +177,111 @@
 	<tech name="MCMT_SpecialUnits" mergeMode="add">
 		<status>UNOBTAINABLE</status>
 		<effects>			
-				<!--Legendary Heroes-->
+      <!--Legendary Heroes-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Landlord</target>
-			</effect>
+				<target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="0.0025" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
-				<target type="ProtoUnit">Landlord</target>
-			</effect>
+				<target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="0.0025" subtype="OnDamageModify" modifytype="Damage" relativity="Assign">
-				<target type="ProtoUnit">Landlord</target>
-			</effect>
+				<target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
-				<target type="ProtoUnit">Landlord</target>
-			</effect>
+				<target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Landlord</target>
-			</effect>
+				<target type="ProtoUnit">Landlord</target></effect>
 
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Noah</target>
-			</effect>
+				<target type="ProtoUnit">Noah</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Landlord</target>
-			</effect>
+				<target type="ProtoUnit">Landlord</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Conan</target>
-			</effect>
+				<target type="ProtoUnit">Conan</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Conan</target>
-			</effect>
+				<target type="ProtoUnit">Conan</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MatsuriYurio</target>
-			</effect>	
+				<target type="ProtoUnit">MatsuriYurio</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MatsuriYurioFlight</target>
-			</effect>
+				<target type="ProtoUnit">MatsuriYurioFlight</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MatsuriAzula</target>
-			</effect>	
+				<target type="ProtoUnit">MatsuriAzula</target></effect>	
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_KastorLegend</target>
-			</effect>		
+				<target type="ProtoUnit">MCMT_KastorLegend</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_ChampionOfFreyr</target>
-			</effect>	
+				<target type="ProtoUnit">MCMT_ChampionOfFreyr</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">AchillesDismounted</target>
-			</effect>
+				<target type="ProtoUnit">AchillesDismounted</target></effect>
 			<effect type="Data" amount="-0.050" subtype="OnDamageModify" modifytype="ROF" relativity="Assign">
-				<target type="ProtoUnit">AchillesDismounted</target>
-			</effect>
+				<target type="ProtoUnit">AchillesDismounted</target></effect>
 			<effect type="Data" amount="0.020" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
-				<target type="ProtoUnit">AchillesDismounted</target>
-			</effect>
+				<target type="ProtoUnit">AchillesDismounted</target></effect>
 				
-				<!--Elite Heroes-->
+      <!--Elite Heroes-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Farseer</target>
-			</effect>
+				<target type="ProtoUnit">Farseer</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Farseer</target>
-			</effect>	
+				<target type="ProtoUnit">Farseer</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Chieftain</target>
-			</effect>			
+				<target type="ProtoUnit">Chieftain</target></effect>			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Hitman</target>
-			</effect>
+				<target type="ProtoUnit">Hitman</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Hitman</target>
-			</effect>	
+				<target type="ProtoUnit">Hitman</target></effect>	
 			<effect type="Data" subtype="BountyResourceEarningReward" unittype="Hitman" resourcetype="Gold" amount="50.0" relativity="Absolute">
-				<target type="Player"></target>
-			</effect>
+				<target type="Player"></target></effect>
 			
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Chieftain</target>
-			</effect>
+				<target type="ProtoUnit">Chieftain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ValkyrieWarrior</target>
-			</effect>
+				<target type="ProtoUnit">ValkyrieWarrior</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ValkyrieWarriorHorse</target>
-			</effect>
+				<target type="ProtoUnit">ValkyrieWarriorHorse</target></effect>
 
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Multigunner</target>
-			</effect>
+				<target type="ProtoUnit">Multigunner</target></effect>
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Multigunner</target>
-			</effect>	
+				<target type="ProtoUnit">Multigunner</target></effect>	
 
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Constructor</target>
-			</effect>
+				<target type="ProtoUnit">Constructor</target></effect>
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Constructor</target>
-			</effect>	
+				<target type="ProtoUnit">Constructor</target></effect>	
 			
-				<!--Elite Warriors-->
+      <!--Elite Warriors-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">WindRider</target>
-			</effect>
+				<target type="ProtoUnit">WindRider</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">WindRider</target>
-			</effect>
+				<target type="ProtoUnit">WindRider</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Partisan</target>
-			</effect>
+				<target type="ProtoUnit">Partisan</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Partisan</target>
-			</effect>		
+				<target type="ProtoUnit">Partisan</target></effect>		
 
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Spartan</target>
-			</effect>
+				<target type="ProtoUnit">Spartan</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Spartan</target>
-			</effect>
+				<target type="ProtoUnit">Spartan</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ImperialGuard</target>
-			</effect>
+				<target type="ProtoUnit">ImperialGuard</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">ImperialGuard</target>
-			</effect>
+				<target type="ProtoUnit">ImperialGuard</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Peacemaker</target>
-			</effect>
+				<target type="ProtoUnit">Peacemaker</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Peacemaker</target>
-			</effect>
+				<target type="ProtoUnit">Peacemaker</target></effect>
 			<effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" 
 				effecttype="Attach" duration="3.00" targettype="HumanSoldier" proto="VFXBleed" relativity="Assign">
-				<target type="ProtoUnit">Peacemaker</target>
-			</effect>
+				<target type="ProtoUnit">Peacemaker</target></effect>
 			<effect type="Data" amount="0.25" subtype="OnHitEffect" action="HandAttack" 
 				effecttype="DamageOverTime" duration="3.00" targettype="HumanSoldier" relativity="Assign">
-				<target type="ProtoUnit">Peacemaker</target>
-			</effect>
+				<target type="ProtoUnit">Peacemaker</target></effect>
 			<effect type="Data" amount="1.00" subtype="OnHitEffectAttachBone" action="HandAttack" 
 				effecttype="Attach" targettype="HumanSoldier" attachbone="spine" relativity="Assign">
-				<target type="ProtoUnit">Peacemaker</target>
-			</effect>
+				<target type="ProtoUnit">Peacemaker</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">AttackWolf</target>
-			</effect>
-
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Superpig</target>
-			</effect>
-      
-      <effect type="Data" amount="4.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Superpig</target>
-			</effect>
+				<target type="ProtoUnit">AttackWolf</target></effect>
 			
-				<!--Economic Special Units-->
+      <!--Economic Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">TravelerOxWagon</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
@@ -341,6 +289,11 @@
 			<effect type="Data" action="Heal" amount="1.33" unittype="LogicalTypeHealed" subtype="WorkRate" relativity="BasePercent">
 				<target type="ProtoUnit">TravelerOxWagon</target>
       </effect>
+
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Superpig</target></effect>
+      <effect type="Data" amount="4.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Superpig</target></effect>
     
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Merchant</target></effect>
@@ -350,119 +303,85 @@
 				<target type="ProtoUnit">MerchantFarmer</target></effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">MerchantLumberjack</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">MerchantFisherman</target></effect>
 	
 				<!--Gods and Mythical Beasts-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ThorDescended</target>
-			</effect>
+				<target type="ProtoUnit">ThorDescended</target></effect>
 			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">ThorDescended</target>
-			</effect>
+				<target type="ProtoUnit">ThorDescended</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ChironGod</target>
-			</effect>
+				<target type="ProtoUnit">ChironGod</target></effect>
 			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">ChironGod</target>
-			</effect>
+				<target type="ProtoUnit">ChironGod</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">HeraclesGod</target>
-			</effect>
+				<target type="ProtoUnit">HeraclesGod</target></effect>
 			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">HeraclesGod</target>
-			</effect>
+				<target type="ProtoUnit">HeraclesGod</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">HadesDescended</target>
-			</effect>
+				<target type="ProtoUnit">HadesDescended</target></effect>
 			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">HadesDescended</target>
-			</effect>
+				<target type="ProtoUnit">HadesDescended</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">VolstaggAwakened</target>
-			</effect>
+				<target type="ProtoUnit">VolstaggAwakened</target></effect>
 			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">VolstaggAwakened</target>
-			</effect>
+				<target type="ProtoUnit">VolstaggAwakened</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">SurtrAwakened</target>
-			</effect>
+				<target type="ProtoUnit">SurtrAwakened</target></effect>
 			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">SurtrAwakened</target>
-			</effect>
+				<target type="ProtoUnit">SurtrAwakened</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">FenrisulfrAwakened</target>
-			</effect>
+				<target type="ProtoUnit">FenrisulfrAwakened</target></effect>
 			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">FenrisulfrAwakened</target>
-			</effect>
+				<target type="ProtoUnit">FenrisulfrAwakened</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Fenrisulfr</target>
-			</effect>
+				<target type="ProtoUnit">Fenrisulfr</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">GorgonAvenger</target>
-			</effect>
+				<target type="ProtoUnit">GorgonAvenger</target></effect>
 			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">GorgonAvenger</target>
-			</effect>
+				<target type="ProtoUnit">GorgonAvenger</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Fafnirstrasz</target>
-			</effect>
+				<target type="ProtoUnit">Fafnirstrasz</target></effect>
 			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Fafnirstrasz</target>
-			</effect>
+				<target type="ProtoUnit">Fafnirstrasz</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Grootia</target>
-			</effect>
+				<target type="ProtoUnit">Grootia</target></effect>
 			<effect type="Data" amount="0.25" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Grootia</target>
-			</effect>			
+				<target type="ProtoUnit">Grootia</target></effect>			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Earthshaker</target>
-			</effect>
+				<target type="ProtoUnit">Earthshaker</target></effect>
 			<effect type="Data" amount="0.40" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Earthshaker</target>
-			</effect>
+				<target type="ProtoUnit">Earthshaker</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">PegasusGroundedMessenger</target>
-			</effect>
+				<target type="ProtoUnit">PegasusGroundedMessenger</target></effect>
 				<!--Chinese Legends-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_HuangZhaowu</target>
-			</effect>
+				<target type="ProtoUnit">MCMT_HuangZhaowu</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_HuangZhaowuWife</target>
-			</effect>
+				<target type="ProtoUnit">MCMT_HuangZhaowuWife</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_NvChou</target>
-			</effect>
+				<target type="ProtoUnit">MCMT_NvChou</target></effect>
 			
 				<!--Super Weapons-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_GiantSiegeCrossbow</target>
-			</effect>
+				<target type="ProtoUnit">MCMT_GiantSiegeCrossbow</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_Devastator</target>
-			</effect>			
+				<target type="ProtoUnit">MCMT_Devastator</target></effect>			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_ColossusOfRhodes</target>
-			</effect>
+				<target type="ProtoUnit">MCMT_ColossusOfRhodes</target></effect>
 			<effect type="Data" amount="4.75" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_ColossusOfRhodes</target>
-			</effect>
+				<target type="ProtoUnit">MCMT_ColossusOfRhodes</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Onigami</target>
-			</effect>
+				<target type="ProtoUnit">Onigami</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">SolarBarge</target>
-			</effect>
+				<target type="ProtoUnit">SolarBarge</target></effect>
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">SolarBarge</target>
-			</effect>
+				<target type="ProtoUnit">SolarBarge</target></effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">NukeCannon</target>
-			</effect>
+				<target type="ProtoUnit">NukeCannon</target></effect>
 			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">NukeCannon</target>
-			</effect>
+				<target type="ProtoUnit">NukeCannon</target></effect>
 
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">OxCartModelX</target></effect>
@@ -505,29 +424,34 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">DestroyerCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">FanaticCaptain</target></effect>		
 
-				<!--Mage Tower Special Units-->
+      <!--Mage Tower Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Maiar</target></effect>
 
-				<!--New Buildings-->
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Bastion</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StellarGateway</target></effect>
+      <!--MCMT Special Buildings: Buildable by Noah-->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StellarGateway</target></effect>
 			
+      <!--MCMT Special Buildings: Buildable by Landlord-->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Bastion</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
-      
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TechBuilding</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TechBuilding</target></effect>
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TechBuilding</target></effect>
-
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Ecomarket</target></effect>
-			
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_DwarvenForge</target></effect>	
-			
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MageTower</target></effect>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Ecomarket</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MageTower</target></effect>			
 			<effect type="Data" amount="2.50" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MageTower</target></effect>
-			
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StrategicVesselAssembly</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">StrategicVesselAssembly</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">AirCommand</target></effect>
 
+      <!--MCMT Special Buildings: Buildable by T.O.W and Merchants-->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
+			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SeasonalFarm</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">IndustrialFarm</target></effect>
+
+      <!--MCMT Special Buildings: Buildable by Thor Dwarves-->
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_DwarvenForge</target></effect>	
+			
+      <!--MCMT Special Buildings: Establishment Assistance Probe-->
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfLightning</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfTruth</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">BeaconOfSun</target></effect>
@@ -542,67 +466,49 @@
 
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">WarpPortal</target></effect>
 
+      <!--MCMT Special Buildings: Deployable-->
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">OilRig</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
-			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
-			
+
 				<!--Naval Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">Desolator</target>
-            </effect>	
+        <target type="ProtoUnit">Desolator</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">Flagship</target>
-            </effect>	
+        <target type="ProtoUnit">Flagship</target></effect>	
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Flagship</target>
-			</effect>
+				<target type="ProtoUnit">Flagship</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">Navigator</target>
-            </effect>	
+        <target type="ProtoUnit">Navigator</target></effect>	
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Navigator</target>
-			</effect>
-	
+				<target type="ProtoUnit">Navigator</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">ScorpionBoat</target>
-            </effect>	
+        <target type="ProtoUnit">ScorpionBoat</target></effect>	
 			<effect type="Data" amount="0.02" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">ScorpionBoat</target>
-			</effect>
-			
+				<target type="ProtoUnit">ScorpionBoat</target></effect>			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">FlyingDutchman</target>
-            </effect>	
+        <target type="ProtoUnit">FlyingDutchman</target></effect>	
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">FlyingDutchman</target>
-			</effect>
+				<target type="ProtoUnit">FlyingDutchman</target></effect>
+
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">PirateCaptain</target>
-            </effect>	
+        <target type="ProtoUnit">PirateCaptain</target></effect>	
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">PirateCaptain</target>
-			</effect>
+				<target type="ProtoUnit">PirateCaptain</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-                <target type="ProtoUnit">GhostCrew</target>
-            </effect>
+        <target type="ProtoUnit">GhostCrew</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Blazemaster</target>
-			</effect>
+				<target type="ProtoUnit">Blazemaster</target></effect>
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Blazemaster</target>
-			</effect>
+				<target type="ProtoUnit">Blazemaster</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Worldbreaker</target>
-			</effect>
+				<target type="ProtoUnit">Worldbreaker</target></effect>
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Worldbreaker</target>
-			</effect>
+				<target type="ProtoUnit">Worldbreaker</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">OilRigPacked</target>
-			</effect>
+				<target type="ProtoUnit">OilRigPacked</target></effect>
+      
+      <!--Aircommand HQ Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MrWukong</target>
-			</effect>
+				<target type="ProtoUnit">MrWukong</target></effect>
 
 			<!-- CyberTech Projectiles -->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ProjectileDisintegrationBolt</target></effect>
@@ -894,7 +800,7 @@
 			
 			<!-- TravelerOxWagon Single Page -->
 			<!--Assign-->
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="TheAttractor" row="3" column="0" relativity="Assign"><target type="ProtoUnit">TravelerOxWagon</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="TheAttractor" row="2" column="0" relativity="Assign"><target type="ProtoUnit">TravelerOxWagon</target></effect>
 		
 			<!-- Automaton Single Page-->
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Armory" row="1" column="4" relativity="Assign"><target type="ProtoUnit">Automaton</target></effect>

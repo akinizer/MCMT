@@ -834,4 +834,11 @@
     <displaynameid>STR_PUC_GATE</displaynameid>
     <rollovertextid>STR_PUC_GATE_LR</rollovertextid>
   </protounitcommand>
+  <protounitcommand>
+    <name>Restock</name>
+    <icon>resources\shared\hud\command\wall_to_gate_icon.png</icon>
+    <command>uiTransformSelectedUnit("IndustrialFarm",true)</command>
+    <displaynameid>STR_TRANSFORM_INDUSTRIAL_FARM_NAME</displaynameid>
+    <rollovertextid>STR_TRANSFORM_INDUSTRIAL_FARM_LR</rollovertextid>
+  </protounitcommand>
 </protounitcommands>

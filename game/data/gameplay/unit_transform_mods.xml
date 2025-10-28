@@ -11,4 +11,8 @@
     <from>Electrofence</from>
     <to>HolofenceGate</to>
   </transform>   
+  <transform>
+    <from>IndustrialFarm</from>
+    <to>IndustrialFarm</to>
+  </transform>   
 </unittransforms>
