@@ -9,7 +9,8 @@
     <anim>HandAttack</anim>
     <onhiteffect type="Snare" duration="2" rate="0.85">
     </onhiteffect>
-    <impacteffect>effects\impacts\crush</impacteffect>
+    <impacteffect>effects\impacts\fireball</impacteffect>
+    <onhiteffect type="Attach" targetunittype="Unit" proto="VFXNeZhaFire" duration="1.250000"></onhiteffect>
   </action>
   <action>
     <name stringid="STR_ACTION_RANGED">RangedAttack</name>
@@ -21,7 +22,7 @@
     <maxspread>5.0</maxspread>
     <spreadfactor>0.25</spreadfactor>
     <trackrating>1.0</trackrating>
-    <impacteffect>effects\impacts\pierce</impacteffect>
+    <impacteffect>effects\impacts\pierce</impacteffect>    
     <rate type="Unit">1.0</rate>
     <volleymode>1</volleymode>
   </action>
