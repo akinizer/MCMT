@@ -19,6 +19,9 @@
 	<Merchant>
 		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 	</Merchant>
+	<MerchantLumberjack>
+		<ability>MCMT_AbstractUnitTransform<rof>5</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
+	</MerchantLumberjack>
 	
 	<!-- FutureTech Units-->
 	<Electrofence>
@@ -105,6 +108,11 @@
 		<ability>PassiveSacredHands<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 		<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
 	</MatsuriAzula>
+	
+	<Voltox>
+	    <ability>AbilityVoltox<chargetimeasrof>1</chargetimeasrof></ability>
+    	<ability>PassiveDivineImmunity<alwaysdisabledingrid>1</alwaysdisabledingrid></ability>
+	</Voltox>
 	
 	<!--Temple of Primordials and Constructions of Hephaestos-->
 	<Worldbreaker>

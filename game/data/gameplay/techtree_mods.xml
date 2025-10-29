@@ -305,6 +305,10 @@
 				<target type="ProtoUnit">MerchantLumberjack</target></effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">MerchantFisherman</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Deforestator</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Deforestator</target></effect>	
 	
 				<!--Gods and Mythical Beasts-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
@@ -397,6 +401,8 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ScoutProbe</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">EstablishmentAssistProbe</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>		
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Voltox</target></effect>		
+	    <effect type="Data" amount="0.40" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Voltox</target></effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MobileFortress</target></effect>		
 			
       <effect type="Data" amount="0.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ElectromagneticFloatingUnit</target></effect>

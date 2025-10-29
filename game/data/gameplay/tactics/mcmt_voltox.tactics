@@ -1,0 +1,41 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <rate type="Building">1.0</rate>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\crush</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>HandAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="Unit">1.0</rate>
+    <volleymode>1</volleymode>
+  </action>
+  <action>
+    <name stringid="STR_ABILITY_VOLTOX">SpawnAssistUnit</name>
+    <type>SpawnAssistUnit</type>
+    <attackaction>1</attackaction>
+    <chargeaction>1</chargeaction>
+    <anim>HandAttack</anim>
+    <rate type="Unit">1.0</rate>
+  </action>
+  <tactic>Default
+    <action priority="100">SpawnAssistUnit</action>
+    <action priority="90">HandAttack</action>
+    <action priority="80">RangedAttack</action>
+    <attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype></tactic>
+</tactics>

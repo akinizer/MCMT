@@ -1322,4 +1322,17 @@
 		<attackinterval>0.25</attackinterval>
     </power>
 	<!-- MCMT // CUSTOMIZED GOD POWERS -->
+	<power name="AbilityVoltox" type="UnitAction">
+		<displaynameid>STR_ABILITY_VOLTOX</displaynameid>
+		<rolloverid>STR_ABILITY_VOLTOX_LR</rolloverid>
+		<icon>chinese\static_color\abilities\yangjian_ability_a_icon.png</icon>
+		<placement enemy="">Unit</placement>
+		<abstractplacementtargettype>HumanSoldier</abstractplacementtargettype>
+		<abstractplacementtargettype>LogicalTypeMythUnitNotTitan</abstractplacementtargettype>
+		<abstractplacementtargettype>LogicalTypeVillagerNotHero</abstractplacementtargettype>
+		<abstractplacementtargettype>TradeUnit</abstractplacementtargettype>
+		<abstractplacementtargettype>LogicalTypeShipNotHero</abstractplacementtargettype>
+		<abstractplacementtargettype>AbstractSiegeWeapon</abstractplacementtargettype>
+		<unitaction>HowlingCelestialDog</unitaction>
+	</power>
 </powersmod>

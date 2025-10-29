@@ -1,0 +1,53 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HUNTING">Hunting</name>
+    <type>Hunting</type>
+    <maxrange>10</maxrange>
+    <rate type="NonConvertableHerdable">0</rate>
+    <rate type="Herdable">0</rate>
+    <rate type="Tree">1.0</rate>
+    <typedmaxrange type="Tree">1</typedmaxrange>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_GATHER">Gather</name>
+    <type>Gather</type>
+    <maxrange>0.5</maxrange>
+    <rate type="WoodResource">1.0</rate>
+    <rate type="Dropsite">1.0</rate>
+    <typedmaxrange type="Tree">0.1</typedmaxrange>
+    <typedmaxrange type="Dropsite">1.0</typedmaxrange>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <maxrange>1</maxrange>
+    <rate type="NonConvertableHerdable">0</rate>
+    <rate type="Herdable">0</rate>
+    <rate type="All">1.0</rate>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_CHOP">ChopAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>HandAttack</anim>
+    <maxrange>1</maxrange>
+    <rate type="Tree">1.0</rate>
+    <hidefromstats>1</hidefromstats>
+    <impacteffect>effects\impacts\chop</impacteffect>
+  </action>
+  <action>
+    <name>SmartDropsite</name>
+    <type>SmartDropsite</type>
+    <maxrange>2</maxrange>
+    <rate type="Dropsite">1.0</rate>
+  </action>
+  <tactic>Default<action priority="100">ChopAttack</action><action priority="80">HandAttack</action><action>Gather</action><action>Hunting</action><action>SmartDropsite</action><attackresponsetype>LogicalTypeVillagersAttackResponse</attackresponsetype><attacktype>LogicalTypeVillagersAttack</attacktype><attackmovetype>LogicalTypeHandUnitsAutoAttack</attackmovetype></tactic>
+</tactics>

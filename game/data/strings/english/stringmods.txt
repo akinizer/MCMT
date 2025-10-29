@@ -32,6 +32,10 @@ ID = "STR_UNIT_MERCHANTFISHERMAN_NAME"   ;   Str = "Merchant (Fisherman)"
 ID = "STR_UNIT_MERCHANTFISHERMAN_LR"   ;   Str = "Merchant excels in shoore fishing and harpoon"
 ID = "STR_UNIT_MERCHANTFISHERMAN_SR"   ;   Str = "Merchant (Fisherman)"
 
+ID = "STR_UNIT_DEFORESTATOR_NAME"   ;   Str = "Deforestator"
+ID = "STR_UNIT_DEFORESTATOR_LR"   ;   Str = "Merchant Lumberjack gets on a machine provided by CyberTech. Faster at woodcutting. Larger load capacity"
+ID = "STR_UNIT_DEFORESTATOR_SR"   ;   Str = "Lumberjack (Machine)"
+
 // ELITE UNITS
 ID = "STR_UNIT_CHIEFTAIN_NAME"   ;   Str = "Chieftain"
 ID = "STR_UNIT_CHIEFTAIN_LR"   ;   Str = "Veteran Tribal Villager. Faster, Stronger, Tougher."
@@ -179,6 +183,16 @@ ID = "STR_UNIT_PEACEMAKER_LR"    ;   Str = "Shield of the Mankind and Always Tak
 ID = "STR_UNIT_HITMAN_NAME"    ;   Str = "Hitman"
 ID = "STR_UNIT_HITMAN_SR"    ;   Str = "Hitman"
 ID = "STR_UNIT_HITMAN_LR"    ;   Str = "Excellent Marksman and Hired Gun that Never Forgives Whoever Approaches"
+
+ID = "STR_UNIT_MOBILE_FORTRESS_NAME"    ;   Str = "Mobile Fortress"
+ID = "STR_UNIT_MOBILE_FORTRESS_SR"    ;   Str = "Mobile Fortress"
+ID = "STR_UNIT_MOBILE_FORTRESS_LR"    ;   Str = "Peak of Warfare on wheels. No soldier has seen another day"
+
+ID = "STR_UNIT_VOLTOX_NAME"    ;   Str = "Voltox"
+ID = "STR_UNIT_VOLTOX_SR"    ;   Str = "Voltox Superpova"
+ID = "STR_UNIT_VOLTOX_LR"    ;   Str = "Super Cyborg without any fear and mercy. Equipped with anti-unit railgun and anti-building explosives. Accompanied with his best friend, Sparky the energy wolf"
+ID = "STR_ABILITY_VOLTOX"    ;   Str = "Sparky the Energy Wolf"
+ID = "STR_ABILITY_VOLTOX_LR"    ;   Str = "Summons the best companion of a cyborg. It zaps to enemies and leaves them electrified"
 
 // HOUSE UNITS
 ID = "STR_UNIT_ATTACKWOLF_NAME"    ;   Str = "Attack Wolf"
