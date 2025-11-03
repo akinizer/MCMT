@@ -1114,7 +1114,7 @@
 		<armor type="Pierce" value="0.6000"></armor>
 		<armor type="Crush" value="0.9900"></armor>
 		
-		<autoattackrange>20.0000</autoattackrange>		
+		<autoattackrange>28.0000</autoattackrange>		
 
 		<unittype>LogicalTypeFindMilitaryHero</unittype>
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
@@ -1261,6 +1261,7 @@
 		<selectionradiusz>1.1500</selectionradiusz>
 		
 		<trainpoints>10.0000</trainpoints>
+		<autoattackrange>20.0000</autoattackrange>
 		
 		<impacttype>Armoured</impacttype>
 		<unitaitype>RangedCombative</unitaitype>
@@ -1589,6 +1590,7 @@
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>land</movementtype>
 		<turnrate>18.0000</turnrate>
+		<autoattackrange>16.0000</autoattackrange>
 		
 		<flag>AbilitiesOnBothPages</flag>
 		
@@ -2095,6 +2097,7 @@
 		<movementtype>amphibious</movementtype>
 		<flag>DecalStickToWaterSurface</flag>
 		
+		<autoattackrange>16.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>150.0000</initialhitpoints>
 		<maxhitpoints>150.0000</maxhitpoints>
@@ -2199,6 +2202,7 @@
 		<maxshieldpoints>75</maxshieldpoints>
 		
 		<trainpoints>20</trainpoints>
+		<autoattackrange>16.0000</autoattackrange>
 		
 		<weightclass>5</weightclass>
 		<populationcount>2</populationcount>
@@ -2292,7 +2296,10 @@
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>300.0000</initialhitpoints>
 		<maxhitpoints>300.0000</maxhitpoints>
+
 		<trainpoints>11.0000</trainpoints>
+		<autoattackrange>16.0000</autoattackrange>
+		
 		<weightclass>10</weightclass>
 		<populationcount>5</populationcount>
 		<maxvelocity>2.8000</maxvelocity>
@@ -2731,6 +2738,7 @@
 		<turnrate>13.5000</turnrate>
 		<initialhitpoints>72.0000</initialhitpoints>
 		<maxhitpoints>72.0000</maxhitpoints>
+		<autoattackrange>30.0000</autoattackrange>
 
 		<trainpoints>3.0000</trainpoints>
 		<weightclass>10</weightclass>
@@ -3163,6 +3171,138 @@
 			<modelattachmentbone>Spine</modelattachmentbone>
 		</protoaction>
 	</unit>
+	<unit name="OrphicEgg">
+		<displaynameid>STR_UNIT_PHOENIX_EGG_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_PHOENIX_EGG_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_PHOENIX_EGG_SR</shortrollovertextid>
+		<icon>resources\egyptian\player_color\units\phoenix_egg_icon.png</icon>
+		<animfile>egyptian\units\myth\phoenix\phoenix_egg.xml</animfile>
+		<soundsetfile>egyptian\vo\phoenix_egg\phoenix_egg.xml</soundsetfile>
+		<obstructionradiusx>0.9900</obstructionradiusx>
+		<obstructionradiusz>0.9900</obstructionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>Passive</unitaitype>
+		<movementtype>land</movementtype>
+		
+		<initialhitpoints>1000.0000</initialhitpoints>
+		<maxhitpoints>1000.0000</maxhitpoints>
+		<lifespan>10.0000</lifespan>
+		<buildlimit>1</buildlimit>
+		<trainpoints>45</trainpoints>
+		<cost resourcetype="Favor">666.0000</cost>
+
+		<weightclass>10000</weightclass>
+		<populationcount>0</populationcount>
+		<los>16.0000</los>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeMythicMythUnit</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>DisplayQueue</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeMythUnitNotTitan</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFreezableMythUnit</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeMythUnitNotFlying</unittype>
+		<unittype>LogicalTypeNotEconomicOrMilitaryUnit</unittype>
+		<!-- TODO: Spawned by God Power or Tech -->
+		<!-- TODO: Spawn Phanes on Decay -->
+		<flag>Invulnerable</flag>
+		<flag>Immoveable</flag>
+		<flag>NotDeleteable</flag>
+		<flag>NotPushable</flag>
+		<flag>NoHPBar</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>SelectWithObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>PushPlacement</flag>
+		<flag>NoIdleActions</flag>
+		<flag>PreventRespawn</flag>
+		<flag>NeverCountDeathAsLoss</flag>
+		<flag>NotCommandable</flag>
+		<tactics>default.tactics</tactics>
+	</unit>
+	<unit name="Phanes">
+		<displaynameid>STR_UNIT_PHANES_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_PHANES_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_PHANES_SR</shortrollovertextid>
+		<icon>resources\spc\player_color\units\shiji_icon.png</icon>
+		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
+		<animfile>spc\units\krios\krios.xml</animfile>
+    	<soundsetfile>atlantean\vo\oracle\oracle.xml</soundsetfile>
+		<obstructionradiusx>1.4900</obstructionradiusx>
+		<obstructionradiusz>1.4900</obstructionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<spawn type="dead" count="1">QingLong</spawn>
+		<spawn type="dead" count="1">YingLong</spawn>
+		<spawn type="dead" count="1">QiLin</spawn>
+		<spawn type="dead" count="1">XuanWu</spawn>
+		<spawn type="dead" count="1">BaiHu</spawn>
+		<spawn type="dead" count="1">ZhuQue</spawn>
+		<unitaitype>HandCombative</unitaitype>
+		<movementtype>Amphibious</movementtype>
+		<turnrate>13.5000</turnrate>
+		<initialhitpoints>100000.0000</initialhitpoints>
+		<maxhitpoints>100000.0000</maxhitpoints>
+		<trainpoints>4.0000</trainpoints>
+		<populationcount>4</populationcount>
+		<maxvelocity>4.5000</maxvelocity>
+		<los>16.0000</los>
+		<cost resourcetype="Gold">200.0000</cost>
+		<cost resourcetype="Favor">25.0000</cost>
+		<armor type="Hack" value="0.1500"></armor>
+		<armor type="Pierce" value="0.5500"></armor>
+		<armor type="Crush" value="0.8000"></armor>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeMythicMythUnit</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<flag>AlwaysAllowOverPopCap</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>GroupSelection</flag>
+		<flag>CorpseDecays</flag>
+		<command row="3" column="5">AttackMove</command>
+		<tactics>handattack.tactics</tactics>
+		<!-- TODO: decay 5 minutes-->
+		<!-- TODO: blast on hiteffect-->
+		<!-- TODO: On Death Spawn: Aspicious Beasts-->
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>20.000000</rof>
+			<damage type="Divine">1.000000</damage>
+			<damagearea>4.000000</damagearea>
+			<damageflags>Nature|Enemy</damageflags>
+			<damagebonus type="AbstractTitan">50000.000000</damagebonus>
+			<maxrange>100.000000</maxrange>
+			<trackrating>99.0</trackrating>
+			<projectile>ProjectilePriestPharaoh</projectile>
+			<impacteffect>effects\impacts\fireball</impacteffect>
+		</protoaction>
+	</unit>
 	<unit name="Voltox">
 		<displaynameid>STR_UNIT_VOLTOX_NAME</displaynameid>
 		<rollovertextid>STR_UNIT_VOLTOX_LR</rollovertextid>
@@ -3175,7 +3315,7 @@
 		<impacttype>Metal</impacttype>
 		<unitaitype>HandCombative</unitaitype>
 
-		<autoattackrange>16.0000</autoattackrange>
+		<autoattackrange>30.0000</autoattackrange>
 		<rechargetime>30.0000</rechargetime>
 
 		<movementtype>land</movementtype>
@@ -3253,7 +3393,7 @@
 			<damage type="Divine">50.000000</damage>			
 			<damagebonus type="HumanSoldier">8.000000</damagebonus>
 			<maxrange>30.000000</maxrange>
-			<projectile>ProjectileSatyrSpear</projectile>
+			<projectile>ProjectileLiJingAttack</projectile>
 		</protoaction>
 		<protoaction>
 			<name>HeroRingOnSelf</name>
@@ -3752,6 +3892,111 @@
 			<modelattachmentbone>Spine</modelattachmentbone>
 		</protoaction>
 	</unit>
+	<unit name="WarBear">
+		<displaynameid>STR_UNIT_WARBEAR_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_WARBEAR_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_WARBEAR_SR</shortrollovertextid>
+		<icon>resources\nature\animals\land\bear_icon.png</icon>
+    	<animfile>nature\animals\land\bear\bear.xml</animfile>
+    	<soundsetfile>nature\animals\polar_bear\polar_bear.xml</soundsetfile>
+		
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Unarmored</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+
+		<movementtype>land</movementtype>
+		<initialhitpoints>120.0000</initialhitpoints>
+		<maxhitpoints>120.0000</maxhitpoints>
+		<trainpoints>12.0000</trainpoints>
+		<weightclass>8</weightclass>
+		<populationcount>1</populationcount>
+
+		<maxvelocity>5.0000</maxvelocity>
+		<los>16.0000</los>
+		<cost resourcetype="Food">50.0000</cost>
+		
+		<armor type="Hack" value="0.2800"></armor>
+		<armor type="Pierce" value="0.4500"></armor>
+		<armor type="Crush" value="0.4500"></armor>
+		
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>AbstractInfantry</unittype>
+		<unittype>InfantryLineUpgraded</unittype>
+		<unittype>HumanSoldier</unittype>
+		
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+
+		<tactics>handattack_idle_stat_bonus.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>0.700000</rof>
+			<damage type="Hack">6.800000</damage>
+			<damagebonus type="HumanSoldier">1.250000</damagebonus>
+			<onhiteffect type="Attach" targetunittype="Unit" proto="VFXBleed" attachbone="spine" duration="6.000000"></onhiteffect>
+			<onhiteffect type="DamageOverTime" duration="3.000000">
+				<damage type="Hack">1.50000</damage>
+			</onhiteffect>
+			<maxrange>0.750000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name>IdleDamageBonus</name>
+			<modifyamount>0.00250</modifyamount>
+			<modifyratecap>1.3000</modifyratecap>
+			<modifybase>1.0000</modifybase>
+			<modifydecay>0.00100</modifydecay>
+			<modifytype>Damage</modifytype>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_TECH_FURY_OF_THE_FALLEN_NAME">DeathBoostDamageBonus</name>
+			<type>LikeBonus</type>
+			<modifybase>1.0</modifybase>
+			<maxrange>6</maxrange>
+			<modifyratebytype>1</modifyratebytype>
+			<modifyprotoid>BerserkDamageBoost</modifyprotoid>
+			<active>0</active>
+			<rate type="BerserkDamageBoost">0.25</rate>
+			<persistent>1</persistent>
+			<modifytype>Damage</modifytype>
+			<modelattachment>vfx\glow\arkantos_boost.xml</modelattachment>
+			<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+		</protoaction>
+
+	</unit>
 
 	<!-- CyberTech Workshop Special Units -->
 	 <unit name="MechanizedMammothUnit">
@@ -3774,6 +4019,7 @@
 		<maxhitpoints>4000.0000</maxhitpoints>
 		<unitregen>1.5000</unitregen>
 
+		<autoattackrange>50.0000</autoattackrange>
 		<trainpoints>15.0000</trainpoints>
 		<weightclass>100</weightclass>
 		<populationcount>3</populationcount>
@@ -4196,13 +4442,18 @@
 		<initialhitpoints>3600.0000</initialhitpoints>
 		<maxhitpoints>3600.0000</maxhitpoints>
 		
-		<unitshieldregen>5.0000</unitshieldregen>
-		
+		<unitshieldregen>5.0000</unitshieldregen>		
 		<unitregen>30.0000</unitregen>
 		<maxcontained>25</maxcontained>
 		<populationcapaddition>25.0000</populationcapaddition>
 		<maxvelocity>0.0000</maxvelocity>
-		<los>26.0000</los>		
+		<los>26.0000</los>
+		
+		<populationcapaddition>100</populationcapaddition>
+		<cost resourcetype="Wood">1000.0000</cost>
+		<cost resourcetype="Gold">1000.0000</cost>
+		<cost resourcetype="Food">1000.0000</cost>
+		<cost resourcetype="Favor">50.0000</cost>
 		
 		<carrycapacity resourcetype="Food">1.0000</carrycapacity>
 		<carrycapacity resourcetype="Wood">1.0000</carrycapacity>
@@ -4543,6 +4794,7 @@
 		
 		<train row="1" column="0">Grootia</train>
 		<train row="1" column="1">Earthshaker</train>
+		<train row="1" column="2">OrphicEgg</train>
 		
 		<!--Legends-->
 		<train row="2" column="0">MCMT_KastorLegend</train>
@@ -6964,7 +7216,7 @@
 		<shortrollovertextid>STR_UNIT_ATTACKWOLF_SR</shortrollovertextid>
 		<icon>resources\nature\animals\land\arctic_wolf_icon.png</icon>
 		<animfile>nature\animals\land\arctic_wolf\arctic_wolf.xml</animfile>
-		<soundsetfile>nature\animals\arctic_wolf\arctic_wolf.xml</soundsetfile>
+		<soundsetfile>norse\vo\fenris_wolf_brood\fenris_wolf_brood.xml</soundsetfile>
 		
 		<obstructionradiusx>0.7400</obstructionradiusx>
 		<obstructionradiusz>0.7400</obstructionradiusz>
@@ -6976,9 +7228,13 @@
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>45.0000</initialhitpoints>
 		<maxhitpoints>45.0000</maxhitpoints>
+
+		<autoattackrange>16.0000</autoattackrange>
 		<trainpoints>3.0000</trainpoints>
 		<weightclass>4</weightclass>
 		<maxvelocity>5.7000</maxvelocity>
+		<maxrunvelocity>15.0000</maxrunvelocity>
+
 		<los>14.0000</los>
 		<cost resourcetype="Food">15.0000</cost>
 		<armor type="Hack" value="0.2000"></armor>
@@ -6999,8 +7255,11 @@
 		<unittype>CountsTowardMilitaryScore</unittype>
 		<unittype>LogicalTypeEarthquakeAttack</unittype>
 		<unittype>LogicalTypeHealed</unittype>
+
+		<rechargetime>3.0000</rechargetime>
 		
 		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
@@ -7019,14 +7278,38 @@
 		<flag>CommonCommands</flag>
 		<flag>MilitaryCommands</flag>
 		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>CastAbilitySelf</flag>
 		<tactics>handattack.tactics</tactics>
 		<protoaction>
 			<name>HandAttack</name>
 			<rof>1.700000</rof>
-			<damage type="Hack">8</damage>
-			<damagebonus type="HumanSoldier">4.000000</damagebonus>
-			<damagebonus type="Huntable">5.000000</damagebonus>
+			<damage type="Hack">15.0</damage>
+			<rate type="Building">0.0</rate>
+			<rate type="All">1.0</rate>
+			<damagebonus type="HumanSoldier">100.000000</damagebonus>
+			<damagebonus type="AbstractVillager">100.000000</damagebonus>
+			<damagebonus type="TradeUnit">100.000000</damagebonus>
 			<maxrange>0.500000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_CHARGE">Charge</name>
+			<type>Rampage</type>
+			<damage type="Hack">15.0</damage>
+			<rate type="Building">0.0</rate>
+			<rate type="All">1.0</rate>
+			<damagebonus type="HumanSoldier">100.000000</damagebonus>
+			<damagebonus type="AbstractVillager">100.000000</damagebonus>
+			<damagebonus type="TradeUnit">100.000000</damagebonus>
+			<charged>
+				<chargedmodify modifytype="Speed" applytype="Multiply">4.0</chargedmodify>
+				<duration>3.0</duration>
+			</charged>
+			<projectile>VFXRampage</projectile>
+			<chargeaction>1</chargeaction>
+			<modifyduration>3000</modifyduration>
+			<maxsizeclass>6</maxsizeclass>
+			<autocastbyself>1</autocastbyself>
+			<autocastdistance>15.000000</autocastdistance>
 		</protoaction>
 	</unit>
 	<unit name="MCMT_NvChou">
@@ -7242,7 +7525,7 @@
 		<obstructionradiusz>0.4900</obstructionradiusz>
 		<impacttype>Armoured</impacttype>
 		<unitaitype>RangedCombative</unitaitype>
-		<autoattackrange>16.0000</autoattackrange>
+		<autoattackrange>20.0000</autoattackrange>
 		
 		<movementtype>amphibious</movementtype>
 		<flag>TieToWaterSurface</flag>
@@ -7318,6 +7601,7 @@
 		</protoaction>
 	</unit>
 	<unit name="MCMT_GiantSiegeCrossbow">
+		<autoattackrange>200.0000</autoattackrange>
 		<trainpoints>1.0000</trainpoints>
 		
 		<displaynameid>STR_UNIT_MCMT_GIANTSIEGECROSSBOW_NAME</displaynameid>
@@ -7420,6 +7704,8 @@
 		<obstructionradiusz>8.5000</obstructionradiusz>
 		<impacttype>Wood</impacttype>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>24.0000</autoattackrange>
 		<turnrate>1.5</turnrate>
 		<initialhitpoints>2800.0000</initialhitpoints>
 		<maxhitpoints>2800.0000</maxhitpoints>
@@ -7629,6 +7915,7 @@
 		
 		<buildlimit>1</buildlimit>
 		
+		<autoattackrange>18.0000</autoattackrange>
 		<turnrate>9.0000</turnrate>
 		<initialhitpoints>7800.0000</initialhitpoints>
 		<maxhitpoints>7800.0000</maxhitpoints>
@@ -7738,6 +8025,7 @@
 		<maxshieldpoints>1000</maxshieldpoints>
 		<unitshieldregen>2</unitshieldregen>
 		
+		<autoattackrange>45.0000</autoattackrange>
 		<trainpoints>25.0000</trainpoints>
 		<buildlimit>1</buildlimit>
 		
@@ -7830,127 +8118,129 @@
 	</unit>
 	
 	<unit name="WindRider">	
-    <displaynameid>STR_UNIT_WINDRIDER_NAME</displaynameid>
-    <rollovertextid>STR_UNIT_WINDRIDER_LR</rollovertextid>
-    <shortrollovertextid>STR_UNIT_WINDRIDER_SR</shortrollovertextid>
-    <icon>resources\chinese\player_color\units\white_horse_cavalry_icon.png</icon>
-    <animfile>chinese\units\cavalry\white_horse_cavalry\white_horse_cavalry.xml</animfile>
-    <soundsetfile>chinese\vo\white_horse_cavalry\white_horse_cavalry.xml</soundsetfile>
-    <obstructionradiusx>0.7400</obstructionradiusx>
-    <obstructionradiusz>0.7400</obstructionradiusz>
-    <selectionradiusx>0.7500</selectionradiusx>
-    <selectionradiusz>1.1500</selectionradiusz>
-    <impacttype>Armoured</impacttype>
-    <unitaitype>HandCombative</unitaitype>
-    <movementtype>land</movementtype>
-    <turnrate>18.0000</turnrate>
-    <initialhitpoints>155.0000</initialhitpoints>
-    <maxhitpoints>155.0000</maxhitpoints>
-    <trainpoints>8.5000</trainpoints>
-    <weightclass>6</weightclass>
-    <populationcount>3</populationcount>
-    <maxvelocity>6.0000</maxvelocity>
-	
-    <rechargetime>0.1000</rechargetime>
-	
-	<buildlimit>20</buildlimit>
-	
-    <los>22.0000</los>
-    <cost resourcetype="Food">45.0000</cost>
-    <cost resourcetype="Gold">85.0000</cost>
-    <armor type="Hack" value="0.6000"></armor>
-    <armor type="Pierce" value="0.4000"></armor>
-    <armor type="Crush" value="0.9900"></armor>
-    <unittype>LogicalTypeNeededForVictory</unittype>
-    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeLandMilitary</unittype>
-    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
-    <unittype>LogicalTypeGarrisonInShips</unittype>
-    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
-    <unittype>LogicalTypeVillagersAttack</unittype>
-    <unittype>LogicalTypeHandUnitsAttack</unittype>
-    <unittype>LogicalTypeRangedUnitsAttack</unittype>
-    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
-    <unittype>LogicalTypeValidBoltTarget</unittype>
-    <unittype>LogicalTypeAffectedByRestoration</unittype>
-    <unittype>LogicalTypeHealed</unittype>
-    <unittype>CountsTowardMilitaryScore</unittype>
-	
-    <unittype>Unit</unittype>
-    <unittype>UnitClass</unittype>
-    <unittype>MilitaryUnit</unittype>
-    <unittype>AbstractCavalry</unittype>
-	<unittype>CavalryLineUpgraded</unittype>
-	<unittype>AbstractArcher</unittype>
-	<unittype>ArcherLineUpgraded</unittype>
-	<unittype>AbstractScout</unittype>	
-	
-    <unittype>Hero</unittype>	
-    <unittype>MinorHero</unittype>	   
-    
-    <unittype>LogicalTypeConvertsHerds</unittype>
-    <unittype>LogicalTypeEarthquakeAttack</unittype>
-    <unittype>LogicalTypeValidMeteorTarget</unittype>
-    <unittype>LogicalTypeValidTornadoAttack</unittype>
-    <unittype>LogicalTypeValidShiftingSandsTarget</unittype>
-    <unittype>LogicalTypeParticipatesInBattlecries</unittype>
-    <unittype>LogicalTypeValidSpyTarget</unittype>
-    <unittype>LogicalTypeValidFrostTarget</unittype>
-    <unittype>LogicalTypeValidTraitorTarget</unittype>
-    <unittype>LogicalTypeValidShockwaveTarget</unittype>
-	
-    <flag>CollidesWithProjectiles</flag>
-    <flag>CorpseDecays</flag>
-    <flag>ShowGarrisonButton</flag>
-    <flag>DontRotateObstruction</flag>
-    <flag>ObscuredByUnits</flag>
-    <flag>CommonCommands</flag>
-    <flag>MilitaryCommands</flag>
-    <flag>CreateUnitGroupAutomatically</flag>
-    <flag>NoRandomVariation</flag>
-    <tactics>white_horse_cavalry.tactics</tactics>
-	
-    <protoaction>
-      <name>HandAttack</name>
-      <rof>1.200000</rof>
-      <damage type="Hack">13.000000</damage>
-      <damage type="Pierce">17.000000</damage>
-      <damagebonus type="HumanSoldier">3.000000</damagebonus>
-      <maxrange>1.000000</maxrange>
-    </protoaction>
-    <protoaction>
-      <name>RangedAttack</name>
-      <rof>1.000000</rof>
-      <damage type="Pierce">25.000000</damage>
-      <damagebonus type="HumanSoldier">5.000000</damagebonus>
-      <damagebonus type="AbstractVillager">5.000000</damagebonus>
-      <damagebonus type="AbstractFlyingUnit">15.000000</damagebonus>
-      <maxrange>25.000000</maxrange>
-      <projectile>ProjectileArrowFlaming</projectile>
-	  
-      <onhiteffect active="1" type="Attach" proto="VFXScorchingFeathers" attachbone="spine" duration="5.000000">
-        <target attacktype="Unit"></target>
-        <target ignoretype="AbstractSiegeWeapon"></target>
-        <target ignoretype="AbstractTitan"></target>
-      </onhiteffect>
-    </protoaction>
-	<protoaction>
-		<name>HeroRingOnSelf</name>
-		<type>Modify</type>
-		<modifyselfonly>1</modifyselfonly>
-		<persistent>1</persistent>
-		<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+		<displaynameid>STR_UNIT_WINDRIDER_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_WINDRIDER_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_WINDRIDER_SR</shortrollovertextid>
+		<icon>resources\chinese\player_color\units\white_horse_cavalry_icon.png</icon>
+		<animfile>chinese\units\cavalry\white_horse_cavalry\white_horse_cavalry.xml</animfile>
+		<soundsetfile>chinese\vo\white_horse_cavalry\white_horse_cavalry.xml</soundsetfile>
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>0.7500</selectionradiusx>
+		<selectionradiusz>1.1500</selectionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<movementtype>land</movementtype>
+
+		<autoattackrange>30.0000</autoattackrange>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>155.0000</initialhitpoints>
+		<maxhitpoints>155.0000</maxhitpoints>
+		<trainpoints>8.5000</trainpoints>
+		<weightclass>6</weightclass>
+		<populationcount>3</populationcount>
+		<maxvelocity>6.0000</maxvelocity>
+		
+		<rechargetime>0.1000</rechargetime>
+		
+		<buildlimit>20</buildlimit>
+		
+		<los>22.0000</los>
+		<cost resourcetype="Food">45.0000</cost>
+		<cost resourcetype="Gold">85.0000</cost>
+		<armor type="Hack" value="0.6000"></armor>
+		<armor type="Pierce" value="0.4000"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>AbstractCavalry</unittype>
+		<unittype>CavalryLineUpgraded</unittype>
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<unittype>AbstractScout</unittype>	
+		
+		<unittype>Hero</unittype>	
+		<unittype>MinorHero</unittype>	   
+		
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>NoRandomVariation</flag>
+		<tactics>white_horse_cavalry.tactics</tactics>
+		
+		<protoaction>
+		<name>HandAttack</name>
+		<rof>1.200000</rof>
+		<damage type="Hack">13.000000</damage>
+		<damage type="Pierce">17.000000</damage>
+		<damagebonus type="HumanSoldier">3.000000</damagebonus>
+		<maxrange>1.000000</maxrange>
 		</protoaction>
-	<protoaction>
-		<name>HeroGlowOnSelf</name>
-		<type>Modify</type>
-		<modifyselfonly>1</modifyselfonly>
-		<persistent>1</persistent>
-		<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
-		<modelattachmentbone>Spine</modelattachmentbone>
-	</protoaction>
-	
-  </unit>
+		<protoaction>
+		<name>RangedAttack</name>
+		<rof>1.000000</rof>
+		<damage type="Pierce">25.000000</damage>
+		<damagebonus type="HumanSoldier">5.000000</damagebonus>
+		<damagebonus type="AbstractVillager">5.000000</damagebonus>
+		<damagebonus type="AbstractFlyingUnit">15.000000</damagebonus>
+		<maxrange>25.000000</maxrange>
+		<projectile>ProjectileArrowFlaming</projectile>
+		
+		<onhiteffect active="1" type="Attach" proto="VFXScorchingFeathers" attachbone="spine" duration="5.000000">
+			<target attacktype="Unit"></target>
+			<target ignoretype="AbstractSiegeWeapon"></target>
+			<target ignoretype="AbstractTitan"></target>
+		</onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+		
+	</unit>
 	
 	<!--Naval///Special///Units-->
 	<unit name="Desolator">
@@ -7972,6 +8262,8 @@
     <turnrate>9.0000</turnrate>
     <initialhitpoints>320.0000</initialhitpoints>
     <maxhitpoints>320.0000</maxhitpoints>
+
+	<autoattackrange>18.0000</autoattackrange>
     <trainpoints>14.0000</trainpoints>
     <weightclass>8</weightclass>
     <sizeclass>3</sizeclass>
@@ -8074,6 +8366,7 @@
 	<buildlimit>1</buildlimit>
 	<trainpoints>1</trainpoints>
     
+	<autoattackrange>22.0000</autoattackrange>
     <turnrate>12.0000</turnrate>
     <initialhitpoints>200.0000</initialhitpoints>
     <maxhitpoints>200.0000</maxhitpoints>
@@ -8387,6 +8680,8 @@
     <turnrate>12.0000</turnrate>
     <initialhitpoints>180.0000</initialhitpoints>
     <maxhitpoints>180.0000</maxhitpoints>
+
+	<autoattackrange>30.0000</autoattackrange>
     <trainpoints>16.0000</trainpoints>
     <weightclass>4</weightclass>
 	
@@ -8681,6 +8976,8 @@
     <unitaitype>RangedCombative</unitaitype>
     <formationorder>2</formationorder>
     <movementtype>water</movementtype>
+
+	<autoattackrange>40.0000</autoattackrange>
     <turnrate>15.0000</turnrate>
     <initialhitpoints>320.0000</initialhitpoints>
     <maxhitpoints>320.0000</maxhitpoints>
@@ -9319,6 +9616,7 @@
 	</unit>		
 	
 	<unit name="Minotaur">
+		<maxvelocity>5.2000</maxvelocity>
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
@@ -9336,7 +9634,6 @@
 			<name>RangedAttack</name>
 			<rof>1.700000</rof>
 			<damage type="Pierce">35.000000</damage>
-			<damage type="Crush">5.000000</damage>
 			<damagebonus type="MythUnit">8.000000</damagebonus>
 			<damagebonus type="Hero">0.250000</damagebonus>
 			<maxrange>16.000000</maxrange>
@@ -10679,17 +10976,33 @@
 		<armor type="Crush" value="0.9900"></armor>
 	</unit>
 	<unit name="Jarl">
+		<armor type="Hack" value="0.4500"></armor>
+		<armor type="Pierce" value="0.4500"></armor>
+		<armor type="Crush" value="0.9900"></armor>
 		<unittype>Hero</unittype>
 		<protoaction>
 			<name>HandAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">10.0000000</damage>
 			<damage type="Divine">2.0000000</damage>
+			<damagebonus type="MythUnit">2.500000</damagebonus>
 			<maxrange>0.750000</maxrange>
 		</protoaction>
-		<armor type="Hack" value="0.4500"></armor>
-		<armor type="Pierce" value="0.4500"></armor>
-		<armor type="Crush" value="0.9900"></armor>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>		
 	</unit>
 	
 	<!--Greek///Heroes///Zeus-->
@@ -10782,7 +11095,14 @@
 			<minrange>4.000000</minrange>
 			<maxrange>30.000000</maxrange>
 			<damagearea>3.000000</damagearea>
-			<onhiteffect type="Throw" targetunittype="MilitaryUnit"></onhiteffect>
+			<onhiteffect type="Stun" targetunittype="LogicalTypeMythUnitNotTitan" duration="1.00"></onhiteffect>
+			<onhiteffect type="Stun" targetunittype="HumanSoldier" duration="2.00"></onhiteffect>
+			<onhiteffect type="Stun" targetunittype="LogicalTypeVillagerNotHero" duration="4.00"></onhiteffect>
+			
+			<onhiteffect type="Throw">
+				<target attacktype="HumanSoldier"></target>
+				<target attacktype="AbstractVillager"></target>
+			</onhiteffect>
 		</protoaction>
 		
 	</unit>
@@ -11209,6 +11529,8 @@
 		<unitaitype>RangedCombative</unitaitype>
 		<formationorder>4</formationorder>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>35.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>70.0000</initialhitpoints>
 		<maxhitpoints>70.0000</maxhitpoints>
@@ -11314,6 +11636,8 @@
 		<impacttype>Armoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>16.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>155.0000</initialhitpoints>
 		<maxhitpoints>155.0000</maxhitpoints>
@@ -11411,6 +11735,8 @@
 		<impacttype>Armoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>16.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>125.0000</initialhitpoints>
 		<maxhitpoints>125.0000</maxhitpoints>
@@ -11511,6 +11837,8 @@
 		<impacttype>Armoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>16.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>130.0000</initialhitpoints>
 		<maxhitpoints>130.0000</maxhitpoints>
@@ -11612,6 +11940,8 @@
 		<unitaitype>RangedCombative</unitaitype>
 		<formationorder>4</formationorder>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>25.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>90.0000</initialhitpoints>
 		<maxhitpoints>90.0000</maxhitpoints>
@@ -11710,6 +12040,8 @@
 		<impacttype>Armoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>16.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>225.0000</initialhitpoints>
 		<maxhitpoints>225.0000</maxhitpoints>
@@ -11809,6 +12141,8 @@
 		<impacttype>Armoured</impacttype>
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>land</movementtype>
+
+		<autoattackrange>16.0000</autoattackrange>
 		<turnrate>18.0000</turnrate>
 		<initialhitpoints>155.0000</initialhitpoints>
 		<maxhitpoints>155.0000</maxhitpoints>
@@ -11908,6 +12242,7 @@
 		
 		<buildlimit>1</buildlimit>
 		<trainpoints>1.0000</trainpoints>
+		<autoattackrange>80.0000</autoattackrange>
 		
 		<initialhitpoints>875.0000</initialhitpoints>
 		<maxhitpoints>875.0000</maxhitpoints>
@@ -11995,6 +12330,7 @@
 		
 		<movementtype>Land</movementtype>
 		
+		<autoattackrange>30.0000</autoattackrange>
 		<turnrate>30.0000</turnrate>
 		<heighthitpointbaroffset>7.0</heighthitpointbaroffset>
 		
@@ -12082,6 +12418,7 @@
 		
 		<movementtype>Land</movementtype>
 		
+		<autoattackrange>30.0000</autoattackrange>
 		<turnrate>30.0000</turnrate>
 		<heighthitpointbaroffset>7.0</heighthitpointbaroffset>
 		
@@ -12169,6 +12506,7 @@
 		
 		<movementtype>Land</movementtype>
 		
+		<autoattackrange>30.0000</autoattackrange>
 		<turnrate>30.0000</turnrate>
 		<heighthitpointbaroffset>7.0</heighthitpointbaroffset>
 		
@@ -13612,6 +13950,7 @@
 	</unit>
 	
 	<unit name="QingLong">
+		<unittype>LogicalTypeDivineImmunity</unittype>
 		<initialshieldpoints>1000.0000</initialshieldpoints>
 		<maxshieldpoints>1000.0000</maxshieldpoints>
 		<initialhitpoints>1000.0000</initialhitpoints>
@@ -14989,6 +15328,47 @@
 		<tech row="3" column="3">MCMT_SpecialService</tech>
 		<tech row="2" column="1">MCMT_ArchitectsOfMarley</tech>
 	</unit>
+	<unit name="CitadelCenter">
+		<unittype>AbstractFortress</unittype>
+	</unit>
+	<unit name="Baolei">
+		<unitshieldregen damagetimeout="3.0">1.0000</unitshieldregen>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_I</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_II</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_III</tech>
+		<tech row="3" column="2">Baolei_BuildingAccels</tech>
+		
+	</unit>
+	<unit name="Fortress">
+		<unitshieldregen damagetimeout="3.0">1.0000</unitshieldregen>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_I</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_II</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_III</tech>		
+	</unit>
+	<unit name="MidgolStronghold">
+		<unitshieldregen damagetimeout="3.0">1.0000</unitshieldregen>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_I</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_II</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_III</tech>
+	</unit>
+	<unit name="HillFort">
+		<unitshieldregen damagetimeout="3.0">1.0000</unitshieldregen>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_I</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_II</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_III</tech>
+	</unit>
+	<unit name="Palace">
+		<unitshieldregen damagetimeout="3.0">1.0000</unitshieldregen>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_I</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_II</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_III</tech>
+	</unit>
+	<unit name="AsgadianHillFort">
+		<unitshieldregen damagetimeout="3.0">1.0000</unitshieldregen>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_I</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_II</tech>
+		<tech row="3" column="2">MCMT_AdvancedFortifications_III</tech>
+	</unit>
 	<unit name="Dock">
 		<protoaction>
 			<name>RangedAttack</name>
@@ -15211,6 +15591,7 @@
 		  <onhiteffect type="Throw">
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="LogicalTypeVillagerNotHero"></target>
+			<target attacktype="LogicalTypeMythUnitNotFlying"></target>
 			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
 		  </onhiteffect>
 		</protoaction>
@@ -15228,6 +15609,7 @@
 		  <onhiteffect type="Throw">
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="LogicalTypeVillagerNotHero"></target>
+			<target attacktype="LogicalTypeMythUnitNotFlying"></target>
 			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
 		  </onhiteffect>
 		</protoaction>
@@ -15295,88 +15677,106 @@
 	<unit name="TreeCypress">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
+		<flag>ObscuresUnits</flag>
   	</unit>
 	<unit name="TreeCypressSnow">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeHades">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
 		<initialresource resourcetype="Wood">500</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeMarsh">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeOak">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1250</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeOakAutumn">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1250</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeOakRound">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">12500</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeOlive">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreePalm">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreePine">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreePineDead">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
-		<initialresource resourcetype="Wood">500</initialresource>	
+		<initialresource resourcetype="Wood">500</initialresource>
+		<flag>ObscuresUnits</flag>	
 	</unit>
 	<unit name="TreePineSnow">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreePineSnowBurning">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeSavannah">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeSavannahOld">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
 		<initialresource resourcetype="Wood">1100</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeTundra">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>
 	<unit name="TreeTundraSnow">
 		<obstructionradiusx>0.1000</obstructionradiusx>
 		<obstructionradiusz>0.1000</obstructionradiusz>	
 		<initialresource resourcetype="Wood">1000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>		
 	<unit name="TreeGaia">
 		<initialresource resourcetype="Wood">2000</initialresource>
+		<flag>ObscuresUnits</flag>
 	</unit>	
 	<!--Gold Mines-->
 	<unit name="MineGoldLarge">

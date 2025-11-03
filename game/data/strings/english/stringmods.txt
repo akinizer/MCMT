@@ -190,7 +190,7 @@ ID = "STR_UNIT_MOBILE_FORTRESS_LR"    ;   Str = "Peak of Warfare on wheels. No s
 
 ID = "STR_UNIT_VOLTOX_NAME"    ;   Str = "Voltox"
 ID = "STR_UNIT_VOLTOX_SR"    ;   Str = "Voltox Superpova"
-ID = "STR_UNIT_VOLTOX_LR"    ;   Str = "Super Cyborg without any fear and mercy. Equipped with anti-unit railgun and anti-building explosives. Accompanied with his best friend, Sparky the energy wolf"
+ID = "STR_UNIT_VOLTOX_LR"    ;   Str = "Super Cyborg without any fear and mercy. Equipped with ballistic anti-unit power sword and anti-building explosive charges. Accompanied with his best friend, Sparky the energy wolf"
 ID = "STR_ABILITY_VOLTOX"    ;   Str = "Sparky the Energy Wolf"
 ID = "STR_ABILITY_VOLTOX_LR"    ;   Str = "Summons the best companion of a cyborg. It zaps to enemies and leaves them electrified"
 
@@ -285,6 +285,10 @@ ID = "STR_UNIT_LOKI_MARE_NAME"   ;   Str = "Svadillfari (Loki)"
 ID = "STR_UNIT_LOKI_MARE_SR"   ;   Str = "Loki in Mare Form"
 ID = "STR_UNIT_LOKI_MARE_LR"   ;   Str = "God of Mischief. Good at Infiltration "
 
+ID = "STR_UNIT_WARBEAR_NAME"   ;   Str = "Warbear (Berserk)"
+ID = "STR_UNIT_WARBEAR_SR"   ;   Str = "Werebear Berserk"
+ID = "STR_UNIT_WARBEAR_LR"   ;   Str = "Berserk unleashes his inner form"
+
 ID = "STR_UNIT_LOKI_JOTNAR_NAME"   ;   Str = "Loki Odinson (God)"
 ID = "STR_UNIT_LOKI_JOTNAR_SR"   ;   Str = "Loki in True Form"
 ID = "STR_UNIT_LOKI_JOTNAR_LR"   ;   Str = "God of Mischief. Has Never Been This Serious"
@@ -294,6 +298,15 @@ ID = "STR_UNIT_NOAH_NAME"   ;   Str = "Noah "
 ID = "STR_UNIT_NOAH_SR"   ;   Str = "Noah the Oracle of Guidance"
 ID = "STR_UNIT_NOAH_LR"   ;   Str = "The Legendary Oracle that Visited Many Eras for Millenia in Many Forms; Widely Known as Moses and Pharaoh; Noah of Ark; King David;  "
 ID = "STR_MSG_NOAH_SPAWN"   ;   Str = "Noah has returned to teach Pharaoh a new lesson!"
+
+// ORPHIC
+ID = "STR_UNIT_ORPHIC_EGG_NAME"   ;   Str = "Orphic Egg"
+ID = "STR_UNIT_ORPHIC_EGG_SR"   ;   Str = "Cosmic Egg of Cosmos"
+ID = "STR_UNIT_ORPHIC_EGG_LR"   ;   Str = "One of Creator Entities. It gives a birth to Phanes, Huanglong and Auspicious Beasts"
+
+ID = "STR_UNIT_PHANES_NAME"   ;   Str = "Phanes"
+ID = "STR_UNIT_PHANES_SR"   ;   Str = "Cosmic Egg of Cosmos"
+ID = "STR_UNIT_PHANES_LR"   ;   Str = "Primeval Creation intervined with Huanglong, created Darkness, Light and the Cosmos"
 
 // CYBERTECH SETH UNITS
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_NAME"   ;   Str = "Mechanized Mammoth Unit"
@@ -408,12 +421,21 @@ ID = "STR_UNIT_NILECROCODILE_NAME"   ;   Str = "Nile Crocodile"
 // SPECIAL TECHS
 ID = "STR_TECH_MCMT_PAGE_1"   ;   Str = "Page1"
 ID = "STR_TECH_MCMT_PAGE_2"   ;   Str = "Page2"
+ID = "STR_TECH_BAOLEI_PAGE_1_0"   ;   Str = "Path1"
+ID = "STR_TECH_BAOLEI_PAGE_2_0"   ;   Str = "Path2"
+ID = "STR_TECH_BAOLEI_PAGE_1"   ;   Str = "Command Myth"
+ID = "STR_TECH_BAOLEI_PAGE_2"   ;   Str = "Command Might"
+
+ID = "STR_TECH_ACTIVATE_TECH"   ;   Str = "Activate Tech"
 
 ID = "STR_TECH_RECRUITING_MOUNTAINDWARVES_NAME"   ;   Str = "Recruiting Mountain Dwarves"
 ID = "STR_TECH_RECRUITING_MOUNTAINDWARVES_LR"    ;   Str = "Work Force now becomes Dwarf Force"
 
 ID = "STR_TECH_ARCHITECTS_OF_MARLEY_NAME"   ;   Str = "Architects of Marley"
 ID = "STR_TECH_ARCHITECTS_OF_MARLEY_LR"   ;   Str = "Architects from Kingdom of Marley share their pride in the Anti-Titan Walls"
+
+ID = "STR_TECH_ADVANCEDFORTIFICATIONS_NAME"   ;   Str = "Advanced Fortifications"
+ID = "STR_TECH_ADVANCEDFORTIFICATIONS_LR"   ;   Str = "CyberTech R & D provides modern techniques and materials to create ultimate fortifications"
 
 ID = "STR_TECH_ORACLEWATCHERS_NAME"   ;   Str = "Oracle Watchers"
 ID = "STR_TECH_ORACLEWATCHERS_LR"   ;   Str = "Oracles with Excellent Psionic Sight have been assigned to Towers as Watcher Commanders"

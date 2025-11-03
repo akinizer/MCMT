@@ -167,6 +167,11 @@
 	<OilRigPacked>
 		<ability>MCMT_AbstractUnitTransform<rof>40</rof><castonself>true</castonself><noautocast>true</noautocast></ability>
 	</OilRigPacked>
+
+	<!--House-->
+	<AttackWolf>
+		<ability>AbilityTaoWu<chargetimeasrof>1</chargetimeasrof><castonself>true</castonself><donotforcestop>true</donotforcestop></ability>
+	</AttackWolf>
 	
 	<!-- /////// Existing Unit Override ///////// -->
 	

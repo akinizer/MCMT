@@ -193,6 +193,14 @@
 				<target type="ProtoUnit">Noah</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Landlord</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">OrphicEgg</target></effect>
+			<effect type="Data" amount="4.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">OrphicEgg</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Phanes</target></effect>
+      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="Phanes" relativity="Absolute">
+		    <target type="ProtoUnit">OrphicEgg</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Conan</target></effect>
@@ -236,6 +244,8 @@
 				<target type="ProtoUnit">ValkyrieWarrior</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">ValkyrieWarriorHorse</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">WarBear</target></effect>
 
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Multigunner</target></effect>
@@ -531,6 +541,23 @@
 			<effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="WhaleHuntable" relativity="Assign">
 				<target type="ProtoUnit">Salmon</target>
 			</effect>
+        <!--Population Rework for Myth Units and Basic Villagers-->
+      <effect type="Data" amount="0.5" subtype="PopulationCount" relativity="BasePercent">
+        <target type="ProtoUnit">MythUnit</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerNorse</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerAtlantean</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerGreek</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerChinese</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerEgyptian</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerNorse</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerDwarf</target></effect>
 
 				<!--Buildings-->
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
@@ -710,6 +737,9 @@
 			<effect type="TechStatus" status="active">MCMT_SpecialService</effect>
 			<effect type="TechStatus" status="obtainable">MCMT_RecruitingMountainDwarves</effect>	
 			<effect type="TechStatus" status="obtainable">MCMT_ArchitectsOfMarley</effect>		
+			<effect type="TechStatus" status="obtainable">MCMT_AdvancedFortifications_I</effect>
+			<effect type="TechStatus" status="obtainable">MCMT_AdvancedFortifications_II</effect>
+			<effect type="TechStatus" status="obtainable">MCMT_AdvancedFortifications_III</effect>
 			<effect type="TechStatus" status="obtainable">MCMT_OracleWatchers</effect>
 
 			<!--TechBuilding FutureTech-->
@@ -750,10 +780,11 @@
 			<!--TOW Techs
 			<effect type="TechStatus" status="obtainable">FarmingMachinery</effect>
 			<effect type="TechStatus" status="obtainable">IndustrialTools</effect>
-			<effect type="TechStatus" status="obtainable">ManufactionRobotics</effect>-->			
+			<effect type="TechStatus" status="obtainable">ManufactionRobotics</effect>-->	
+      <!--Fortress CyberTech-->		
 		</effects>
 	</tech>	
-	<!-- /// Unit Panels /// -->
+	<!-- /// MCMT Unit Panels /// -->
 	<tech name="MCMT_UnitAccelPanels" mergeMode="add">
 		<status>UNOBTAINABLE</status>
 		<effects>			
@@ -761,14 +792,17 @@
 			<effect type="TechStatus" status="obtainable">MCMT_Page1</effect>
 		</effects>
 	</tech>
+  <!-- /// Civilization Building Panels /// -->
+
+  <!-- MCMT PAGES -->
 	<tech name="MCMT_Page1" mergeMode="add">
-        <displaynameid>STR_TECH_MCMT_PAGE_1</displaynameid>
-        <researchpoints>0.0000</researchpoints>
-        <status>UNOBTAINABLE</status>
-        <icon>resources\front_end\GodsPage\Arrow_Button_L_On.png</icon>
-        <flag>InfiniteTech</flag>
-		<flag>NoTextMessage</flag>
-        <effects>
+    <displaynameid>STR_TECH_MCMT_PAGE_1</displaynameid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_L_On.png</icon>
+    <flag>InfiniteTech</flag>
+    <flag>NoTextMessage</flag>
+    <effects>
 			<!-- Conan Page 1 -->
 			<!--Clear-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_KastorLegend" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
@@ -810,16 +844,16 @@
 		
 			<!-- Automaton Single Page-->
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Armory" row="1" column="4" relativity="Assign"><target type="ProtoUnit">Automaton</target></effect>
-		</effects>
+    </effects>
 	</tech>
 	<tech name="MCMT_Page2" mergeMode="add">
-        <displaynameid>STR_TECH_MCMT_PAGE_2</displaynameid>
-        <researchpoints>0.0000</researchpoints>
-        <status>UNOBTAINABLE</status>
-        <icon>resources\front_end\GodsPage\Arrow_Button_R_On.png</icon>
-        <flag>InfiniteTech</flag>
-		<flag>NoTextMessage</flag>
-        <effects>
+    <displaynameid>STR_TECH_MCMT_PAGE_2</displaynameid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_R_On.png</icon>
+    <flag>InfiniteTech</flag>
+    <flag>NoTextMessage</flag>
+    <effects>
 			<!-- Conan Page 2 -->
 			<!--Clear-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Partisan" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
@@ -854,8 +888,104 @@
 			<!--Arrows-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" tech="MCMT_Page2" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" tech="MCMT_Page1" row="3" column="5" relativity="Assign"><target type="ProtoUnit">Landlord</target></effect>				
-		</effects>
+    </effects>
 	</tech>	
+
+  <!-- CIVILIZATION BUILDING PANELS AND COMMANDS-->
+
+  <!--Chinese: Baolei Commands-->  
+  <tech name="Baolei_BuildingAccels" mergeMode="add">
+    <displaynameid>STR_TECH_ACTIVATE_TECH</displaynameid>
+    <researchpoints>10.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+    <icon>resources\tech\activate_tech.jpg</icon>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+    <researchpoints>10.0000</researchpoints>
+    <cost resourcetype="Favor">100.0000</cost>
+    <status>UNOBTAINABLE</status>
+    <prereqs>
+      <specificage>MythicAgeChinese</specificage>
+    </prereqs>
+		<effects>			
+      <effect type="TechStatus" status="obtainable">Baolei_Page1_0</effect>
+      <effect type="TechStatus" status="obtainable">Baolei_Page2_0</effect>
+    </effects>
+	</tech>
+  <tech name="Baolei_Page1_0" mergeMode="add">
+    <displaynameid>STR_TECH_BAOLEI_PAGE_1_0</displaynameid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_L_On.png</icon>
+    <flag>InfiniteTech</flag>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+		<effects>			
+      <effect type="TechStatus" status="obtainable">Baolei_Page1</effect>
+      <effect type="TechStatus" status="obtainable">Baolei_Page2</effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page1_0" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page2_0" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="Baolei_Page2" row="3" column="4" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>	
+      <effect type="Data" amount="2.0" subtype="Hitpoints" relativity="Percent">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+    </effects>
+	</tech>
+  <tech name="Baolei_Page2_0" mergeMode="add">
+    <displaynameid>STR_TECH_BAOLEI_PAGE_2_0</displaynameid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_R_On.png</icon>
+    <flag>InfiniteTech</flag>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+		<effects>	      
+      <effect type="TechStatus" status="obtainable">Baolei_Page1</effect>
+      <effect type="TechStatus" status="obtainable">Baolei_Page2</effect>		
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page1_0" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page2_0" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="Baolei_Page1" row="3" column="3" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>	
+      <effect type="Data" amount="2.0" subtype="Hitpoints" relativity="Percent">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+    </effects>
+	</tech>
+  <tech name="Baolei_Page1" mergeMode="add">
+    <displaynameid>STR_TECH_BAOLEI_PAGE_1</displaynameid>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_L_On.png</icon>
+    <flag>InfiniteTech</flag>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+		<effects>			
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page1" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page2" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="Baolei_Page2" row="3" column="4" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>	
+      
+      <effect type="Data" amount="2.0" subtype="Hitpoints" relativity="Percent">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
+      <effect type="Data" amount="0.5" subtype="Hitpoints" relativity="Percent">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+    </effects>
+	</tech>
+  <tech name="Baolei_Page2" mergeMode="add">
+    <displaynameid>STR_TECH_BAOLEI_PAGE_2</displaynameid>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_R_On.png</icon>
+    <flag>InfiniteTech</flag>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+		<effects>			
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page1" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="Baolei_Page2" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="Baolei_Page1" row="3" column="3" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Baolei</target></effect>	
+      
+      <effect type="Data" amount="2.0" subtype="Hitpoints" relativity="Percent">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" amount="0.5" subtype="Hitpoints" relativity="Percent">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>  
+    </effects>
+	</tech>
 	
 	<!-- /// Researches /// -->
 	
@@ -965,6 +1095,95 @@
 			<effect type="TechStatus" status="obtainable">CrossbowTower</effect>
 		</effects>
 	</tech>
+  <tech name="MCMT_AdvancedFortifications_I" mergeMode="add">
+    <flag>NeverAutoResearch</flag>
+		<displaynameid>STR_TECH_ADVANCEDFORTIFICATIONS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ADVANCEDFORTIFICATIONS_LR</rollovertextid>
+		<icon>resources\tech\architect_marley.png</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+
+		<researchpoints>10.0000</researchpoints>
+		<cost resourcetype="Gold">1000</cost>
+		<cost resourcetype="Wood">1000</cost>
+
+    <effects>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+				<target type="ProtoUnit">AbstractWall</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Crush" relativity="Percent">
+				<target type="ProtoUnit">AbstractWall</target></effect>
+      <effect type="Data" amount="750.0" subtype="Hitpoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractWall</target></effect>
+
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+				<target type="ProtoUnit">AbstractFortress</target></effect>
+      <effect type="Data" amount="1000.0" subtype="Hitpoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractFortress</target></effect>
+    </effects>
+  </tech>
+  <tech name="MCMT_AdvancedFortifications_II" mergeMode="add">
+    <flag>NeverAutoResearch</flag>
+		<displaynameid>STR_TECH_ADVANCEDFORTIFICATIONS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ADVANCEDFORTIFICATIONS_LR</rollovertextid>
+		<icon>resources\tech\architect_marley.png</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+
+		<researchpoints>10.0000</researchpoints>
+		<cost resourcetype="Gold">1250</cost>
+		<cost resourcetype="Wood">1250</cost>
+
+    <effects>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+				<target type="ProtoUnit">AbstractWall</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Crush" relativity="Percent">
+				<target type="ProtoUnit">AbstractWall</target></effect>
+      <effect type="Data" amount="750.0" subtype="Hitpoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractWall</target></effect>
+
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+				<target type="ProtoUnit">AbstractFortress</target></effect>
+      <effect type="Data" amount="1000.0" subtype="Hitpoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractFortress</target></effect>
+    </effects>
+  </tech>
+  <tech name="MCMT_AdvancedFortifications_III" mergeMode="add">
+    <flag>NeverAutoResearch</flag>
+		<displaynameid>STR_TECH_ADVANCEDFORTIFICATIONS_NAME</displaynameid>
+		<rollovertextid>STR_TECH_ADVANCEDFORTIFICATIONS_LR</rollovertextid>
+		<icon>resources\tech\architect_marley.png</icon>
+		<status>UNOBTAINABLE</status>
+		<flag>CountsTowardMilitaryScore</flag>
+		<flag>MythTech</flag>
+
+		<researchpoints>10.0000</researchpoints>
+		<cost resourcetype="Gold">1500</cost>
+		<cost resourcetype="Wood">1500</cost>
+		<cost resourcetype="Favor">100</cost>
+
+    <effects>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+				<target type="ProtoUnit">AbstractWall</target></effect>
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Crush" relativity="Percent">
+				<target type="ProtoUnit">AbstractWall</target></effect>
+      <effect type="Data" amount="750.0" subtype="Hitpoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractWall</target></effect>
+
+      <effect type="Data" amount="-0.10" subtype="ArmorVulnerability" armortype="Hack" relativity="Percent">
+				<target type="ProtoUnit">AbstractFortress</target></effect>
+      <effect type="Data" amount="1000.0" subtype="Hitpoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractFortress</target></effect>
+
+      <effect type="Data" amount="1000.00" subtype="ShieldPoints" relativity="Absolute">
+        <target type="ProtoUnit">AbstractFortress</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.5" subtype="MaximumRange" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractFortress</target></effect>
+      
+      <effect type="TechStatus" status="obtainable">Baolei_BuildingAccels</effect>
+    </effects>
+  </tech>
 	<tech name="MCMT_OracleWatchers" mergeMode="add">
 		<flag>NeverAutoResearch</flag>
 		<displaynameid>STR_TECH_ORACLEWATCHERS_NAME</displaynameid>
@@ -2614,6 +2833,71 @@
         <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
     </effects>
   </tech>
+  <tech name="BurningPitch" mergeMode="replace">
+    <displaynameid>STR_TECH_BURNING_PITCH_NAME</displaynameid>
+    <rollovertextid>STR_TECH_BURNING_PITCH_LR</rollovertextid>
+    <cost resourcetype="Wood">500.0000</cost>
+    <cost resourcetype="Gold">300.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\shared\static_color\technologies\burning_pitch_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <techtype>ArmoryTechnology</techtype>
+    <techage>MythicAge</techage>
+    <effects>
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+      <effect type="Data" action="RangedAttack" amount="-2.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">ThrowingAxeman</target></effect>
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">AbstractArcherShip</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.50" subtype="Damagebonus" unittype="Ship" relativity="Absolute">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+      
+      <effect type="Data" action="RangedAttack" amount="1.15" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractArcherShip</target></effect>
+        
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Centaur</target></effect>
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Medusa</target></effect>
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Satyr</target></effect>
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Draugr</target></effect>
+      
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Helepolis</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">SiegeTower</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">Ballista</target></effect>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+        <target type="ProtoUnit">SiegeCrossbow</target></effect>
+
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="HumanSoldier" relativity="Absolute">
+        <target type="ProtoUnit">AbstractTower</target></effect>
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="HumanSoldier" relativity="Absolute">
+        <target type="ProtoUnit">AbstractFortress</target></effect>
+
+      <effect type="Data" action="RangedAttack" amount="3.00" subtype="Damagebonus" unittype="AnimalOfSet" relativity="Absolute">
+        <target type="ProtoUnit">AbstractVillager</target></effect>
+
+      <effect type="Data" amount="0.25" subtype="OnHitEffect" action="RangedAttack" effecttype="DamageOverTime" duration="4.00" targettype="House" relativity="Assign">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+      <effect type="Data" amount="0.25" subtype="OnHitEffect" action="RangedAttack" effecttype="DamageOverTime" duration="4.00" targettype="Manor" relativity="Assign">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+      <effect type="Data" amount="0.25" subtype="OnHitEffect" action="RangedAttack" effecttype="DamageOverTime" duration="4.00" targettype="Dropsite" relativity="Assign">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+      <effect type="Data" amount="0.25" subtype="OnHitEffect" action="RangedAttack" effecttype="DamageOverTime" duration="4.00" targettype="Ship" relativity="Assign">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+
+      <effect type="Data" action="RangedAttack" amount="5.0" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">FireArcher</target></effect>
+      <effect type="Data" amount="0.25" subtype="OnHitEffect" action="RangedAttack" effecttype="DamageOverTime" duration="4.00" targettype="AbstractSiegeWeapon" relativity="Assign">
+        <target type="ProtoUnit">AbstractArcher</target></effect>
+    </effects>
+  </tech>  
 
   <!-- Greek - Techs -->
   <tech name="MonstrousRage" mergeMode="add">
@@ -2621,6 +2905,8 @@
       <effect type="Data" amount="1.15" subtype="AdditionalScale" relativity="Absolute">
           <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target>
       </effect>		
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXFire" relativity="Assign">
+        <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>
     </effects>
   </tech>
   <tech name="LabyrinthOfMinos" mergeMode="add">
@@ -3024,6 +3310,8 @@
         <target type="ProtoUnit">Hero</target></effect>
       <effect type="Data" action="RangedAttack" amount="1.0" subtype="DamageBonus" unittype="MythUnit" relativity="Absolute">
         <target type="ProtoUnit">Hero</target></effect>
+
+      <effect type="TechStatus" status="active">LightningWeaponsActive</effect>
     </effects>
   </tech>
   <tech name="TempleOfHealing" mergeMode="replace">
@@ -3321,6 +3609,8 @@
       <effect type="Data" action="Autogather" amount="1.25" subtype="WorkRate" unittype="Favor" relativity="BasePercent">
           <target type="ProtoUnit">Pharaoh</target>
         </effect>
+
+        <effect type="TechStatus" status="active">LightningWeaponsActive</effect>
     </effects>	
   </tech>
   <tech name="FuneralBarge" mergeMode="add">
@@ -3690,9 +3980,10 @@
 
   <tech name="Berserkergang" mergeMode="add">    
     <effects>
-      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="Bear" relativity="Absolute">
-		    <target type="ProtoUnit">Berserk</target>
-	    </effect>
+      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="WarBear" relativity="Absolute">
+		    <target type="ProtoUnit">Berserk</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+        <target type="ProtoUnit">WarBear</target></effect>
     </effects>
   </tech>
 
@@ -3799,6 +4090,15 @@
 	  <effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">AbstractDwarf</target></effect>
       <effect type="Data" amount="1.15" subtype="Damage" action="HandAttack" relativity="BasePercent"><target type="ProtoUnit">Hersir</target></effect>
       <effect type="Data" action="AutoGather" amount="2.00" subtype="WorkRate" unittype="Favor" relativity="BasePercent"><target type="ProtoUnit">Hersir</target></effect>
+      <effect type="TechStatus" status="active">LightningWeaponsActive</effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXLightningWeaponsUnitImpact" attachbone="spine" relativity="Assign">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXLightningWeaponsUnitImpact" attachbone="spine" relativity="Assign">
+        <target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="RangedAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXLightningWeaponsUnitImpact" attachbone="spine" relativity="Assign">
+        <target type="ProtoUnit">SentryTower</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="6.00" targettype="Unit" proto="VFXLightningWeaponsUnitImpact" attachbone="spine" relativity="Assign">
+        <target type="ProtoUnit">AbstractWarship</target></effect>
     </effects>
   </tech>
   <tech name="DwarvenBreastplate" mergeMode="add">
@@ -4221,12 +4521,13 @@
         <target type="ProtoUnit">Fanatic</target>
       </effect>
 
-	  <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
-        <target type="ProtoUnit">Katapeltes</target>
+      <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
+          <target type="ProtoUnit">Katapeltes</target>
+        </effect>
+      <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
+          <target type="ProtoUnit">Contarius</target>
       </effect>
-	  <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
-        <target type="ProtoUnit">Contarius</target>
-      </effect>
+      <effect type="TechStatus" status="active">LightningWeaponsActive</effect>
     </effects>
   </tech>
   <tech name="HaloOfTheSun" mergeMode="replace">
@@ -4577,8 +4878,7 @@
       <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">Hero</target></effect>
 
-      <effect type="TechActivate">
-        <target type="Tech">LightningWeaponsActive</target></effect>
+      <effect type="TechStatus" status="active">LightningWeaponsActive</effect>
       <effect type="OnHitEffect" allactions="1" srcproto="ChargedModifyContainer" srcaction="LightningWeaponAttack" effecttype="Stun">
         <target type="ProtoUnit">Unit</target></effect>
       <effect type="OnHitEffect" allactions="1" srcproto="ChargedModifyContainer" srcaction="LightningWeaponAttack" effecttype="Attach">
