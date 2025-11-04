@@ -136,8 +136,7 @@
 	</tech>
 
 	<!--Egyptian Special Units and Tech Improvements-->
-	<tech name="ArchaicAgeEgyptian" mergeMode="add">
-		
+	<tech name="ArchaicAgeEgyptian" mergeMode="add">		
 		<effects>
 			<!--Noah-->
 			<effect type="TechStatus" status="active">MCMT_EgyptianRenovation</effect>
@@ -172,6 +171,94 @@
 			<effect type="SetName" proto="SonOfOsiris" newname="STR_UNIT_SON_OF_HORUS_NAME"></effect>
 		</effects>
 	</tech>
+
+  <!--Rework Popcost for MythUnits-->
+  <tech name="ArchaicAgeGreek" mergeMode="add">
+    <effects>      
+      <!--Temple-->
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Pegasus</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Minotaur</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Cyclops</target></effect>
+      <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Hydra</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Colossus</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Centaur</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">NemeanLion</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Chimera</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Manticore</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Medusa</target></effect>
+      <!--Dock-->
+      <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Scylla</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Carcinos</target></effect>
+    </effects>
+  </tech>
+  <tech name="ArchaicAgeEgyptian" mergeMode="add">
+    <effects>      
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Roc</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Sphinx</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Petsuchos</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Avenger</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Wadjet</target></effect>
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Scarab</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Anubite</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ScorpionMan</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Phoenix</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Mummy</target></effect>
+      
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Leviathan</target></effect>
+      <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">WarTurtle</target></effect>
+    </effects>
+  </tech>
+  <tech name="ArchaicAgeNorse" mergeMode="add">
+    <effects>      
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Troll</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">FenrisWolfBrood</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Valkyrie</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Draugr</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Einheri</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">BattleBoar</target></effect>
+      <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Fafnir</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">FireGiant</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">FrostGiant</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">MountainGiant</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">RockGiant</target></effect>
+      
+      <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Kraken</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">JormunElver</target></effect>
+    </effects>
+  </tech>
+  <tech name="ArchaicAgeAtlantean" mergeMode="add">
+    <effects>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Caladria</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Promethean</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Automaton</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Satyr</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Behemoth</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Centimanus</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Argus</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">StymphalianBird</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Lampades</target></effect>
+          
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Servant</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Nereid</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ManOWar</target></effect>
+    </effects>
+  </tech>
+  <tech name="ArchaicAgeChinese" mergeMode="add">
+    <effects>      
+      <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">QingLong</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">YaZi</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">TaoTie</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">TaoWu</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">HunDun</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">QiLin</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">QiongQi</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">BaiHu</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ZhuQue</target></effect>        
+      
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ChiWen</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">XuanWu</target></effect>
+    </effects>
+  </tech>
 
 	<!-- General Special Units and Improvements -->
 	<tech name="MCMT_SpecialUnits" mergeMode="add">
@@ -541,13 +628,14 @@
 			<effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="WhaleHuntable" relativity="Assign">
 				<target type="ProtoUnit">Salmon</target>
 			</effect>
-        <!--Population Rework for Myth Units and Basic Villagers-->
-      <effect type="Data" amount="0.5" subtype="PopulationCount" relativity="BasePercent">
-        <target type="ProtoUnit">MythUnit</target></effect>
+
+        <!--Population Rework for Basic Villagers-->
       <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
         <target type="ProtoUnit">VillagerNorse</target></effect>
       <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
         <target type="ProtoUnit">VillagerAtlantean</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">VillagerAtlanteanHero</target></effect>
       <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
         <target type="ProtoUnit">VillagerGreek</target></effect>
       <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
@@ -559,7 +647,12 @@
       <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
         <target type="ProtoUnit">VillagerDwarf</target></effect>
 
-				<!--Buildings-->
+      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">TradeUnit</target></effect>
+      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign">
+        <target type="ProtoUnit">PiXiu</target></effect>
+
+				<!--Scale Rework for Buildings-->
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">House</target></effect>
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
@@ -598,7 +691,8 @@
 				<target type="ProtoUnit">MilitaryBarracks</target></effect>
       <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">CounterBarracks</target></effect>
-				<!--Naval Units-->
+			
+        <!--Scale Rework for Naval Units-->
 			<effect type="Data" amount="3.00" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Ship</target>
 			</effect>
