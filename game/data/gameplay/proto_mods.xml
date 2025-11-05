@@ -933,6 +933,75 @@
 		<flag>DynamicUpdate</flag>
 		<command row="1" column="5">Restock</command>
 	</unit>
+	<unit name="DionysianFarm">
+		<displaynameid>STR_BLD_DIONYSIAN_FARM_NAME</displaynameid>
+		<rollovertextid>STR_BLD_DIONYSIAN_FARM_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_DIONYSIAN_FARM_SR</shortrollovertextid>
+		<icon>resources\chinese\static_color\buildings\farm_shennong_icon.png</icon>
+		<animfile>chinese\buildings\farm\farm_c_shennong.xml</animfile>
+		<soundsetfile>chinese\sfx\buildings\farm_shennong.xml</soundsetfile>
+		<obstructionradiusx>3.0000</obstructionradiusx>
+		<obstructionradiusz>3.0000</obstructionradiusz>
+		<selectionradiusx>2.5000</selectionradiusx>
+		<selectionradiusz>2.5000</selectionradiusz>
+		<farmingradiusx>3.0000</farmingradiusx>
+		<farmingradiusz>3.0000</farmingradiusz>
+		<farmingobstructionradiusx>0.5000</farmingobstructionradiusx>
+		<farmingobstructionradiusz>0.5000</farmingobstructionradiusz>
+		<farmingnumstops>2</farmingnumstops>
+		<movementtype>land</movementtype>
+		<initialhitpoints>600.0000</initialhitpoints>
+		<maxhitpoints>600.0000</maxhitpoints>
+		<autobuildrate>10.0000</autobuildrate>
+		<gathererlimit>5</gathererlimit>
+		<buildingworkrate>1.5000</buildingworkrate>
+		<los>6.0000</los>
+		<initialresource resourcetype="Food">1.0000</initialresource>
+		<resourcesubtype>grain</resourcesubtype>
+		<cost resourcetype="Favor">1.0000</cost>
+		<carrycapacity resourcetype="Food">9999.0000</carrycapacity>
+		<gatherratemultiplier>1.40</gatherratemultiplier>
+		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Pierce" value="0.8000"></armor>
+		<armor type="Crush" value="0.0500"></armor>
+		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>CountsTowardEconomicScore</unittype>
+		<unittype>Resource</unittype>
+		<unittype>Building</unittype>
+		<unittype>AbstractFarm</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<flag>EnterHotkeyContext</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>Immoveable</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>UnlimitedSupply</flag>
+		<flag>NonSolid</flag>
+		<flag>UseFarmingAnims</flag>
+		<flag>NoIdleActions</flag>
+		<flag>DynamicUpdate</flag>
+		<flag>UseStaticFarmingAnims</flag>
+		<tactics>farm_shennong.tactics</tactics>
+		<protoaction>
+			<name>AreaHeal</name>
+			<modifyamount>1</modifyamount>
+			<maxrange>3.5</maxrange>
+			<slowhealmultiplier>0.25</slowhealmultiplier>
+		</protoaction>
+		<protoaction>
+			<name>AutoGather</name>
+			<type>AutoGather</type>
+			<rate type="Favor">1.000000</rate>
+			<persistent>1</persistent>
+		</protoaction>
+	</unit>
 	<unit name="Farseer" mergeMode="add">
 		<displaynameid>STR_UNIT_FARSEER_NAME</displaynameid>
 		<rollovertextid>STR_UNIT_FARSEER_LR</rollovertextid>

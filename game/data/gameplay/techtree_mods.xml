@@ -550,6 +550,7 @@
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">TheAttractor</target></effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SeasonalFarm</target></effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">IndustrialFarm</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">DionysianFarm</target></effect>
 
       <!--MCMT Special Buildings: Buildable by Thor Dwarves-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_DwarvenForge</target></effect>	
@@ -3530,6 +3531,30 @@
         <target type="ProtoUnit">Hippocampus</target></effect>
     </effects>
   </tech>
+  <tech name="Dionysia" mergeMode="replace">
+    <displaynameid>STR_TECH_DIONYSIA_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DIONYSIA_LR</rollovertextid>
+    <cost resourcetype="Wood">150.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\greek\static_color\technologies\dionysia_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" subtype="BuildingChainEffect" unittype="Farm" effecttype="InRange" modifytype="AutoBuildRate" amount="5.0" relativity="Absolute">
+          <target type="Player"></target></effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="AbstractFarm" relativity="BasePercent">
+        <target type="ProtoUnit">EconomicUpgraded</target></effect>
+      
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="Farm" relativity="Assign">
+        <target type="ProtoUnit">VillagerGreek</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="DionysianFarm" row="1" column="3" relativity="Assign">
+        <target type="ProtoUnit">VillagerGreek</target></effect>
+
+			<effect type="SetName" proto="Farm" newname="STR_BLD_DIONYSIAN_FARM_NAME"></effect>
+    </effects>
+  </tech>
   <!-- Egyptian - Military Unit Upgrade Techs-->
   <tech name="MediumSpearmen" mergeMode="add">
     <effects>
@@ -5127,4 +5152,117 @@
         <target type="ProtoUnit">DouJian</target></effect>
     </effects>
   </tech>
+
+  <!-- Structures of Gods-->
+    <!-- Ancient Greek -->
+  <tech name="HeroicAgeDionysus" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_CHTHONIANTEMPLE_NAME"></effect></effects>
+  </tech> 
+  <tech name="HeroicAgeApollo" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_APOLLONTEMPLE_NAME"></effect></effects>
+  </tech> 
+  <tech name="HeroicAgeAphrodite" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TITANESSTEMPLE_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeHephaestus" mergeMode="add">
+    <effects><effect type="SetName" proto="Armory" newname="STR_BLD_FORGEOFOLYMPUS_NAME"></effect></effects>
+  </tech> 
+    <!-- Egyptian Kingdom -->
+  <tech name="MythicAgeOsiris" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFTHEDEAD_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeHorus" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFTHEELDER_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeThoth" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFESHMOON_NAME"></effect></effects>
+  </tech> 
+   <!-- Norse Clans -->
+  <tech name="MythicAgeThor" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFTHUNDER_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeOdin" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFVALOR_NAME"></effect></effects>
+  </tech> 
+  <tech name="ArchaicAgeLoki" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFDESTINY_NAME"></effect></effects>
+  </tech> 
+  <tech name="ArchaicAgeFreyr" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFYNGVI_NAME"></effect></effects>
+  </tech> 
+   <!-- Atlantean Titans -->
+  <tech name="ArchaicAgeKronos" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFTIME_NAME"></effect></effects>
+  </tech> 
+  <tech name="ArchaicAgeOranos" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFSKY_NAME"></effect></effects>
+  </tech> 
+  <tech name="ArchaicAgeGaia" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFEARTH_NAME"></effect></effects>
+  </tech> 
+   <!-- Chinese Empire -->
+  <tech name="MythicAgeGonggong" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFSEA_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeHuangdi" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFGOLDGENEMPEROR_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeZhurong" mergeMode="add">
+    <effects><effect type="SetName" proto="Temple" newname="STR_BLD_TEMPLEOFFIRE_NAME"></effect></effects>
+  </tech> 
+  
+  <!-- Wonders of World-->
+    <!-- Greek Wonders of Art-->
+  <tech name="MythicAgeZeus" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_STATUEOFZEUS_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgePoseidon" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_THEATREOFDIONYSUS_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeHades" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_MAUSOLEUM_NAME"></effect></effects>
+  </tech> 
+    <!-- Egyptian Wonders of Art-->
+  <tech name="MythicAgeRa" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_GREATPYRAMIDOFGIZA_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeIsis" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_GREATSPHINXOFGIZA_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeSet" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_TEMPLEOFHATHORNEFERTARI_NAME"></effect></effects>
+  </tech> 
+    <!-- Norse Wonders of Art-->
+  <tech name="MythicAgeOdin" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_ODINSTOWER_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeThor" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_DONARSOAK_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeLoki" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_SKIDBLADNIR_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeFreyr" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_ALFHEIMR_NAME"></effect></effects>
+  </tech> 
+    <!-- Atlantean Wonders of Art-->
+  <tech name="MythicAgeOranos" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_ORANOSPALACE_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeGaia" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_AQUEDUCTFOUNTAIN_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeKronos" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_SUNDIALTOWER_NAME"></effect></effects>
+  </tech> 
+    <!-- Chinese Wonders of Art-->
+  <tech name="MythicAgeFuxi" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_AOGUANGPALACE_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeNuwa" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_MOUNTPENGLAI_NAME"></effect></effects>
+  </tech> 
+  <tech name="MythicAgeShennong" mergeMode="add">
+    <effects><effect type="SetName" proto="Wonder" newname="STR_BLD_FUSANG_NAME"></effect></effects>
+  </tech> 
 </techtreemods>
