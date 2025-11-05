@@ -186,9 +186,24 @@
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Chimera</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Manticore</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Medusa</target></effect>
+      
+      <effect type="Data" amount="3" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Pegasus</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Minotaur</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Cyclops</target></effect>
+      <effect type="Data" amount="5" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Hydra</target></effect>
+      <effect type="Data" amount="10" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Colossus</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Centaur</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">NemeanLion</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Chimera</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Manticore</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Medusa</target></effect>
+
       <!--Dock-->
       <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Scylla</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Carcinos</target></effect>
+      
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Scylla</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Carcinos</target></effect>
     </effects>
   </tech>
   <tech name="ArchaicAgeEgyptian" mergeMode="add">
@@ -198,14 +213,28 @@
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Petsuchos</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Avenger</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Wadjet</target></effect>
-      <effect type="Data" amount="0" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Scarab</target></effect>
+      <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Scarab</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Anubite</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ScorpionMan</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Phoenix</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Mummy</target></effect>
       
+      <effect type="Data" amount="3" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Roc</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Sphinx</target></effect>
+      <effect type="Data" amount="50" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Petsuchos</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Avenger</target></effect>
+      <effect type="Data" amount="50" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Wadjet</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Scarab</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Anubite</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">ScorpionMan</target></effect>
+      <effect type="Data" amount="5" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Phoenix</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Mummy</target></effect>
+      
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Leviathan</target></effect>
       <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">WarTurtle</target></effect>
+      
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Leviathan</target></effect>
+      <effect type="Data" amount="5" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">WarTurtle</target></effect>
     </effects>
   </tech>
   <tech name="ArchaicAgeNorse" mergeMode="add">
@@ -222,8 +251,20 @@
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">MountainGiant</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">RockGiant</target></effect>
       
+      <effect type="Data" amount="50" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Troll</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">FenrisWolfBrood</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">BattleBoar</target></effect>
+      <effect type="Data" amount="3" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Fafnir</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">FireGiant</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">FrostGiant</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">MountainGiant</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">RockGiant</target></effect>
+      
       <effect type="Data" amount="5" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Kraken</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">JormunElver</target></effect>
+      
+      <effect type="Data" amount="5" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Kraken</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">JormunElver</target></effect>
     </effects>
   </tech>
   <tech name="ArchaicAgeAtlantean" mergeMode="add">
@@ -237,10 +278,19 @@
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Argus</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">StymphalianBird</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Lampades</target></effect>
+      
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Caladria</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Satyr</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Behemoth</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Centimanus</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Argus</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">StymphalianBird</target></effect>
           
-      <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Servant</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">Nereid</target></effect>
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ManOWar</target></effect>
+      
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">Nereid</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">ManOWar</target></effect>
     </effects>
   </tech>
   <tech name="ArchaicAgeChinese" mergeMode="add">
@@ -255,8 +305,21 @@
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">BaiHu</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ZhuQue</target></effect>        
       
+      <effect type="Data" amount="3" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">QingLong</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">YaZi</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">TaoTie</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">TaoWu</target></effect>
+      <effect type="Data" amount="5" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">HunDun</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">QiLin</target></effect>
+      <effect type="Data" amount="15" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">QiongQi</target></effect>
+      <effect type="Data" amount="30" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">BaiHu</target></effect>
+      <effect type="Data" amount="5" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">ZhuQue</target></effect>        
+      
       <effect type="Data" amount="1" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">ChiWen</target></effect>
       <effect type="Data" amount="2" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">XuanWu</target></effect>
+      
+      <effect type="Data" amount="10" subtype="BuildLimit" relativity="Assign"><target type="ProtoUnit">ChiWen</target></effect>
+      <effect type="Data" amount="15" subtype="PopulationCount" relativity="Assign"><target type="ProtoUnit">XuanWu</target></effect>
     </effects>
   </tech>
 
@@ -454,8 +517,11 @@
 				<target type="ProtoUnit">Earthshaker</target></effect>
 			<effect type="Data" amount="0.40" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Earthshaker</target></effect>
+
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">PegasusGroundedMessenger</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">BullOfHeaven</target></effect>
 				<!--Chinese Legends-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">MCMT_HuangZhaowu</target></effect>
@@ -3194,51 +3260,25 @@
     <flag>MythTech</flag>
     <techtype>MythUnitUpgrade</techtype>
     <effects>
-      <!--greek infernals (hades-->
-      <effect type="Data" amount="2.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Hydra</target></effect>
-      <effect type="Data" amount="2.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Scylla</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">HadesShade</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Cyclops</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Chimera</target></effect>
-      <!--atlantean infernals-->
-       <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Behemoth</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Centimanus</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Lampades</target></effect>
-      <!--norse infernals-->
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">FireGiant</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Nidhogg</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">FenrisWolfBrood</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Kraken</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">JormunElver</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Draugr</target></effect>      
-      <!--egyptian infernals-->
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Mummy</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Chimera</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">Leviathan</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">ScorpionMan</target></effect>
-      <!--chinese infernals-->
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">TaoTie</target></effect>
-      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
-        <target type="ProtoUnit">HunDun</target></effect>
+      <!--Dionysus Alter Ego -->
+      <effect type="Data" amount="1.50" subtype="Damage" action="HandAttack" damagetype="Hack" relativity="BasePercent">
+        <target type="ProtoUnit">Minotaur</target></effect>
+      <effect type="Data" amount="7.0" subtype="Damage" action="HandAttack" damagetype="Crush" relativity="Absolute">
+        <target type="ProtoUnit">Minotaur</target></effect>
+      
+      <effect type="CreateUnit" unit="BullofHeaven" generator="AbstractTemple">
+        <pattern type="Scatter" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+          <offset x="0.00" y="0.00" z="0.00"></offset></pattern></effect>
+      <effect type="Data" amount="25.00" subtype="ResourceReturn" resource="Favor" relativity="Assign">
+        <target type="ProtoUnit">BullofHeaven</target></effect>
+
+      <effect type="Data" amount="0.001" subtype="OnDamageModify" modifytype="ArmorSpecific" damagetype="Hack" relativity="Assign">
+        <target type="ProtoUnit">TitanAtlantean</target></effect>
+      <effect type="Data" amount="0.001" subtype="OnDamageModify" modifytype="ArmorSpecific" damagetype="Pierce" relativity="Assign">
+        <target type="ProtoUnit">TitanAtlantean</target></effect>
+
+      <effect type="TechStatus" status="obtainable">MadnessOfDionysus</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="MadnessOfDionysus" row="1" column="2" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Temple</target></effect>	
     </effects>
   </tech>
    <tech name="SylvanLore" mergeMode="replace">
@@ -3532,8 +3572,8 @@
     </effects>
   </tech>
   <tech name="Dionysia" mergeMode="replace">
-    <displaynameid>STR_TECH_DIONYSIA_NAME</displaynameid>
-    <rollovertextid>STR_TECH_DIONYSIA_LR</rollovertextid>
+    <displaynameid>STR_TECH_DIONYSIA_FESTIVAL_PREPARATIONS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_DIONYSIA_FESTIVAL_PREPARATIONS_LR</rollovertextid>
     <cost resourcetype="Wood">150.0000</cost>
     <cost resourcetype="Favor">20.0000</cost>
     <researchpoints>40.0000</researchpoints>
@@ -3544,15 +3584,137 @@
     <effects>
       <effect type="Data" subtype="BuildingChainEffect" unittype="Farm" effecttype="InRange" modifytype="AutoBuildRate" amount="5.0" relativity="Absolute">
           <target type="Player"></target></effect>
-      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="AbstractFarm" relativity="BasePercent">
-        <target type="ProtoUnit">EconomicUpgraded</target></effect>
-      
+            
       <effect type="Data" amount="1.00" subtype="CommandRemove" proto="Farm" relativity="Assign">
         <target type="ProtoUnit">VillagerGreek</target></effect>
       <effect type="Data" amount="1.00" subtype="CommandAdd" proto="DionysianFarm" row="1" column="3" relativity="Assign">
         <target type="ProtoUnit">VillagerGreek</target></effect>
-
 			<effect type="SetName" proto="Farm" newname="STR_BLD_DIONYSIAN_FARM_NAME"></effect>
+
+      <effect type="TechStatus" status="obtainable">DionysiaRuralFestival</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="DionysiaRuralFestival" row="2" column="1" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Temple</target></effect>	
+    </effects>
+  </tech>
+  <tech name="DionysiaRuralFestival" mergeMode="add">
+    <displaynameid>STR_TECH_RURAL_FESTIVAL_NAME</displaynameid>
+    <rollovertextid>STR_TECH_RURAL_FESTIVAL_LR</rollovertextid>
+    <cost resourcetype="Food">100.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>20.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\greek\static_color\technologies\dionysia_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="AbstractFarm" relativity="BasePercent">
+        <target type="ProtoUnit">EconomicUpgraded</target></effect>
+      
+      <effect type="TechStatus" status="obtainable">DionysiaUrbanFestival</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="DionysiaUrbanFestival" row="2" column="1" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Temple</target></effect>	
+    </effects>
+  </tech>
+  <tech name="DionysiaUrbanFestival" mergeMode="add">
+    <displaynameid>STR_TECH_URBAN_FESTIVAL_NAME</displaynameid>
+    <rollovertextid>STR_TECH_URBAN_FESTIVAL_SR</rollovertextid>
+    <cost resourcetype="Food">100.0000</cost>
+    <cost resourcetype="Favor">20.0000</cost>
+    <researchpoints>20.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\greek\static_color\technologies\dionysia_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="AbstractFarm" relativity="BasePercent">
+        <target type="ProtoUnit">EconomicUpgraded</target></effect>
+    </effects>
+  </tech>
+
+  <tech name="MadnessOfDionysus" mergeMode="add">
+    <displaynameid>STR_TECH_MADNESSOFDIONYSUS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_MADNESSOFDIONYSUS_LR</rollovertextid>
+    <cost resourcetype="Food">50.0000</cost>
+    <cost resourcetype="Gold">50.0000</cost>
+    <cost resourcetype="Favor">25.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\greek\static_color\technologies\dionysia_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+      <effect type="Data" amount="0.10" subtype="OnHitEffect" action="HandAttack" effecttype="DamageOverTime" duration="2.00" targettype="HumanSoldier" relativity="Assign">
+        <target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffect" action="HandAttack" effecttype="Attach" duration="2.00" targettype="HumanSoldier" proto="VFXBleed" relativity="Assign">
+        <target type="ProtoUnit">Hero</target></effect>
+      <effect type="Data" amount="1.00" subtype="OnHitEffectAttachBone" action="HandAttack" effecttype="Attach" targettype="HumanSoldier" attachbone="spine" relativity="Assign">
+        <target type="ProtoUnit">Hero</target></effect>
+
+      <effect type="Data" amount="0.80" subtype="TrainPoints" relativity="Percent">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" amount="0.5" subtype="OnHitEffectRate" allactions="1" effecttype="Lifesteal" targettype="HumanSoldier" relativity="Absolute">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+      <effect type="Data" amount="1.0" subtype="OnHitEffectRate" allactions="1" effecttype="Lifesteal" targettype="AbstractVillager" relativity="Absolute">
+        <target type="ProtoUnit">HumanSoldier</target></effect>
+
+      <effect type="TechStatus" status="obtainable">EldritchSects</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="EldritchSects" row="1" column="2" relativity="Assign" hidetooltip=""><target type="ProtoUnit">Temple</target></effect>	
+    </effects>
+  </tech>
+  <tech name="EldritchSects" mergeMode="add">
+    <displaynameid>STR_TECH_ELDRITCHSECTS_NAME</displaynameid>
+    <rollovertextid>STR_TECH_ELDRITCHSECTS_LR</rollovertextid>
+    <cost resourcetype="Gold">100.0000</cost>
+    <cost resourcetype="Favor">30.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\greek\static_color\technologies\dionysia_icon.png</icon>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>MythTech</flag>
+    <effects>
+         <!--greek infernals (hades)-->
+      <effect type="Data" amount="2.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Hydra</target></effect>
+      <effect type="Data" amount="2.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Scylla</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">HadesShade</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Cyclops</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Chimera</target></effect>
+      <!--atlantean infernals-->
+       <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Behemoth</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Centimanus</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Lampades</target></effect>
+      <!--norse infernals-->
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">FireGiant</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Nidhogg</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">FenrisWolfBrood</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Kraken</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">JormunElver</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Draugr</target></effect>      
+      <!--egyptian infernals-->
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Mummy</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Chimera</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">Leviathan</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">ScorpionMan</target></effect>
+      <!--chinese infernals-->
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">TaoTie</target></effect>
+      <effect type="Data" amount="1.50" subtype="UnitRegenRate" relativity="Absolute">
+        <target type="ProtoUnit">HunDun</target></effect>
     </effects>
   </tech>
   <!-- Egyptian - Military Unit Upgrade Techs-->

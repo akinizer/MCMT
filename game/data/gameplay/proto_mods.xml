@@ -8210,10 +8210,94 @@
 			<persistent>1</persistent>
 			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
 			<modelattachmentbone>Spine</modelattachmentbone>
-		</protoaction>
-		
+		</protoaction>		
 	</unit>
-	
+	<unit name="BullOfHeaven">
+		<displaynameid>STR_UNIT_BULLOFHEAVEN_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_BULLOFHEAVEN_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_BULLOFHEAVEN_SR</shortrollovertextid>
+		<icon>resources\nature\animals\land\aurochs_icon.png</icon>
+		<animfile>nature\animals\land\aurochs\aurochs.xml</animfile>
+		<soundsetfile>greek\vo\minotaur\minotaur.xml</soundsetfile>		
+		<minimapicon>ui\minimap\minimap_hero_spc</minimapicon>
+
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>0.7500</selectionradiusx>
+		<selectionradiusz>1.0000</selectionradiusz>
+		<impacttype>Armored</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+
+		<initialhitpoints>1480.0000</initialhitpoints>
+		<maxhitpoints>1480.0000</maxhitpoints>
+		<unitregen>1.0000</unitregen>
+
+		<weightclass>7</weightclass>
+		<maxvelocity>5.2000</maxvelocity>
+		<los>14.0000</los>
+		
+		<armor type="Hack" value="0.6800"></armor>
+		<armor type="Pierce" value="0.7800"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+
+		<unittype>Unit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>MajorHero</unittype>
+
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>		
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeDivineImmunity</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>NotDeleteable</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<tactics>handattack.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Hack">22.000000</damage>
+			<damage type="Divine">8.000000</damage>
+			<damagebonus type="Hero">1.500000</damagebonus>
+			<damagebonus type="MythUnit">2.000000</damagebonus>
+			<maxrange>1.500000</maxrange>
+			<onhiteffect type="Throw" targetunittype="Hero"></onhiteffect>
+			<throw>1</throw>
+		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
+		</protoaction>
+	</unit>
 	<!--Naval///Special///Units-->
 	<unit name="Desolator">
     <displaynameid>STR_UNIT_MCMT_DESOLATOR_NAME</displaynameid>
@@ -9606,6 +9690,7 @@
 			<name>RangedAttack</name>
 			<rof>1.700000</rof>
 			<damage type="Pierce">35.000000</damage>
+			<damage type="Crush">1.000000</damage>
 			<damagebonus type="MythUnit">8.000000</damagebonus>
 			<damagebonus type="Hero">0.250000</damagebonus>
 			<maxrange>16.000000</maxrange>

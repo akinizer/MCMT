@@ -82,6 +82,10 @@ ID = "STR_UNIT_MCMT_HUANGZHAOWUWIFE_LR"   ;   Str = "Resurrected Wife of Huang Z
 ID = "STR_UNIT_MCMT_NVCHOU_NAME"   ;   Str = "Shiji Nüchou"
 ID = "STR_UNIT_MCMT_NVCHOU_LR"   ;   Str = "Old Witch Friend of Houyi"
 
+ID = "STR_UNIT_BULLOFHEAVEN_NAME"   ;   Str = "Bull of Heaven"
+ID = "STR_UNIT_BULLOFHEAVEN_SR"   ;   Str = "Heavenly Bull of Olympus"
+ID = "STR_UNIT_BULLOFHEAVEN_LR"   ;   Str = "Divine Bull that raged through Olympus as alter-ego of Dionysus "
+
 // MANOR ELITES
 ID = "STR_UNIT_MURMILLO_CAPTAIN_NAME"   ;   Str = "Murmillo Captain"
 ID = "STR_UNIT_MURMILLO_CAPTAIN_SR"   ;   Str = "Alektus the Plasmasteel"
@@ -308,7 +312,7 @@ ID = "STR_UNIT_PHANES_NAME"   ;   Str = "Phanes"
 ID = "STR_UNIT_PHANES_SR"   ;   Str = "Cosmic Egg of Cosmos"
 ID = "STR_UNIT_PHANES_LR"   ;   Str = "Primeval Creation intervined with Huanglong, created Darkness, Light and the Cosmos"
 
-// CYBERTECH SETH UNITS
+// CYBERTECH SET UNITS
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_NAME"   ;   Str = "Mechanized Mammoth Unit"
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_SR"   ;   Str = "Mechanized Mammoth Unit"
 ID = "STR_UNIT_MECHANIZED_MAMMOTH_UNIT_LR"   ;   Str = "CyberTech Super Unit Unexpectedly Possessed By Set"
@@ -571,6 +575,18 @@ ID = "STR_TECH_PRIMORDIAL_LIGHT_LR"   ;   Str = "Empowers Damages of Heroes and 
 
 ID = "STR_TECH_OLYMPICGAMES_NAME"   ;   Str = "Olympic Games"
 ID = "STR_TECH_OLYMPICGAMES_LR"   ;   Str = "Integrates Era with Sports, Athletes and Mounted Racers"
+
+ID = "STR_TECH_DIONYSIA_FESTIVAL_PREPARATIONS_NAME"   ;   Str = "Dionysia: Festival Preparations"
+ID = "STR_TECH_DIONYSIA_FESTIVAL_PREPARATIONS_LR"   ;   Str = "Dionysian Festivals are being prepared both in Rural and Urban Areas. Harvests are blessed during the celebrations worthy of the God of Festivities and Wine"
+ID = "STR_TECH_RURAL_FESTIVAL_NAME"   ;   Str = "Dionysia: Rural Festival"
+ID = "STR_TECH_RURAL_FESTIVAL_LR"   ;   Str = "Rural Dionysian Festival where countryside citizens gather to celebrate the God of Festivities and Wine with rustic dances, music and feasts"
+ID = "STR_TECH_URBAN_FESTIVAL_NAME"   ;   Str = "Dionysia: Urban Festival"
+ID = "STR_TECH_URBAN_FESTIVAL_SR"   ;   Str = "Urban Dionysian Festival where citizens gather to celebrate the God of Festivities and Wine with rustic dances, music and feasts"
+
+ID = "STR_TECH_MADNESSOFDIONYSUS_NAME"   ;   Str = "Madness of Dionysus"
+ID = "STR_TECH_MADNESSOFDIONYSUS_LR"   ;   Str = "Dionysus goes through madness phase that leaves festive ego behind and embraces bloodthirsty personality. As he turns into Bull God, his followers orchestrate murders "
+ID = "STR_TECH_ELDRITCHSECTS_NAME"   ;   Str = "Eldritch Sects"
+ID = "STR_TECH_ELDRITCHSECTS_LR"   ;   Str = "Worshippers of Eldritch Gods emerge among citizens which start a new faction of Gods that is based on fear and horror crawling through vast space of Cosmos"
 
 // SUPERWEAPONS
 ID = "STR_POWER_PSIONIC_DECIMATOR"   ;   Str = "Psionic Decimator"
