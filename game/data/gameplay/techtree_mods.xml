@@ -327,7 +327,7 @@
 	<tech name="MCMT_SpecialUnits" mergeMode="add">
 		<status>UNOBTAINABLE</status>
 		<effects>			
-      <!--Legendary Heroes-->
+      <!--Legendary Heroes - Autospawn - Bastion - Deathspawn - Temple of Primordials-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Landlord</target></effect>
 			<effect type="Data" amount="0.0025" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
@@ -343,14 +343,6 @@
 				<target type="ProtoUnit">Noah</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Landlord</target></effect>
-      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">OrphicEgg</target></effect>
-			<effect type="Data" amount="4.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">OrphicEgg</target></effect>
-      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Phanes</target></effect>
-      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="Phanes" relativity="Absolute">
-		    <target type="ProtoUnit">OrphicEgg</target></effect>
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Conan</target></effect>
@@ -364,17 +356,13 @@
 				<target type="ProtoUnit">MatsuriAzula</target></effect>	
 			
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_KastorLegend</target></effect>		
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_ChampionOfFreyr</target></effect>	
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">AchillesDismounted</target></effect>
 			<effect type="Data" amount="-0.050" subtype="OnDamageModify" modifytype="ROF" relativity="Assign">
 				<target type="ProtoUnit">AchillesDismounted</target></effect>
 			<effect type="Data" amount="0.020" subtype="OnDamageModify" modifytype="Speed" relativity="Assign">
 				<target type="ProtoUnit">AchillesDismounted</target></effect>
 				
-      <!--Elite Heroes-->
+      <!--Elite Heroes - Bastion - Temple of Primordials - Deathspawn-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">Farseer</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
@@ -407,7 +395,7 @@
 			<effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Constructor</target></effect>	
 			
-      <!--Elite Warriors-->
+      <!--Elite Warriors - Bastion - House-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">WindRider</target></effect>
 			<effect type="Data" amount="1.30" subtype="AdditionalScale" relativity="Absolute">
@@ -441,7 +429,7 @@
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">AttackWolf</target></effect>
 			
-      <!--Economic Special Units-->
+      <!--Economic Special Units - Bastion - T.O.W - Tech Building-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">TravelerOxWagon</target></effect>
 			<effect type="Data" amount="1.80" subtype="AdditionalScale" relativity="Absolute">
@@ -469,93 +457,71 @@
 				<target type="ProtoUnit">Deforestator</target></effect>
       <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
 				<target type="ProtoUnit">Deforestator</target></effect>	
-	
-				<!--Gods and Mythical Beasts-->
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ThorDescended</target></effect>
-			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">ThorDescended</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">ChironGod</target></effect>
-			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">ChironGod</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">HeraclesGod</target></effect>
-			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">HeraclesGod</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">HadesDescended</target></effect>
-			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">HadesDescended</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">VolstaggAwakened</target></effect>
-			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">VolstaggAwakened</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">SurtrAwakened</target></effect>
-			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">SurtrAwakened</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">FenrisulfrAwakened</target></effect>
-			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">FenrisulfrAwakened</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Fenrisulfr</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">GorgonAvenger</target></effect>
-			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">GorgonAvenger</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Fafnirstrasz</target></effect>
-			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Fafnirstrasz</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Grootia</target></effect>
-			<effect type="Data" amount="0.25" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Grootia</target></effect>			
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Earthshaker</target></effect>
-			<effect type="Data" amount="0.40" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">Earthshaker</target></effect>
 
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">OxCartModelX</target></effect>
+      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">OxCartModelX</target></effect>
+      
+         <!--Civilization Temple-->	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">PegasusGroundedMessenger</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">BullOfHeaven</target></effect>
-				<!--Chinese Legends-->
+	
+				<!--TODO: Additional Gods and Mythical Beasts - Temple of Primordials-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_HuangZhaowu</target></effect>
+				<target type="ProtoUnit">ChironGod</target></effect>
+			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">ChironGod</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_HuangZhaowuWife</target></effect>
+				<target type="ProtoUnit">HeraclesGod</target></effect>
+			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">HeraclesGod</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_NvChou</target></effect>
+				<target type="ProtoUnit">HadesDescended</target></effect>
+			<effect type="Data" amount="9.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">HadesDescended</target></effect>
 			
-				<!--Super Weapons-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_GiantSiegeCrossbow</target></effect>
+				<target type="ProtoUnit">GorgonAvenger</target></effect>
+			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">GorgonAvenger</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_Devastator</target></effect>			
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_ColossusOfRhodes</target></effect>
-			<effect type="Data" amount="4.75" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">MCMT_ColossusOfRhodes</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">Onigami</target></effect>
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">SolarBarge</target></effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">SolarBarge</target></effect>
-      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">NukeCannon</target></effect>
-			<effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">NukeCannon</target></effect>
+				<target type="ProtoUnit">Fafnirstrasz</target></effect>
+			<effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute">
+				<target type="ProtoUnit">Fafnirstrasz</target></effect>
 
-			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-				<target type="ProtoUnit">OxCartModelX</target></effect>
-      <effect type="Data" amount="1.50" subtype="AdditionalScale" relativity="Absolute">
-				<target type="ProtoUnit">OxCartModelX</target></effect>
-			
-				<!--CyberTech Units-->
+        <!--Presets of Units - Temple of Primordials-->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Fenrisulfr</target></effect>			
+      <effect type="Data" amount="5.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">ThorDescended</target></effect>
+      <effect type="Data" amount="4.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">VolstaggAwakened</target></effect>
+      <effect type="Data" amount="4.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">SurtrAwakened</target></effect>
+      <effect type="Data" amount="8.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">FenrisulfrAwakened</target></effect>
+      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="Fenrisulfr" relativity="Absolute"><target type="ProtoUnit">FenrisulfrAwakened</target></effect>
+
+      <effect type="Data" amount="0.25" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Grootia</target></effect>			
+      <effect type="Data" amount="0.40" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">Earthshaker</target></effect>
+      <effect type="Data" amount="4.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">OrphicEgg</target></effect>
+      <effect type="Data" amount="1.00" subtype="ModifySpawn" spawntype="Dead" proto="Phanes" relativity="Absolute"><target type="ProtoUnit">OrphicEgg</target></effect>
+
+      <effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">NukeCannon</target></effect>
+      <effect type="Data" amount="4.75" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">MCMT_ColossusOfRhodes</target></effect>			
+      <effect type="Data" amount="2.00" subtype="AdditionalScale" relativity="Absolute"><target type="ProtoUnit">SolarBarge</target></effect> 
+
+        <!--Gods and Mythical Beasts - Temple of Primordials-->
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_GodsBeasts</effect>
+
+      	<!--Primevals - Temple of Primordials-->			
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_Primevals</effect>
+
+      	<!--Chinese Legends - Temple of Primordials-->			
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_Legends</effect>
+
+      	<!--Super Weapons - Temple of Primordials-->			
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_SuperWeapons</effect>
+
+				<!--CyberTech Units - Manor - Siege Workshop - Bastion - Deployables-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MotherShip</target></effect>	
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">PrismTank</target></effect>		
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MirageTank</target></effect>		
@@ -675,6 +641,8 @@
 				<target type="ProtoUnit">Worldbreaker</target></effect>
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
 				<target type="ProtoUnit">OilRigPacked</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+				<target type="ProtoUnit">Onigami</target></effect>
       
       <!--Aircommand HQ Special Units-->
 			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
@@ -966,10 +934,7 @@
     <effects>
 			<!-- Conan Page 1 -->
 			<!--Clear-->
-			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_KastorLegend" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_ChampionOfFreyr" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_KastorLegend" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_ChampionOfFreyr" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
+
 			<!--Assign-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Partisan" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Partisan" row="1" column="1" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
@@ -1020,11 +985,8 @@
 			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="Partisan" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Partisan" row="0" column="255" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
 			<!--Assign-->
-			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_KastorLegend" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_ChampionOfFreyr" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>			
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_KastorLegend" row="1" column="1" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
-			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_ChampionOfFreyr" row="1" column="1" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
-			<!--Arrows-->
+
+      <!--Arrows-->
 			<effect type="Data" amount="1.00" subtype="CommandRemove" tech="MCMT_Page2" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>
 			<effect type="Data" amount="1.00" subtype="CommandAdd" tech="MCMT_Page1" row="3" column="5" relativity="Assign"><target type="ProtoUnit">Conan</target></effect>	
 			
@@ -1147,6 +1109,165 @@
         <target type="ProtoUnit">LogicalTypeMythUnitNotTitan</target></effect>  
     </effects>
 	</tech>
+
+  <!-- Temple of Primordials - Activate Tech -->
+  <tech name="TempleOfPrimordials_ActivateTech_GodsBeasts" mergeMode="add">
+    <displaynameid>STR_TECH_ACTIVATE_TECH_GODSBEASTS</displaynameid>
+    <researchpoints>10.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+    <icon>resources\tech\activate_tech.jpg</icon>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+    <flag>InfiniteTech</flag>
+    <researchpoints>1.0000</researchpoints>
+		<effects>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ThorDescended</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">VolstaggAwakened</target></effect>			
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SurtrAwakened</target></effect>			
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">FenrisulfrAwakened</target></effect>			
+		
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="ThorDescended" row="0" column="0" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="VolstaggAwakened" row="0" column="1" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="SurtrAwakened" row="0" column="2" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="FenrisulfrAwakened" row="0" column="3" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_Return</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_Return" row="3" column="5" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_GodsBeasts" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Primevals" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Legends" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_SuperWeapons" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+    </effects>
+	</tech>
+  <tech name="TempleOfPrimordials_ActivateTech_Primevals" mergeMode="add">
+    <displaynameid>STR_TECH_ACTIVATE_TECH_PRIMEVALS</displaynameid>
+    <researchpoints>10.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+    <icon>resources\tech\activate_tech.jpg</icon>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+    <flag>InfiniteTech</flag>
+    <researchpoints>1.0000</researchpoints>
+		<effects>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Grootia</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Earthshaker</target></effect>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">OrphicEgg</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">Phanes</target></effect>
+			    
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="Grootia" row="0" column="0" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="Earthshaker" row="0" column="1" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="OrphicEgg" row="0" column="2" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>    
+      
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_Return</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_Return" row="3" column="5" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_GodsBeasts" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Primevals" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Legends" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_SuperWeapons" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+    </effects>
+	</tech>
+  <tech name="TempleOfPrimordials_ActivateTech_Legends" mergeMode="add">
+    <displaynameid>STR_TECH_ACTIVATE_TECH_LEGENDS</displaynameid>
+    <researchpoints>10.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+    <icon>resources\tech\activate_tech.jpg</icon>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+    <flag>InfiniteTech</flag>
+    <researchpoints>1.0000</researchpoints>
+		<effects>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_KastorLegend</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_HuangZhaowu</target></effect>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_HuangZhaowuWife</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_NvChou</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_ChampionOfFreyr</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">ValkyrieWarrior</target></effect>
+			
+      <effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_KastorLegend" row="0" column="0" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_HuangZhaowu" row="0" column="1" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_HuangZhaowuWife" row="0" column="2" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>    
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_NvChou" row="0" column="3" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>    
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_ChampionOfFreyr" row="0" column="4" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>    
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="ValkyrieWarrior" row="0" column="5" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>    
+
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_Return</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_Return" row="3" column="5" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_GodsBeasts" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Primevals" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Legends" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_SuperWeapons" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+    </effects>
+	</tech>
+  
+  <tech name="TempleOfPrimordials_ActivateTech_SuperWeapons" mergeMode="add">
+    <displaynameid>STR_TECH_ACTIVATE_TECH_SUPERWEAPONS</displaynameid>
+    <researchpoints>10.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+    <icon>resources\tech\activate_tech.jpg</icon>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+    <flag>InfiniteTech</flag>
+    <researchpoints>1.0000</researchpoints>
+		<effects>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_GiantSiegeCrossbow</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_Devastator</target></effect>			
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">NukeCannon</target></effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">MCMT_ColossusOfRhodes</target></effect>
+			<effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute"><target type="ProtoUnit">SolarBarge</target></effect>
+
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_GiantSiegeCrossbow" row="0" column="0" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_Devastator" row="0" column="1" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="NukeCannon" row="0" column="2" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="MCMT_ColossusOfRhodes" row="0" column="4" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+			<effect type="Data" amount="1.00" subtype="CommandAdd" proto="SolarBarge" row="0" column="5" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>     
+      
+      <effect type="TechStatus" status="obtainable">TempleOfPrimordials_ActivateTech_Return</effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_Return" row="3" column="5" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_GodsBeasts" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Primevals" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Legends" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_SuperWeapons" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+    </effects>
+	</tech>
+  <tech name="TempleOfPrimordials_ActivateTech_Return" mergeMode="add">
+    <displaynameid>STR_TECH_ACTIVATE_TECH_SUPERWEAPONS</displaynameid>
+    <researchpoints>10.0000</researchpoints>
+		<status>UNOBTAINABLE</status>
+    <icon>resources\front_end\GodsPage\Arrow_Button_L_On.png</icon>
+    <flag>NoTextMessage</flag>
+    <flag>HideFromDialogs</flag>
+    <flag>InfiniteTech</flag>
+    <researchpoints>1.0000</researchpoints>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="ThorDescended" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="VolstaggAwakened" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="SurtrAwakened" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="FenrisulfrAwakened" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="Grootia" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="Earthshaker" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="OrphicEgg" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_KastorLegend" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_HuangZhaowu" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_HuangZhaowuWife" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_NvChou" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_ChampionOfFreyr" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="ValkyrieWarrior" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_GiantSiegeCrossbow" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_Devastator" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="NukeCannon" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="MCMT_ColossusOfRhodes" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandRemove" proto="SolarBarge" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+    
+      <effect type="Data" amount="1.00" subtype="CommandRemove" tech="TempleOfPrimordials_ActivateTech_Return" relativity="Assign" hidetooltip=""><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_GodsBeasts" row="0" column="0" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_Primevals" row="0" column="1" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_Legends" row="0" column="2" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+      <effect type="Data" amount="1.00" subtype="CommandAdd" tech="TempleOfPrimordials_ActivateTech_SuperWeapons" row="0" column="3" relativity="Assign"><target type="ProtoUnit">TempleOfPrimordials</target></effect>
+    </effects>
+  </tech>
 	
 	<!-- /// Researches /// -->
 	

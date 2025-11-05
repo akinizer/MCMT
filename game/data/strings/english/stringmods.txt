@@ -470,6 +470,10 @@ ID = "STR_TECH_BAOLEI_PAGE_1"   ;   Str = "Command Myth"
 ID = "STR_TECH_BAOLEI_PAGE_2"   ;   Str = "Command Might"
 
 ID = "STR_TECH_ACTIVATE_TECH"   ;   Str = "Activate Tech"
+ID = "STR_TECH_ACTIVATE_TECH_GODSBEASTS"   ;   Str = "Activate Tech: Gods and Beasts"
+ID = "STR_TECH_ACTIVATE_TECH_PRIMEVALS"   ;   Str = "Activate Tech: Primevals"
+ID = "STR_TECH_ACTIVATE_TECH_LEGENDS"   ;   Str = "Activate Tech: Legends"
+ID = "STR_TECH_ACTIVATE_TECH_SUPERWEAPONS"   ;   Str = "Activate Tech: Superweapons"
 
 ID = "STR_TECH_RECRUITING_MOUNTAINDWARVES_NAME"   ;   Str = "Recruiting Mountain Dwarves"
 ID = "STR_TECH_RECRUITING_MOUNTAINDWARVES_LR"    ;   Str = "Work Force now becomes Dwarf Force"
@@ -596,6 +600,9 @@ ID = "STR_POWER_PSIONIC_LEVITATION_LR"   ;   Str = "Psionic Energy Unleashed to 
 
 ID = "STR_POWER_TSUNAMI_GENERATOR"   ;   Str = "Tsunami Generator"
 ID = "STR_POWER_TSUNAMI_GENERATOR_LR"   ;   Str = "Seismic Wave Superweapon Unleashed by Worldbreaker Super Battleship"
+
+// ACTION NAMES
+ID = "STR_ACTION_DEMOLITION_ATTACK"   ;   Str = "Demolition Attack"
 
 // XL MAPS
 ID = "STR_MAP_ACROPOLIS_COLOSSAL_NAME" ;   Str = "Acropolis Colossal Map"

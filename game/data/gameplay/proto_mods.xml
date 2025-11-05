@@ -3227,8 +3227,8 @@
 		<unitaitype>HandCombative</unitaitype>
 		<movementtype>Amphibious</movementtype>
 		<turnrate>13.5000</turnrate>
-		<initialhitpoints>100000.0000</initialhitpoints>
-		<maxhitpoints>100000.0000</maxhitpoints>
+		<initialhitpoints>40000.0000</initialhitpoints>
+		<maxhitpoints>40000.0000</maxhitpoints>
 		<trainpoints>4.0000</trainpoints>
 		<populationcount>4</populationcount>
 		<maxvelocity>4.5000</maxvelocity>
@@ -3266,13 +3266,17 @@
 			<name>HandAttack</name>
 			<rof>20.000000</rof>
 			<damage type="Divine">1.000000</damage>
-			<damagearea>4.000000</damagearea>
+			<damagearea>20.000000</damagearea>
 			<damageflags>Nature|Enemy</damageflags>
 			<damagebonus type="AbstractTitan">50000.000000</damagebonus>
 			<maxrange>100.000000</maxrange>
 			<trackrating>99.0</trackrating>
 			<projectile>ProjectilePriestPharaoh</projectile>
 			<impacteffect>effects\impacts\fireball</impacteffect>
+			<onhiteffect type="Throw" targetunittype="HumanSoldier"></onhiteffect>
+			<onhiteffect type="Throw" targetunittype="LogicalTypeVillagerNotHero"></onhiteffect>
+			<onhiteffect type="Throw" targetunittype="LogicalTypeMythUnitNotTitan"></onhiteffect>
+			<throw>1</throw>
 		</protoaction>
 	</unit>
 	<unit name="Voltox">
@@ -4718,18 +4722,19 @@
 		<initialhitpoints>2750.0000</initialhitpoints>
 		<maxhitpoints>2750.0000</maxhitpoints>
 		<unitshieldregen damagetimeout="3.0">5.0000</unitshieldregen>
-		<maxcontained>100</maxcontained>
 		<los>25.0000</los>
 		
 		<maxvelocity>0.0000</maxvelocity>		
 		<maxhitpoints>2000.0000</maxhitpoints>
 		<buildpoints>40.0000</buildpoints>
-		<maxcontained>5</maxcontained>
+		<maxcontained>20</maxcontained>
 		<los>9.0000</los>
+
 		<initialresource resourcetype="Favor">1.0000</initialresource>
-		<armor type="Hack" value="0.3000"></armor>
+		<armor type="Hack" value="0.6000"></armor>
 		<armor type="Pierce" value="0.9000"></armor>
-		<armor type="Crush" value="0.0500"></armor>
+		<armor type="Crush" value="0.6500"></armor>
+
 		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
 		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
 		<unittype>LogicalTypeBuildingsNotWalls</unittype>
@@ -4745,8 +4750,6 @@
 		
 		<unittype>LogicalTypeEarthquakeAttack</unittype>
 		<unittype>LogicalTypeAffectedByRestoration</unittype>
-		<unittype>LogicalTypeValidMeteorTarget</unittype>
-		<unittype>LogicalTypeValidTornadoAttack</unittype>
 		<unittype>LogicalTypeMilitaryProductionBuilding</unittype>
 		<unittype>LogicalTypeNeededForVictory</unittype>
 		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
@@ -4755,33 +4758,18 @@
 		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>	
 		<unittype>LogicalTypeBuildingThatCanBeEmpowered</unittype>
 		<unittype>LogicalTypeValidSentinelTarget</unittype>
-		
+				
 		<!--Gods and Mythical Beasts-->
-		<train row="0" column="0">ThorDescended</train>
-		<train row="0" column="1">VolstaggAwakened</train>
-		<train row="0" column="2">SurtrAwakened</train>
-		<train row="0" column="3">FenrisulfrAwakened</train>
-		<train row="0" column="4">Fenrisulfr</train>
-		<train row="0" column="5">MCMT_ColossusOfRhodes</train>		
+		<tech row="0" column="0">TempleOfPrimordials_ActivateTech_GodsBeasts</tech>
+
+		<!--Primevals-->
+		<tech row="0" column="1">TempleOfPrimordials_ActivateTech_Primevals</tech>
+
+		<!--Chinese Legends-->
+		<tech row="0" column="2">TempleOfPrimordials_ActivateTech_Legends</tech>
 		
-		<train row="1" column="0">Grootia</train>
-		<train row="1" column="1">Earthshaker</train>
-		<train row="1" column="2">OrphicEgg</train>
-		
-		<!--Legends-->
-		<train row="2" column="0">MCMT_KastorLegend</train>
-		<train row="2" column="1">MCMT_HuangZhaowu</train>
-		<train row="2" column="2">MCMT_HuangZhaowuWife</train>
-		<train row="2" column="3">MCMT_NvChou</train>
-		<train row="2" column="4">MCMT_ChampionOfFreyr</train>
-		<train row="2" column="5">ValkyrieWarrior</train>
-		
-		<!--SuperWeapons-->
-		<train row="3" column="0">MCMT_GiantSiegeCrossbow</train>
-		<train row="3" column="1">MCMT_Devastator</train>
-		<train row="3" column="2">NukeCannon</train>
-		<train row="3" column="4">Onigami</train>		
-		<train row="3" column="5">SolarBarge</train>		
+		<!--Superweapons-->
+		<tech row="0" column="3">TempleOfPrimordials_ActivateTech_SuperWeapons</tech>
 
 		<flag>PrayableTo</flag>
 		<flag>HideResourceInventory</flag>
@@ -4797,7 +4785,6 @@
 		<flag>HasGatherPoint</flag>
 		
 		<contain>LogicalTypePickable</contain>
-		<command row="3" column="0">SetGatherPoint</command>
 
 		<!--cost added-->
 		<cost resourcetype="Gold">42.000</cost>
@@ -6510,11 +6497,12 @@
 		<unittype>LogicalTypeHandUnitsAttack</unittype>
 		<unittype>LogicalTypeRangedUnitsAttack</unittype>
 		
+		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
 		
 		<unittype>Hero</unittype>
-		<unittype>LegendHero</unittype>
+		<unittype>MajorHero</unittype>
 		<unittype>HeroShadowUpgraded</unittype>
 		
 		<unittype>AbstractTitan</unittype>
@@ -6527,6 +6515,7 @@
 		<unittype>LogicalTypeAffectedByRestoration</unittype>
 		<unittype>LogicalTypeHealed</unittype>
 		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
 		
 		<flag>BattleMusicTrigger</flag>
 		<flag>NoIdleActions</flag>
@@ -6546,8 +6535,6 @@
 		<turnrate>18.0000</turnrate>
 		<maxvelocity>8.0000</maxvelocity>
 		<los>20.0000</los>
-		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
-		<unittype>Unit</unittype>
 		<flag>NonCollideable</flag>
 		<flag>DontRotateObstruction</flag>
 		<flag>ObscuredByUnits</flag>
@@ -6556,74 +6543,69 @@
 		<flag>GivesLOSToAll</flag>
 		<flag>PlaceAnywhere</flag>
 		<flag>TieToWaterSurface</flag>
-		<selfdestructprotoaction>SelfDestructAttack</selfdestructprotoaction>
+		<selfdestructprotoaction>HandAttack</selfdestructprotoaction>
 		<tactics>fenrir.tactics</tactics>
 		<protoaction>
-		  <name>HandAttack</name>
-		  <rof>1.0</rof>
-		  <damage type="Hack">30.0</damage>
-		  <damage type="Crush">80.0</damage>
-		  <damagearea>8.000000</damagearea>
+		  <name stringid="STR_ACTION_DEMOLITION_ATTACK">HandAttack</name>
+		  <rof>5.0</rof>
+		  <damage type="Hack">175.0</damage>
+		  <damage type="Crush">2000.0</damage>
+		  <rate type="Unit">1.000000</rate>
+		  <rate type="Building">1.000000</rate>
+		  <rate type="Tree">1.000000</rate>
+		  <attackaction>1</attackaction>
+		  <handlogic>1</handlogic>
+		  <anim>Death</anim>
+		  <damagearea>25.000000</damagearea>
 		  <damageflags>Nature|Enemy</damageflags>
-		  <damagebonus type="Tree">0.00000</damagebonus>
 		  <damagebonus type="Huntable">999.00000</damagebonus>
 		  <damagebonus type="Herdable">999.00000</damagebonus>
 		  <damagebonus type="NonConvertableHerdable">999.00000</damagebonus>
 		  <damagebonus type="WildCrops">999.00000</damagebonus>
-		  <onhiteffect type="ShadingFade" shadingtype="burning" factor="1.1" fadetime="1.0" targetunittype="Tree">
-		  </onhiteffect>
-		  <onhiteffect type="AnimOverride" anim="Burning" targetunittype="Tree" duration="17.0">
-		  </onhiteffect>
-		  <onhiteffect type="Attach" proto="VFXFenirTreeFire" targetunittype="Tree" duration="8.0">
-		  </onhiteffect>
-		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="Herdable" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="Huntable" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="NonConvertableHerdable" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="WildCrops">
-		  </onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="EconomicUnit"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="HumanSoldier"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="LogicalTypeMythUnitNotTitan"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="Hero"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="Huntable"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="Herdable"></onhiteffect>
+		  <maxsizeclass>6</maxsizeclass>
+
+		  <onhiteffect type="ShadingFade" shadingtype="burning" factor="1.1" fadetime="1.0" targetunittype="Tree"></onhiteffect>
+		  <onhiteffect type="AnimOverride" anim="Burning" targetunittype="Tree" duration="17.0"></onhiteffect>
+		  <onhiteffect type="Attach" proto="VFXFenirTreeFire" targetunittype="Tree" duration="8.0"></onhiteffect>
+		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="Herdable" deadonly="1"></onhiteffect>
+		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="Huntable" deadonly="1"></onhiteffect>
+		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="NonConvertableHerdable" deadonly="1"></onhiteffect>
+		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" targetunittype="WildCrops"></onhiteffect>
+		  <selfdestruct>1</selfdestruct>
+		  <active>1</active>
 		</protoaction>
 		<protoaction>
 		  <name>SelfDestructAttack</name>
+		  <attackaction>1</attackaction>
 		  <damage type="Hack">175.000000</damage>
 		  <damage type="Crush">2000.000000</damage>
 		  <damagearea>25.000000</damagearea>
 		  <damageflags>Nature|Self|Enemy|Ally</damageflags>
-		  <damagebonus type="Tree">0.00000</damagebonus>
 		  <damagebonus type="Huntable">999.00000</damagebonus>
 		  <damagebonus type="Herdable">999.00000</damagebonus>
 		  <damagebonus type="NonConvertableHerdable">999.00000</damagebonus>
 		  <damagebonus type="WildCrops">999.00000</damagebonus>
 		  <allydamagemultiplier>0.100000</allydamagemultiplier>
-		  <onhiteffect type="Throw" targetunittype="EconomicUnit">
-		  </onhiteffect>
-		  <onhiteffect type="Throw" targetunittype="HumanSoldier">
-		  </onhiteffect>
-		  <onhiteffect type="Throw" targetunittype="LogicalTypeMythUnitNotTitan">
-		  </onhiteffect>
-		  <onhiteffect type="Throw" targetunittype="Hero">
-		  </onhiteffect>
-		  <onhiteffect type="Throw" targetunittype="Huntable">
-		  </onhiteffect>
-		  <onhiteffect type="Throw" targetunittype="Herdable">
-		  </onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="EconomicUnit"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="HumanSoldier"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="LogicalTypeMythUnitNotTitan"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="Hero"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="Huntable"></onhiteffect>
+		  <onhiteffect type="Throw" targetunittype="Herdable"></onhiteffect>
 		  <maxsizeclass>6</maxsizeclass>
-		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="Herdable" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="Huntable" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="NonConvertableHerdable" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="WildCrops" deadonly="1">
-		  </onhiteffect>
-		  <onhiteffect type="Shading" shadingtype="burning" factor="1.1" targetunittype="Tree">
-		  </onhiteffect>
-		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" duration="10.0" targetunittype="LogicalTypeHandUnitsAttack">
-		  </onhiteffect>
-		  <onhiteffect type="TreeFlatten" targetunittype="Tree">
-		  </onhiteffect>
+		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="Herdable" deadonly="1"></onhiteffect>
+		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="Huntable" deadonly="1"></onhiteffect>
+		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="NonConvertableHerdable" deadonly="1"></onhiteffect>
+		  <onhiteffect type="Shading" shadingtype="burning" factor="1.4" targetunittype="WildCrops" deadonly="1"></onhiteffect>
+		  <onhiteffect type="Shading" shadingtype="burning" factor="1.1" targetunittype="Tree"></onhiteffect>
+		  <onhiteffect type="ShadingFade" shadingtype="burning" fadetime="1.0" factor="1.4" duration="10.0" targetunittype="LogicalTypeHandUnitsAttack"></onhiteffect>
+		  <onhiteffect type="TreeFlatten" targetunittype="Tree"></onhiteffect>
 		</protoaction>
 		<protoaction>
 			<name>HeroRingOnSelf</name>
@@ -6805,7 +6787,6 @@
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
-		<unittype>MythUnit</unittype>
 		<unittype>Hero</unittype>
 		<unittype>LegendHero</unittype>
 		
@@ -6908,9 +6889,6 @@
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
 		<unittype>MilitaryUnit</unittype>
-		<unittype>MythUnit</unittype>
-		<unittype>MythUnitMelee</unittype>
-		<unittype>MythUnitSiege</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
 		<unittype>AbstractSiegeWeapon</unittype>
