@@ -622,6 +622,7 @@ ID = "STR_ACTION_ROCKTHROWATTACK"   ;   Str = "Rock Throw Attack"
 ID = "STR_ACTION_EXPLOSIVEJAVELINATTACK"   ;   Str = "Explosive Javelin Attack"
 ID = "STR_ACTION_SKYDIVEATTACK"   ;   Str = "Skydive Attack"
 ID = "STR_ACTION_GORGONSGAZEATTACK"   ;   Str = "Gorgon's Gaze Attack"
+ID = "STR_ACTION_DISTANCINGATTACK"   ;   Str = "Distancing Attack"
 
 // XL MAPS
 ID = "STR_MAP_ACROPOLIS_COLOSSAL_NAME" ;   Str = "Acropolis Colossal Map"

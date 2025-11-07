@@ -1,6 +1,6 @@
 <tactics>
   <action>
-    <name>HandAttack</name>
+    <name stringid="STR_ACTION_CLUBSMASHATTACK">ClubSmashAttack</name>
     <type>Attack</type>
     <rate type="LogicalTypeHandUnitsAttack">1.0</rate>
     <attackaction>1</attackaction>
@@ -12,7 +12,7 @@
     <impacteffect>effects\impacts\hack</impacteffect>
   </action>
   <action>
-    <name>RangedAttack</name>
+    <name stringid="STR_ACTION_HEROICTHROWATTACK">HeroicThrowAttack</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>
@@ -25,7 +25,7 @@
     <rate type="AbstractFlyingUnit">1.0</rate>
   </action>
   <action>
-    <name>RangedAttackLand</name>
+    <name stringid="STR_ACTION_LIONTHROWATTACK">LionThrowAttack</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>
@@ -40,8 +40,8 @@
     <rate type="Ship">1.0</rate>
   </action>
   <tactic>Default
-    <action priority="100">RangedAttack</action>
-    <action priority="90">RangedAttackLand</action>
-    <action priority="80">HandAttack</action>
+    <action priority="100">HeroicThrowAttack</action>
+    <action priority="90">LionThrowAttack</action>
+    <action priority="80">ClubSmashAttack</action>
     <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
 </tactics>
