@@ -1,6 +1,6 @@
 <tactics>
   <action>
-    <name>HandAttack</name>
+    <name stringid="STR_ACTION_SLASHATTACK">SlashAttack</name>
     <type>Attack</type>
     <rate type="LogicalTypeHandUnitsAttack">1.0</rate>
     <attackaction>1</attackaction>
@@ -25,7 +25,7 @@
     <rate type="AbstractFlyingUnit">1.0</rate>
   </action>
   <action>
-    <name>RangedAttackLand</name>
+    <name stringid="STR_ACTION_HEROICJAVELINATTACK">HeroicJavelinAttack</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>
@@ -35,29 +35,13 @@
     <spreadfactor>0.25</spreadfactor>
     <trackrating>1.0</trackrating>
     <impacteffect>effects\impacts\pierce</impacteffect>
-    <rate type="AbstractFlyingUnit">0.0</rate>
-    <rate type="Building">1.0</rate>
-    <rate type="Ship">1.0</rate>
-    <rate type="AbstractSiegeWeapon">1.0</rate>
-  </action>
-   <action>
-    <name>Gore</name>
-    <type>Gore</type>
-    <rate type="LogicalTypeMythUnitNotFlying">1.0</rate>
+    <rate type="Building">0.0</rate>
     <rate type="HumanSoldier">1.0</rate>
-    <rate type="EconomicUnit">1.0</rate>
-    <rate type="AnimalOfSet">1.0</rate>
-    <rate type="Hero">1.0</rate>
-    <attackaction>1</attackaction>
-    <handlogic>1</handlogic>
-    <anim>Gore</anim>
-    <chargeaction>1</chargeaction>
-    <impacteffect>effects\impacts\hack</impacteffect>
+    <rate type="NavalUnit">1.0</rate>
   </action>
   <tactic>Default
     <action priority="100">RangedAttack</action>
-    <action priority="90">RangedAttackLand</action>
-    <action priority="80">Gore</action>
-    <action priority="70">HandAttack</action>
+    <action priority="90">HeroicJavelinAttack</action>
+    <action priority="80">SlashAttack</action>
     <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
 </tactics>

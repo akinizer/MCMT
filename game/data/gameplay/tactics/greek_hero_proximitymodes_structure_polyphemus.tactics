@@ -1,0 +1,63 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_HEAVYSLAMATTACK">HeavySlamAttack</name>
+    <type>Attack</type>
+    <rate type="LogicalTypeHandUnitsAttack">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_ROCKTHROWATTACK">RockThrowAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HEROICTHROWATTACK">HeroicThrowAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">0.0</rate>
+    <rate type="Building">1.0</rate>
+    <rate type="Ship">1.0</rate>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+  </action>
+   <action>
+    <name stringid="STR_ACTION_SEISMICSLAMATTACK">SeismicSlamAttack</name>
+    <type>Gore</type>
+    <rate type="LogicalTypeMythUnitNotFlying">1.0</rate>
+    <rate type="HumanSoldier">1.0</rate>
+    <rate type="EconomicUnit">1.0</rate>
+    <rate type="AnimalOfSet">1.0</rate>
+    <rate type="Hero">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>Gore</anim>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <tactic>Default
+    <action priority="100">RockThrowAttack</action>
+    <action priority="90">HeroicThrowAttack</action>
+    <action priority="80">SeismicSlamAttack</action>
+    <action priority="70">HeavySlamAttack</action>
+    <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>

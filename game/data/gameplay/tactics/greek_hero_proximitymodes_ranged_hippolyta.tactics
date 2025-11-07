@@ -1,0 +1,46 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_RAPIDFIREATTACK">RapidfireAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>99.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="Unit">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_HEROICBOWATTACK">HeroicBowAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="All">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_RANGED_FLYING">RangedAttackFlying</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttackFlying</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">1.0</rate>
+  </action>
+  <tactic>Default
+    <action priority="100">RangedAttackFlying</action>
+    <action priority="90">HeroicBowAttack</action>
+    <action priority="80">RapidfireAttack</action>
+    <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>
