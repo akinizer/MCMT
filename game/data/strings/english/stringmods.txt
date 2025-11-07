@@ -604,6 +604,25 @@ ID = "STR_POWER_TSUNAMI_GENERATOR_LR"   ;   Str = "Seismic Wave Superweapon Unle
 // ACTION NAMES
 ID = "STR_ACTION_DEMOLITION_ATTACK"   ;   Str = "Demolition Attack"
 
+ID = "STR_ACTION_SLASHATTACK"   ;   Str = "Slash Attack"
+ID = "STR_ACTION_SPEARTHRUSTATTACK"   ;   Str = "Spear Thrust Attack"
+ID = "STR_ACTION_HEROICBOWATTACK"   ;   Str = "Heroic Bow Attack"
+ID = "STR_ACTION_HEROICJAVELINATTACK"   ;   Str = "Heroic Javelin Attack"
+ID = "STR_ACTION_HEROICTHROWATTACK"   ;   Str = "Heroic Throw Attack"
+
+ID = "STR_ACTION_CLUBSMASHATTACK"   ;   Str = "Club Smash Attack"
+ID = "STR_ACTION_HEAVYSLAMATTACK"   ;   Str = "Heavy Slam Attack"
+ID = "STR_ACTION_SEISMICSLAMATTACK"   ;   Str = "Seismic Slam Attack"
+ID = "STR_ACTION_CLEAVEATTACK"   ;   Str = "Cleave Attack"
+ID = "STR_ACTION_RAPIDFIREATTACK"   ;   Str = "Rapid Fire Attack"
+ID = "STR_ACTION_SERPENTBOWATTACK"   ;   Str = "Serpentbow Attack"
+ID = "STR_ACTION_PIERCINGTHROWATTACK"   ;   Str = "Piercing Throw Attack"
+ID = "STR_ACTION_LIONTHROWATTACK"   ;   Str = "Lion Throw Attack"
+ID = "STR_ACTION_ROCKTHROWATTACK"   ;   Str = "Rock Throw Attack"
+ID = "STR_ACTION_EXPLOSIVEJAVELINATTACK"   ;   Str = "Explosive Javelin Attack"
+ID = "STR_ACTION_SKYDIVEATTACK"   ;   Str = "Skydive Attack"
+ID = "STR_ACTION_GORGONSGAZEATTACK"   ;   Str = "Gorgon's Gaze Attack"
+
 // XL MAPS
 ID = "STR_MAP_ACROPOLIS_COLOSSAL_NAME" ;   Str = "Acropolis Colossal Map"
 ID = "STR_MAP_AIR_COLOSSAL_NAME" ;   Str = "Air Colossal Map"

@@ -1330,7 +1330,7 @@
 		<selectionradiusz>1.1500</selectionradiusz>
 		
 		<trainpoints>10.0000</trainpoints>
-		<autoattackrange>20.0000</autoattackrange>
+		<autoattackrange>48.0000</autoattackrange>
 		
 		<impacttype>Armoured</impacttype>
 		<unitaitype>RangedCombative</unitaitype>
@@ -1374,7 +1374,6 @@
 		<unittype>LogicalTypeRangedUnitsAttack</unittype>
 		<unittype>LogicalTypeMinimapFilterEconomic</unittype>
 		<unittype>CountsTowardEconomicScore</unittype>
-		<unittype>LogicalTypeEasySelectAvoid</unittype>
 		
 		<unittype>Unit</unittype>
 		<unittype>UnitClass</unittype>
@@ -3944,7 +3943,7 @@
 			<damage type="Hack">6.800000</damage>
 			<damagebonus type="HumanSoldier">1.250000</damagebonus>
 			<onhiteffect type="Attach" targetunittype="Unit" proto="VFXBleed" attachbone="spine" duration="6.000000"></onhiteffect>
-			<onhiteffect type="DamageOverTime" duration="3.000000">
+			<onhiteffect type="DamageOverTime" duration="3.000000" targetunittype="Unit">
 				<damage type="Hack">1.50000</damage>
 			</onhiteffect>
 			<maxrange>0.750000</maxrange>
@@ -8372,6 +8371,9 @@
 	  <onhiteffect type="DamageOverTime" duration="5.000000" targetunittype="Unit">
 		<damage type="Divine">3.00000</damage>
 	  </onhiteffect>
+	  <onhiteffect type="DamageOverTime" duration="5.000000" targetunittype="Building">
+		<damage type="Divine">2.50000</damage>
+	  </onhiteffect>
 	  <onhiteffect type="Attach" targetunittype="Unit" proto="VFXPoison" attachbone="spine" duration="5.000000"></onhiteffect>
 	  <onhiteffect type="Attach" proto="VFXScorchingFeathers" attachbone="spine" duration="5.000000">
         <target attacktype="Unit"></target>
@@ -10638,7 +10640,7 @@
 			<damagebonus type="MythUnit">2.000000</damagebonus>
 			<damagebonus type="Hero">0.250000</damagebonus>
 			<maxrange>20.000000</maxrange>
-			<onhiteffect type="DamageOverTime" duration="20.000000">
+			<onhiteffect type="DamageOverTime" duration="20.000000" targetunittype="Unit">
 				<damage type="Divine">5.000000</damage>
 			</onhiteffect>
 			<projectile>ProjectileUFOLazer</projectile>
@@ -10748,11 +10750,14 @@
 			<damageflags>Nature|Enemy</damageflags>
 			<damagebonus type="Hero">0.250000</damagebonus>
 			<damagebonus type="MythUnit">2.000000</damagebonus>
+			<damagebonus type="AbstractVillager">2.500000</damagebonus>
 			<maxrange>12.000000</maxrange>
 			<projectile>ProjectileMummyFlies</projectile>
-			<onhiteffect type="DamageOverTime" duration="15.000000" targetunittype="Unit">
-				<damage type="Divine">3.00000</damage>
-			</onhiteffect>
+			<onhiteffect type="DamageOverTime" duration="15.000000" targetunittype="HumanSoldier">
+				<damage type="Divine">3.00000</damage></onhiteffect>
+			<onhiteffect type="DamageOverTime" duration="15.000000" targetunittype="LogicalTypeVillagerNotHero">
+				<damage type="Divine">3.00000</damage></onhiteffect>
+
 			<onhiteffect type="Reincarnation" duration="15.000000" targetunittype="Unit" proto="MinionReincarnated"></onhiteffect>
 			<onhiteffect type="Attach" targetunittype="Unit" proto="VFXPoison" attachbone="spine" duration="15.000000"></onhiteffect>
 		</protoaction>
@@ -10881,7 +10886,7 @@
 		  <damagebonus type="Hero">0.250000</damagebonus>
 		  <maxrange>1.000000</maxrange>
 		  <rate type="Unit">1.0</rate>
-		  <onhiteffect type="DamageOverTime" duration="6.000000">
+		  <onhiteffect type="DamageOverTime" duration="6.000000" targetunittype="Unit">
 			<damage type="Divine">1.500000</damage>
 		  </onhiteffect>
 		  <onhiteffect type="Attach" targetunittype="Unit" proto="VFXPoison" attachbone="spine" duration="6.000000">
@@ -11130,7 +11135,7 @@
 
 		<tactics>greek_hero_proximitymodes.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">9.00000</damage>
 			<damage type="Divine">2.00000</damage>
@@ -11138,9 +11143,12 @@
 			<damagebonus type="HumanSoldier">6.000000</damagebonus>
 			<damagebonus type="Hero">2.000000</damagebonus>
 			<maxrange>0.750000</maxrange>
-			<onhiteffect type="DamageOverTime" duration="5.000000">
-				<damage type="Divine">3.00000</damage>
-			</onhiteffect>
+			<onhiteffect type="DamageOverTime" duration="5.000000" targetunittype="AbstractVillager">
+				<damage type="Divine">3.50000</damage></onhiteffect>
+			<onhiteffect type="DamageOverTime" duration="5.000000" targetunittype="HumanSoldier">
+				<damage type="Divine">3.00000</damage></onhiteffect>
+			<onhiteffect type="DamageOverTime" duration="5.000000" targetunittype="MythUnit">
+				<damage type="Divine">2.50000</damage></onhiteffect>
 			<defaultattack>1</defaultattack>			
 		</protoaction>
 		<protoaction>
@@ -11152,7 +11160,7 @@
 			<projectile>ProjectileArrowFlaming</projectile>
 		</protoaction>
 		<protoaction>
-			<name>RangedAttackLand</name>
+			<name stringid="STR_ACTION_HEROICBOWATTACK">RangedAttackLand</name>
 			<rof>2.000000</rof>
 			<damage type="Pierce">9.000000</damage>
 			<damage type="Divine">2.000000</damage>
@@ -11263,7 +11271,7 @@
 		<contain external="1">LogicalTypePickable</contain>
 		<tactics>greek_hero_proximitymodes_mythunit.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_CLUBSMASHATTACK">HandAttack</name>
 			<rof>1.200000</rof>
 			<damage type="Hack">12.000000</damage>
 			<damage type="Crush">12.000000</damage>
@@ -11283,14 +11291,16 @@
 			<projectile>ProjectileArrowFlaming</projectile>
 		</protoaction>
 		<protoaction>
-			<name>RangedAttackLand</name>
-			<rof>2.500000</rof>
-			<damage type="Divine">3.000000</damage>
-			<damage type="Crush">6.000000</damage>
-			<damagebonus type="MythUnit">3.000000</damagebonus>
+			<name stringid="STR_ACTION_LIONTHROWATTACK">RangedAttackLand</name>
+			<rof>5.000000</rof>
+			<damage type="Divine">5.000000</damage>
+			<damage type="Crush">10.000000</damage>
+			<damagebonus type="MythUnit">10.000000</damagebonus>
+			<damagebonus type="NavalUnit">5.000000</damagebonus>
 			<minrange>12.000000</minrange>
 			<maxrange>28.000000</maxrange>
-			<projectile>ProjectileArrowFlaming</projectile>
+			<projectile>RelicGoldenLion</projectile>
+			<onhiteffect type="Spawn" proto="VFXFishingShipChineseDemolition" amount="1"></onhiteffect>
 		</protoaction>
 		<protoaction>
 			<name>Pickup</name>
@@ -11311,7 +11321,7 @@
 		<maxshieldpoints>100</maxshieldpoints>
 		
 		<protoaction>
-			<name>RangedAttack</name>
+			<name stringid="STR_ACTION_RAPIDFIREATTACK">RangedAttack</name>
 			<rof>0.600000</rof>
 			<damage type="Pierce">14.000000</damage>			
 			<damage type="Divine">2.00000</damage>
@@ -11322,46 +11332,240 @@
 			<projectile>ProjectileArrowFlaming</projectile>
 		</protoaction>
 	</unit>
-	<unit name="Bellerophon">
+	<unit name="Bellerophon" mergeMode="replace">
+		<displaynameid>STR_UNIT_BELLEROPHON_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_BELLEROPHON_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_BELLEROPHON_SR</shortrollovertextid>
+		<icon>resources\greek\player_color\units\bellerophon_icon.png</icon>
+		<animfile>greek\units\hero\bellerophon\bellerophon.xml</animfile>
+		<soundsetfile>greek\vo\bellerophon\bellerophon.xml</soundsetfile>
+		<obstructionradiusx>0.7400</obstructionradiusx>
+		<obstructionradiusz>0.7400</obstructionradiusz>
+		<selectionradiusx>0.7500</selectionradiusx>
+		<selectionradiusz>1.1500</selectionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>30.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>640.0000</initialhitpoints>
+		<maxhitpoints>640.0000</maxhitpoints>
+		<trainpoints>30.0000</trainpoints>
+		<buildlimit>1</buildlimit>
+		<weightclass>8</weightclass>
+		<maxcontained>1</maxcontained>
+		<populationcount>4</populationcount>
 		<maxvelocity>6.7000</maxvelocity>
-		<initialshieldpoints>100</initialshieldpoints>
-		<maxshieldpoints>100</maxshieldpoints>
-		
+		<initialshieldpoints>250</initialshieldpoints>
+		<maxshieldpoints>250</maxshieldpoints>
+
+		<rechargetime>8.0000</rechargetime>
+		<los>16.0000</los>
+		<sharedselectionunittypes>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<cost resourcetype="Gold">400.0000</cost>
+		<cost resourcetype="Favor">6.0000</cost>
+		<armor type="Hack" value="0.2000"></armor>
+		<armor type="Pierce" value="0.5500"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		<unittype>Unit</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Hero</unittype>
+		<unittype>MajorHero</unittype>
 		<unittype>CavalryLineUpgraded</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
 		<unittype>MythUnitCavalry</unittype>		
 		<unittype>MythUnitRanged</unittype>		
-		
+
+		<unittype>HeroShadowUpgraded</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>SplitQueue</flag>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>greek_hero_proximitymodes_jump.tactics</tactics>
 		<protoaction>
-			<name>JumpAttack</name>
+			<name stringid="STR_ACTION_SPEARTHRUSTATTACK">HandAttack</name>
+			<rof>1.200000</rof>
+			<damage type="Hack">15.000000</damage>
+			<damage type="Divine">7.000000</damage>
+			<damagebonus type="MythUnit">4.500000</damagebonus>
+			<maxrange>1.000000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">10.000000</damage>
+			<damagebonus type="MythUnit">5.000000</damagebonus>
+			<maxrange>12.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_EXPLOSIVEJAVELINATTACK">RangedAttackLand</name>
+			<anim>HandAttack</anim>
+			<rof>2.000000</rof>
+			<damage type="Pierce">12.000000</damage>
+			<damage type="Crush">8.000000</damage>
+			<damage type="Divine">2.000000</damage>
+			<damagebonus type="MythUnit">8.000000</damagebonus>
+			<damagebonus type="HumanSoldier">5.000000</damagebonus>
+			<damagebonus type="Building">4.000000</damagebonus>
+			<minrange>12.000000</minrange>
+			<maxrange>28.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+			<onhiteffect type="Spawn" proto="VFXFishingShipChineseDemolition" amount="1"></onhiteffect>
+			<onhiteffect type="Attach" targetunittype="Unit" proto="VFXNeZhaFire" duration="5.000000"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_SKYDIVEATTACK">JumpAttack</name>
 			<rof>0.010000</rof>
 			<damage type="Hack">60.000000</damage>
 			<damage type="Divine">20.000000</damage>
 			<damagebonus type="MythUnit">4.500000</damagebonus>
 			<minrange>4.000000</minrange>
-			<maxrange>30.000000</maxrange>
+			<maxrange>25.000000</maxrange>
 			<damagearea>3.000000</damagearea>
 			<onhiteffect type="Stun" targetunittype="LogicalTypeMythUnitNotTitan" duration="1.00"></onhiteffect>
 			<onhiteffect type="Stun" targetunittype="HumanSoldier" duration="2.00"></onhiteffect>
 			<onhiteffect type="Stun" targetunittype="LogicalTypeVillagerNotHero" duration="4.00"></onhiteffect>
-			
-			<onhiteffect type="Throw">
+			<onhiteffect type="Throw" >
 				<target attacktype="HumanSoldier"></target>
+				<target attacktype="LogicalTypeMythUnitNotTitan"></target>
 				<target attacktype="AbstractVillager"></target>
 			</onhiteffect>
+		</protoaction>	
+		<protoaction>
+			<name>Pickup</name>
+			<type>Pickup</type>
+			<maxrange>1</maxrange>
+			<rate type="LogicalTypePickable">1.00000</rate>
 		</protoaction>
-		
+		<protoaction>
+			<name>DropOff</name>
+			<type>DropOff</type>
+			<maxrange>1</maxrange>
+			<rate type="AbstractTemple">1.00000</rate>
+		</protoaction>			
 	</unit>
 	<!--Greek///Heroes///Hades-->
-	<unit name="Ajax">
+	<unit name="Ajax" mergeMode="replace">
+		<displaynameid>STR_UNIT_AJAX_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_AJAX_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_AJAX_SR</shortrollovertextid>
+		<icon>resources\greek\player_color\units\ajax_icon.png</icon>
+		<animfile>greek\units\hero\ajax\ajax.xml</animfile>
+		<soundsetfile>greek\vo\ajax\ajax.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>16.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>190.0000</initialhitpoints>
+		<maxhitpoints>190.0000</maxhitpoints>
+		<trainpoints>5.0000</trainpoints>
+		<buildlimit>1</buildlimit>
+		<weightclass>7</weightclass>
+		<maxcontained>1</maxcontained>
+		<populationcount>2</populationcount>
+		<maxvelocity>4.3000</maxvelocity>
+		<los>16.0000</los>
+		<sharedselectionunittypes>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<cost resourcetype="Food">100.0000</cost>
+		<cost resourcetype="Wood">50.0000</cost>
 		<armor type="Hack" value="0.5000"></armor>
 		<armor type="Pierce" value="0.6000"></armor>
 		<armor type="Crush" value="0.6900"></armor>
-		
+
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
-		
+
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>RotateInPlace</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>SplitQueue</flag>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>greek_hero_proximitymodes_humans.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_SPEARTHRUSTATTACK">HandAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">20.000000</damage>
 			<damage type="Divine">10.000000</damage>
@@ -11369,6 +11573,40 @@
 			<damagebonus type="SeaSnake">3.000000</damagebonus>
 			<damagebonus type="Serpent">3.000000</damagebonus>
 			<maxrange>1.000000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_HEROICJAVELINATTACK">RangedAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Pierce">4.000000</damage>
+			<damagebonus type="MythUnit">9.000000</damagebonus>
+			<maxrange>12.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttackLand</name>
+			<anim>HandAttack</anim>
+			<rof>2.000000</rof>
+			<damage type="Pierce">12.000000</damage>
+			<damage type="Hack">2.000000</damage>
+			<damage type="Divine">2.000000</damage>
+			<damagebonus type="MythUnit">8.000000</damagebonus>
+			<damagebonus type="HumanSoldier">5.000000</damagebonus>
+			<minrange>12.000000</minrange>
+			<maxrange>28.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
+		<protoaction>
+			<name>Pickup</name>
+			<type>Pickup</type>
+			<maxrange>1</maxrange>
+			<rate type="LogicalTypePickable">1.00000</rate>
+		</protoaction>
+		<protoaction>
+			<name>DropOff</name>
+			<type>DropOff</type>
+			<maxrange>1</maxrange>
+			<rate type="AbstractTemple">1.00000</rate>
 		</protoaction>
 	</unit>
 	<unit name="Achilles">
@@ -11383,7 +11621,7 @@
 		
 		<tactics>greek_hero.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">12.000000</damage>			
 			<damage type="Divine">2.00000</damage>
@@ -11443,7 +11681,7 @@
 		<trainpoints>5.0000</trainpoints>
 		<initialshieldpoints>100</initialshieldpoints>
 		<maxshieldpoints>100</maxshieldpoints>
-		<unitshieldregen>5.0000</unitshieldregen>
+		<unitshieldregen>7.77</unitshieldregen>
 
 		<buildlimit>1</buildlimit>
 		<weightclass>7</weightclass>
@@ -11510,22 +11748,38 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>SplitQueue</flag>
 		<contain external="1">LogicalTypePickable</contain>
-		<tactics>greek_hero.tactics</tactics>
+		<tactics>greek_hero_proximitymodes.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_CLEAVEATTACK">HandAttack</name>
 			<rof>3.000000</rof>
 			<damage type="Hack">9.00000</damage>
+			<damage type="Divine">3.00000</damage>
 			<damagebonus type="MythUnit">4.000000</damagebonus>
+			<damagebonus type="HumanSoldier">4.500000</damagebonus>
 			<maxrange>0.750000</maxrange>
 			<defaultattack>1</defaultattack>
 		</protoaction>
 		<protoaction>
-			<name>RangedAttack</name>
-			<rof>1.000000</rof>
-			<damage type="Pierce">16.000000</damage>
+			<name stringid="STR_ACTION_PIERCINGTHROWATTACK">RangedAttack</name>
+			<anim>HandAttack</anim>
+			<rof>2.000000</rof>
+			<damage type="Divine">8.000000</damage>
 			<damagebonus type="MythUnit">1.500000</damagebonus>
 			<maxrange>20.000000</maxrange>
-			<projectile>ProjectileJavelinFlaming</projectile>
+			<projectile>ProjectileSageAttack</projectile>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_HEROICTHROWATTACK">RangedAttackLand</name>
+			<anim>HandAttack</anim>
+			<rof>2.000000</rof>
+			<damage type="Pierce">5.000000</damage>
+			<damage type="Divine">4.000000</damage>
+			<damagebonus type="MythUnit">8.000000</damagebonus>
+			<damagebonus type="HumanSoldier">6.000000</damagebonus>
+			<damagebonus type="Hero">2.000000</damagebonus>
+			<minrange>12.000000</minrange>
+			<maxrange>28.000000</maxrange>
+			<projectile>ProjectileLiJingAttack</projectile>
 		</protoaction>
 		<protoaction>
 			<name>Pickup</name>
@@ -11538,6 +11792,21 @@
 			<type>DropOff</type>
 			<maxrange>1</maxrange>
 			<rate type="AbstractTemple">1.00000</rate>
+		</protoaction>
+		<protoaction>
+			<name>HeroRingOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow_ring.xml</modelattachment>
+			</protoaction>
+		<protoaction>
+			<name>HeroGlowOnSelf</name>
+			<type>Modify</type>
+			<modifyselfonly>1</modifyselfonly>
+			<persistent>1</persistent>
+			<modelattachment>vfx\glow\hero_glow.xml</modelattachment>
+			<modelattachmentbone>Spine</modelattachmentbone>
 		</protoaction>
 	</unit>
 	<unit name="Chiron">
@@ -11561,31 +11830,149 @@
 			<accuracy>1.0</accuracy>
 			<trackrating>99.0</trackrating>
 			
-			<onhiteffect type="DamageOverTime" duration="5.000000">
+			<onhiteffect type="DamageOverTime" duration="5.000000" targetunittype="Unit">
 				<damage type="Divine">3.00000</damage>
 			</onhiteffect>
 		</protoaction>		
 	</unit>
 	
 	<unit name="Perseus">
+		<displaynameid>STR_UNIT_PERSEUS_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_PERSEUS_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_PERSEUS_SR</shortrollovertextid>
+		<icon>resources\greek\player_color\units\perseus_icon.png</icon>
+		<animfile>greek\units\hero\perseus\perseus.xml</animfile>
+		<soundsetfile>greek\vo\perseus\perseus.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<autoattackrange>30.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>400.0000</initialhitpoints>
+		<maxhitpoints>400.0000</maxhitpoints>
 		<initialshieldpoints>100</initialshieldpoints>
 		<maxshieldpoints>100</maxshieldpoints>
-		
+
+		<trainpoints>30.0000</trainpoints>
+		<buildlimit>1</buildlimit>
+		<weightclass>7</weightclass>
+		<maxcontained>1</maxcontained>
+		<populationcount>4</populationcount>
+		<maxvelocity>4.3000</maxvelocity>
+		<rechargetime>24.0000</rechargetime>
+		<los>16.0000</los>
+		<sharedselectionunittypes><unittype>LogicalTypeSharedHeroSelection</unittype></sharedselectionunittypes>
+		<cost resourcetype="Gold">300.0000</cost>
+		<cost resourcetype="Food">100.0000</cost>
+		<cost resourcetype="Favor">6.0000</cost>
+		<armor type="Hack" value="0.2000"></armor>
+		<armor type="Pierce" value="0.4000"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+
+		<unittype>Hero</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
 		<unittype>InfantryLineUpgraded</unittype>	
+		<unittype>ArcherLineUpgraded</unittype>	
 		<unittype>MythUnitRanged</unittype>	
+
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>SplitQueue</flag>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>greek_hero_proximitymodes_freeze.tactics</tactics>
 		<protoaction>
-		<name>FreezeAttack</name>
-		<rof>1.700000</rof>
-		<maxrange>10.000000</maxrange>
-		<projectile>ProjectileBallOfFireInvisible</projectile>
-		<onhiteffect type="Freeze" freezetype="StoneDamage" duration="8.000000" damage="1000.000000"></onhiteffect>
-		<onhiteffect type="StatModify" duration="8.000000">
-			<modify type="ArmorSpecific" dmgtype="Pierce">1.300000</modify>
-			<modify type="ArmorSpecific" dmgtype="Hack">1.300000</modify>
-			<modify type="ArmorSpecific" dmgtype="Crush">0.700000</modify>
-		</onhiteffect>
-      <workonfrozenunits>0</workonfrozenunits>
-    </protoaction>
+			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Hack">18.000000</damage>
+			<damage type="Divine">9.000000</damage>
+			<damagebonus type="MythUnit">7.000000</damagebonus>
+			<maxrange>0.750000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Pierce">7.000000</damage>
+			<damagebonus type="MythUnit">7.000000</damagebonus>
+			<maxrange>14.000000</maxrange>
+			<projectile>ProjectileWadjetSpit</projectile>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_SERPENTBOWATTACK">RangedAttackLand</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">18.500000</damage>
+			<damage type="Divine">9.000000</damage>
+			<damagebonus type="MythUnit">12.000000</damagebonus>
+			<minrange>12.000000</minrange>
+			<maxrange>28.000000</maxrange>
+			<projectile>ProjectileWadjetSpit</projectile>
+		</protoaction>
+		<protoaction>
+			<name>Pickup</name>
+			<type>Pickup</type>
+			<maxrange>1</maxrange>
+			<rate type="LogicalTypePickable">1.00000</rate>
+		</protoaction>
+		<protoaction>
+			<name>DropOff</name>
+			<type>DropOff</type>
+			<maxrange>1</maxrange>
+			<rate type="AbstractTemple">1.00000</rate>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_GORGONSGAZEATTACK">FreezeAttack</name>
+			<rof>1.700000</rof>
+			<maxrange>10.000000</maxrange>
+			<projectile>ProjectileBallOfFireInvisible</projectile>
+			<onhiteffect type="Freeze" freezetype="StoneDamage" duration="8.000000" damage="1000.000000"></onhiteffect>
+			<onhiteffect type="StatModify" duration="8.000000">
+				<modify type="ArmorSpecific" dmgtype="Pierce">1.300000</modify>
+				<modify type="ArmorSpecific" dmgtype="Hack">1.300000</modify>
+				<modify type="ArmorSpecific" dmgtype="Crush">0.700000</modify>
+			</onhiteffect>
+			<onhiteffect type="Spawn" proto="VFXAsh" amount="1"></onhiteffect>
+		<workonfrozenunits>0</workonfrozenunits>
+		</protoaction>		
 	</unit>
 	<unit name="TheArgo">
 		<initialshieldpoints>100</initialshieldpoints>
@@ -11597,7 +11984,6 @@
 		
 		<maxvelocity>7.0000</maxvelocity>
 		
-		<unittype>AbstractArcher</unittype>
 		<unittype>ArcherLineUpgraded</unittype>
 		<unittype>AbstractWarship</unittype>
 		
@@ -11616,14 +12002,92 @@
 	</unit>	
 	
 	<!--Greek///Heroes///Poseidon-->
-	<unit name="Atalanta">
+	<unit name="Atalanta" mergeMode="replace">
+		<displaynameid>STR_UNIT_ATALANTA_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_ATALANTA_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_ATALANTA_SR</shortrollovertextid>
+		<icon>resources\greek\player_color\units\atalanta_icon.png</icon>
+		<animfile>greek\units\hero\atalanta\atalanta.xml</animfile>
+		<soundsetfile>greek\vo\atalanta\atalanta.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<autoattackrange>30.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>275.0000</initialhitpoints>
+		<maxhitpoints>275.0000</maxhitpoints>
 		<initialshieldpoints>100</initialshieldpoints>
 		<maxshieldpoints>100</maxshieldpoints>
-		
+
+		<trainpoints>20.0000</trainpoints>
+		<buildlimit>1</buildlimit>
+		<weightclass>7</weightclass>
+		<maxcontained>1</maxcontained>
+		<populationcount>3</populationcount>
+		<maxvelocity>5.6000</maxvelocity>
+		<los>16.0000</los>
+		<sharedselectionunittypes>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		</sharedselectionunittypes>
+		<cost resourcetype="Food">75.0000</cost>
+		<cost resourcetype="Gold">175.0000</cost>
+		<cost resourcetype="Favor">2.0000</cost>
+		<armor type="Hack" value="0.3500"></armor>
+		<armor type="Pierce" value="0.3000"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeSharedHeroSelection</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Hero</unittype>
+		<unittype>MajorHero</unittype>
+		<unittype>HeroShadowUpgraded</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
-		
+		<unittype>ArcherLineUpgraded</unittype>
+
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFindMilitaryHero</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>RotateInPlace</flag>
+		<flag>CommonCommands</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>HasDefaultAttack</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>SplitQueue</flag>
+		<contain external="1">LogicalTypePickable</contain>
+		<tactics>greek_hero_proximitymodes_humans.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
 			<rof>1.400000</rof>
 			<damage type="Hack">12.000000</damage>
 			<damage type="Pierce">2.000000</damage>
@@ -11632,6 +12096,39 @@
 			<damagebonus type="AbstractCavalry">6.000000</damagebonus>
 			<maxrange>5.000000</maxrange>
 			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.700000</rof>
+			<damage type="Pierce">5.500000</damage>
+			<damagebonus type="MythUnit">7.000000</damagebonus>
+			<maxrange>12.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_ACTION_HEROICJAVELINATTACK">RangedAttackLand</name>
+			<anim>HandAttack</anim>
+			<rof>2.500000</rof>
+			<damage type="Pierce">12.000000</damage>
+			<damage type="Hack">2.000000</damage>
+			<damage type="Divine">2.000000</damage>
+			<damagebonus type="MythUnit">8.000000</damagebonus>
+			<damagebonus type="HumanSoldier">5.000000</damagebonus>
+			<minrange>12.000000</minrange>
+			<maxrange>28.000000</maxrange>
+			<projectile>ProjectileJavelinFlaming</projectile>
+		</protoaction>
+		<protoaction>
+		<name>Pickup</name>
+			<type>Pickup</type>
+			<maxrange>1</maxrange>
+			<rate type="LogicalTypePickable">1.00000</rate>
+		</protoaction>
+		<protoaction>
+			<name>DropOff</name>
+			<type>DropOff</type>
+			<maxrange>1</maxrange>
+			<rate type="AbstractTemple">1.00000</rate>
 		</protoaction>
 	</unit>
 	<unit name="Hippolyta">
@@ -11643,7 +12140,7 @@
 		<maxvelocity>6.0000</maxvelocity>
 		
 		<protoaction>
-			<name>RangedAttack</name>
+			<name stringid="STR_ACTION_HEROICBOWATTACK">RangedAttack</name>
 			<rof>2.000000</rof>
 			<damage type="Pierce">24.000000</damage>
 			<damage type="Divine">2.000000</damage>
@@ -11740,7 +12237,7 @@
 		<contain external="1">LogicalTypePickable</contain>
 		<tactics>greek_hero_proximitymodes.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">6.500000</damage>
 			<damage type="Divine">2.000000</damage>
@@ -11757,7 +12254,7 @@
 			<projectile>ProjectileArrowFlaming</projectile>
 		</protoaction>
 		<protoaction>
-			<name>RangedAttackLand</name>
+			<name stringid="STR_ACTION_HEROICBOWATTACK">RangedAttackLand</name>
 			<rof>2.000000</rof>
 			<damage type="Pierce">6.500000</damage>
 			<damage type="Divine">2.000000</damage>
@@ -11866,7 +12363,7 @@
 		<contain external="1">LogicalTypePickable</contain>
 		<tactics>greek_hero_proximitymodes_structure_gore.tactics</tactics>
 		<protoaction>
-			<name>HandAttack</name>
+			<name stringid="STR_ACTION_HEAVYSLAMATTACK">HandAttack</name>
 			<rof>1.500000</rof>
 			<damage type="Hack">35.00000</damage>
 			<damage type="Crush">15.00000</damage>
@@ -11877,7 +12374,7 @@
 			<defaultattack>1</defaultattack>
 		</protoaction>				
 		<protoaction>
-			<name>RangedAttack</name>
+			<name stringid="STR_ACTION_ROCKTHROWATTACK">RangedAttack</name>
 			<rof>4.000000</rof>
 			<damage type="Pierce">18.0000</damage>
 			<damagebonus type="MythUnit">7.000000</damagebonus>
@@ -11885,7 +12382,7 @@
 			<projectile>ProjectileCatapultShot</projectile>
 		</protoaction>
 		<protoaction>
-			<name>RangedAttackLand</name>
+			<name stringid="STR_ACTION_HEROICTHROWATTACK">RangedAttackLand</name>
 			<rof>2.500000</rof>
 			<damage type="Crush">13.000000</damage>
 			<damage type="Divine">5.000000</damage>
@@ -11897,7 +12394,7 @@
 			<impacteffect>effects\impacts\crush_medium</impacteffect>
 		</protoaction>
 		<protoaction>
-			<name>Gore</name>
+			<name stringid="STR_ACTION_SEISMICSLAMATTACK">Gore</name>
 			<rof>2.000000</rof>
 			<damage type="Hack">50.000000</damage>
 			<damage type="Crush">10.000000</damage>

@@ -1,6 +1,6 @@
 <tactics>
   <action>
-    <name stringid="STR_ACTION_HAND">HandAttack</name>
+    <name>HandAttack</name>
     <type>Attack</type>
     <rate type="LogicalTypeHandUnitsAttack">1.0</rate>
     <attackaction>1</attackaction>
@@ -12,7 +12,7 @@
     <impacteffect>effects\impacts\hack</impacteffect>
   </action>
   <action>
-    <name stringid="STR_ACTION_RANGED">RangedAttack</name>
+    <name>RangedAttack</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>
@@ -25,7 +25,7 @@
     <rate type="AbstractFlyingUnit">1.0</rate>
   </action>
   <action>
-    <name stringid="STR_ACTION_RANGED">RangedAttackLand</name>
+    <name>RangedAttackLand</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>

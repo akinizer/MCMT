@@ -35,13 +35,24 @@
     <spreadfactor>0.25</spreadfactor>
     <trackrating>1.0</trackrating>
     <impacteffect>effects\impacts\pierce</impacteffect>
-    <rate type="Building">0.0</rate>
-    <rate type="LogicalTypeMythUnitNotFlying">1.0</rate>
-    <rate type="Ship">1.0</rate>
+    <rate type="AbstractFlyingUnit">0.0</rate>
+    <rate type="Building">1.0</rate>
+    <rate type="NavalUnit">1.0</rate>
+  </action>
+   <action>
+    <name>JumpAttack</name>
+    <type>JumpAttack</type>
+    <rate type="Unit">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <anim>JumpAttack</anim>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\hack</impacteffect>
   </action>
   <tactic>Default
     <action priority="100">RangedAttack</action>
     <action priority="90">RangedAttackLand</action>
-    <action priority="80">HandAttack</action>
+    <action priority="80">JumpAttack</action>
+    <action priority="70">HandAttack</action>
     <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
 </tactics>
