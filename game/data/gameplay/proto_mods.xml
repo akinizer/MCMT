@@ -11678,9 +11678,9 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>SplitQueue</flag>
 		<contain external="1">LogicalTypePickable</contain>
-		<tactics>greek_hero_proximitymodes_humans.tactics</tactics>
+		<tactics>greek_hero_proximitymodes_humans_ajax.tactics</tactics>
 		<protoaction>
-			<name stringid="STR_ACTION_SPEARTHRUSTATTACK">HandAttack</name>
+			<name>SpearThrustAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">20.000000</damage>
 			<damage type="Divine">10.000000</damage>
@@ -11691,7 +11691,7 @@
 			<defaultattack>1</defaultattack>
 		</protoaction>
 		<protoaction>
-			<name stringid="STR_ACTION_HEROICJAVELINATTACK">RangedAttack</name>
+			<name>PiercingThrowAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Pierce">4.000000</damage>
 			<damagebonus type="MythUnit">9.000000</damagebonus>
@@ -11699,7 +11699,7 @@
 			<projectile>ProjectileJavelinFlaming</projectile>
 		</protoaction>
 		<protoaction>
-			<name stringid="STR_ACTION_HEROICJAVELINATTACK">RangedAttackLand</name>
+			<name>HeroicJavelinAttack</name>
 			<anim>HandAttack</anim>
 			<rof>2.000000</rof>
 			<damage type="Pierce">12.000000</damage>
@@ -11736,7 +11736,7 @@
 		
 		<tactics>greek_hero.tactics</tactics>
 		<protoaction>
-			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
+			<name>HandAttack</name>
 			<rof>1.000000</rof>
 			<damage type="Hack">12.000000</damage>			
 			<damage type="Divine">2.00000</damage>
@@ -11863,9 +11863,9 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>SplitQueue</flag>
 		<contain external="1">LogicalTypePickable</contain>
-		<tactics>greek_hero_proximitymodes.tactics</tactics>
+		<tactics>greek_hero_proximitymodes_achilles.tactics</tactics>
 		<protoaction>
-			<name stringid="STR_ACTION_CLEAVEATTACK">HandAttack</name>
+			<name>CleaveAttack</name>
 			<rof>3.000000</rof>
 			<damage type="Hack">9.00000</damage>
 			<damage type="Divine">3.00000</damage>
@@ -11875,7 +11875,7 @@
 			<defaultattack>1</defaultattack>
 		</protoaction>
 		<protoaction>
-			<name stringid="STR_ACTION_PIERCINGTHROWATTACK">RangedAttack</name>
+			<name>PiercingThrowAttack</name>
 			<anim>HandAttack</anim>
 			<rof>2.000000</rof>
 			<damage type="Divine">8.000000</damage>
@@ -11884,7 +11884,7 @@
 			<projectile>ProjectileSageAttack</projectile>
 		</protoaction>
 		<protoaction>
-			<name stringid="STR_ACTION_HEROICTHROWATTACK">RangedAttackLand</name>
+			<name>HeroicThrowAttack</name>
 			<anim>HandAttack</anim>
 			<rof>2.000000</rof>
 			<damage type="Pierce">5.000000</damage>
@@ -12034,9 +12034,9 @@
 		<flag>CreateUnitGroupAutomatically</flag>
 		<flag>SplitQueue</flag>
 		<contain external="1">LogicalTypePickable</contain>
-		<tactics>greek_hero_proximitymodes_freeze.tactics</tactics>
+		<tactics>greek_hero_proximitymodes_freeze_perseus.tactics</tactics>
 		<protoaction>
-			<name stringid="STR_ACTION_SLASHATTACK">HandAttack</name>
+			<name>SlashAttack</name>
 			<rof>1.500000</rof>
 			<damage type="Hack">18.000000</damage>
 			<damage type="Divine">9.000000</damage>
@@ -12053,7 +12053,7 @@
 			<projectile>ProjectileWadjetSpit</projectile>
 		</protoaction>
 		<protoaction>
-			<name stringid="STR_ACTION_SERPENTBOWATTACK">RangedAttackLand</name>
+			<name>SerpentbowAttack</name>
 			<rof>2.000000</rof>
 			<damage type="Pierce">18.500000</damage>
 			<damage type="Divine">9.000000</damage>
@@ -12075,7 +12075,7 @@
 			<rate type="AbstractTemple">1.00000</rate>
 		</protoaction>
 		<protoaction>
-			<name stringid="STR_ACTION_GORGONSGAZEATTACK">FreezeAttack</name>
+			<name>GorgonsGazeAttack</name>
 			<rof>1.700000</rof>
 			<maxrange>10.000000</maxrange>
 			<projectile>ProjectileBallOfFireInvisible</projectile>

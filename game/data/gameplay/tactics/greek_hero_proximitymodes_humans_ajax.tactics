@@ -1,6 +1,6 @@
 <tactics>
   <action>
-    <name>HandAttack</name>
+    <name stringid="STR_ACTION_SPEARTHRUSTATTACK">SpearThrustAttack</name>
     <type>Attack</type>
     <rate type="LogicalTypeHandUnitsAttack">1.0</rate>
     <attackaction>1</attackaction>
@@ -12,7 +12,7 @@
     <impacteffect>effects\impacts\hack</impacteffect>
   </action>
   <action>
-    <name>RangedAttack</name>
+    <name stringid="STR_ACTION_PIERCINGTHROWATTACK">PiercingThrowAttack</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>
@@ -25,7 +25,7 @@
     <rate type="AbstractFlyingUnit">1.0</rate>
   </action>
   <action>
-    <name>RangedAttackLand</name>
+    <name stringid="STR_ACTION_HEROICJAVELINATTACK">HeroicJavelinAttack</name>
     <type>Attack</type>
     <attackaction>1</attackaction>
     <rangedlogic>1</rangedlogic>
@@ -35,33 +35,13 @@
     <spreadfactor>0.25</spreadfactor>
     <trackrating>1.0</trackrating>
     <impacteffect>effects\impacts\pierce</impacteffect>
-    <rate type="AbstractFlyingUnit">0.0</rate>
-    <rate type="Building">1.0</rate>
-    <rate type="Ship">1.0</rate>
-    <rate type="AbstractSiegeWeapon">1.0</rate>
-  </action>
-   <action>
-    <name>FreezeAttack</name>
-    <type>Attack</type>
-    <attackaction>1</attackaction>
-    <rangedlogic>1</rangedlogic>
-    <anim>FreezeAttack</anim>
-    <accuracy>1.0</accuracy>
-    <maxspread>0</maxspread>
-    <trackrating>99.0</trackrating>
-    <chargeaction>1</chargeaction>
-    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="Building">0.0</rate>
     <rate type="HumanSoldier">1.0</rate>
-    <rate type="LogicalTypeFreezableMythUnit">1.0</rate>
-    <rate type="LogicalTypeVillagerNotHero">1.0</rate>
-    <rate type="TradeUnit">1.0</rate>
-    <perfectaccuracy>1</perfectaccuracy>
-    <instantballistics>1</instantballistics>
+    <rate type="NavalUnit">1.0</rate>
   </action>
   <tactic>Default
-    <action priority="100">RangedAttack</action>
-    <action priority="90">RangedAttackLand</action>
-    <action priority="80">FreezeAttack</action>
-    <action priority="70">HandAttack</action>
+    <action priority="100">PiercingThrowAttack</action>
+    <action priority="90">HeroicJavelinAttack</action>
+    <action priority="80">SpearThrustAttack</action>
     <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
 </tactics>

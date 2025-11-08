@@ -1,0 +1,67 @@
+<tactics>
+  <action>
+    <name stringid="STR_ACTION_SLASHATTACK">SlashAttack</name>
+    <type>Attack</type>
+    <rate type="LogicalTypeHandUnitsAttack">1.0</rate>
+    <attackaction>1</attackaction>
+    <handlogic>1</handlogic>
+    <forceareaattacktarget>1</forceareaattacktarget>
+    <anim>HandAttack</anim>
+    <onhiteffect type="Snare" duration="2" rate="0.85">
+    </onhiteffect>
+    <impacteffect>effects\impacts\hack</impacteffect>
+  </action>
+  <action>
+    <name>RangedAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">1.0</rate>
+  </action>
+  <action>
+    <name stringid="STR_ACTION_SERPENTBOWATTACK">SerpentbowAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">0.0</rate>
+    <rate type="Building">1.0</rate>
+    <rate type="Ship">1.0</rate>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+  </action>
+   <action>
+    <name stringid="STR_ACTION_GORGONSGAZEATTACK">GorgonsGazeAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>FreezeAttack</anim>
+    <accuracy>1.0</accuracy>
+    <maxspread>0</maxspread>
+    <trackrating>99.0</trackrating>
+    <chargeaction>1</chargeaction>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="HumanSoldier">1.0</rate>
+    <rate type="LogicalTypeFreezableMythUnit">1.0</rate>
+    <rate type="LogicalTypeVillagerNotHero">1.0</rate>
+    <rate type="TradeUnit">1.0</rate>
+    <perfectaccuracy>1</perfectaccuracy>
+    <instantballistics>1</instantballistics>
+  </action>
+  <tactic>Default
+    <action priority="100">RangedAttack</action>
+    <action priority="90">SerpentbowAttack</action>
+    <action priority="80">GorgonsGazeAttack</action>
+    <action priority="70">SlashAttack</action>
+    <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><attackmovetype>AbstractWall</attackmovetype></tactic>
+</tactics>
