@@ -5063,6 +5063,132 @@
 			<modelattachmentbone>Spine</modelattachmentbone>
 		</protoaction>
 	</unit>
+	<unit name="WarBunker">
+		<displaynameid>STR_BLD_WARBUNKER_NAME</displaynameid>
+		<rollovertextid>STR_BLD_WARBUNKER_LR</rollovertextid>
+		<shortrollovertextid>STR_BLD_WARBUNKER_SR</shortrollovertextid>
+		<icon>resources\egyptian\static_color\buildings\citadel_center_egyptian_icon.png</icon>		
+		<minimapicon>ui\minimap\minimap_town_center</minimapicon>		
+		<animfile>egyptian\buildings\citadel_center\citadel_center.xml</animfile>		
+		<soundsetfile>norse\sfx\buildings\asgardian_hill_fort.xml</soundsetfile>
+
+		<obstructionradiusx>1.0000</obstructionradiusx>
+		<obstructionradiusz>1.0000</obstructionradiusz>
+		<impacttype>Metal</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<movementtype>land</movementtype>
+		<initialhitpoints>1200.0000</initialhitpoints>
+		<maxhitpoints>1200.0000</maxhitpoints>
+		<buildpoints>15.0000</buildpoints>
+		<buildlimit>20</buildlimit>
+		<maxcontained>8</maxcontained>
+		<los>24.0000</los>
+		<cost resourcetype="Wood">150.0000</cost>
+		<cost resourcetype="Gold">200.0000</cost>
+		<armor type="Hack" value="0.6000"></armor>
+		<armor type="Pierce" value="0.8500"></armor>
+		<armor type="Crush" value="0.2500"></armor>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeBuildingsNotWalls</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByCeaseFireBuildingSlow</unittype>
+		<unittype>Building</unittype>
+		<unittype>BuildingClass</unittype>
+		<unittype>MilitaryBuilding</unittype>
+		<unittype>AbstractTower</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeTartarianGateValidOverlapPlacement</unittype>
+		<unittype>LogicalTypeBuildingThatCanBeEmpowered</unittype>
+		<unittype>LogicalTypeBuildingNotWonderOrTitan</unittype>
+		<unittype>LogicalTypeBuildingSmall</unittype>
+		<unittype>LogicalTypeValidForestProtectionPlacement</unittype>
+		<unittype>LogicalTypeAffectedByBuildingChainAutoBuild</unittype>
+		<hotkeycontext>TowerAccel</hotkeycontext>
+		<tech row="0" column="0">AntiArmorLogistics</tech>
+		<tech row="0" column="1">AntiAirLogistics</tech>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>Immoveable</flag>
+		<flag>ObscuresUnits</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>Doppled</flag>
+		<flag>PaintTextureWhenPlacing</flag>
+		<flag>FlattenGround</flag>
+		<flag>HasGatherPoint</flag>
+		<flag>DisplayRange</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>HideGarrisonFlag</flag>
+		<flag>HasDefaultAttack</flag>
+		<contain>AbstractArcher</contain>
+		<notcontain>AbstractCavalry</notcontain>
+		<notcontain>MythUnit</notcontain>
+		<notcontain>AbstractSiegeWeapon</notcontain>
+		<notcontain>Ship</notcontain>
+		<notcontain>Resource</notcontain>
+		<command row="3" column="5">Eject</command>
+		<tactics>mcmt_warbunker.tactics</tactics>
+		<protoaction>
+			<name>AntiUnitAttack</name>
+			<rof>0.800000</rof>
+			<damage type="Pierce">20.000000</damage>
+			<damagebonus type="Ship">0.1500</damagebonus>
+			<maxrange>40.000000</maxrange>
+			<projectile>ProjectileArrow</projectile>
+			<displayednumberprojectiles>1</displayednumberprojectiles>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+			<activeifcontainsunits>1</activeifcontainsunits>
+			<containscalebasedamage>1</containscalebasedamage>
+			<scalebycontainedunittype><rate type="AbstractArcher">1.000000</rate></scalebycontainedunittype>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>AntiArmorAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Crush">15.000000</damage>
+			<damagebonus type="AbstractSiegeWeapon">3.0000</damagebonus>
+			<maxrange>40.000000</maxrange>
+			<active>1</active>
+			<projectile>ProjectileBallOfFire</projectile>
+			<displayednumberprojectiles>1</displayednumberprojectiles>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+			<activeifcontainsunits>1</activeifcontainsunits>
+			<containscalebasedamage>1</containscalebasedamage>
+			<scalebycontainedunittype><rate type="AbstractArcher">1.000000</rate></scalebycontainedunittype>
+			<onhiteffect type="Attach" proto="VFXFishingShipChineseDemolition" duration="1.0">
+				<target attacktype="Unit"></target>
+			</onhiteffect>
+			<impacteffect>effects\impacts\fireball</impacteffect>
+			<active>0</active>
+		</protoaction>
+		<protoaction>
+			<name>AntiAirAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Divine">10.000000</damage>
+			<maxrange>40.000000</maxrange>
+			<active>1</active>
+			<projectile>ProjectileBallOfFire</projectile>
+			<displayednumberprojectiles>1</displayednumberprojectiles>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+			<activeifcontainsunits>1</activeifcontainsunits>
+			<containscalebasedamage>1</containscalebasedamage>
+			<scalebycontainedunittype><rate type="AbstractArcher">1.000000</rate></scalebycontainedunittype>
+			<onhiteffect type="Attach" proto="VFXFishingShipChineseDemolition" duration="1.0">
+				<target attacktype="Unit"></target>
+			</onhiteffect>
+			<impacteffect>effects\impacts\fireball</impacteffect>
+			<active>0</active>
+		</protoaction>
+	</unit>
 	<unit name="SonicDisruptorArray">
 		<displaynameid>STR_BLD_SONICDISRUPTORARRAY_NAME</displaynameid>
 		<rollovertextid>STR_BLD_SONICDISRUPTORARRAY_LR</rollovertextid>
@@ -9531,13 +9657,13 @@
 			<rate type="ScoutProbe">5.00000</rate>	
 			<rate type="Ship">5.00000</rate>	
 			<rate type="TheArgo">5.00000</rate>	
-			<rate type="Building">10.0000</rate>	
+			<rate type="Building">1.0000</rate>	
 			<slowhealmultiplier>0.50</slowhealmultiplier>
 			<donotignoredead>1</donotignoredead>
 		</protoaction>
 		<protoaction>
 			<name>Build</name>
-			<rate type="Building">5.00</rate>
+			<rate type="Building">0.20</rate>
 		</protoaction>		
 	</unit>
 	<unit name="Behemoth">
@@ -9813,6 +9939,8 @@
 		</protoaction>
 	</unit>
 	<unit name="HadesShade">
+		<populationcount>0</populationcount>
+
 		<unittype>MilitaryUnit</unittype>
 		<unittype>AbstractInfantry</unittype>
 		<unittype>InfantryLineUpgraded</unittype>
@@ -10424,6 +10552,214 @@
 			<canattackground>1</canattackground>
 		</protoaction>		
 	</unit>
+		<unit name="JormunElver" mergeMode="replace">
+		<displaynameid>STR_UNIT_JORMUN_ELVER_NAME</displaynameid>
+		<rollovertextid>STR_UNIT_JORMUN_ELVER_LR</rollovertextid>
+		<shortrollovertextid>STR_UNIT_JORMUN_ELVER_SR</shortrollovertextid>
+		<icon>resources\norse\player_color\units\jormun_elver_icon.png</icon>
+		<animfile>norse\units\myth\jormun_elver\jormun_elver.xml</animfile>
+		<soundsetfile>norse\vo\jormun_elver\jormun_elver.xml</soundsetfile>
+		<obstructionradiusx>1.4900</obstructionradiusx>
+		<obstructionradiusz>1.4900</obstructionradiusz>
+		<selectionradiusx>1.5000</selectionradiusx>
+		<selectionradiusz>4.5000</selectionradiusz>
+		<impacttype>Unarmoured</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<formationorder>1</formationorder>
+		<movementtype>water</movementtype>
+		<turnrate>5.0000</turnrate>
+		<initialhitpoints>1200.0000</initialhitpoints>
+		<maxhitpoints>1200.0000</maxhitpoints>
+		<trainpoints>10.0000</trainpoints>
+		<weightclass>10</weightclass>
+		<populationcount>4</populationcount>
+		<maxvelocity>6.0000</maxvelocity>
+		<rechargetime>24.0000</rechargetime>
+		<los>22.0000</los>
+		<autoattackrange>40</autoattackrange>
+
+		<cost resourcetype="Food">200.0000</cost>
+		<cost resourcetype="Favor">15.0000</cost>
+		<armor type="Hack" value="0.5500"></armor>
+		<armor type="Pierce" value="0.6000"></armor>
+		<armor type="Crush" value="0.8000"></armor>
+		<unittype>LogicalTypeNavalMilitary</unittype>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeMythicMythUnit</unittype>
+
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>MythUnit</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>NavalUnit</unittype>
+
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeMythUnitNotTitan</unittype>
+		<unittype>LogicalTypeRangedMythUnit</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeFreezableMythUnit</unittype>
+		<unittype>LogicalTypeMythUnitThatGeneratesFavor</unittype>
+		<unittype>LogicalTypeMythUnitNotFlying</unittype>
+		<flag>TieToWaterSurface</flag>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>DecalStickToWaterSurface</flag>
+		<flag>FadeOutDecalOnDeath</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>HasContinuousParticles</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>RangeIndicatorForAbilityCasting</flag>
+		<command row="3" column="0">Stop</command>
+		<command row="3" column="3">Patrol</command>
+		<command row="3" column="4">AttackMove</command>
+		<command row="3" column="5">Delete</command>
+
+		<tactics>mcmt_jormunelver.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Hack">48.000000</damage>
+			<damage type="Crush">12.000000</damage>
+			<damagebonus type="MythUnit">2.000000</damagebonus>
+			<damagebonus type="Hero">0.500000</damagebonus>
+			<maxrange>12.000000</maxrange>
+			<defaultattack>1</defaultattack>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Pierce">60.000000</damage>
+			<damagebonus type="MythUnit">2.000000</damagebonus>
+			<damagebonus type="Hero">0.500000</damagebonus>
+			<minrange>12.000000</minrange>
+			<maxrange>38.000000</maxrange>
+			<projectile>ProjectileFafnirFire</projectile>
+		</protoaction>		
+		<protoaction>
+			<name>ChargedHandAttack</name>
+			<rof>2.000000</rof>
+			<damage type="Hack">150.000000</damage>
+			<damagearea>6.000000</damagearea>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>3.000000</maxrange>
+			<directionaldamagerefangle>1.0000</directionaldamagerefangle>
+			<maxsizeclass>6</maxsizeclass>
+			<onhiteffect type="Throw" targetunittype="LogicalTypeShipNotHero"></onhiteffect>
+			<throw>1</throw>
+			<impactforcemin>300.0f</impactforcemin>
+			<impactforcemax>600.0f</impactforcemax>
+			<impactlaunchangle>10.0</impactlaunchangle>
+			<areasortmode>Directional</areasortmode>
+		</protoaction>
+	</unit>
+		<!--Norse HumanSoldiers-->
+	<unit name="Berserk" mergeMode="add">
+		<tactics>handattack_idle_stat_bonus.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>0.700000</rof>
+			<damage type="Hack">6.50000</damage>
+			<maxrange>0.500000</maxrange>
+			<onhiteffect active="0" type="ProgFreeze" duration="5.0" rate="0.10" freezeduration="2.0" targetunittype="HumanSoldier"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>Build</name>
+			<type>Build</type>
+			<maxrange>0.2</maxrange>
+			<anim>Build</anim>
+			<rate type="Building">1.000000</rate>
+			<typedmaxrange type="Dock">2.0</typedmaxrange>
+		</protoaction>
+		<protoaction>
+			<name>Repair</name>
+			<type>Repair</type>
+			<maxrange>0.2</maxrange>
+			<anim>Build</anim>
+			<rate type="AbstractWall">0.2500</rate>
+			<rate type="Building">0.5000</rate>
+			<typedmaxrange type="Dock">2.0</typedmaxrange>
+		</protoaction>
+		<protoaction>
+			<name>IdleDamageBonus</name>
+			<modifyamount>0.00250</modifyamount>
+			<modifyratecap>1.3000</modifyratecap>
+			<modifybase>1.0000</modifybase>
+			<modifydecay>0.00100</modifydecay>
+			<modifytype>Damage</modifytype>
+		</protoaction>
+		<protoaction>
+			<name stringid="STR_TECH_FURY_OF_THE_FALLEN_NAME">DeathBoostDamageBonus</name>
+			<type>LikeBonus</type>
+			<modifybase>1.0</modifybase>
+			<maxrange>6</maxrange>
+			<modifyratebytype>1</modifyratebytype>
+			<modifyprotoid>BerserkDamageBoost</modifyprotoid>
+			<active>0</active>
+			<rate type="BerserkDamageBoost">0.25</rate>
+			<persistent>1</persistent>
+			<modifytype>Damage</modifytype>
+			<modelattachment>vfx\glow\arkantos_boost.xml</modelattachment>
+			<modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
+		</protoaction>
+	</unit>
+	<unit name="ThrowingAxeman" mergeMode="add">	
+		<unittype>ArcherLineUpgraded</unittype>
+		<tactics>handattack_axeattack.tactics</tactics>
+		<protoaction>
+			<name>AxeSwingAttack</name>
+			<rof>0.700000</rof>
+			<damage type="Hack">6.50000</damage>
+			<maxrange>0.500000</maxrange>
+			<onhiteffect active="0" type="ProgFreeze" duration="5.0" rate="0.10" freezeduration="2.0" targetunittype="HumanSoldier"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>RangedAttack</name>
+			<rof>1.500000</rof>
+			<damage type="Hack">6.000000</damage>
+			<damagebonus type="AbstractInfantry">3.000000</damagebonus>
+			<minrange>2.000000</minrange>
+			<maxrange>10.000000</maxrange>
+			<projectile>ProjectileAxeFlaming</projectile>
+			<impacteffect>effects\impacts\pierce_medium</impacteffect>
+			<onhiteffect active="0" type="ProgFreeze" duration="5.0" rate="0.10" freezeduration="2.0" targetunittype="HumanSoldier"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>Build</name>
+			<type>Build</type>
+			<maxrange>0.2</maxrange>
+			<anim>Build</anim>
+			<rate type="Building">1.000000</rate>
+			<typedmaxrange type="Dock">2.0</typedmaxrange>
+		</protoaction>
+		<protoaction>
+			<name>Repair</name>
+			<type>Repair</type>
+			<maxrange>0.2</maxrange>
+			<anim>Build</anim>
+			<rate type="Building">0.5000</rate>
+			<typedmaxrange type="Dock">2.0</typedmaxrange>
+		</protoaction>
+	</unit>
+
+	<!--IMPROVEMENTS///ATLANTEAN-->
 	<unit name="FireSiphon" mergeMode="replace">
 		<displaynameid>STR_UNIT_FIRE_SIPHON_NAME</displaynameid>
 		<rollovertextid>STR_UNIT_FIRE_SIPHON_LR</rollovertextid>
@@ -16770,8 +17106,6 @@
 		  <onhiteffect type="Throw">
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="LogicalTypeVillagerNotHero"></target>
-			<target attacktype="LogicalTypeMythUnitNotFlying"></target>
-			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
 		  </onhiteffect>
 		</protoaction>
 	</unit>
@@ -16788,8 +17122,6 @@
 		  <onhiteffect type="Throw">
 			<target attacktype="HumanSoldier"></target>
 			<target attacktype="LogicalTypeVillagerNotHero"></target>
-			<target attacktype="LogicalTypeMythUnitNotFlying"></target>
-			<target attacktype="LogicalTypeMythUnitNotTitan"></target>
 		  </onhiteffect>
 		</protoaction>
 	</unit>

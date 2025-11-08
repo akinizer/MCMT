@@ -353,7 +353,11 @@ ID = "STR_BLD_OILRIGPACKED_LR"   ;   Str = "Packed Form of the Oil Obscurator Ri
 
 ID = "STR_BLD_AIRCOMMAND_NAME"   ;   Str = "Air Command HQ"
 ID = "STR_BLD_AIRCOMMAND_SR"   ;   Str = "Air Command Headquarters"
-ID = "STR_BLD_AIRCOMMAND_LR"   ;   Str = "Defensive Base of Operations for Aircraft "
+ID = "STR_BLD_AIRCOMMAND_LR"   ;   Str = "Defensive Base of Operations for Aircraft"
+
+ID = "STR_BLD_WARBUNKER_NAME"   ;   Str = "War Bunker"
+ID = "STR_BLD_WARBUNKER_LR"   ;   Str = "Defensive Building"
+ID = "STR_BLD_WARBUNKER_SR"   ;   Str = "Defensive Building"
 
 // SPECIAL UTILITY STRUCTURES
 ID = "STR_BLD_SONICDISRUPTORARRAY_NAME"   ;   Str = "Sonic Disruptor Array"
@@ -577,6 +581,12 @@ ID = "STR_TECH_CHAMPION_ENGINES_LR"   ;   Str = "Champion Siege Weapon Ultimate 
 ID = "STR_TECH_PRIMORDIAL_LIGHT_NAME"   ;   Str = "Primordial Light"
 ID = "STR_TECH_PRIMORDIAL_LIGHT_LR"   ;   Str = "Empowers Damages of Heroes and Myth Units"
 
+ID = "STR_TECH_WARBUNKER_ANTIARMOR_NAME"   ;   Str = "Anti-Armor Logistics"
+ID = "STR_TECH_WARBUNKER_ANTIARMOR_LR"   ;   Str = "Enable heavy-armored targeting fireports. Deadly to buildings and siege weapons"
+
+ID = "STR_TECH_WARBUNKER_ANTIAIR_NAME"   ;   Str = "Anti-Air Logistics"
+ID = "STR_TECH_WARBUNKER_ANTIAIR_LR"   ;   Str = "Enable aerial targeting fireports"
+
 ID = "STR_TECH_OLYMPICGAMES_NAME"   ;   Str = "Olympic Games"
 ID = "STR_TECH_OLYMPICGAMES_LR"   ;   Str = "Integrates Era with Sports, Athletes and Mounted Racers"
 
@@ -623,6 +633,8 @@ ID = "STR_ACTION_EXPLOSIVEJAVELINATTACK"   ;   Str = "Explosive Javelin Attack"
 ID = "STR_ACTION_SKYDIVEATTACK"   ;   Str = "Skydive Attack"
 ID = "STR_ACTION_GORGONSGAZEATTACK"   ;   Str = "Gorgon's Gaze Attack"
 ID = "STR_ACTION_DISTANCINGATTACK"   ;   Str = "Distancing Attack"
+
+ID = "STR_ACTION_AXESWINGATTACK"   ;   Str = "Axe Swing Attack"
 
 // XL MAPS
 ID = "STR_MAP_ACROPOLIS_COLOSSAL_NAME" ;   Str = "Acropolis Colossal Map"

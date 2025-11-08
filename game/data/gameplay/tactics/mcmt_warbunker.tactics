@@ -1,0 +1,60 @@
+<tactics>
+  <action>
+    <name>AntiUnitAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <scalebycontainedunittype>
+      <rate type="Unit">0.05</rate>
+    </scalebycontainedunittype>
+    <impacteffect>effects\impacts\pierce</impacteffect>
+    <rate type="AbstractFlyingUnit">0.0</rate>
+    <rate type="Unit">1.0</rate>
+  </action>
+  <action>
+    <name>AntiArmorAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <scalebycontainedunittype>
+      <rate type="Unit">0.05</rate>
+    </scalebycontainedunittype>
+    <impacteffect>effects\impacts\fireball</impacteffect>
+    <rate type="AbstractFlyingUnit">0.0</rate>
+    <rate type="MythUnit">0.0</rate>
+    <rate type="AbstractSiegeWeapon">1.0</rate>
+    <rate type="Building">1.0</rate>
+    <rate type="Ship">1.0</rate>
+  </action>
+  <action>
+    <name>AntiAirAttack</name>
+    <type>Attack</type>
+    <attackaction>1</attackaction>
+    <rangedlogic>1</rangedlogic>
+    <anim>RangedAttack</anim>
+    <accuracy>0.8</accuracy>
+    <maxspread>5.0</maxspread>
+    <spreadfactor>0.25</spreadfactor>
+    <trackrating>1.0</trackrating>
+    <scalebycontainedunittype>
+      <rate type="Unit">0.05</rate>
+    </scalebycontainedunittype>
+    <impacteffect>effects\impacts\fireball</impacteffect>
+    <rate type="AbstractFlyingUnit">1.0</rate>
+  </action>
+  <tactic>Default
+    <action priority="100">AntiUnitAttack</action>
+    <action priority="90">AntiAirAttack</action>
+    <action priority="80">AntiArmorAttack</action>
+    <attacktype>LogicalTypeRangedUnitsAttack</attacktype><autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype></tactic>
+</tactics>
